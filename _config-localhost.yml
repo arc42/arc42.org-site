@@ -11,11 +11,11 @@ title                    : "arc42"
 title_separator          : "-"
 name                     : "Dr. Gernot Starke"
 description              : "resources for software architects."
-url                      : "http://draft.arc42.org" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "http://localhost" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "arc42/arc42.org-site" # GitHub username/repo-name
 teaser                   : /assets/images/arc42-splash-landingpage.jpg # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-breadcrumbs            : false # true, false (default)
+breadcrumbs              : false # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : false # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
@@ -24,7 +24,7 @@ comments:
 
 atom_feed:
   path                   : http://it-and-more.blogspot.com
-
+  
 # SEO Related
 google_site_verification :
 bing_site_verification   :
