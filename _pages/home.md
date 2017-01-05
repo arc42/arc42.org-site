@@ -12,23 +12,37 @@ header:
 excerpt: "Communicating software architectures. Practical and pragmatic.
 Free and open source, takes the pain out of documentation."
 intro:
-  - excerpt: "arc42 ensures better software- and system architects. It's based upon practical experience of many architecture projects of different sizes and domains. arc42 contains a template for development, documentation and communication of software architectures. arc42 fits arbitrary technologies and tools."
+  - excerpt: "&bull; ensures better software- and system architects<br>
+    	&bull; based upon practical experience of many architecture projects  domains	<br>
+      &bull;proven template for documentation and communication <br>
+      &bull;supports arbitrary technologies and tools."
 feature_row:
-  - image_path: assets/images/unsplash-gallery-image-1-th.jpg
-    alt: "placeholder image 1"
-    title: "Communicate"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    alt: "placeholder image 2"
-    title: "Develop"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-    url: "#test-link"
+  - title: "Communicate"
+    image_path: assets/images/communicate-icon.svg
+    alt: "communicate-icon"
+    excerpt: "Effectively communicate architectures. Pragmatic views and crosscutting concepts, compatible to IEEE 1471."
+    url: "#communicate"
     btn_label: "Read More"
     btn_class: "btn--inverse"
-  - image_path: /assets/images/unsplash-gallery-image-3-th.jpg
-    title: "Professional Service"
+
+  - image_path: assets/images/develop-icon.svg
+    alt: "develop-icon"
+    title: "Develop"
+    excerpt: "Build better systems. High quality, lean and lightweight."
+    url: "#develop"
+    btn_label: "Read More"
+    btn_class: "btn--inverse"
+
+  - image_path: assets/images/workshop-icon.svg
+    alt: "workshop-icon"
+    title: "Learn"
     excerpt: "We've successfully trained hundreds of developers in our
-    **Mastering Software Architectures** workshops. Highly practical."
+    **Mastering Software Architectures** workshops. Highly practical.
+    iSAQB Certification."
+    url: "#learn"
+    btn_label: "Read More"
+    btn_class: "btn--inverse"
+
 feature_row2:
   - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
     alt: "placeholder image 2"
