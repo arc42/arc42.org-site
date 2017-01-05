@@ -1,0 +1,12 @@
+# main links
+main:
+  - title: "Quick-Start"
+    url: /docs/quick-start-guide/
+  - title: "Template"
+    url: /docs/examples/
+  - title: "Documentation"
+    url: /docs/help/
+  - title: "Download"
+    url: /docs/download/
+  # - title: "Sitemap"
+  #   url: /sitemap/
