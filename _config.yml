@@ -9,30 +9,31 @@
 locale                   : "en"
 title                    : "arc42"
 title_separator          : "-"
-name                     : "Your Name"
+name                     : "Dr. Gernot Starke"
 description              : "resources for software architects."
-url                      : "http://localhost" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "http://draft.arc42.org" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "arc42/arc42.org" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-# breadcrumbs            : false # true, false (default)
+repository               : "arc42/arc42.org-site" # GitHub username/repo-name
+teaser                   : /assets/images/arc42-splash-landingpage.jpg # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+  provider               : false # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+
+atom_feed:
+  path                   : http://it-and-more.blogspot.com/feeds/posts/default
 
 # SEO Related
 google_site_verification :
 bing_site_verification   :
 alexa_site_verification  :
-yandex_site_verification :
 
 # Social Sharing
 twitter:
   username               : gernotstarke
-og_image                 : # Open Graph/Twitter default site image
-# For specifying social profiles
+  # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
   type                   : Organization # Person or Organization (defaults to Person)
@@ -49,25 +50,22 @@ analytics:
 # Site Author
 author:
   name             : "Dr. Gernot Starke"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : /assets/images/Gernot-avatar-2016.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "innoQ fellow, (co)founder of arc42, founder of aim42"
   location         : "Cologne, Germany"
-  email            :
-  uri              :
+  email            : info@arc42.org
+  uri              : http://gernotstarke.de
   github           : gernotstarke
   google_plus      :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
   twitter          : gernotstarke
   xing             :
 
-
 # Reading Files
 include:
   - .htaccess
   - _pages
 exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
   - vendor
   - .asset-cache
   - .bundle
