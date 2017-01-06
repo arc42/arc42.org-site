@@ -6,6 +6,8 @@ main:
     url: /docs/examples/
   - title: "Documentation"
     url: /docs/help/
+  - title: "FAQ"
+    url: http://faq.arc42.org
   - title: "Download"
     url: /docs/download/
   # - title: "Sitemap"
