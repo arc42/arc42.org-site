@@ -4,31 +4,48 @@
 
 
 
+### How does it work?
 
-based upon [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/).
+* home.md is the homepage, it's mapped (via permalink) to "/".
+* The Github repository is configured to generate Github-pages via Jekyll.
+* Github serves the site under a custom-domain, configured as CNAME.
+* With the arc42.org hosting provider we configured a custom DNS
+CNAME entry to point to github.
 
-[![GitHub license](https://img.shields.io/badge/license-CCSA40-lightgrey.svg)](https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/LICENSE)
 
-### Credits
+## Credits
 
 ##### Michael Rose, creator of the Minimal-Mistakes Jekyll Theme
 
 - <https://mademistakes.com>
 - <https://twitter.com/mmistakes>
 
-#### Icons + Demo Images:
+#### Icons + Images:
 
-- [Unsplash](https://unsplash.com/)
+* Free images can be found at [Unsplash](https://unsplash.com/)
+* I bought several icons from [IconFinder](https://www.iconfinder.com?ref=gernotstarke), a great source for professional-grade icons. Recommended!
+* I generated the various favicon files with [RealFavIconGenerator](http://realfavicongenerator.net/). 
+
 
 ---
 
 ## Licenses
 
-### arc42
 
-### MinimalMistakes Theme
+### arc42 Template
+The arc42 template is licensed under a [CreativeCommons Sharealike International 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/).
 
-The MIT License (MIT)
+You are free to:
+
+* **Share** — copy and redistribute the template in any medium or format
+* **Adapt** — remix, transform, and build upon the material for any purpose, even commercially. 
+
+
+
+### [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) 
+
+
+##### The MIT License (MIT)
 
 Copyright (c) 2016 Michael Rose
 
