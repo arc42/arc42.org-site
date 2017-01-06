@@ -40,7 +40,7 @@ feature_row3:
 
 
 feature_row4:
-  - image_path: /assets/images/template/04-solution-strategy-overview.png
+  - image_path: /assets/images/template/04-solution-strategy-overview.svg
     alt: "solution strategy overview"
     title: "4. Solution Strategy"
     excerpt: 'Summary of the fundamental decisions and
@@ -65,7 +65,7 @@ feature_row6:
 - image_path: /assets/images/template/06-runtime-overview.png
   alt: "runtime view"
   title: "6. Runtime View"
-  excerpt: ''
+  excerpt: 'Behavior of building blocks as scenarios, covering important use cases or features, interactions at critical external interfaces, operation and administration plus error and exception behavior.'
   url: "http://docs.arc42.org/section-6/"
   btn_label: "Read More"
   btn_class: "btn--inverse"    
@@ -74,8 +74,38 @@ feature_row7:
 - image_path: /assets/images/template/07-deployment-overview.png
   alt: "deployment view"
   title: "7. Deployment View "
-  excerpt: ''
+  excerpt: 'Technical infrastructure with environments, computers, processors, topologies. Mapping of (software) building blocks to infrastructure elements.'
   url: "http://docs.arc42.org/section-7/"
+  btn_label: "Read More"
+  btn_class: "btn--inverse"    
+
+feature_row8:
+- image_path: /assets/images/template/08-concepts-overview.png
+  alt: "crosscutting concepts"
+  title: "8. Crosscutting Concepts"
+  excerpt: 'Overall, principal regulations and solution approaches relevant in multiple parts (→ cross-cutting) of the system. Concepts are often related to **multiple building blocks**. Include different topics like domain models,  architectur patterns and -styles, rules for using specific technology and inmplementation rules.'
+  url: "http://docs.arc42.org/section-8/"
+  btn_label: "Read More"
+  btn_class: "btn--inverse"    
+
+feature_row9:
+- image_path: /assets/images/template/09-decision-overview.png
+  alt: "risks and technical decisions"
+  title: "9. Architectural Decisions"
+  excerpt: 'Important, expensive, critical, large scale or risky architecture decisions
+including rationals.'
+  url: "http://docs.arc42.org/section-9/"
+  btn_label: "Read More"
+  btn_class: "btn--inverse"    
+
+
+feature_row10:
+- image_path: /assets/images/template/10-q-scenario-overview.png
+  alt: "quality "
+  title: "10. Quality Requirements"
+  excerpt: 'Quality requirements as scenarios, with quality tree to provide high-level overview. The most important quality goals should have been described in
+section 1.2. (quality goals).'
+  url: "http://docs.arc42.org/section-9/"
   btn_label: "Read More"
   btn_class: "btn--inverse"    
 
