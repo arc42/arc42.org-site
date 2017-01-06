@@ -2,10 +2,12 @@
 main:
   - title: "Quick-Start"
     url: /docs/quick-start-guide/
+  - title: "Training"
+    url: http://arc42.de/termine.html
   - title: "Template"
-    url: /docs/examples/
+    url: /template/
   - title: "Documentation"
-    url: /docs/help/
+    url: http://docs.arc42.org
   - title: "FAQ"
     url: http://faq.arc42.org
   - title: "Download"
