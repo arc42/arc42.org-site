@@ -9,12 +9,12 @@ header:
   cta_label: "Download"
   cta_url: "https://github.com/mmistakes/minimal-mistakes/"
   caption: "Photo credit: [**baranco1**](https://www.flickr.com/photos/59159233@N04/)"
-excerpt: "Communicating software architectures. Practical and pragmatic.
-Free and open source, takes the pain out of documentation."
+excerpt: "All you ever need to construct, **communicate and document your software architecture**. Proven, **practical and pragmatic**.
+Free and open source, **takes the pain out of documentation**."
 intro:
-  - excerpt: "&bull; ensures better software- and system architects<br>
-    	&bull; based upon practical experience of many architecture projects  domains	<br>
-      &bull;proven template for documentation and communication <br>
+  - excerpt: "&bull; ensures better software architectures.<br>
+    	&bull; based on practical experience of many systems.<br>
+      &bull;proven template for documentation and communication. <br>
       &bull;supports arbitrary technologies and tools."
 feature_row:
   - title: "Communicate"
