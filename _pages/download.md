@@ -1,22 +1,18 @@
 ---
 title: "arc42"
 layout: splash
-permalink: /
+permalink: /download
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /assets/images/arc42-splash-landingpage.jpg
-  cta_label: "Introduction"
-  cta_url: "/introduction"
+  cta_label: "Download V 7.0 (latest)"
+  cta_url: "/download/"
   caption: "Photo credit: [**baranco1**](https://www.flickr.com/photos/59159233@N04/)"
-excerpt: "All you ever need to construct, **communicate and document your software architecture**. Proven, **practical and pragmatic**.
-Free and open source, **takes the pain out of documentation**."
+excerpt: "download version 7.0 - the most practical and effective arc42 ever."
 
 intro:
-  - excerpt: "Ensures **better software architectures**.<br>
-    	Based on practical experience of many systems.<br>
-      Proven template for documentation and communication. <br>
-      Supports arbitrary technologies and tools."
+  - excerpt: "Version 7.0, released January 15th 2017."
 
 feature_row:
   - title: "Communicate"
@@ -53,22 +49,7 @@ feature_row2:
     url: "#test-link"
     btn_label: "Read More"
     btn_class: "btn--inverse"
-feature_row3:
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    alt: "placeholder image 2"
-    title: "Placeholder Image Right Aligned"
-    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Right aligned with `type="right"`'
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--inverse"
-feature_row4:
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    alt: "placeholder image 2"
-    title: "Placeholder Image Center Aligned"
-    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Centered with `type="center"`'
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--inverse"
+
 ---
 
 {% include feature_row id="intro" type="center" %}

@@ -24,7 +24,7 @@ comments:
 
 atom_feed:
   path                   : http://it-and-more.blogspot.com
-  
+
 # SEO Related
 google_site_verification :
 bing_site_verification   :
@@ -56,8 +56,8 @@ author:
   email            : info@arc42.org
   uri              : http://gernotstarke.de
   github           : gernotstarke
-  google_plus      :
-  stackoverflow    : # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
+  google_plus      : 105917203908419102125
+  stack_overflow   : arc42
   twitter          : gernotstarke
   xing             :
 
@@ -123,8 +123,8 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
+# paginate: 5 # amount of posts to show
+# paginate_path: /page:num/
 timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 

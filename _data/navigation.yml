@@ -1,16 +1,16 @@
 # main links
 main:
-  - title: "Quick-Start"
-    url: /docs/quick-start-guide/
-  - title: "Training"
-    url: http://arc42.de/termine.html
-  - title: "Template"
-    url: /template/
+  - title: "Overview"
+    url: /overview/
   - title: "Documentation"
     url: http://docs.arc42.org
   - title: "FAQ"
     url: http://faq.arc42.org
+  - title: "Training"
+    url: http://arc42.de/termine.html
   - title: "Download"
-    url: /docs/download/
+    url: /download
+  - title: "Examples"
+    url: /examples
   # - title: "Sitemap"
   #   url: /sitemap/
