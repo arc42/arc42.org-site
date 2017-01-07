@@ -4,34 +4,27 @@ layout: splash
 permalink: /documentation/
 header:
   overlay_color: "#000"
-  #overlay_filter: "0.2"
+  overlay_filter: "0.4"
   overlay_image: /assets/images/splash/unsplash-documentation-sebastien-gabriel.jpg
   caption: "Photo credit: [**unsplash**](https://unsplash.com/collections/3015/northside-01?photo=XOrFfUPUfeU)"
-excerpt: "Our documentation: Your questions answered."
+excerpt: "The info you need. Your questions answered."
 
-
-feature_row3:
-  - image_path: /assets/images/template/03-context-overview.png
-    alt: "solution strategy overview"
-    title: "3. Context and Scope"
-    excerpt: 'Delimits your system from its (external) communication partners (neighboring systems and users). Specifies the external interfaces. Shown from a business/domain perspective (always) or a technical perspective (optional)'
-    url: "http://docs.arc42.org/section-4/"
-    btn_label: "Read More"
-    btn_class: "btn--inverse"    
-
-
-
-feature_row7:
-- image_path: /assets/images/template/07-deployment-overview.png
-  alt: "deployment view"
-  title: "7. Deployment View "
-  excerpt: 'Technical infrastructure with environments, computers, processors, topologies. Mapping of (software) building blocks to infrastructure elements.'
-  url: "http://docs.arc42.org/section-7/"
-  btn_label: "Read More"
-  btn_class: "btn--inverse"    
-
-
+feature_row1:
+  - image_path: /assets/images/cabinet-sanwal-deen.jpg
+    alt: "idea: cabinet"
+    title: "arc42 works like a cabinet..."
+    excerpt: 'predefines sections for the relevant aspects of software architectures. Use them according to specific needs. Intentionally leave sections empty...'
+  
 ---
+
+# arc42 supports ANY kind of system or project
+
+arc42 supports your style of working, your domain and your technology.
+Apply it in agile, lean or formal projects - you decide.
+
+{% include feature_row id="feature_row1" type="left" %}
+
+
 
 # Get it!
 
