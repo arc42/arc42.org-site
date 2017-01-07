@@ -5,7 +5,7 @@ permalink: /examples
 header:
   overlay_color: "#000"
   overlay_filter: "0.0"
-  overlay_image: /assets/images/example-splash-daniel-olah.jpg
+  overlay_image: /assets/images/splash/unsplash-example-daniel-olah.jpg
   caption: "Photo credit: [**unsplash**](https://unsplash.com/)"
 excerpt: "arc42 examples."
 
