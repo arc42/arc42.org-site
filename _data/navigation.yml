@@ -1,9 +1,9 @@
 # main links
 main:
   - title: "Overview"
-    url: /overview/
+    url: /overview
   - title: "Documentation"
-    url: http://docs.arc42.org
+    url: /documentation
   - title: "FAQ"
     url: http://faq.arc42.org
   - title: "Training"

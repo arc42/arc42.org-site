@@ -5,7 +5,7 @@ permalink: /overview/
 header:
   overlay_color: "#000"
   overlay_filter: "0.2"
-  overlay_image: /assets/images/unsplash-bridge-tom-van-hoogstraten.jpg
+  overlay_image: /assets/images/splash/unsplash-bridge-tom-van-hoogstraten.jpg
   caption: "Photo credit: [**unsplash**](https://unsplash.com/@grafish/)"
 excerpt: "arc42 is a template for architecture communication and documentation."
 
@@ -162,3 +162,15 @@ arc42 answers the following two questions in a pragmatic way, but can be tailore
 {% include feature_row id="feature_row11" type="left" %}
 
 {% include feature_row id="feature_row12" type="right" %}
+
+<hr>
+
+# More Info
+
+Now that you know about the template sections, you can dive deeper. Have a look at our extensive documentation:
+
+* Real-world [examples](/examples/)
+* FAQ - [Frequently asked questions](http://faq.arc42.org)
+* Our extensive [template documentation](http://docs.arc42.org), organized by template section.
+
+<a href="/documentation" class="btn btn--success">show more documentation.</a>

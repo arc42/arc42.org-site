@@ -5,9 +5,9 @@ permalink: /
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/arc42-splash-landingpage.jpg
+  overlay_image: /assets/images/splash/arc42-splash-landingpage.jpg
   cta_label: "Overview"
-  cta_url: "/overview/"
+  cta_url: "/overview"
   caption: "Photo credit: [**baranco1**](https://www.flickr.com/photos/59159233@N04/)"
 excerpt: "All you ever need to construct, **communicate and document your software architecture**. Proven, **practical and pragmatic**.
 Free and open source, **takes the pain out of documentation**."
