@@ -4,13 +4,13 @@ main:
     url: /overview
   - title: "Documentation"
     url: /documentation
+  - title: "Examples"
+    url: /examples
   - title: "FAQ"
     url: http://faq.arc42.org
   - title: "Training"
     url: http://arc42.de/termine.html
   - title: "Download"
     url: /download
-  - title: "Examples"
-    url: /examples
   # - title: "Sitemap"
   #   url: /sitemap/
