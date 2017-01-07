@@ -20,11 +20,12 @@ A table of important **stakeholders** with their expectation regarding architect
     url: "http://docs.arc42.org/section-1/"
     btn_label: "Read More"
     btn_class: "btn--inverse"
+
 feature_row2:
   - image_path: /assets/images/template/02-constraints-overview.png
     alt: "constraints-image"
     title: "2. Constraints"
-    excerpt: 'Anything that constrains teams in design and implementation decisions or decision about related processes. These constraints sometimes go beyond individual systems and are valid for whole organizations and companies.'
+    excerpt: 'Anything that constrains teams in design and implementation decisions or decision about related processes. Can sometimes go beyond individual systems and are valid for whole organizations and companies.'
     url: "http://docs.arc42.org/section-2/"
     btn_label: "Read More"
     btn_class: "btn--inverse"    
@@ -33,7 +34,7 @@ feature_row3:
   - image_path: /assets/images/template/03-context-overview.png
     alt: "solution strategy overview"
     title: "3. Context and Scope"
-    excerpt: ''
+    excerpt: 'Delimits your system from its (external) communication partners (neighboring systems and users). Specifies the external interfaces.'
     url: "http://docs.arc42.org/section-4/"
     btn_label: "Read More"
     btn_class: "btn--inverse"    
@@ -101,13 +102,33 @@ including rationals.'
 
 feature_row10:
 - image_path: /assets/images/template/10-q-scenario-overview.png
-  alt: "quality "
+  alt: "quality"
   title: "10. Quality Requirements"
   excerpt: 'Quality requirements as scenarios, with quality tree to provide high-level overview. The most important quality goals should have been described in
 section 1.2. (quality goals).'
-  url: "http://docs.arc42.org/section-9/"
+  url: "http://docs.arc42.org/section-10/"
   btn_label: "Read More"
   btn_class: "btn--inverse"    
+
+feature_row11:
+- image_path: /assets/images/template/11-risk-overview.png
+  alt: "risk"
+  title: "11. Risks and Technical Debt"
+  excerpt: 'Known technical risks or technical debt. What potential problems exist within or around the system? What does the development team feel miserable about?'
+  url: "http://docs.arc42.org/section-11/"
+  btn_label: "Read More"
+  btn_class: "btn--danger"    
+
+feature_row12:
+- image_path: /assets/images/template/12-glossary-overview.png
+  alt: "glossary"
+  title: "12. Glossary"
+  excerpt: 'Important domain and technical terms that stakeholders use when discussing he system. Also: translation reference if you work in a multi-language environment.'
+  url: "http://docs.arc42.org/section-12/"
+  btn_label: "Read More"
+  btn_class: "btn--inverse"    
+
+
 
 ---
 
@@ -137,3 +158,7 @@ arc42 answers the following two questions in a pragmatic way, but can be tailore
 {% include feature_row id="feature_row9" type="left" %}
 
 {% include feature_row id="feature_row10" type="right" %}
+
+{% include feature_row id="feature_row11" type="left" %}
+
+{% include feature_row id="feature_row12" type="right" %}
