@@ -1,12 +1,12 @@
 ---
-title: "The arc42 Template"
+title: "arc42 Template Overview"
 layout: splash
-permalink: /template/
+permalink: /overview/
 header:
   overlay_color: "#000"
-  overlay_filter: "0.5"
-  overlay_image: /assets/images/arc42-splash-landingpage.jpg
-  caption: "Photo credit: [**baranco1**](https://www.flickr.com/photos/59159233@N04/)"
+  overlay_filter: "0.2"
+  overlay_image: /assets/images/unsplash-bridge-tom-van-hoogstraten.jpg
+  caption: "Photo credit: [**unsplash**](https://unsplash.com/@grafish/)"
 excerpt: "arc42 is a template for architecture communication and documentation."
 
 
@@ -34,7 +34,7 @@ feature_row3:
   - image_path: /assets/images/template/03-context-overview.png
     alt: "solution strategy overview"
     title: "3. Context and Scope"
-    excerpt: 'Delimits your system from its (external) communication partners (neighboring systems and users). Specifies the external interfaces.'
+    excerpt: 'Delimits your system from its (external) communication partners (neighboring systems and users). Specifies the external interfaces. Shown from a business/domain perspective (always) or a technical perspective (optional)'
     url: "http://docs.arc42.org/section-4/"
     btn_label: "Read More"
     btn_class: "btn--inverse"    
