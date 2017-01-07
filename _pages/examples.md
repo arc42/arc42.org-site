@@ -4,7 +4,7 @@ layout: splash
 permalink: /examples
 header:
   overlay_color: "#000"
-  overlay_filter: "0.5"
+  overlay_filter: "0.0"
   overlay_image: /assets/images/example-splash-daniel-olah.jpg
   caption: "Photo credit: [**unsplash**](https://unsplash.com/)"
 excerpt: "arc42 examples."
@@ -13,8 +13,8 @@ excerpt: "arc42 examples."
 feature_row1:
   - image_path: /assets/images/arc42-by-example-cover.png
     alt: "arc42 by Example"
-    title: "arc42 by Example"
-    excerpt: 'Real software architectures, documented with the arc42 template. Helps you jumpstart your own documentation. Written by Gernot Starke, Michael Simons and Stefan Zörner.'
+    title: "Six Real-World Systems..."
+    excerpt: 'The architecture of real systems, documented with the arc42 template. Helps you jumpstart your own documentation. Written by Gernot Starke, Michael Simons and Stefan Zörner.'
     url: "https://leanpub.com/arc42byexample"
     btn_label: "see the book"
     btn_class: "btn--inverse"
@@ -28,3 +28,24 @@ feature_row1:
 <hr>
 
 {% include feature_row id="feature_row1" type="left" %}
+
+<hr>
+# Online Examples
+
+Here you find links to public arc42 examples. Contact us if you like your system
+included here...
+
+[HTML Sanity Checker](http://aim42.github.io/htmlSanityCheck/hsc_arc42.html) (Englisch)  
+Verbose example for the documentation of a Gradle plugin, created by Dr. Gernot Starke.
+
+[DocChess](http://www.dokchess.de/dokchess/arc42/) (German)  
+Verbose example for a chess engine, created by Stefan Z&ouml;rner. There is also a book available which describes the creation of this example.
+
+[Gradle](http://www.embarc.de/arc42-starschnitt-gradle/) (German)  
+A series of blog posts which describe certain aspects of Gradle and put them into context of arc42. Created by Stefan Z&ouml;rner.
+
+[biking](http://biking.michael-simons.eu/docs/index.html) (English)
+A real world example for a bike activity tracker, created by Michael Simons
+
+[Angular 2](http://blog.fingersteps.ch/2015/12/01/blog-serie-architekturueberblick-von-angular-2/) (German)
+A series of blog posts inspired by the Gradle "Starschnitt". Created by Patrick Roos.
