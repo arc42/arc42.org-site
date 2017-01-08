@@ -8,7 +8,7 @@ header:
   overlay_image: /assets/images/splash/arc42-splash-landingpage.jpg
   cta_label: "Overview"
   cta_url: "/overview"
-  caption: "Photo credit: [**baranco1**](https://www.flickr.com/photos/59159233@N04/)"
+  caption: "Photo credit: [**Thomas Bayer**](https://wwwl.predic8.de/)"
 excerpt: "All you ever need to construct, **communicate and document your software architecture**. Proven, **practical and pragmatic**.
 Free and open source, **takes the pain out of documentation**."
 
