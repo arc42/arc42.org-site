@@ -6,9 +6,7 @@ header:
   overlay_color: "#000"
   overlay_filter: "0.2"
   overlay_image: /assets/images/splash/unsplash-download-pedro-lastra.jpg
-  cta_label: "Get it!"
-  cta_url: "/download/"
-  caption: "Photo credit: [**unsplash**](https://unsplash.com/photos/5g8dJvtYRYA/)"
+  caption: "Photo credit: [**Pedro Lastra**](https://unsplash.com/photos/5g8dJvtYRYA/)"
 excerpt: "Version 7.0 - the most practical and effective arc42 ever."
 
 intro:
@@ -19,12 +17,12 @@ intro:
 
 {% include feature_row id="intro" type="center" %}
 
-{% assign formats = "asciidoc|docx|markdown|latex" | split: "|"  %}  
+{% assign formats = "docx|asciidoc|markdown|html|latex|textile|" | split: "|"  %}  
 {% assign types = "plain|withhelp" | split: "|"  %}  
 | Format | Language | Plain | With Help |
 |--------|----------|-------|-----------|
-{% for format in formats %}| {{ format }} | EN | {% for type in types %} [.zip](download/arc42-template-EN-{{type}}-{{format}}.zip?raw=true) |{% endfor %}
-|  | DE | {% for type in types %} [.zip](download/arc42-template-DE-{{type}}-{{format}}.zip?raw=true) |{% endfor %}
+{% for format in formats %}| {{ format }} | EN | {% for type in types %} [.zip](https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-EN-{{type}}-{{format}}.zip) |{% endfor %}
+|  | DE | {% for type in types %} [.zip](https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-DE-{{type}}-{{format}}.zip) |{% endfor %}
 {% endfor %}|
 Confluence | EN |  | [5.x or 6.x](https://www.dropbox.com/s/yvlkkozpt36rovr/templateEN-V6-confluence-53.xml.zip?dl=0), [4.3](https://www.dropbox.com/s/9ss7s1h24ikyx5d/templateEN-V6-confluence-43.xml.zip?dl=0) |
 |            | DE |  | [5.x oder 6.x](https://www.dropbox.com/s/phz6fgdas2p320a/templateDE-V6-confluence-53.xml.zip?dl=0), [4.3](https://www.dropbox.com/s/x7n456bw8i8dl97/templateDE-V6-confluence-43.xml.zip?dl=0) |
