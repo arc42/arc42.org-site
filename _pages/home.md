@@ -31,7 +31,7 @@ feature_row:
     alt: "develop-icon"
     title: "Develop"
     excerpt: "Build better systems. High quality, lean and lightweight."
-    url: "#develop"
+    url: "/develop"
     btn_label: "Read More"
     btn_class: "btn--info"
 
