@@ -41,7 +41,7 @@ feature_row:
     excerpt: "We've successfully trained hundreds of developers in our
     **Mastering Software Architectures** workshops. Highly practical.
     iSAQB Certification."
-    url: "#learn"
+    url: "/learn"
     btn_label: "Read More"
     btn_class: "btn--info"
 
