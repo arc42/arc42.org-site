@@ -10,7 +10,7 @@ locale                   : "en"
 title                    : "arc42"
 title_separator          : "-"
 name                     : "Dr. Gernot Starke"
-description              : "resources for software architects."
+description              : "Resources for software architects."
 url                      : "http://localhost" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "arc42/arc42.org-site" # GitHub username/repo-name

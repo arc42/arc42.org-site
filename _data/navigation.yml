@@ -2,15 +2,15 @@
 main:
   - title: "Overview"
     url: /overview
-  - title: "Documentation"
+  - title: "Docs"
     url: /documentation
-  - title: "Examples"
-    url: /examples
   - title: "FAQ"
     url: http://faq.arc42.org
+  - title: "Examples"
+    url: /examples
   - title: "Training"
-    url: http://arc42.de/termine.html
+    url: /learn
   - title: "Download"
     url: /download
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "Contact"
+    url: /contact/
