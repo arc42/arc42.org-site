@@ -26,7 +26,7 @@ Their well-known workshop "Mastering Software Architectures" attracts developers
 software designers and software architects, to coach systematic development,
 communication and analysis/evaluation of software architectures.
 
-Peter and Gernot pioneered the "dual trainer" mode - where two experienced
+Peter and Gernot pioneered the "_dual trainer_" mode - where two experienced
 trainers are conducting training in parallel - yielding a lively, diverse
 and highly motivation learning experience. They have gained their vast experience
 from different backgrounds (Peter more from embedded and real-time systems,
@@ -38,5 +38,5 @@ from different backgrounds (Peter more from embedded and real-time systems,
 arc42 trainings provide ideal and effective preparation for
 the iSAQB CPSA (Certified Professional for Software Architecture) certifications.
 
-Our common public trainings are currently held in Munic, Frankfurt and Vienna,
+Our popular public trainings are currently held in Munic, Frankfurt and Vienna,
 for exact dates and conditions please refer to our [German site](http://arc42.de/termine).
