@@ -3,8 +3,8 @@ title: "arc42"
 layout: splash
 permalink: /
 header:
-  overlay_color: "#000"
-  overlay_filter: "0.5"
+  overlay_color: "#d7ecf8"
+  overlay_filter: rgba(15, 80, 180, 0.4)
   overlay_image: /assets/images/splash/arc42-splash-landingpage.jpg
   cta_label: "Overview"
   cta_url: "/overview"
