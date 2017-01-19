@@ -1,6 +1,6 @@
 ---
 title: "arc42 Documentation"
-layout: splash
+layout: single
 permalink: /documentation/
 header:
   overlay_color: "#000"
@@ -9,39 +9,29 @@ header:
   caption: "Photo credit: [**unsplash**](https://unsplash.com/collections/3015/northside-01?photo=XOrFfUPUfeU)"
 excerpt: "The info you need. Your questions answered."
 
-feature_row1:
-  - image_path: /assets/images/cabinet-sanwal-deen.jpg
-    alt: "idea: cabinet"
-    title: "arc42 works like a cabinet..."
-    excerpt: 'predefines sections for the relevant aspects of software architectures. Use them according to specific needs. Intentionally leave sections empty... Compare the arc42 sections to the _drawers_ of a cabinet. arc42 contains 12 such drawers, each one specialized to hold a specific kind of information about the architecture of a system. The meaning of these arc42 drawers is easy to understand.'
-
-structure_overview:
-- image_path: /assets/images/structure-overview.png
-  alt: "the 12 section of arc42"
-  title: arc42 structure overview
-  excerpt: ''
-
-form_no_thanx:
-- image_path: /assets/images/form-no-thanx.png
-  alt: "no forms!"
-  title: "Risk: Template Zombies"
-  excerpt: 'We want to warn you about one risk when using arc42 template:
-  one could interpret the template as a form and could be tempted to
-  fill every field . We seriously dislike terms like “fill in” and “form”.
-   (The term „template zombies“ has been coined by Tom DeMarco, Peter Hruschka et al.
-  in their award-winning book „Adrenalin Junkies and Templates Zombies“ (Dorset House 2007))'
-
 
 ---
-# What is arc42?
+
+## What's arc42?
 
 arc42 offers a clear, simple and effective structure to document and
 communicate your software system.
 
 arc42 is optimized for understandability and adequacy. It naturally guides you to explain any kind of architecture information or decision in an understandable way.
 
+## Documentation
 
-{% include feature_row id="feature_row1" type="left" %}
+* Why arc42?
+
+* [One Minute Overview](/overview): arc42 illustrated on a single page.
+
+* Five Minute Introduction (to be done)
+
+* [Overview of the sections](#overview)
+
+* Full documentation (on our website [docs.arc42.org](http://docs.arc42.org))
+
+
 
 ## Overview of the arc42 sections
 
@@ -53,7 +43,7 @@ arc42 is optimized for understandability and adequacy. It naturally guides you t
 |6. Runtime View|12. Glossary |
 
 
-# arc42 supports ANY kind of system or project
+## arc42 supports ANY kind of system or project
 
 arc42 supports your style of working, your domain and your technology.
 Apply it in agile, lean or formal projects - you decide.
@@ -75,15 +65,7 @@ individual design decisions.
 make anyhow.
 
 
-{% include feature_row id="form_no_thanx" type="right" %}
-
-
-arc42 is intended to be a lightweight tool that can easily be adapted to
-your specific need. It is not nearly a “fill-in all fields” form.
-
-
-
-# Get it!
+## Get it!
 
 You want aweseome communication/documentation support for your
 system or your next project:
