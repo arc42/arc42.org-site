@@ -12,12 +12,20 @@ excerpt: "The info you need. Your questions answered."
 
 ---
 
-## What's arc42?
+## arc42: Effective, lean and pragmatic architecture documentation and communication
 
 arc42 offers a clear, simple and effective structure to document and
 communicate your software system.
 
+![image-left](/assets/images/cabinet-sanwal-deen-300px.jpg){: .align-left}
+Compare the arc42 sections to the _drawers_ of a cabinet. arc42 contains 12 such drawers, each one specialized to hold a specific kind of information about the architecture of a system.
+
 arc42 is optimized for understandability and adequacy. It naturally guides you to explain any kind of architecture information or decision in an understandable way.
+
+#### arc42 supports ANY kind of system or project
+
+arc42 supports your style of working, your domain and your technology.
+Apply it in agile, lean or formal projects - you decide.
 
 ## Documentation
 
@@ -42,11 +50,6 @@ arc42 is optimized for understandability and adequacy. It naturally guides you t
 |5. Building Block View|11. Risks & Technical Debt|
 |6. Runtime View|12. Glossary |
 
-
-## arc42 supports ANY kind of system or project
-
-arc42 supports your style of working, your domain and your technology.
-Apply it in agile, lean or formal projects - you decide.
 
 
 ## Painless documentation
