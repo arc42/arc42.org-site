@@ -12,8 +12,9 @@
 
     <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | absolute_url }}{% endif %}"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
 
-    <li><script async defer src="https://slackin-giwyfuegce.now.sh/slackin.js"></script></li>
-  </ul>
+    <li><a href="http://arc42.slack.com/"><i class="fa fa-fw fa-slack" aria-hidden="true"></i> Slack</a></li>
+
+    </ul>
 </div>
 
 <div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }}
