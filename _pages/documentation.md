@@ -29,7 +29,7 @@ Apply it in agile, lean or formal projects - you decide.
 
 ## Documentation
 
-* Why arc42?
+* [Why arc42?](/why): What problems does arc42 solve?
 
 * [One Minute Overview](/overview): arc42 illustrated on a single page.
 
