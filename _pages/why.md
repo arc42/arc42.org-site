@@ -22,12 +22,13 @@ arc42 can help to reduce or eliminate very effiently with low effort.
 ### Not Existing or Outdated
 The first problem is missing or outdated documentation:
 
-![](/assets/images/desert-junk.jpg){: .align-right}{: width="40%"}
+![](/assets/images/desert-junk.jpg)
+[Photo: Pablo Garcia Saldana](https://unsplash.com/photos/I9qoPr82Csg){: .small}
+
 There's documentation, created somewhere in the past. Rumors say it had been
 correct a long time ago, the original authors unknown or vanished. Such _historical_
 artifacts only waste disk space and provide no value at alll, for nobody.
 
-Photo: [Pablo Garcia Saldana](https://unsplash.com/photos/I9qoPr82Csg){: .small}
 
 
 ### Chaotic
@@ -40,25 +41,33 @@ by various people without proper coordination.
 Such _documentation anarchy_ is hard to maintain and is generally considered
 more harmful than helpful, due to the lack of appropriate structure.
 
-Photo: [AuntyLaurie](https://www.flickr.com/photos/auntylaurie/8239863846/){: .small}
+[Photo: AuntyLaurie](https://www.flickr.com/photos/auntylaurie/8239863846/){: .small}
 
 
 ### Too Much
-You can hide any needle in a sufficiently large haystack - and nobody will
-be able to efficiently find it in there.
 
 ![](/assets/images/document-pile.jpg){: .align-right}{: width="30%"}
+You can hide any needle in a sufficiently large haystack - and nobody will
+be able to efficiently find it in there.
 Such piles of documents might seem impressive at first - unless someone tries
 to find (or update!) specific information.
 
-Photo: [Jean Etienn Min Duy](https://www.flickr.com/photos/jepoirrier/376900808){: .small}
+These overflow often happens on network-shares or wikis when nobody
+cares about documentation structure and -content.
+
+[Photo: Alexandre Duret-Lutz](https://www.flickr.com/photos/gadl/320300354/){: .small}
 
 
 ### Painful
 
 From typical developers' perspective, documentation is often a pain:
-formalities, inapropriate tools and formats, unclear instructions on
-what and how to document...
+
+![](/assets/images/painful.jpg){: .align-left}{: width="30%"}
+Formalities, inapropriate tools and formats, missing goals,
+unclear instructions on what and how to document. Stakeholders complaining,
+documentation is awkward and clumsy. Creativity gone. That's **not** why people became developer.  
+
+[Photo: MattysFlicks](https://www.flickr.com/photos/68397968@N07/9933927445/){: .small}
 
 
 # arc42 makes documentation efficient and effective
