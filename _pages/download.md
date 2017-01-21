@@ -52,7 +52,8 @@ two flavors:
 
 ### Legacy Version (arc42 v6) for Confluence  
 
-If you still use confluence version 4 or 5, these legacy downloads might help you.
+If you still use confluence version 4 or 5, these legacy downloads might help you
+(currently from Dropbox - we're moving this to the Github repo any day now)
 
 | Confluence version | Language  | With Help |
 |--------|-----------|-----------|
