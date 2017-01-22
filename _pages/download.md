@@ -40,7 +40,7 @@ two flavors:
 | Language | flat | structured |
 |----------|------|------------|
 | DE | [.zip]({{PREFIX}}DE-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}DE-withhelp-confluenceStructured.zip) |
-| EN | [.zip]({{PREFIX}}EN-withhelp-confluenceFlat.zip) | [.zip]({{URL_PREFIX}}EN-withhelp-confluenceStructured.zip) |
+| EN | [.zip]({{PREFIX}}EN-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}EN-withhelp-confluenceStructured.zip) |
 
 
 ### Notes for Confluence users
