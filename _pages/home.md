@@ -23,7 +23,7 @@ feature_row:
     image_path: assets/images/communicate-icon.svg
     alt: "communicate-icon"
     excerpt: "Effectively communicate architectures. Pragmatic views and crosscutting concepts, compatible to IEEE 1471."
-    url: "#communicate"
+    url: "/overview"
     btn_label: "Read More"
     btn_class: "btn--info"
 
