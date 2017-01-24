@@ -13,10 +13,7 @@ excerpt: "All you ever need to construct, **communicate and document your softwa
 Free and open source, **takes the pain out of documentation**."
 
 intro:
-  - excerpt: "Ensures **better software architectures**.<br>
-    	Based on practical experience of many systems.<br>
-      Proven template for documentation and communication. <br>
-      Supports arbitrary technologies and tools."
+  - excerpt: "arc42 ensures **better software architectures**."
 
 feature_row:
   - title: "Communicate"
@@ -50,3 +47,16 @@ feature_row:
 {% include feature_row id="intro" type="center" %}
 
 {% include feature_row %}
+
+
+arc42 is based on **practical experience** of many systems in various domains,
+from information and web systems, real-time and embedded to business intelligence
+and data warehouses.
+
+arc42 providesproviding a template for **documentation and communication** of software and system
+architectures.
+
+arc42 supports **arbitrary technologies and tools**.
+
+arc42 is completely process-agnostic, and especially
+well-suited for **lean and agile** development approaches.
