@@ -169,7 +169,7 @@ arc42 answers the following two questions in a pragmatic way, but can be tailore
 
 Now that you know about the template sections, you can dive deeper. Have a look at our extensive documentation:
 
-* Real-world [examples](/examples/)
+* Real-world [examples](/examples)
 * FAQ - [Frequently asked questions](http://faq.arc42.org)
 * Our extensive [template documentation](http://docs.arc42.org), organized by template section.
 
