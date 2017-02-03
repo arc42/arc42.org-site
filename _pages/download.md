@@ -89,10 +89,7 @@ differently.
 
 | Enterprise Architect EAP |
 |--------------------------|
-| [.zip]({{GITHUBDIR}}eap/arc42-V6-short.zip)|
-
-U.
-{: .small}
+| Short EA template: [arc42-V6-short.eap.zip]({{GITHUBDIR}}eap/arc42-V6-short.eap.zip)|
 
 
 
