@@ -22,6 +22,7 @@ intro:
 On this page you find all available arc42 template downloads,
 various formats for various tools.
 
+{% assign GITHUBDIR = "https://github.com/arc42/arc42-template/raw/master/dist/" %}
 {% assign PREFIX = "https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-" %}
 
 ## File-based formats
@@ -61,14 +62,13 @@ These versions are generated for the latest version of confluence
 ## Legacy Version (arc42 v6) for Confluence  
 
 If you still use confluence version 4 or 5, these legacy downloads might help you
-(currently from Dropbox - we're moving this to the Github repo any day now)
 
 | Confluence version | Language  | With Help |
 |--------|-----------|-----------|
-|5.x | EN |  [.zip](https://www.dropbox.com/s/yvlkkozpt36rovr/templateEN-V6-confluence-53.xml.zip?dl=0)|
-|>4.3 | EN | [.zip](https://www.dropbox.com/s/9ss7s1h24ikyx5d/templateEN-V6-confluence-43.xml.zip?dl=0)|
-|5.x | DE | [.zip](https://www.dropbox.com/s/phz6fgdas2p320a/templateDE-V6-confluence-53.xml.zip?dl=0)|
-|>4.3 | DE | [.zip](https://www.dropbox.com/s/x7n456bw8i8dl97/templateDE-V6-confluence-43.xml.zip?dl=0) |
+|5.x | EN |  [.zip]({{GITHUBDIR}}legacy/templateEN-V6-confluence-53.xml.zip)|
+|>4.3 | EN | [.zip]({{GITHUBDIR}}legacy/templateEN-V6-confluence-43.xml.zip)|
+|5.x | DE | [.zip]({{GITHUBDIR}}legacy/templateDE-V6-confluence-53.xml.zip)|
+|>4.3 | DE | [.zip]({{GITHUBDIR}}legacy/templateDE-V6-confluence-43.xml.zip) |
 
 These legacy versions have been provided (thanx!) by arc42 users - and can
 not be supported by us (as we don't have access to these legacy Confluence versions).
@@ -79,10 +79,22 @@ not be supported by us (as we don't have access to these legacy Confluence versi
 Enterprise Architect;copy; is a commercial UML modeling tool by
 SparxSystems.
 
-The Enterprise-Architect version of arc42 contains the plain
-arc42 structure without help text.
+The Enterprise-Architect version of arc42 contains only the diagram-intensive parts
+of the arc42 structure without help text. It's available in EN only.
 
-&lt; to be done >
+Please use this format only as a companion to any textual or wiki format,
+as it does not contain any explanations or rationales. Put your diagrams
+into an EA model, but text and tables should be created, kept and maintained
+differently.
+
+| Enterprise Architect EAP |
+|--------------------------|
+| [.zip]({{GITHUBDIR}}eap/arc42-V6-short.zip)|
+
+U.
+{: .small}
+
+
 
 ## Formats for other modeling tools
 We currently don't support additional modeling tools - but would love to...
