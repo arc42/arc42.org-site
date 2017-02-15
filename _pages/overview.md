@@ -35,7 +35,7 @@ feature_row3:
     alt: "solution strategy overview"
     title: "3. Context and Scope"
     excerpt: 'Delimits your system from its (external) communication partners (neighboring systems and users). Specifies the external interfaces. Shown from a business/domain perspective (always) or a technical perspective (optional)'
-    url: "http://docs.arc42.org/section-4/"
+    url: "http://docs.arc42.org/section-3/"
     btn_label: "Read More"
     btn_class: "btn--inverse"    
 
