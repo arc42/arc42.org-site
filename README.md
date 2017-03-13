@@ -1,6 +1,6 @@
 # arc42.org Website
 
-> currently available on [draft.arc42.org](http://draft.arc42.org)
+> currently available on [arc42.org](http://arc42.org)
 
 
 
@@ -24,7 +24,7 @@ CNAME entry to point to github.
 
 * Free images can be found at [Unsplash](https://unsplash.com/)
 * I bought several icons from [IconFinder](https://www.iconfinder.com?ref=gernotstarke), a great source for professional-grade icons. Recommended!
-* I generated the various favicon files with [RealFavIconGenerator](http://realfavicongenerator.net/). 
+* I generated the various favicon files with [RealFavIconGenerator](http://realfavicongenerator.net/).
 
 
 ---
@@ -38,11 +38,11 @@ The arc42 template is licensed under a [CreativeCommons Sharealike International
 You are free to:
 
 * **Share** — copy and redistribute the template in any medium or format
-* **Adapt** — remix, transform, and build upon the material for any purpose, even commercially. 
+* **Adapt** — remix, transform, and build upon the material for any purpose, even commercially.
 
 
 
-### [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) 
+### [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/)
 
 
 ##### The MIT License (MIT)
