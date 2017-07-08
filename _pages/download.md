@@ -20,14 +20,14 @@ intro:
 {% include toc %}
 
 On this page you find all available arc42 template downloads,
-various formats for various tools.
+various [formats]({{page.url}}#format-overview) for various tools. For an overview of these formats, see [below]({{page.url}}#format-overview).
 
 {% assign GITHUBDIR = "https://github.com/arc42/arc42-template/raw/master/dist/" %}
 {% assign PREFIX = "https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-" %}
 
 ## File-based formats
 
-{% assign formats = "docx|asciidoc|markdown|latex|html|textile" | split: "|"  %}  
+{% assign formats = "docx|asciidoc|markdown|latex|html|rst|textile" | split: "|"  %}  
 {% assign types = "plain|withhelp" | split: "|"  %}  
 
 | Format | Language | Plain | With Help |
@@ -98,3 +98,34 @@ We currently don't support additional modeling tools - but would love to...
 In case you use arc42 with such a tool, please think about contributing :-)
 
 Please [contact us!](/contact)
+
+
+
+## Format overview
+
+**docx**
+: Microsoft Word, usable with LibreOffice or OpenOffice
+
+**asciidoc**
+: Powerful yet simple markup language, used by arc42 itself. Ideally suited for architecture documentation. See
+[docToolchain](https://rdmueller.github.io/docToolchain/) or the [original source](http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/).
+
+**markdown**
+: Widespread and simple markup language, [documented here](https://daringfireball.net/projects/markdown/syntax) by its inventor
+
+**latex**
+: No, not the rubber stuff, but the mother (despite TeX)
+of all markup languages, a full-blown [document preparation system](https://www.latex-project.org/). For those who need beauty and are willing
+to invest some effort...
+
+**rst**
+: [ReStructuredText](http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html),  markup language, heavily used by [ReadTheDocs] and in the Python world.
+
+**textile**
+: Another simple markup language, [well-documented](https://txstyle.org/) 
+
+**html**
+: Used only to _view_ the template, not to work with it
+
+**Confluence**
+: A commercial wiki system (by [Atlassian Inc.](https://confluence.atlassian.com/alldoc/atlassian-documentation-32243719.html)).
