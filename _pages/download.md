@@ -111,7 +111,7 @@ Please [contact us!](/contact)
 [docToolchain](https://rdmueller.github.io/docToolchain/) or the [original source](http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/).
 
 **markdown**
-: Widespread and simple markup language, [documented here](https://daringfireball.net/projects/markdown/syntax) by its inventor
+: Widespread and simple markup language, [documented here](https://daringfireball.net/projects/markdown/syntax) by its inventor.
 
 **latex**
 : No, not the rubber stuff, but the mother (despite TeX)
@@ -119,13 +119,13 @@ of all markup languages, a full-blown [document preparation system](https://www.
 to invest some effort...
 
 **rst**
-: [ReStructuredText](http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html),  markup language, heavily used by [ReadTheDocs] and in the Python world.
+: [ReStructuredText](http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html),  markup language, heavily used by [ReadTheDocs](https://readthedocs.org/) and in the Python world.
 
 **textile**
-: Another simple markup language, [well-documented](https://txstyle.org/) 
+: Another simple markup language, [well-documented](https://txstyle.org/). 
 
 **html**
-: Used only to _view_ the template, not to work with it
+: Used only to _view_ the template, not to work with it.
 
 **Confluence**
 : A commercial wiki system (by [Atlassian Inc.](https://confluence.atlassian.com/alldoc/atlassian-documentation-32243719.html)).
