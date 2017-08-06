@@ -32,13 +32,11 @@ alexa_site_verification  :
 
 # Social Sharing
 twitter:
-  username               : gernotstarke
-  # For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
+  username               : arc42Tipps
+
 social:
   type                   : Organization # Person or Organization (defaults to Person)
   name                   : arc42 # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
 
 # Analytics
 analytics:
@@ -55,11 +53,11 @@ author:
   location         : "Cologne, Germany"
   email            : info@arc42.org
   uri              : http://gernotstarke.de
-  github           : gernotstarke
-  google_plus      :
-  stackoverflow    : # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
-  twitter          : gernotstarke
-  xing             :
+  github           : arc42
+  google_plus      : 105917203908419102125
+  stackoverflow    :
+  twitter          : arc42Tipps
+  xing             : arc42
 
 # Reading Files
 include:

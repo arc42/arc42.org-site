@@ -32,13 +32,11 @@ alexa_site_verification  :
 
 # Social Sharing
 twitter:
-  username               : gernotstarke
-  # For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
+  username               : arc42Tipps
+
 social:
   type                   : Organization # Person or Organization (defaults to Person)
   name                   : arc42 # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
 
 # Analytics
 analytics:
@@ -49,17 +47,17 @@ analytics:
 
 # Site Author
 author:
-  name             : "Dr. Gernot Starke"
-  avatar           : /assets/images/Gernot-avatar-2016.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "innoQ fellow, (co)founder of arc42, founder of aim42"
-  location         : "Cologne, Germany"
-  email            : info@arc42.org
-  uri              : http://gernotstarke.de
-  github           : gernotstarke
-  google_plus      : 105917203908419102125
-  stack_overflow   : arc42
-  twitter          : gernotstarke
-  xing             :
+      name             : "Dr. Gernot Starke"
+      avatar           : /assets/images/Gernot-avatar-2016.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+      bio              : "innoQ fellow, (co)founder of arc42, founder of aim42"
+      location         : "Cologne, Germany"
+      email            : info@arc42.org
+      uri              : http://gernotstarke.de
+      github           : arc42
+      google_plus      : 105917203908419102125
+      stackoverflow    :
+      twitter          : arc42Tipps
+      xing             : arc42
 
 # Reading Files
 include:
