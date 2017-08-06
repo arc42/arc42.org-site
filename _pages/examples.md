@@ -49,3 +49,11 @@ A real world example for a bike activity tracker, created by Michael Simons
 
 [Angular 2](http://blog.fingersteps.ch/2015/12/01/blog-serie-architekturueberblick-von-angular-2/) (German)
 A series of blog posts inspired by the Gradle "Starschnitt". Created by Patrick Roos.
+
+
+
+# Learn more!
+
+{% include subtle-ads/subtle-ads.html %}
+
+<a href="http://arc42.de" class="btn btn--success">Training site</a>

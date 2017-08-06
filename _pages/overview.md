@@ -165,7 +165,7 @@ arc42 answers the following two questions in a pragmatic way, but can be tailore
 
 <hr>
 
-# More Info
+# Further information
 
 Now that you know about the template sections, you can dive deeper. Have a look at our extensive documentation:
 
@@ -174,3 +174,10 @@ Now that you know about the template sections, you can dive deeper. Have a look 
 * Our extensive [template documentation](http://docs.arc42.org), organized by template section.
 
 <a href="/documentation" class="btn btn--success">show more documentation.</a>
+
+
+# Learn more!
+
+{% include subtle-ads/subtle-ads.html %}
+
+<a href="http://arc42.de" class="btn btn--success">Training site</a>
