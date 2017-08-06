@@ -13,7 +13,7 @@ excerpt: "All you ever need to construct, **communicate and document your softwa
 Free and open source, **takes the pain out of documentation**."
 
 intro:
-  - excerpt: "arc42 ensures **better software architectures**."
+  - title: "arc42: better software architectures"
 
 feature_row:
   - title: "Communicate"
