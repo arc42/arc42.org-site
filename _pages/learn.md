@@ -1,6 +1,6 @@
 ---
 title: "Learn architecture"
-layout: single
+layout: splash
 permalink: /learn
 header:
   overlay_image: /assets/images/splash/learn-header-helloquence.jpg
@@ -40,3 +40,10 @@ the iSAQB CPSA (Certified Professional for Software Architecture) certifications
 
 Our popular public trainings are currently held in Munic, Frankfurt and Vienna,
 for exact dates and conditions please refer to our [German site](http://arc42.de/termine).
+
+
+# Next dates
+
+{% include subtle-ads/subtle-ads.html %}
+
+<a href="http://arc42.de" class="btn btn--success">Training site</a>

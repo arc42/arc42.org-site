@@ -129,3 +129,11 @@ to invest some effort...
 
 **Confluence**
 : A commercial wiki system (by [Atlassian Inc.](https://confluence.atlassian.com/alldoc/atlassian-documentation-32243719.html)).
+
+
+
+# Learn more!
+
+{% include subtle-ads/subtle-ads.html %}
+
+<a href="http://arc42.de" class="btn btn--success">Training site</a>

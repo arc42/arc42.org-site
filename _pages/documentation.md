@@ -1,6 +1,6 @@
 ---
 title: "arc42 Documentation"
-layout: single
+layout: splash
 permalink: /documentation/
 header:
   overlay_color: "#000"
@@ -74,3 +74,10 @@ You want aweseome communication/documentation support for your
 system or your next project:
 
 <a href="/download" class="btn btn--success">Download.</a>
+
+
+# Learn more!
+
+{% include subtle-ads/subtle-ads.html %}
+
+<a href="http://arc42.de" class="btn btn--success">Training site</a>

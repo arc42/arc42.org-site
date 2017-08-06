@@ -60,3 +60,10 @@ arc42 supports **arbitrary technologies and tools**.
 
 arc42 is completely process-agnostic, and especially
 well-suited for **lean and agile** development approaches.
+
+
+# Learn more!
+
+{% include subtle-ads/subtle-ads.html %}
+
+<a href="http://arc42.de" class="btn btn--success">Training site</a>
