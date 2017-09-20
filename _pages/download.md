@@ -34,6 +34,7 @@ various [formats]({{page.url}}#format-overview) for various tools. For an overvi
 |--------|----------|-------|-----------|
 {% for format in formats %}| {{ format }} | EN | {% for type in types %} [.zip]({{PREFIX}}EN-{{type}}-{{format}}.zip) |{% endfor %}
 |  | DE | {% for type in types %} [.zip]({{PREFIX}}DE-{{type}}-{{format}}.zip) |{% endfor %}
+|  | ES | {% for type in types %} [.zip]({{PREFIX}}ES-{{type}}-{{format}}.zip) |{% endfor %}
 {% endfor %}
 
 ## Confluence format
@@ -48,6 +49,7 @@ two flavors:
 |----------|------|------------|
 | DE | [.zip]({{PREFIX}}DE-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}DE-withhelp-confluenceStructured.zip) |
 | EN | [.zip]({{PREFIX}}EN-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}EN-withhelp-confluenceStructured.zip) |
+| ES | [.zip]({{PREFIX}}ES-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}ES-withhelp-confluenceStructured.zip) |
 
 These versions are generated for the latest version of confluence
 (we test with our own [cloud-hosted confluence](https://arc42-template.atlassian.net/)
