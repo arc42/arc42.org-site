@@ -94,6 +94,35 @@ differently.
 | Short EA template: [arc42-V6-short.eap.zip]({{GITHUBDIR}}eap/arc42-V6-short.eap.zip)|
 
 
+## IBM Rhapsody&copy; format
+[Rhapsody](http://www-03.ibm.com/software/products/en/ratirhap)&copy;
+is a commercial modeling tool by IBM, primarily suited
+for embedded systems.
+
+The Rhapsody version of arc42 contains the complete parts of the arc42 structure with minimum help text. It’s available in EN only. This rhapsody arc42 profile includes the complete arc42 structure within Rhapsody using UML/SysML.
+
+This version has been created and tested with Rhapsody version 8.2.1.
+
+It contains following items in the zip archive:
+
+1.	rhapsody_arc42_profile Rhapsody project. In this Rhapsody project following model is contained:
+    *	rhapsody_arc42_profile which comprises of stereotypes required for establishing arc42 structure
+    *	place holder to start adding your project
+
+2.	rhapsody_arc42_report_generation folder for Report generation which contains IBM RPE template required to generate Report out of the Rhapsody model.
+
+3.	rhapsody_example_arc42_for_arc42 example Rhapsody project called. In this Rhapsody project following model is incorporated
+    *	example_arc42_for_arc42 a small example where all the chapters are explained on why arc42 with arc42 structure
+    *	usage of rhapsody_arc42_profile within
+
+4.	rhapsody_arc42_getting_started_guide.docx which explains the usage of rhapsody arc42 profile
+
+
+
+We appreciate the contribution of user `@nrnjnsk83`, who produced and contributed
+the Rhapsody version for arc42!
+{: .small}
+
 
 ## Formats for other modeling tools
 We currently don't support additional modeling tools - but would love to...
