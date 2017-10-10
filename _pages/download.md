@@ -119,8 +119,7 @@ It contains following items in the zip archive:
 
 
 
-We appreciate the contribution of user `@nrnjnsk83`, who produced and contributed
-the Rhapsody version for arc42!
+We appreciate the contribution of user `@nrnjnsk83` (Niranjan SK, Robert Bosch GmbH), who produced and contributed the Rhapsody version for arc42!
 {: .small}
 
 
