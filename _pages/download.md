@@ -122,6 +122,11 @@ It contains following items in the zip archive:
 We appreciate the contribution of user `@nrnjnsk83` (Niranjan SK, Robert Bosch GmbH), who produced and contributed the Rhapsody version for arc42!
 {: .small}
 
+| IBM Rhapsody arc42 Template |
+|--------------------------|
+| [arc42-v1-rhapsody.zip]({{GITHUBDIR}}rhapsody/arc42-v1-rhapsody.zip)|
+
+
 
 ## Formats for other modeling tools
 We currently don't support additional modeling tools - but would love to...
