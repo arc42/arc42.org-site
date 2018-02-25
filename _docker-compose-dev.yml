@@ -3,9 +3,9 @@
 version: '2'
 
 services:
-  jekyll:
+  arc42-jekyll:
     build: .
-    image: arc42:org-site
+    image: arc42:site
     command: jekyll serve --trace --host 0.0.0.0 --watch --incremental
     environment:
       - JEKYLL_ENV=development
