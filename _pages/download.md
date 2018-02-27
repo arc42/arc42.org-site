@@ -27,7 +27,7 @@ various [formats]({{page.url}}#format-overview) for various tools. For an overvi
 
 ## File-based formats
 
-{% assign formats = "docx|asciidoc|markdown|latex|html|rst|textile" | split: "|"  %}  
+{% assign formats = "docx|asciidoc|markdown|markdownMP|latex|html|rst|textile" | split: "|"  %}  
 {% assign types = "plain|withhelp" | split: "|"  %}  
 
 | Format | Language | Plain | With Help |
