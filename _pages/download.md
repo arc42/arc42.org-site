@@ -148,6 +148,9 @@ Please [contact us!](/contact)
 **markdown**
 : Widespread and simple markup language, [documented here](https://daringfireball.net/projects/markdown/syntax) by its inventor.
 
+**markdownMP**
+: Same format as **markdown** above but every chapter is located in its own file.
+
 **latex**
 : No, not the rubber stuff, but the mother (despite TeX)
 of all markup languages, a full-blown [document preparation system](https://www.latex-project.org/). For those who need beauty and are willing
