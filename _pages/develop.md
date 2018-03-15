@@ -3,14 +3,14 @@ title: "arc42 for architecture development"
 layout: single
 permalink: /develop
 header:
-  overlay_image: /assets/images/splash/develop-header.jpg
+  overlay_image: /images/splash/develop-header.jpg
   caption: "Photo: [**Ilya Pavlov**](https://unsplash.com/search/photos/code?photo=OqtafYT5kTw)"
 
 ---
 
 # Architecture Activities
 
-![](/assets/images/arc42-process-with-icon.png)
+![](/images/arc42-process-with-icon.png)
 
 We propose six core activities that software architects should carry out
 during development and maintenance of any system.
