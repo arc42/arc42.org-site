@@ -5,13 +5,13 @@ permalink: /examples
 header:
   overlay_color: "#000"
   overlay_filter: "0.0"
-  overlay_image: /assets/images/splash/unsplash-example-daniel-olah.jpg
+  overlay_image: /images/splash/unsplash-example-daniel-olah.jpg
   caption: "Photo credit: [**unsplash**](https://unsplash.com/)"
 excerpt: "arc42 examples."
 
 
 feature_row1:
-  - image_path: /assets/images/arc42-by-example-cover.png
+  - image_path: /images/arc42-by-example-cover.png
     alt: "arc42 by Example"
     title: "Six Real-World Systems..."
     excerpt: 'The architecture of real systems, documented with the arc42 template. Helps you jumpstart your own documentation. Written by Gernot Starke, Michael Simons and Stefan Zörner.'

@@ -3,14 +3,14 @@ title: "Learn architecture"
 layout: splash
 permalink: /learn
 header:
-  overlay_image: /assets/images/splash/learn-header-helloquence.jpg
+  overlay_image: /images/splash/learn-header-helloquence.jpg
   caption: "Photo: [**helloquence**](https://unsplash.com/photos/5fNmWej4tAA)"
 
 ---
 
 # Become Certified Professional for Software Architecture!
 
-![](/assets/images/arc42-learn-cpsaf.png)
+![](/images/arc42-learn-cpsaf.png)
 
 We are founding members of the iSAQB association, and actively participated
 in iSAQB standardization working groups ever since.

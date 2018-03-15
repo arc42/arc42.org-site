@@ -5,7 +5,7 @@ permalink: /documentation/
 header:
   overlay_color: "#000"
   overlay_filter: "0.4"
-  overlay_image: /assets/images/splash/unsplash-documentation-sebastien-gabriel.jpg
+  overlay_image: /images/splash/unsplash-documentation-sebastien-gabriel.jpg
   caption: "Photo credit: [**unsplash**](https://unsplash.com/collections/3015/northside-01?photo=XOrFfUPUfeU)"
 excerpt: "The info you need. Your questions answered."
 
@@ -17,7 +17,7 @@ excerpt: "The info you need. Your questions answered."
 arc42 offers a clear, simple and effective structure to document and
 communicate your software system.
 
-![image-left](/assets/images/cabinet-sanwal-deen-300px.jpg){: .align-left}
+![image-left](/images/cabinet-sanwal-deen-300px.jpg){: .align-left}
 Compare the arc42 sections to the _drawers_ of a cabinet. arc42 contains 12 such drawers, each one specialized to hold a specific kind of information about the architecture of a system.
 
 arc42 is optimized for understandability and adequacy. It naturally guides you to explain any kind of architecture information or decision in an understandable way.

@@ -5,6 +5,9 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
+theme: minimal-mistakes-jekyll
+
+
 # Site Settings
 locale                   : "en"
 title                    : "arc42"
@@ -14,7 +17,7 @@ description              : "Resources for software architects."
 url                      : "http://localhost" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "arc42/arc42.org-site" # GitHub username/repo-name
-teaser                   : /assets/images/arc42-splash-landingpage.jpg # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : /images/arc42-splash-landingpage.jpg # path of fallback teaser image, e.g. "/images/500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -48,7 +51,7 @@ analytics:
 # Site Author
 author:
       name             : "Dr. Gernot Starke"
-      avatar           : /assets/images/Gernot-avatar-2016.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+      avatar           : /images/Gernot-avatar-2016.jpg # path of avatar image, e.g. "/images/bio-photo.jpg"
       bio              : "innoQ fellow, (co)founder of arc42, founder of aim42"
       location         : "Cologne, Germany"
       email            : info@arc42.org
@@ -85,8 +88,10 @@ exclude:
   - Rakefile
   - README
   - tmp
-  - /docs # ignore Minimal Mistakes /docs
-  - /test # ignore Minimal Mistakes /test
+  - Dockerfile
+  - _develop-site.sh
+  - _docker*
+
 keep_files:
   - .git
 encoding: "utf-8"
@@ -127,7 +132,7 @@ timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist

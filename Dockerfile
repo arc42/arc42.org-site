@@ -1,10 +1,12 @@
-FROM ruby:2.3-alpine
+FROM jekyll/builder
+
+LABEL version="0.9.0"
+LABEL description="develop and generate arc42.org site"
+LABEL vendor="arc42 (Gernot Starke)"
 
 COPY Gemfile .
-COPY Gemfile.lock .
+#COPY Gemfile.lock .
 
-RUN apk update && \
-    apk add make gcc musl-dev nodejs python
 RUN bundle install
 
 WORKDIR /srv/jekyll

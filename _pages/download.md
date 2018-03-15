@@ -5,7 +5,7 @@ permalink: /download
 header:
   overlay_color: "#000"
   overlay_filter: "0.2"
-  overlay_image: /assets/images/splash/unsplash-download-pedro-lastra.jpg
+  overlay_image: /images/splash/unsplash-download-pedro-lastra.jpg
   caption: "Photo credit: [**Pedro Lastra**](https://unsplash.com/photos/5g8dJvtYRYA/)"
 excerpt: "Version 7.0 - the most practical and effective arc42 ever."
 

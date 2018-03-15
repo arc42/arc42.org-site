@@ -5,7 +5,7 @@ permalink: /
 header:
   overlay_color: "#d7ecf8"
   overlay_filter: rgba(15, 80, 180, 0.4)
-  overlay_image: /assets/images/splash/arc42-splash-landingpage.jpg
+  overlay_image: /images/splash/arc42-splash-landingpage.jpg
   cta_label: "Overview"
   cta_url: "/overview"
   caption: "Photo credit: [**Thomas Bayer**](https://www.predic8.de/)"
@@ -17,14 +17,14 @@ intro:
 
 feature_row:
   - title: "Communicate"
-    image_path: assets/images/communicate-icon.svg
+    image_path: /images/communicate-icon.svg
     alt: "communicate-icon"
     excerpt: "Effectively communicate architectures. Pragmatic views and crosscutting concepts, compatible to IEEE 1471."
     url: "/overview"
     btn_label: "Read More"
     btn_class: "btn--info"
 
-  - image_path: assets/images/develop-icon.svg
+  - image_path: /images/develop-icon.svg
     alt: "develop-icon"
     title: "Develop"
     excerpt: "Build better systems. High quality, lean and lightweight."
@@ -32,7 +32,7 @@ feature_row:
     btn_label: "Read More"
     btn_class: "btn--info"
 
-  - image_path: assets/images/workshop-icon.svg
+  - image_path: /images/workshop-icon.svg
     alt: "workshop-icon"
     title: "Learn"
     excerpt: "We've successfully trained hundreds of developers in our
