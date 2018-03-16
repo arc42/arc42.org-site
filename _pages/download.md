@@ -27,7 +27,7 @@ various [formats]({{page.url}}#format-overview) for various tools. For an overvi
 
 ## File-based formats
 
-{% assign formats = "docx|asciidoc|markdown|latex|html|rst|textile" | split: "|"  %}  
+{% assign formats = "docx|asciidoc|markdown|markdownMP|latex|html|rst|textile" | split: "|"  %}  
 {% assign types = "plain|withhelp" | split: "|"  %}  
 
 | Format | Language | Plain | With Help |
@@ -147,6 +147,9 @@ Please [contact us!](/contact)
 
 **markdown**
 : Widespread and simple markup language, [documented here](https://daringfireball.net/projects/markdown/syntax) by its inventor.
+
+**markdownMP**
+: Same format as **markdown** above but every chapter is located in its own file.
 
 **latex**
 : No, not the rubber stuff, but the mother (despite TeX)
