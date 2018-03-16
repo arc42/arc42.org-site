@@ -91,6 +91,7 @@ exclude:
   - Dockerfile
   - _develop-site.sh
   - _docker*
+  - zz-site
 
 keep_files:
   - .git
