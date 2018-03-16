@@ -17,7 +17,9 @@ intro:
 
 {% include feature_row id="intro" type="center" %}
 
+<!--
 {% include toc %}
+-->
 
 On this page you find all available arc42 template downloads,
 various [formats]({{page.url}}#format-overview) for various tools. For an overview of these formats, see [below]({{page.url}}#format-overview).
@@ -172,8 +174,6 @@ to invest some effort...
 
 # Learn more!
 
-<!--
 {% include subtle-ads/subtle-ads.html %}
--->
 
 <a href="http://arc42.de" class="btn btn--success">Training site</a>
