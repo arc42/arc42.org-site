@@ -5,7 +5,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-remote-theme: minimal-mistakes-jekyll
+remote-theme: mmistakes/minimal-mistakes@4.10.1
 
 # Site Settings
 locale                   : "en"
