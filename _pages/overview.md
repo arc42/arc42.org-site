@@ -179,6 +179,6 @@ Now that you know about the template sections, you can dive deeper. Have a look 
 
 # Learn more!
 
-{% include trainings/subtle-ads.html %}
+{% include subtle-ads.html %}
 
 <a href="http://arc42.de" class="btn btn--success">Training site</a>
