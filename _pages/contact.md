@@ -8,6 +8,18 @@ header:
 
 ---
 
+Please note: In case you contact us:
+
+* we'll use your personal data (name, email)
+only for the purpose of answering your request. It will not be stored, kept
+or processed in sense of European General Data Protection Regulation [GDBPR](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation).
+* you explicitely give your consent that your data will be used for the
+aforementioned objective.
+* you explicitely acknowledge and consent that some of the contact options
+make use of unencrypted communication channels - therefore your personal data
+might be visible during transit.
+
+
 
 * on [<i class="fab fa-fw fa-slack"></i>Slack](https://arc42.slack.com)
    * you can [self-register here - it's free](https://slackin-giwyfuegce.now.sh).
@@ -26,4 +38,4 @@ Please see our <a href="{{ site.baseurl }}/imprint">Imprint + Privacy Statement<
 
 # Site Build
 
-This version of the site was build {{ site.time }}.
+This version of the site was build {{ site.time | date: "%Y-%b-%d %H:%M"}}.
