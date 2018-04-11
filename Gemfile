@@ -1,8 +1,7 @@
 source "https://rubygems.org"
 
 
-gem "jekyll"
-gem "minimal-mistakes-jekyll"
+gem "jekyll", '~> 3.5.2'
 
 group :jekyll_plugins do
   gem "github-pages"
