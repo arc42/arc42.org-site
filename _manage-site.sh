@@ -54,7 +54,7 @@ case "$choice" in
                    ;;
 
   r|R|remove) echo "remove running docker container"
-             docker-compose --file _docker-compose-dev.yml up
+             docker-compose --file _docker-compose-dev.yml down
              ;;
 
   p|P|production)  echo "create production site"
