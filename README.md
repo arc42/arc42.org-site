@@ -2,6 +2,7 @@
 
 > currently available on [arc42.org](http://arc42.org)
 
+ATTENTION: Site is currently beeing migrated to [netlify](https://netlify.com)
 
 
 ### How does it work?

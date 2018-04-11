@@ -1,11 +1,10 @@
 FROM jekyll/builder
 
-LABEL version="0.8.1"
+LABEL version="0.8.3"
 LABEL description="develop and generate arc42.org site"
 LABEL vendor="arc42 (Gernot Starke)"
 
 COPY Gemfile .
-#COPY Gemfile.lock .
 
 RUN apk update && \
     apk add ncurses && \
