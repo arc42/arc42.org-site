@@ -78,6 +78,6 @@ system or your next project:
 
 # Learn more!
 
-{% include subtle-ads/subtle-ads.html %}
+{% include trainings/subtle-ads.html %}
 
 <a href="http://arc42.de" class="btn btn--success">Training site</a>
