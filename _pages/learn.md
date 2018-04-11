@@ -44,6 +44,6 @@ for exact dates and conditions please refer to our [German site](http://arc42.de
 
 # Next dates
 
-{% include subtle-ads/subtle-ads.html %}
+{% include trainings/subtle-ads.html %}
 
 <a href="http://arc42.de" class="btn btn--success">Training site</a>
