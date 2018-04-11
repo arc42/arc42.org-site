@@ -22,3 +22,8 @@ header:
 
 
 Please see our <a href="{{ site.baseurl }}/imprint">Imprint + Privacy Statement</a>.
+
+
+# Site Build
+
+This version of the site was build {{ site.time }}.

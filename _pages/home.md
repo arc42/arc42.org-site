@@ -64,6 +64,6 @@ well-suited for **lean and agile** development approaches.
 
 # Learn more!
 
-{% include subtle-ads.html %}
+{% include subtle-ads/subtle-ads.html %}
 
 <a href="http://arc42.de" class="btn btn--success">Training site</a>
