@@ -174,7 +174,7 @@ to invest some effort...
 # Learn more!
 
 
-{% include ./_includes/subtle-ads/subtle-ads.html %}
+{% include subtle-ads/subtle-ads.html %}
 
 
 <a href="http://arc42.de" class="btn btn--success">Training site</a>
