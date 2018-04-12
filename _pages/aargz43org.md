@@ -20,12 +20,20 @@ make use of unencrypted communication channels - therefore your personal data
 might be visible during transit.
 
 
-<form name="contact" method="POST" netlify>
-  <p>
-    <label>Your Name: <input type="text" name="name"></label>   
+<form name="foundation-anmeldung" method="POST" netlify>
+   <p class="hidden">
+    <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+  </p>
+  <p>    
+    <label>Ihr Name: <input type="text" name="name"></label>   
+    <label>Name Teilnehmer (falls Sie eine andere Person anmelden): <input type="text" name="tname"></label>   
   </p>
   <p>
-    <label>Your Email: <input type="email" name="email"></label>
+    <label>Ihre Email: <input type="email" name="email"></label>
+  </p>
+  <p>
+    <label>Rechnungsadresse: <textarea name="rechadr"></textarea>
+    </label>
   </p>
   <p>
     <label>Bemerkung: <textarea name="message"></textarea></label>
@@ -36,20 +44,16 @@ might be visible during transit.
   <option value="sep-2019">18.-22. Sept 2019, Frankfurt</option>
   <option value="dez-2019">6.-9. Dez 2019 München</option>
 </select></p></div>
-<p>Teilnahme an CPSA-Foundation Prüfung (unverbindlich):</p>
-  <div>
-    <input type="radio" name="ja" value="ja">
-    <label>Ja</label>
 
-    <input type="radio" id="nein"
-     name="nein" value="nein">
-    <label for="nein">Nein</label>
+<div>
+<p>Wir melden Sie unverbindlich zur (optionalen) CPSA-Foundation Prüfung
+am letzten Veranstaltungstag an. Sie können vor-Ort entscheiden,
+ob Sie teilnehmen wollen (Prüfungsgebühr nicht im Kurspreis enthalten).</p>
+</div>    
 
-    <input type="radio" id="vielleicht"
-     name="vielleicht" value="vielleicht">
-    <label for="vielleicht">Vielleicht</label>
-  </div>
-  <p>
-    <button type="submit">Send</button>
+<div data-netlify-recaptcha></div>
+
+<p>
+    <button type="submit">Anmeldung absenden</button>
   </p>
 </form>
