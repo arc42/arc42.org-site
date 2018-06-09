@@ -8,6 +8,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
+    asciidoctor (1.5.6.2)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -98,6 +99,9 @@ GEM
       pathutil (~> 0.9)
       rouge (>= 1.7, < 4)
       safe_yaml (~> 1.0)
+    jekyll-asciidoc (2.1.0)
+      asciidoctor (>= 1.5.0)
+      jekyll (>= 2.3.0)
     jekyll-avatar (0.5.0)
       jekyll (~> 3.0)
     jekyll-coffeescript (1.1.1)
@@ -143,6 +147,46 @@ GEM
     jekyll-sitemap (1.2.0)
       jekyll (~> 3.3)
     jekyll-swiss (0.4.0)
+    jekyll-theme-architect (0.1.0)
+      jekyll (~> 3.5)
+      jekyll-seo-tag (~> 2.0)
+    jekyll-theme-cayman (0.1.0)
+      jekyll (~> 3.5)
+      jekyll-seo-tag (~> 2.0)
+    jekyll-theme-dinky (0.1.0)
+      jekyll (~> 3.5)
+      jekyll-seo-tag (~> 2.0)
+    jekyll-theme-hacker (0.1.0)
+      jekyll (~> 3.5)
+      jekyll-seo-tag (~> 2.0)
+    jekyll-theme-leap-day (0.1.0)
+      jekyll (~> 3.5)
+      jekyll-seo-tag (~> 2.0)
+    jekyll-theme-merlot (0.1.0)
+      jekyll (~> 3.5)
+      jekyll-seo-tag (~> 2.0)
+    jekyll-theme-midnight (0.1.0)
+      jekyll (~> 3.5)
+      jekyll-seo-tag (~> 2.0)
+    jekyll-theme-minimal (0.1.0)
+      jekyll (~> 3.5)
+      jekyll-seo-tag (~> 2.0)
+    jekyll-theme-modernist (0.1.0)
+      jekyll (~> 3.5)
+      jekyll-seo-tag (~> 2.0)
+    jekyll-theme-primer (0.5.2)
+      jekyll (~> 3.5)
+      jekyll-github-metadata (~> 2.9)
+      jekyll-seo-tag (~> 2.2)
+    jekyll-theme-slate (0.1.0)
+      jekyll (~> 3.5)
+      jekyll-seo-tag (~> 2.0)
+    jekyll-theme-tactile (0.1.0)
+      jekyll (~> 3.5)
+      jekyll-seo-tag (~> 2.0)
+    jekyll-theme-time-machine (0.1.0)
+      jekyll (~> 3.5)
+      jekyll-seo-tag (~> 2.0)
     jekyll-titles-from-headings (0.5.1)
       jekyll (~> 3.3)
     jekyll-watch (2.0.0)
@@ -200,12 +244,13 @@ GEM
       thread_safe (~> 0.1)
     unicode-display_width (1.3.0)
 
-
 PLATFORMS
   ruby
 
 DEPENDENCIES
   github-pages
+  jekyll
+  jekyll-asciidoc
 
 BUNDLED WITH
    1.16.1
