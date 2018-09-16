@@ -8,10 +8,8 @@ ATTENTION: Site is currently beeing migrated to [netlify](https://netlify.com)
 ### How does it work?
 
 * home.md is the homepage, it's mapped (via permalink) to "/".
-* The Github repository is configured to generate Github-pages via Jekyll.
-* Github serves the site under a custom-domain, configured as CNAME.
 * With the arc42.org hosting provider we configured a custom DNS
-CNAME entry to point to github.
+CNAME entry to point to Netlify.
 
 
 ## Credits
