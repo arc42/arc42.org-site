@@ -58,6 +58,8 @@ These versions are generated for the latest version of confluence
 
 **Notes for Confluence users**
 
+* We are operating a public confluence - as (briefly) described [here](/confluence-info).
+
 * If you consider to use confluence, the [asciidoc2confluence](https://github.com/rdmueller/asciidoc2confluence) script might be helpful.
 
 * There is also a [confluence plugin available from the atlassian market place](https://marketplace.atlassian.com/plugins/com.networkedassets.plugins.space-blueprint/server/overview).
