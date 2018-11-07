@@ -152,6 +152,12 @@ Please [contact us!](/contact)
 **markdownMP**
 : Same format as **markdown** above but every chapter is located in its own file.
 
+**gitHubMarkdown**
+: GitHub Flavored Markdown is a dialect of Markdown that is used on GitHub.com and GitHub Enterprise. See the [article here](https://help.github.com/categories/writing-on-github) .
+
+**gitHubMarkdownMP**
+: Same format as **gitHubMarkdown** above but every chapter is located in its own file.
+
 **latex**
 : No, not the rubber stuff, but the mother (despite TeX)
 of all markup languages, a full-blown [document preparation system](https://www.latex-project.org/). For those who need beauty and are willing
