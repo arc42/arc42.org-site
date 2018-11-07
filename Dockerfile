@@ -1,6 +1,6 @@
 FROM jekyll/builder
 
-LABEL version="0.8.3"
+LABEL version="0.8.4"
 LABEL description="develop and generate arc42.org site"
 LABEL vendor="arc42 (Gernot Starke)"
 
