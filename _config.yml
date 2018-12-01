@@ -49,7 +49,7 @@ social:
 analytics:
   provider               : false # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          : 
+    tracking_id          :
 
 
 # Site Author
@@ -61,7 +61,7 @@ author:
   email            : info@arc42.org
   uri              : http://gernotstarke.de
   github           : arc42
-  google_plus      : 105917203908419102125
+  google_plus      :
   stackoverflow    :
   twitter          : arc42Tipps
   xing             : arc42
@@ -149,6 +149,7 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-include-cache
 
 
 # Archives
@@ -198,6 +199,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: false 
       share: true
       related: true

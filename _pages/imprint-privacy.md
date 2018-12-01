@@ -4,6 +4,10 @@ title: Imprint & Privacy
 permalink: /imprint/
 order: 90
 share: false
+header:
+  overlay_image: /images/splash/privacy-274694-unsplash.jpg
+  caption: "[**Scott Webb**](https://unsplash.com/photos/yekGLpc3vro)"
+
 ---
 
 The following text has to be included in sites provided from Germany by German citicens,

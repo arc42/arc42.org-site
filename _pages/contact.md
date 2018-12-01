@@ -5,8 +5,10 @@ permalink: /contact
 header:
   overlay_image: /images/splash/unsplash-contact-pavan-trikutam.jpg
   caption: "Photo: [**Pavan Trikutam**](https://unsplash.com/collections/389099/contact?photo=71CjSSB83Wo)"
-
+sidebar:
+  nav: "about"
 ---
+
 
 Please note: In case you contact us:
 
