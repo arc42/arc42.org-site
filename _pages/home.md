@@ -61,6 +61,9 @@ arc42 supports **arbitrary technologies and tools**.
 arc42 is completely process-agnostic, and especially
 well-suited for **lean and agile** development approaches.
 
+arc42 is open-source and can be used **free of charge**, in commercial and
+private situations. 
+See our [license page](/license) for details.
 
 # Learn more!
 
