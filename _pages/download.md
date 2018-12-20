@@ -36,6 +36,7 @@ various [formats]({{page.url}}#format-overview) for various tools. For an overvi
 {% for format in formats %}| {{ format }} | EN | {% for type in types %} [.zip]({{PREFIX}}EN-{{type}}-{{format}}.zip) |{% endfor %}
 |  | DE | {% for type in types %} [.zip]({{PREFIX}}DE-{{type}}-{{format}}.zip) |{% endfor %}
 |  | ES | {% for type in types %} [.zip]({{PREFIX}}ES-{{type}}-{{format}}.zip) |{% endfor %}
+|  | RU | {% for type in types %} [.zip]({{PREFIX}}RU-{{type}}-{{format}}.zip) |{% endfor %}
 {% endfor %}
 
 ## Confluence format
