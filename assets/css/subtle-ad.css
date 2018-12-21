@@ -35,8 +35,8 @@
   font-family: $header-font-family;
   font-size: 20px;
   font-weight: bold;
-  line-height: 1.2pt;
   margin-top: 5px;
+  word-wrap: break-word;
 }
 
 .subtle-ad a {
