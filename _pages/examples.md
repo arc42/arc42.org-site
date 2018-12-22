@@ -35,16 +35,16 @@ feature_row1:
 Here you find links to public arc42 examples. Contact us if you like your system
 included here...
 
-[HTML Sanity Checker](http://aim42.github.io/htmlSanityCheck/hsc_arc42.html) (Englisch)  
+[HTML Sanity Checker](https://hsc.aim42.org) (Englisch)  
 Verbose example for the documentation of a Gradle plugin, created by Dr. Gernot Starke.
 
 [DocChess](http://www.dokchess.de/dokchess/arc42/) (German)  
 Verbose example for a chess engine, created by Stefan Z&ouml;rner. There is also a book available which describes the creation of this example.
 
-[Gradle](http://www.embarc.de/arc42-starschnitt-gradle/) (German)  
+[Gradle](https://www.embarc.de/arc42-starschnitt-gradle/) (German)  
 A series of blog posts which describe certain aspects of Gradle and put them into context of arc42. Created by Stefan Z&ouml;rner.
 
-[biking](http://biking.michael-simons.eu/docs/index.html) (English)
+[biking](https://biking.michael-simons.eu/docs/index.html) (English)
 A real world example for a bike activity tracker, created by Michael Simons
 
 [Angular 2](http://blog.fingersteps.ch/2015/12/01/blog-serie-architekturueberblick-von-angular-2/) (German)
@@ -56,4 +56,4 @@ A series of blog posts inspired by the Gradle "Starschnitt". Created by Patrick 
 
 {% include subtle-ads/subtle-ads.html %}
 
-<a href="http://arc42.de" class="btn btn--success">Training site</a>
+<a href="https://arc42.de" class="btn btn--success">Training site</a>

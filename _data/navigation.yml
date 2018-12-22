@@ -5,7 +5,7 @@ main:
   - title: "Docs"
     url: /documentation
   - title: "FAQ"
-    url: http://faq.arc42.org
+    url: https://faq.arc42.org
   - title: "Examples"
     url: /examples
   - title: "Training"

@@ -17,7 +17,7 @@ feature_row1:
     excerpt: 'Short description of the **requirements**, driving forces,
 extract (or abstract) of requirements. Top three (max five) **quality goals** for the architecture which have highest priority for the major stakeholders.
 A table of important **stakeholders** with their expectation regarding architecture.'
-    url: "http://docs.arc42.org/section-1/"
+    url: "https://docs.arc42.org/section-1/"
     btn_label: "Read More"
     btn_class: "btn--inverse"
 
@@ -26,7 +26,7 @@ feature_row2:
     alt: "constraints-image"
     title: "2. Constraints"
     excerpt: 'Anything that constrains teams in design and implementation decisions or decision about related processes. Can sometimes go beyond individual systems and are valid for whole organizations and companies.'
-    url: "http://docs.arc42.org/section-2/"
+    url: "https://docs.arc42.org/section-2/"
     btn_label: "Read More"
     btn_class: "btn--inverse"    
 
@@ -35,7 +35,7 @@ feature_row3:
     alt: "solution strategy overview"
     title: "3. Context and Scope"
     excerpt: 'Delimits your system from its (external) communication partners (neighboring systems and users). Specifies the external interfaces. Shown from a business/domain perspective (always) or a technical perspective (optional)'
-    url: "http://docs.arc42.org/section-3/"
+    url: "https://docs.arc42.org/section-3/"
     btn_label: "Read More"
     btn_class: "btn--inverse"    
 
@@ -48,7 +48,7 @@ feature_row4:
     solution strategies that shape the architecture. Can include technology,
     top-level decomposition, approaches to achieve top quality goals
     and relevant organizational decisions.'
-    url: "http://docs.arc42.org/section-4/"
+    url: "https://docs.arc42.org/section-4/"
     btn_label: "Read More"
     btn_class: "btn--inverse"    
 
@@ -58,7 +58,7 @@ feature_row5:
   alt: "building block view"
   title: "5. Building Block View"
   excerpt: 'Static decomposition of the system, abstractions of source-code, shown as hierarchy of white boxes (containing black boxes), up to the appropriate level of detail.'
-  url: "http://docs.arc42.org/section-5/"
+  url: "https://docs.arc42.org/section-5/"
   btn_label: "Read More"
   btn_class: "btn--inverse"    
 
@@ -67,7 +67,7 @@ feature_row6:
   alt: "runtime view"
   title: "6. Runtime View"
   excerpt: 'Behavior of building blocks as scenarios, covering important use cases or features, interactions at critical external interfaces, operation and administration plus error and exception behavior.'
-  url: "http://docs.arc42.org/section-6/"
+  url: "https://docs.arc42.org/section-6/"
   btn_label: "Read More"
   btn_class: "btn--inverse"    
 
@@ -76,7 +76,7 @@ feature_row7:
   alt: "deployment view"
   title: "7. Deployment View "
   excerpt: 'Technical infrastructure with environments, computers, processors, topologies. Mapping of (software) building blocks to infrastructure elements.'
-  url: "http://docs.arc42.org/section-7/"
+  url: "https://docs.arc42.org/section-7/"
   btn_label: "Read More"
   btn_class: "btn--inverse"    
 
@@ -85,7 +85,7 @@ feature_row8:
   alt: "crosscutting concepts"
   title: "8. Crosscutting Concepts"
   excerpt: 'Overall, principal regulations and solution approaches relevant in multiple parts (→ cross-cutting) of the system. Concepts are often related to **multiple building blocks**. Include different topics like domain models,  architectur patterns and -styles, rules for using specific technology and inmplementation rules.'
-  url: "http://docs.arc42.org/section-8/"
+  url: "https://docs.arc42.org/section-8/"
   btn_label: "Read More"
   btn_class: "btn--inverse"    
 
@@ -95,7 +95,7 @@ feature_row9:
   title: "9. Architectural Decisions"
   excerpt: 'Important, expensive, critical, large scale or risky architecture decisions
 including rationals.'
-  url: "http://docs.arc42.org/section-9/"
+  url: "https://docs.arc42.org/section-9/"
   btn_label: "Read More"
   btn_class: "btn--inverse"    
 
@@ -106,7 +106,7 @@ feature_row10:
   title: "10. Quality Requirements"
   excerpt: 'Quality requirements as scenarios, with quality tree to provide high-level overview. The most important quality goals should have been described in
 section 1.2. (quality goals).'
-  url: "http://docs.arc42.org/section-10/"
+  url: "https://docs.arc42.org/section-10/"
   btn_label: "Read More"
   btn_class: "btn--inverse"    
 
@@ -115,7 +115,7 @@ feature_row11:
   alt: "risk"
   title: "11. Risks and Technical Debt"
   excerpt: 'Known technical risks or technical debt. What potential problems exist within or around the system? What does the development team feel miserable about?'
-  url: "http://docs.arc42.org/section-11/"
+  url: "https://docs.arc42.org/section-11/"
   btn_label: "Read More"
   btn_class: "btn--danger"    
 
@@ -124,7 +124,7 @@ feature_row12:
   alt: "glossary"
   title: "12. Glossary"
   excerpt: 'Important domain and technical terms that stakeholders use when discussing he system. Also: translation reference if you work in a multi-language environment.'
-  url: "http://docs.arc42.org/section-12/"
+  url: "https://docs.arc42.org/section-12/"
   btn_label: "Read More"
   btn_class: "btn--inverse"    
 
@@ -170,8 +170,8 @@ arc42 answers the following two questions in a pragmatic way, but can be tailore
 Now that you know about the template sections, you can dive deeper. Have a look at our extensive documentation:
 
 * Real-world [examples](/examples)
-* FAQ - [Frequently asked questions](http://faq.arc42.org)
-* Our extensive [template documentation](http://docs.arc42.org), organized by template section.
+* FAQ - [Frequently asked questions](https://faq.arc42.org)
+* Our extensive [template documentation](https://docs.arc42.org), organized by template section.
 * Our (sketchy) [collection of software patterns](http://patterns.arc42.org).
 
 <a href="/documentation" class="btn btn--success">show more documentation.</a>
@@ -181,4 +181,4 @@ Now that you know about the template sections, you can dive deeper. Have a look 
 
 {% include subtle-ads/subtle-ads.html %}
 
-<a href="http://arc42.de" class="btn btn--success">Training site</a>
+<a href="https://arc42.de" class="btn btn--success">Training site</a>

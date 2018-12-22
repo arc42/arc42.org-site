@@ -30,7 +30,7 @@ comments:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
 
 atom_feed:
-  path                   : http://it-and-more.blogspot.com
+  path                   : https://it-and-more.blogspot.com
 
 # SEO Related
 google_site_verification :
@@ -59,7 +59,7 @@ author:
   bio              : "innoQ fellow, (co)founder of arc42, founder of aim42"
   location         : "Cologne, Germany"
   email            : info@arc42.org
-  uri              : http://gernotstarke.de
+  uri              : https://gernotstarke.de
   github           : arc42
   google_plus      :
   stackoverflow    :
@@ -97,6 +97,8 @@ exclude:
   - _docker*
   - zz-site/
   - _site/
+  - includes/subtle-ads/logo
+  - includes/subtle-ads/*.sh
 
 keep_files:
   - .git
@@ -199,6 +201,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: false 
+      comments: false
       share: true
       related: true
