@@ -37,7 +37,7 @@ Apply it in agile, lean or formal projects - you decide.
 
 * [Overview of the sections](#overview)
 
-* Full documentation (on our website [docs.arc42.org](http://docs.arc42.org))
+* Full documentation (on our website [docs.arc42.org](https://docs.arc42.org))
 
 
 
@@ -80,4 +80,4 @@ system or your next project:
 
 {% include subtle-ads/subtle-ads.html %}
 
-<a href="http://arc42.de" class="btn btn--success">Training site</a>
+<a href="https://arc42.de" class="btn btn--success">Training site</a>

@@ -99,7 +99,7 @@ differently.
 
 
 ## IBM Rhapsody&copy; format
-[Rhapsody](http://www-03.ibm.com/software/products/en/ratirhap)&copy;
+[Rhapsody](https://www-03.ibm.com/software/products/en/ratirhap)&copy;
 is a commercial modeling tool by IBM, primarily suited
 for embedded systems.
 
@@ -147,7 +147,7 @@ Please [contact us!](/contact)
 
 **asciidoc**
 : Powerful yet simple markup language, used by arc42 itself. Ideally suited for architecture documentation. See
-[docToolchain](https://rdmueller.github.io/docToolchain/) or the [original source](http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/).
+[docToolchain](https://rdmueller.github.io/docToolchain/) or the [original source](https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/).
 
 **markdown**
 : Widespread and simple markup language, [documented here](https://daringfireball.net/projects/markdown/syntax) by its inventor.
@@ -186,4 +186,4 @@ to invest some effort...
 {% include subtle-ads/subtle-ads.html %}
 
 
-<a href="http://arc42.de" class="btn btn--success">Training site</a>
+<a href="https://arc42.de" class="btn btn--success">Training site</a>

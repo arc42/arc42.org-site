@@ -1,6 +1,6 @@
 # arc42.org Website
 
-> currently available on [arc42.org](http://arc42.org)
+> currently available on [arc42.org](https://arc42.org)
 
 ATTENTION: Site is currently beeing migrated to [netlify](https://netlify.com)
 

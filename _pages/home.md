@@ -62,11 +62,11 @@ arc42 is completely process-agnostic, and especially
 well-suited for **lean and agile** development approaches.
 
 arc42 is open-source and can be used **free of charge**, in commercial and
-private situations. 
+private situations.
 See our [license page](/license) for details.
 
 # Learn more!
 
 {% include subtle-ads/subtle-ads.html %}
 
-<a href="http://arc42.de" class="btn btn--success">Training site</a>
+<a href="https://arc42.de" class="btn btn--success">Training site</a>

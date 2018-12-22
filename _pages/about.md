@@ -19,7 +19,7 @@ He has worked on the design and implementation of medium and large-scale systems
 
 He is a founding member of the iSAQB (International Software Architecture Qualification Board) and the IREB (International Requirements Engineering Board) and (together with Gernot) the initiator of the arc42 initiative.
 
-Read more at [systemsguild.com](http://systemsguild.com), [b-agile.de](https://b-agile.de) und [req42.de](https://req42.de)
+Read more at [systemsguild.com](https://systemsguild.com), [b-agile.de](https://b-agile.de) und [req42.de](https://req42.de)
 
 ![](/images/about/Ralf-Mueller.jpg)
 
