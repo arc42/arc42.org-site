@@ -63,7 +63,7 @@ cares about documentation structure and -content.
 From typical developers' perspective, documentation is often a pain:
 
 ![](/images/painful.jpg){: .align-left}{: width="30%"}
-Formalities, inapropriate tools and formats, missing goals,
+Formalities, inappropriate tools and formats, missing goals,
 unclear instructions on what and how to document. Stakeholders complaining,
 documentation is awkward and clumsy. Creativity gone. That's **not** why people became developer.  
 
