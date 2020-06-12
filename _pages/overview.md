@@ -84,7 +84,7 @@ feature_row8:
 - image_path: /images/template/08-concepts-overview.png
   alt: "crosscutting concepts"
   title: "8. Crosscutting Concepts"
-  excerpt: 'Overall, principal regulations and solution approaches relevant in multiple parts (→ cross-cutting) of the system. Concepts are often related to **multiple building blocks**. Include different topics like domain models,  architectur patterns and -styles, rules for using specific technology and inmplementation rules.'
+  excerpt: 'Overall, principal regulations and solution approaches relevant in multiple parts (→ cross-cutting) of the system. Concepts are often related to **multiple building blocks**. Include different topics like domain models,  architecture patterns and -styles, rules for using specific technology and implementation rules.'
   url: "https://docs.arc42.org/section-8/"
   btn_label: "Read More"
   btn_class: "btn--inverse"    
@@ -94,7 +94,7 @@ feature_row9:
   alt: "risks and technical decisions"
   title: "9. Architectural Decisions"
   excerpt: 'Important, expensive, critical, large scale or risky architecture decisions
-including rationals.'
+including rationales.'
   url: "https://docs.arc42.org/section-9/"
   btn_label: "Read More"
   btn_class: "btn--inverse"    
@@ -123,7 +123,7 @@ feature_row12:
 - image_path: /images/template/12-glossary-overview.png
   alt: "glossary"
   title: "12. Glossary"
-  excerpt: 'Important domain and technical terms that stakeholders use when discussing he system. Also: translation reference if you work in a multi-language environment.'
+  excerpt: 'Important domain and technical terms that stakeholders use when discussing the system. Also: translation reference if you work in a multi-language environment.'
   url: "https://docs.arc42.org/section-12/"
   btn_label: "Read More"
   btn_class: "btn--inverse"    
