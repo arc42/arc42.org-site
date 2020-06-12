@@ -35,7 +35,7 @@ Apply it in agile, lean or formal projects - you decide.
 
 * Five Minute Introduction (to be done)
 
-* [Overview of the sections](#overview)
+* [Overview of the sections](#overview-of-the-arc42-sections)
 
 * Full documentation (on our website [docs.arc42.org](https://docs.arc42.org))
 
