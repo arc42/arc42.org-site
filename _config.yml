@@ -5,7 +5,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-theme: minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes@4.21.0"
 
 # the following does not work any longer
 # theme: "minimal-mistakes"
@@ -139,19 +139,19 @@ timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Plugins
 plugins:
+  - jekyll-include-cache
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jemoji
-  - jekyll-include-cache
 
 # mimic GitHub Pages with --safe
 whitelist:
+  - jekyll-include-cache
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jemoji
-  - jekyll-include-cache
 
 
 # Archives
