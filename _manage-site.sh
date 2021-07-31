@@ -4,8 +4,7 @@
 
 # what's the site?
 site="arc42.org"
-server="wp1063700.server-he.de"
-localdir="zz-production-site"
+
 remotedir="."
 
 # some colors to highlight certain output
@@ -29,11 +28,6 @@ echo "${GREEN}(b)build ${RESET} build the required docker image."
 echo
 echo "${GREEN}(r)emove ${RESET} the running docker container."
 echo
-echo "${RED}(p)production ${RESET} produces the site with production configuration,"
-echo "into ./zz-production-site directory."
-echo
-#echo "${GREEN}(u)pload ${RESET} the generated site to $server/$remotedir "
-#echo
 echo "=================================================="
 echo
 
@@ -57,17 +51,8 @@ case "$choice" in
              docker-compose --file _docker-compose-dev.yml down
              ;;
 
-  p|P|production)  echo "create production site"
-                   docker-compose --file _docker-compose-prod.yml up
-                   docker-compose --file _docker-compose-prod.yml down
-                   ;;
+  
 
-#  u|U|upload)     echo "upload generated site to server"
-#                  docker run -it \
-#                   --volume $PWD/$localdir:/$localdir \
-#                   ftp-uploader:0.2.4 \
-#                   $site $server $localdir $remotedir
-#                   ;;
 
   # catchall: abort
   *)               echo "${RED} unknown option $choice ${RESET}, aborted."
