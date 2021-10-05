@@ -94,7 +94,7 @@ individual design decisions.
 *	You only keep track of important architecture decision that you had to
 make anyhow.
 
-## Lean and lightweigt
+## Lean and lightweight
 
 arc42 is intended to be a lightweight tool that can easily be adapted to
 your specific need.
