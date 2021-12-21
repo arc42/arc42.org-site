@@ -1,24 +1,22 @@
 ---
 title: "Download arc42"
-layout: splash
+layout: single
 permalink: /download
+toc: true
+classes: wide
 header:
-  overlay_color: "#000"
-  overlay_filter: "0.2"
-  overlay_image: /images/splash/unsplash-download-pedro-lastra.jpg
-  caption: "Photo credit: [**Pedro Lastra**](https://unsplash.com/photos/5g8dJvtYRYA/)"
+  overlay_filter: linear-gradient(rgba(255, 0, 0, 0.7), rgba(0, 0, 255, 0.7))
+  overlay_image: /images/splash/download-landingpage.jpg
+  caption: "Photo credit: [**Ellery Sterling**](https://unsplash.com/photos/dPu5FIT1bGU)"
 excerpt: "Version 7.0 - the most practical and effective arc42 ever."
-
 intro:
   - excerpt: "Version 7.0, released January 20th 2017."
 
-
 ---
 
-{% include feature_row id="intro" type="center" %}
+Version 7.0, released January 20th 2017.
 
 
-{% include toc %}
 
 On this page you find all available arc42 template downloads,
 various [formats]({{page.url}}#format-overview) for various tools. For an overview of these formats, see [below]({{page.url}}#format-overview).
@@ -26,7 +24,7 @@ various [formats]({{page.url}}#format-overview) for various tools. For an overvi
 {% assign GITHUBDIR = "https://github.com/arc42/arc42-template/raw/master/dist/" %}
 {% assign PREFIX = "https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-" %}
 
-## File-based formats
+# File-based formats
 
 {% assign formats = "docx|asciidoc|markdown|markdownMP|latex|html|rst|textile" | split: "|"  %}  
 {% assign types = "plain|withhelp" | split: "|"  %}  
@@ -36,10 +34,11 @@ various [formats]({{page.url}}#format-overview) for various tools. For an overvi
 {% for format in formats %}| {{ format }} | EN | {% for type in types %} [.zip]({{PREFIX}}EN-{{type}}-{{format}}.zip) |{% endfor %}
 |  | DE | {% for type in types %} [.zip]({{PREFIX}}DE-{{type}}-{{format}}.zip) |{% endfor %}
 |  | ES | {% for type in types %} [.zip]({{PREFIX}}ES-{{type}}-{{format}}.zip) |{% endfor %}
+|  | IT | {% for type in types %} [.zip]({{PREFIX}}IT-{{type}}-{{format}}.zip) |{% endfor %}
 |  | RU | {% for type in types %} [.zip]({{PREFIX}}RU-{{type}}-{{format}}.zip) |{% endfor %}
 {% endfor %}
 
-## Confluence format
+# Confluence format
 Confluence versions are generated _with help_ and come in
 two flavors:
 
@@ -52,6 +51,7 @@ two flavors:
 | DE | [.zip]({{PREFIX}}DE-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}DE-withhelp-confluenceStructured.zip) |
 | EN | [.zip]({{PREFIX}}EN-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}EN-withhelp-confluenceStructured.zip) |
 | ES | [.zip]({{PREFIX}}ES-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}ES-withhelp-confluenceStructured.zip) |
+| IT | [.zip]({{PREFIX}}IT-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}EIT-withhelp-confluenceStructured.zip) |
 
 These versions are generated for the latest version of confluence
 (we test with our own [cloud-hosted confluence](https://arc42-template.atlassian.net/)
@@ -81,7 +81,7 @@ not be supported by us (as we don't have access to these legacy Confluence versi
 {: .small}
 
 
-## Enterprise Architect&copy; format
+# Enterprise Architect&copy; format
 Enterprise Architect;copy; is a commercial UML modeling tool by
 SparxSystems.
 
@@ -98,7 +98,7 @@ differently.
 | Short EA template: [arc42-V6-short.eap.zip]({{GITHUBDIR}}eap/arc42-V6-short.eap.zip)|
 
 
-## IBM Rhapsody&copy; format
+# IBM Rhapsody&copy; format
 [Rhapsody](https://www-03.ibm.com/software/products/en/ratirhap)&copy;
 is a commercial modeling tool by IBM, primarily suited
 for embedded systems.
@@ -132,7 +132,7 @@ We appreciate the contribution of user `@nrnjnsk83` (Niranjan SK, Robert Bosch G
 
 
 
-## Formats for other modeling tools
+# Formats for other modeling tools
 We currently don't support additional modeling tools - but would love to...
 In case you use arc42 with such a tool, please think about contributing :-)
 
@@ -140,7 +140,7 @@ Please [contact us!](/contact)
 
 
 
-## Format overview
+# Format overview
 
 **docx**
 : Microsoft Word, usable with LibreOffice or OpenOffice
