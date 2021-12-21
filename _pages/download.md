@@ -26,11 +26,13 @@ various [formats]({{page.url}}#format-overview) for various tools. For an overvi
 
 # File-based formats
 
+These formats are generated based upon their AsciiDoc sources from the [Github repository](https://github.com/arc42/arc42-template).
+
 {% assign formats = "docx|asciidoc|markdown|markdownMP|latex|html|rst|textile" | split: "|"  %}  
 {% assign types = "plain|withhelp" | split: "|"  %}  
 
-| Format | Language | Plain | With Help |
-|--------|----------|-------|-----------|
+| Format | Language | Plain <br> (without explanation) | With Help <br>(contains explanations for every section) |
+|--------|----------|-------|-----------| 
 {% for format in formats %}| {{ format }} | EN | {% for type in types %} [.zip]({{PREFIX}}EN-{{type}}-{{format}}.zip) |{% endfor %}
 |  | DE | {% for type in types %} [.zip]({{PREFIX}}DE-{{type}}-{{format}}.zip) |{% endfor %}
 |  | ES | {% for type in types %} [.zip]({{PREFIX}}ES-{{type}}-{{format}}.zip) |{% endfor %}
@@ -53,9 +55,7 @@ two flavors:
 | ES | [.zip]({{PREFIX}}ES-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}ES-withhelp-confluenceStructured.zip) |
 | IT | [.zip]({{PREFIX}}IT-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}EIT-withhelp-confluenceStructured.zip) |
 
-These versions are generated for the latest version of confluence
-(we test with our own [cloud-hosted confluence](https://arc42-template.atlassian.net/)
-  provided by Atlassian.)
+These versions are generated for the latest version of confluence.
 
 **Notes for Confluence users**
 

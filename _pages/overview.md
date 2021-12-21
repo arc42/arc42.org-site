@@ -12,7 +12,7 @@ excerpt: "arc42 is a template for architecture communication and documentation."
 
 feature_row1:
   - image_path: /images/template/01-intro-and-goals.png
-    alt: "intro-image"
+    alt: "intro and goals"
     title: "1. Introduction and Goals"
     excerpt: 'Short description of the **requirements**, driving forces,
 extract (or abstract) of requirements. Top three (max five) **quality goals** for the architecture which have highest priority for the major stakeholders.
@@ -23,7 +23,7 @@ A table of important **stakeholders** with their expectation regarding architect
 
 feature_row2:
   - image_path: /images/template/02-constraints-overview.png
-    alt: "constraints-image"
+    alt: "constraints"
     title: "2. Constraints"
     excerpt: 'Anything that constrains teams in design and implementation decisions or decision about related processes. Can sometimes go beyond individual systems and are valid for whole organizations and companies.'
     url: "https://docs.arc42.org/section-2/"
@@ -32,7 +32,7 @@ feature_row2:
 
 feature_row3:
   - image_path: /images/template/03-context-overview.png
-    alt: "solution strategy overview"
+    alt: "scope and context overview"
     title: "3. Context and Scope"
     excerpt: 'Delimits your system from its (external) communication partners (neighboring systems and users). Specifies the external interfaces. Shown from a business/domain perspective (always) or a technical perspective (optional)'
     url: "https://docs.arc42.org/section-3/"
@@ -91,7 +91,7 @@ feature_row8:
 
 feature_row9:
 - image_path: /images/template/09-decision-overview.png
-  alt: "risks and technical decisions"
+  alt: "architectural decisions"
   title: "9. Architectural Decisions"
   excerpt: 'Important, expensive, critical, large scale or risky architecture decisions
 including rationales.'
@@ -102,7 +102,7 @@ including rationales.'
 
 feature_row10:
 - image_path: /images/template/10-q-scenario-overview.png
-  alt: "quality"
+  alt: "quality requirements"
   title: "10. Quality Requirements"
   excerpt: 'Quality requirements as scenarios, with quality tree to provide high-level overview. The most important quality goals should have been described in
 section 1.2. (quality goals).'
@@ -132,12 +132,17 @@ feature_row12:
 
 ---
 
-arc42 answers the following two questions in a pragmatic way, but can be tailored to your specific needs:
+arc42 answers the following two questions in a pragmatic way and can be tailored to your specific needs:
 
-* _What_ should we document/communicate about our architecture?
-* _How_ should we document/communicate?
+* _What_ should you document/communicate about your architecture?
+* _How_ should you document/communicate?
+
+
+![](/images/arc42-overview-V8.png)
 
 <hr>
+
+# More details
 
 {% include feature_row id="feature_row1" type="left" %}
 
