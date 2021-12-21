@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xl="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" viewBox="12.193725 37.204725 686.8868 287.80316" width="686.8868" height="287.80316">
+  <defs>
+    <filter id="Shadow" filterUnits="userSpaceOnUse" x="-56.49495" y="8.42441">
+      <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation=".436"/>
+      <feOffset in="blur" result="offset" dx="2.88" dy="1.44"/>
+      <feFlood flood-color="black" flood-opacity=".25" result="flood"/>
+      <feComposite in="flood" in2="offset" operator="in"/>
+    </filter>
+    <font-face font-family="Mark Pro" font-size="10" panose-1="2 11 6 4 2 2 1 1 1 4" units-per-em="1000" underline-position="-96" underline-thickness="68" slope="0" x-height="475" cap-height="700" ascent="1014.002" descent="-253.5005" font-weight="400">
+      <font-face-src>
+        <font-face-name name="MarkPro-Book"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="Mark Pro" font-size="12" panose-1="2 11 6 4 2 2 1 1 1 4" units-per-em="1000" underline-position="-96" underline-thickness="68" slope="0" x-height="475" cap-height="700" ascent="1014.002" descent="-253.5005" font-weight="400">
+      <font-face-src>
+        <font-face-name name="MarkPro-Book"/>
+      </font-face-src>
+    </font-face>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="black">
+      <g>
+        <path d="M 8 0 L 0 -3 L 0 3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.19.2\n2021-12-21 15:38:42 +0000</metadata>
+  <g id="arc42-overview" fill-opacity="1" stroke-dasharray="none" stroke="none" fill="none" stroke-opacity="1">
+    <title>arc42-overview</title>
+    <rect fill="white" x="12.193725" y="37.204725" width="686.8868" height="287.80316"/>
+    <g id="arc42-overview_Ebene_1">
+      <title>Ebene 1</title>
+      <g id="Graphic_237_shadow" filter="url(#Shadow)">
+        <rect x="226.063" y="84.84055" width="129.92712" height="27" fill="white"/>
+        <rect x="226.063" y="84.84055" width="129.92712" height="27" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".72"/>
+      </g>
+      <g id="Graphic_235_shadow" filter="url(#Shadow)">
+        <rect x="226.063" y="254.58955" width="129.32894" height="29.806563" fill="white"/>
+        <rect x="226.063" y="254.58955" width="129.32894" height="29.806563" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".72"/>
+      </g>
+      <g id="Graphic_234_shadow" filter="url(#Shadow)">
+        <rect x="364.96064" y="111.3299" width="129.33071" height="47.636646" fill="white"/>
+        <rect x="364.96064" y="111.3299" width="129.33071" height="47.636646" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".72"/>
+      </g>
+      <g id="Graphic_227_shadow" filter="url(#Shadow)">
+        <rect x="364.96064" y="198.74826" width="129.33071" height="25.881" fill="white"/>
+        <rect x="364.96064" y="198.74826" width="129.33071" height="25.881" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".72"/>
+      </g>
+      <g id="Graphic_184_shadow" filter="url(#Shadow)">
+        <rect x="226.063" y="177.63655" width="130.03938" height="24.204" fill="white"/>
+        <rect x="226.063" y="177.63655" width="130.03938" height="24.204" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".72"/>
+      </g>
+      <g id="Graphic_63_shadow" filter="url(#Shadow)">
+        <rect x="364.96064" y="264.14366" width="129.33071" height="21.092565" fill="white"/>
+        <rect x="364.96064" y="264.14366" width="129.33071" height="21.092565" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".72"/>
+      </g>
+      <g id="Graphic_244_shadow" filter="url(#Shadow)">
+        <rect x="364.96064" y="84.55709" width="128.62414" height="22.32" fill="white"/>
+        <rect x="364.96064" y="84.55709" width="128.62414" height="22.32" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".72"/>
+      </g>
+      <g id="Graphic_247_shadow" filter="url(#Shadow)">
+        <rect x="226.063" y="209.58955" width="129.32894" height="37.251007" fill="white"/>
+        <rect x="226.063" y="209.58955" width="129.32894" height="37.251007" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".72"/>
+      </g>
+      <g id="Graphic_248_shadow" filter="url(#Shadow)">
+        <rect x="226.063" y="144.23695" width="129.92712" height="27" fill="white"/>
+        <rect x="226.063" y="144.23695" width="129.92712" height="27" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".72"/>
+      </g>
+      <g id="Graphic_249_shadow" filter="url(#Shadow)">
+        <rect x="226.063" y="118.13785" width="129.92712" height="18" fill="white"/>
+        <rect x="226.063" y="118.13785" width="129.92712" height="18" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".72"/>
+      </g>
+      <g id="Graphic_226_shadow" filter="url(#Shadow)">
+        <rect x="364.96064" y="163.54694" width="129.33071" height="28.79756" fill="white"/>
+        <rect x="364.96064" y="163.54694" width="129.33071" height="28.79756" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".72"/>
+      </g>
+      <g id="Graphic_242_shadow" filter="url(#Shadow)">
+        <rect x="364.96064" y="230.26868" width="129.33071" height="27.5782" fill="white"/>
+        <rect x="364.96064" y="230.26868" width="129.33071" height="27.5782" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".72"/>
+      </g>
+      <g id="Graphic_281">
+        <rect x="212.59843" y="69.09449" width="292.32284" height="226.77166" fill="#ccc"/>
+        <rect x="212.59843" y="69.09449" width="292.32284" height="226.77166" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_237">
+        <rect x="226.063" y="84.84055" width="129.92712" height="27" fill="white"/>
+        <rect x="226.063" y="84.84055" width="129.92712" height="27" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".72"/>
+        <text transform="translate(226.063 86.84055)" fill="black">
+          <tspan font-family="Mark Pro" font-size="10" font-weight="400" fill="black" x="6" y="10">1. Introduction &amp; Goals</tspan>
+        </text>
+      </g>
+      <g id="Graphic_235">
+        <rect x="226.063" y="254.58955" width="129.32894" height="29.806563" fill="white"/>
+        <rect x="226.063" y="254.58955" width="129.32894" height="29.806563" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".72"/>
+        <text transform="translate(228.063 256.58955)" fill="black">
+          <tspan font-family="Mark Pro" font-size="10" font-weight="400" fill="black" x="6" y="10">6. Runtime View</tspan>
+        </text>
+      </g>
+      <g id="Graphic_234">
+        <rect x="364.96064" y="111.3299" width="129.33071" height="47.636646" fill="white"/>
+        <rect x="364.96064" y="111.3299" width="129.33071" height="47.636646" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".72"/>
+        <text transform="translate(364.96064 113.3299)" fill="black">
+          <tspan font-family="Mark Pro" font-size="10" font-weight="400" fill="black" x="6" y="10">8. Crosscutting</tspan>
+        </text>
+      </g>
+      <g id="Graphic_227">
+        <rect x="364.96064" y="198.74826" width="129.33071" height="25.881" fill="white"/>
+        <rect x="364.96064" y="198.74826" width="129.33071" height="25.881" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".72"/>
+        <text transform="translate(364.96064 200.74826)" fill="black">
+          <tspan font-family="Mark Pro" font-size="10" font-weight="400" fill="black" x="6" y="10">10. Quality Requirements</tspan>
+        </text>
+      </g>
+      <g id="Graphic_184">
+        <rect x="226.063" y="177.63655" width="130.03938" height="24.204" fill="white"/>
+        <rect x="226.063" y="177.63655" width="130.03938" height="24.204" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".72"/>
+        <text transform="translate(228.063 179.63655)" fill="black">
+          <tspan font-family="Mark Pro" font-size="10" font-weight="400" fill="black" x="6" y="10">4. Solution Strategy</tspan>
+        </text>
+      </g>
+      <g id="Graphic_63">
+        <rect x="364.96064" y="264.14366" width="129.33071" height="21.092565" fill="white"/>
+        <rect x="364.96064" y="264.14366" width="129.33071" height="21.092565" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".72"/>
+        <text transform="translate(364.96064 266.14366)" fill="black">
+          <tspan font-family="Mark Pro" font-size="10" font-weight="400" fill="black" x="6" y="10">12. Glossary</tspan>
+        </text>
+      </g>
+      <g id="Graphic_244">
+        <rect x="364.96064" y="84.55709" width="128.62414" height="22.32" fill="white"/>
+        <rect x="364.96064" y="84.55709" width="128.62414" height="22.32" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".72"/>
+        <text transform="translate(364.96064 86.55709)" fill="black">
+          <tspan font-family="Mark Pro" font-size="10" font-weight="400" fill="black" x="6" y="10">7. Deployment View</tspan>
+        </text>
+      </g>
+      <g id="Graphic_247">
+        <rect x="226.063" y="209.58955" width="129.32894" height="37.251007" fill="white"/>
+        <rect x="226.063" y="209.58955" width="129.32894" height="37.251007" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".72"/>
+        <text transform="translate(228.063 211.58955)" fill="black">
+          <tspan font-family="Mark Pro" font-size="10" font-weight="400" fill="black" x="6" y="10">5. Building Block View</tspan>
+        </text>
+      </g>
+      <g id="Graphic_248">
+        <rect x="226.063" y="144.23695" width="129.92712" height="27" fill="white"/>
+        <rect x="226.063" y="144.23695" width="129.92712" height="27" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".72"/>
+        <text transform="translate(228.063 146.23695)" fill="black">
+          <tspan font-family="Mark Pro" font-size="10" font-weight="400" fill="black" x="6" y="10">3. Context &amp; Scope</tspan>
+        </text>
+      </g>
+      <g id="Graphic_249">
+        <rect x="226.063" y="118.13785" width="129.92712" height="18" fill="white"/>
+        <rect x="226.063" y="118.13785" width="129.92712" height="18" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".72"/>
+        <text transform="translate(228.063 120.13785)" fill="black">
+          <tspan font-family="Mark Pro" font-size="10" font-weight="400" fill="black" x="6" y="10">2. Constraints</tspan>
+        </text>
+      </g>
+      <g id="Graphic_226">
+        <rect x="364.96064" y="163.54694" width="129.33071" height="28.79756" fill="white"/>
+        <rect x="364.96064" y="163.54694" width="129.33071" height="28.79756" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".72"/>
+        <text transform="translate(364.96064 165.54694)" fill="black">
+          <tspan font-family="Mark Pro" font-size="10" font-weight="400" fill="black" x="6" y="10">9. Architectural</tspan>
+        </text>
+      </g>
+      <g id="Graphic_250">
+        <text transform="translate(377.02045 176.6783)" fill="black">
+          <tspan font-family="Mark Pro" font-size="10" font-weight="400" fill="black" x="6" y="10">Decisions</tspan>
+        </text>
+      </g>
+      <g id="Graphic_242">
+        <rect x="364.96064" y="230.26868" width="129.33071" height="27.5782" fill="white"/>
+        <rect x="364.96064" y="230.26868" width="129.33071" height="27.5782" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".72"/>
+        <text transform="translate(364.96064 232.26868)" fill="black">
+          <tspan font-family="Mark Pro" font-size="10" font-weight="400" fill="black" x="6" y="10">11. Risks &amp; </tspan>
+        </text>
+      </g>
+      <g id="Graphic_252">
+        <text transform="translate(380.1507 242.34688)" fill="black">
+          <tspan font-family="Mark Pro" font-size="10" font-weight="400" fill="black" x="6" y="10">Technical Debt</tspan>
+        </text>
+      </g>
+      <g id="Graphic_333">
+        <text transform="translate(560.8316 95.35433)" fill="black">
+          <tspan font-family="Mark Pro" font-size="12" font-weight="400" fill="black" x="0" y="12">Cross-cutting topics,</tspan>
+          <tspan font-family="Mark Pro" font-size="12" font-weight="400" fill="black" x="3.408" y="27">often very technical</tspan>
+          <tspan font-family="Mark Pro" font-size="12" font-weight="400" fill="black" x="24.291" y="42">and detailed</tspan>
+        </text>
+      </g>
+      <g id="Line_337">
+        <line x1="491.9005" y1="131.10237" x2="545.9829" y2="125.57509" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_338">
+        <text transform="translate(533.5991 42.204725)" fill="black">
+          <tspan font-family="Mark Pro" font-size="12" font-weight="400" fill="black" x="8668621e-19" y="12">Hardware, infrastructure</tspan>
+          <tspan font-family="Mark Pro" font-size="12" font-weight="400" fill="black" x="32.547" y="27">&amp; deployment</tspan>
+        </text>
+      </g>
+      <g id="Line_339">
+        <line x1="492.5978" y1="95.66929" x2="537.8941" y2="80.3723" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_340">
+        <text transform="translate(524.0945 292.00788)" fill="black">
+          <tspan font-family="Mark Pro" font-size="12" font-weight="400" fill="black" x="3836931e-19" y="12">important and specific terms</tspan>
+          <tspan font-family="Mark Pro" font-size="10" font-weight="400" fill="black" x="27.4455" y="25">(„ubiquitous language“)</tspan>
+        </text>
+      </g>
+      <g id="Line_341">
+        <line x1="494.29135" y1="274.68995" x2="529.8919" y2="284.40225" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_342">
+        <text transform="translate(32.879804 74.09449)" fill="black">
+          <tspan font-family="Mark Pro" font-size="12" font-weight="400" fill="black" x="0" y="12">fundamental requirements,</tspan>
+          <tspan font-family="Mark Pro" font-size="12" font-weight="400" fill="black" x="29.331" y="27">esp. quality goals</tspan>
+        </text>
+      </g>
+      <g id="Line_343">
+        <line x1="226.063" y1="94.97462" x2="207.15654" y2="93.99502" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_344">
+        <text transform="translate(54.6063 121.92914)" fill="black">
+          <tspan font-family="Mark Pro" font-size="12" font-weight="400" fill="black" x="1.605" y="12">External systems </tspan>
+          <tspan font-family="Mark Pro" font-size="12" font-weight="400" fill="black" x="16.566" y="27">&amp; interfaces</tspan>
+        </text>
+      </g>
+      <g id="Line_345">
+        <line x1="226.063" y1="150.4168" x2="172.96204" y2="144.43332" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_347">
+        <text transform="translate(17.193727 283.1496)" fill="black">
+          <tspan font-family="Mark Pro" font-size="12" font-weight="400" fill="black" x="4405365e-19" y="12">important runtime scenarios</tspan>
+        </text>
+      </g>
+      <g id="Line_348">
+        <line x1="226.063" y1="267.5197" x2="178.1872" y2="276.35328" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_349">
+        <text transform="translate(38.66142 173.3071)" fill="black">
+          <tspan font-family="Mark Pro" font-size="12" font-weight="400" fill="black" x="15.228" y="12">Core ideas and </tspan>
+          <tspan font-family="Mark Pro" font-size="12" font-weight="400" fill="black" x="0" y="27">solution approaches</tspan>
+        </text>
+      </g>
+      <g id="Line_350">
+        <line x1="226.063" y1="189.56693" x2="171.19694" y2="189.02936" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_351">
+        <text transform="translate(31.469493 217.59843)" fill="black">
+          <tspan font-family="Mark Pro" font-size="12" font-weight="400" fill="black" x="0" y="12">Structure of source code,</tspan>
+          <tspan font-family="Mark Pro" font-size="12" font-weight="400" fill="black" x="28.866" y="27">modularisation</tspan>
+          <tspan font-family="Mark Pro" font-size="12" font-weight="400" fill="black" x="34.557" y="42">(hierarchical)</tspan>
+        </text>
+      </g>
+      <g id="Line_352">
+        <line x1="226.063" y1="226.77166" x2="192.4345" y2="230.45926" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_353">
+        <text transform="translate(564.5577 201.65355)" fill="black">
+          <tspan font-family="Mark Pro" font-size="12" font-weight="400" fill="black" x="13.893" y="12">Quality tree,</tspan>
+          <tspan font-family="Mark Pro" font-size="12" font-weight="400" fill="black" x="0" y="27">quality Scenarios</tspan>
+        </text>
+      </g>
+      <g id="Line_354">
+        <line x1="494.29135" y1="210.82678" x2="549.6693" y2="213.50922" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_355">
+        <text transform="translate(560.93515 157.3622)" fill="black">
+          <tspan font-family="Mark Pro" font-size="12" font-weight="400" fill="black" x="4.2745" y="12">Important decisions</tspan>
+          <tspan font-family="Mark Pro" font-size="10" font-weight="400" fill="black" x="0" y="25">(not described elsewhere)</tspan>
+        </text>
+      </g>
+      <g id="Line_356">
+        <line x1="492.5978" y1="178.93701" x2="546.0517" y2="175.84142" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_357">
+        <text transform="translate(564.1593 249.4882)" fill="black">
+          <tspan font-family="Mark Pro" font-size="12" font-weight="400" fill="black" x="731859e-18" y="12">Known problems</tspan>
+          <tspan font-family="Mark Pro" font-size="12" font-weight="400" fill="black" x="22.92" y="27">and risks</tspan>
+        </text>
+      </g>
+      <g id="Line_358">
+        <line x1="492.5197" y1="246.25985" x2="549.3707" y2="254.86238" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_359">
+        <text transform="translate(377.02045 124.96483)" fill="black">
+          <tspan font-family="Mark Pro" font-size="10" font-weight="400" fill="black" x="6" y="10">Concepts</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>

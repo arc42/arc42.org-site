@@ -33,22 +33,7 @@ Apply it in agile, lean or formal projects - you decide.
 
 * [One Minute Overview](/overview): arc42 illustrated on a single page.
 
-* Five Minute Introduction (to be done)
-
-* [Overview of the sections](#overview-of-the-arc42-sections)
-
-* Full documentation (on our website [docs.arc42.org](https://docs.arc42.org))
-
-
-
-## Overview of the arc42 sections
-
-|1. Requirements and Goals |7. Deployment View |
-|2. Constraints |8. Crosscutting Concepts |
-|3. Scope & Context |9. Architecture Decisions |
-|4. Solution Strategy |10. Quality Scenarios |
-|5. Building Block View|11. Risks & Technical Debt|
-|6. Runtime View|12. Glossary |
+* Extensive documentation (on the documentation website [docs.arc42.org](https://docs.arc42.org))
 
 
 
