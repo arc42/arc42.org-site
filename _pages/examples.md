@@ -35,7 +35,7 @@ feature_row1:
 Here you find links to public arc42 examples. Contact us if you like your system
 included here...
 
-[HTML Sanity Checker](https://hsc.aim42.org) (Englisch)  
+[HTML Sanity Checker](https://hsc.aim42.org) (English)  
 Verbose example for the documentation of a Gradle plugin, created by Dr. Gernot Starke.
 
 [DocChess](http://www.dokchess.de/dokchess/arc42/) (German)  
