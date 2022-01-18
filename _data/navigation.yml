@@ -4,8 +4,8 @@ main:
     url: /overview
   - title: "Docs"
     url: /documentation
-  - title: "FAQ"
-    url: https://faq.arc42.org
+  - title: Publications
+    url: /publications
   - title: "Examples"
     url: /examples
   - title: "Training"
