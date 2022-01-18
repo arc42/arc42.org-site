@@ -22,8 +22,6 @@ Compare the arc42 sections to the _drawers_ of a cabinet. arc42 contains 12 such
 
 arc42 is optimized for understandability and adequacy. It naturally guides you to explain any kind of architecture information or decision in an understandable way.
 
-#### arc42 supports ANY kind of system or project
-
 arc42 supports your style of working, your domain and your technology.
 Apply it in agile, lean or formal projects - you decide.
 
@@ -33,9 +31,10 @@ Apply it in agile, lean or formal projects - you decide.
 
 * [One Minute Overview](/overview): arc42 illustrated on a single page.
 
-* Extensive documentation (on the documentation website [docs.arc42.org](https://docs.arc42.org))
+* Main documentation website [**docs.arc42.org**](https://docs.arc42.org), containing many examples
 
-
+* Extensive [FAQ](https://faq.arc42.org)
+  
 
 ## Painless documentation
 
