@@ -19,56 +19,53 @@ Free and open source, **takes the pain out of documentation**."
 
 template_training_news:
 - title: "Template"
-  excerpt: "![](/images/home/template.png)<br> Wir liefern Ihnen das arc42-Template für Architekturdokumentation - **Open Source, pragmatisch, kostenfrei**.
-  Sie füllen es mit Ihren Architekturentscheidungen - **Einfach, effektiv und schmerzfrei**."
+  excerpt: "![](/images/home/template.png)<br> 
+  We provide you with the arc42 template for architecture documentation - 
+  **Open Source, pragmatic, free of charge**. You fill it with your architecture decisions - 
+  **Simple, effective and painless**."
   url: "/overview"
   btn_label: "read more..."
   btn_class: "btn--primary"
 
 - title: "Trainings"
   excerpt: "![](/images/home/training.png)<br>
-  Wir haben Hunderte Menschen erfolgreich in unserem bewährten
-  **Mastering Software Architectures** Workshop ausgebildet. Praxisrelevant, effektiv und nachhaltig.
-  Bereitet perfekt auf die iSAQB Foundation Zertifizierung vor.<br>
-  <br>
-  <a href='anmeldung'><button class='button buttonAnmeldung'>Anmeldung</button></a>
-  <a href='/schulungen'><button class='button buttonGrey'>mehr zu Schulungen</button></a>"
+  We have successfully trained hundreds of people in our proven **Mastering Software Architectures workshop**. 
+  Practical, effective and sustainable. Perfectly prepares for the iSAQB Foundation certification."
+  url: "/learn"
+  btn_label: "read more..."
+  btn_class: "btn--primary"
 
 
 - title: "News"
   excerpt: "![](/images/home/news.png)<br>
+  
+    * The new book as ideal preparation for iSAQB certification: [Software Architecture Foundation](/books#software-architecture-foundation-cpsa-f-exam-preparation).
 
-    * Lesen Sie unseren Artikel [Handeln statt jammern](/articles#handeln-statt-jammern) und lernen Sie mehr über das iSAQB Advanced Modul REQ4ARC.
-
-    * Das neue Buch als ideale Vorbereitung auf die iSAQB-Zertifizierung: [Software Architecture Foundation](/books#software-architecture-foundation-cpsa-f-exam-preparation).
-
-    * Noch mehr Beispiele zu arc42 in dem Buch arc42 by Example - [Vol 2. Embedded Systems and IoT](/books#arc42-by-example-vol2).
+    * Even more examples of arc42 in the book arc42 by Example - [Vol 2. Embedded Systems and IoT](/books#arc42-by-example-vol2).
       "
 
 methode_publications_consulting:
-- title: "Die arc42-Methode"
+- title: "The arc42-method"
   excerpt: "![](/images/home/method.png)<br>
-  arc42 ist systematisch aber flexibel. Passend für große und kleine Teams in iterativen
-  oder weniger agilen Prozessen.
+  arc42 is systematic but flexible. Suitable for large and small teams in iterative or less agile processes.
   "
   url: "/method"
   btn_label: "read more..."
   btn_class: "btn--primary"
 
-- title: "arc42 Lesestoff"
+- title: "arc42 reading material"
   excerpt: "![](/images/home/publikationen.png)<br>
-  Es gibt viel zu lesen über arc42 und Architektur. Von der Methode über _good practices_
-  bis hin zu kompletten Beispielen von Softwarearchitekturen.<br>
-  Stöbern Sie in unseren Büchern, Artikeln, Vorträgen oder Videos."
+  There is a lot to read about arc42 and architecture. From methodology to _good practices_ 
+  to complete examples of software architectures.
+  Browse our books, articles, talks or videos."
   url: "/publications"
   btn_label: "read more..."
   btn_class: "btn--primary"
 
 - title: "Consulting"
   excerpt: "![](/images/home/consulting.png)<br>
-  Wir helfen in allen Lebenslagen Ihrer IT-Projekte weiter.<br>
-
-  Lesen Sie mehr über unsere Angebote an Beratung, Reviews oder praktische Unterstützung für Ihre Projekte."
+  We help in all life situations of your IT projects.
+  Read more about our offers of consulting, reviews or practical support for your projects."
   url: "/consulting"
   btn_label: "read more..."
   btn_class: "btn--primary"
