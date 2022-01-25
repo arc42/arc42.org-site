@@ -9,7 +9,7 @@ header:
   caption: "Photo: [**My Life Through A Lense**](https://unsplash.com/@bamagal)"
   
 
-excerpt: "wir packen mit an..."
+excerpt: "we lend a hand..."
 
 
 review_feature:
@@ -17,30 +17,30 @@ review_feature:
     caption: "Photo: [Jounelle](https://unsplash.com/@jey_photography)"
     alt: "Reviews"
     title: "Reviews"
-    excerpt: 'Wir liefern eine unabhängige Sicht auf Ihre Systeme und Entwicklungsprozesse, mit konkreten Vorschlägen für Verbesserungen.'
+    excerpt: 'We provide an independent view of your systems and development processes, with concrete suggestions for improvements.'
     
 
 
 docu_feature:
   - image_path: /images/consulting/docu-feature.png
-    alt: "Dokumentation"
-    title: "Dokumentation"
-    excerpt: 'Wir helfen Ihnen bei der Dokumentation Ihrer Systeme, pragmatisch und sparsam. Wir haben viele Organisationen erfolgreich bei der Einführung von arc42 unterstützt.'
+    alt: "Documentation"
+    title: "Documentation"
+    excerpt: 'We help you document your systems, pragmatically and economically. We have successfully helped many organizations implement arc42.'
     
 
 improve_feature:
   - image_path: /images/consulting/improve-feature.jpg
-    alt: "Verbessern"
-    title: "Verbesserung"
-    excerpt: "Wir haben zahlreiche Organisationen bei der Verbesserung, Modernisierung und Evolution ihrer Systeme und Entwicklungsprozesse unterstützt. "
+    alt: "Improve"
+    title: "Improvement"
+    excerpt: "We have helped numerous organizations improve, modernize and evolve their systems and development processes. "
 
 talks_feature:
   - image_path: /images/consulting/gernot-talk-seco.jpg
-    alt: "Vorträge"
-    title: "Vorträge"
-    excerpt: 'Wir halten Vorträge zu Themen rund um Architektur, auf Konferenzen oder gerne auch bei Ihnen inhouse. Darf es ein Impulsvortrag, eine Keynote oder ein thematisch fokussierter Deep-Dive sein? '
+    alt: "Talks"
+    title: "Talks"
+    excerpt: 'We give talks on topics related to architecture, at conferences or at your company. Would you like an impulse talk, a keynote or a thematically focused deep dive?'
     url: /talks
-    btn_label: "mehr dazu ..."
+    btn_label: "read more ..."
     btn_class: "btn--primary"
 
 
