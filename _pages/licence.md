@@ -10,6 +10,9 @@ sidebar:
     nav: "about"
 ---
 
+
+## The arc42 template
+
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
 
 <br />
@@ -27,3 +30,7 @@ cannot (and surely will not) revoke these freedoms as long as you follow the lic
 **You must give appropriate credit, provide a link to the license, and indicate if changes to arc42 were made.** You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
 
 If you remix, transform, or build upon material from arc42, you must distribute your contributions under the same license as the original.
+
+
+## Your own content
+You are completely free to use or publish your own content, even if it is embedded in the arc42 template, according to your own rules.
