@@ -38,7 +38,9 @@ template_training_news:
 
 - title: "News"
   excerpt: "![](/images/home/news.png)<br>
-  
+
+    * Blog-Post [Principles of technical documentation](https://www.innoq.com/en/articles/2022/01/principles-of-technical-documentation/).
+
     * The new book as ideal preparation for iSAQB certification: [Software Architecture Foundation](/books#software-architecture-foundation-cpsa-f-exam-preparation).
 
     * Even more examples of arc42 in the book arc42 by Example - [Vol 2. Embedded Systems and IoT](/books#arc42-by-example-vol2).
