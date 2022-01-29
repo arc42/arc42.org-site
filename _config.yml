@@ -18,6 +18,8 @@ name                     : "Dr. Gernot Starke"
 description              : "Resources for software architects."
 url                      : "https://arc42.org" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
+imageurl: /images
+
 repository               : "arc42/arc42.org-site" # GitHub username/repo-name
 teaser                   : /images/arc42-splash-landingpage.jpg # path of fallback teaser image, e.g. "/images/500x300.png"
 breadcrumbs            : false # true, false (default)
