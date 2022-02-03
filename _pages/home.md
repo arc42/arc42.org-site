@@ -39,7 +39,8 @@ template_training_news:
 - title: "News"
   excerpt: "![](/images/home/news.png)<br>
 
-    * Blog-Post [Principles of technical documentation](https://www.innoq.com/en/articles/2022/01/principles-of-technical-documentation/).
+    * Version 8 has been released and is available for [download](/download)
+    * Article [Principles of technical documentation](https://www.innoq.com/en/articles/2022/01/principles-of-technical-documentation/).
 
     * The new book as ideal preparation for iSAQB certification: [Software Architecture Foundation](/books#software-architecture-foundation-cpsa-f-exam-preparation).
 
