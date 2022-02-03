@@ -8,13 +8,13 @@ header:
   overlay_filter: linear-gradient(rgba(255, 0, 0, 0.7), rgba(0, 0, 255, 0.7))
   overlay_image: /images/splash/download-landingpage.jpg
   caption: "Photo credit: [**Ellery Sterling**](https://unsplash.com/photos/dPu5FIT1bGU)"
-excerpt: "Version 7.0 - the most practical and effective arc42 ever."
+excerpt: "Version 8.0 - the most practical and effective arc42 ever."
 intro:
-  - excerpt: "Version 7.0, released January 20th 2017."
+  - excerpt: "Version 8.0, released February 2022."
 
 ---
 
-Version 7.0, released January 20th 2017.
+Version 8.0, released February 2022.
 
 
 
