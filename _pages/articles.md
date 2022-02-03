@@ -30,6 +30,8 @@ Read it [here](/principles-of-technical-documentation).
 
 Originally posted on the [INNOQ Blog](https://www.innoq.com/en/articles/2022/01/principles-of-technical-documentation/).
 
+>You want to LEARN documentation: Join our 2-day hands-on workshop ADOC (find details [on our training site](https://arc42.de/termine)) or [here](/learn).
+
 ## Handeln statt jammern
 
 Peter Hruschka, Gernot Starke
