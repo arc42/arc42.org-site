@@ -3,7 +3,12 @@ title: "About us (and arc42)!"
 layout: single
 permalink: /about
 header:
-  overlay_image: /images/splash/unsplash-bridge-tom-van-hoogstraten.jpg
+  #overlay_image: /images/splash/unsplash-bridge-tom-van-hoogstraten.jpg
+ overlay_image: /images/splash/ukrainian-flag.jpg
+ actions: 
+   - label: "Help Ukraine"  
+     url: https://ukrainewar.carrd.co
+
 
 sidebar:
   nav: "about"

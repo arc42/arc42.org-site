@@ -4,9 +4,11 @@ layout: splash
 
 permalink: /publications
 header:
-  overlay_filter: rgba(15, 80, 180, 0.5)
-  overlay_image: /images/splash/publications-unsplash.jpg
-  caption: "Photo: [**Glen Carstens Peters**](https://unsplash.com/@glenncarstenspeters)"
+  #overlay_filter: rgba(15, 80, 180, 0.5)
+  #overlay_image: /images/splash/publications-unsplash.jpg
+  #caption: "Photo: [**Glen Carstens Peters**](https://unsplash.com/@glenncarstenspeters)"
+  overlay_image: /images/splash/ukrainian-flag.jpg
+  
   actions: 
    - label: "Books"
      url: /books
@@ -16,6 +18,8 @@ header:
      url: /videos  
    - label: "Talks"
      url: /talks
+   - label: "Help Ukraine"  
+     url: https://ukrainewar.carrd.co
 
 excerpt: "we talk and write about architecture...<span style='font-size:80px;'>&#128521;</span>"
 

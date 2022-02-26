@@ -1,13 +1,18 @@
 ---
 title: "arc42 Template Overview"
 layout: splash
-permalink: /overview/
+permalink: /overview
 header:
-  overlay_color: "#000"
-  overlay_filter: "0.2"
-  overlay_image: /images/splash/unsplash-bridge-tom-van-hoogstraten.jpg
-  caption: "Photo credit: [**unsplash**](https://unsplash.com/@grafish/)"
-excerpt: "arc42 is a template for architecture communication and documentation."
+#  overlay_color: "#000"
+#  overlay_filter: "0.2"
+#  overlay_image: /images/splash/unsplash-bridge-tom-van-hoogstraten.jpg
+#  caption: "Photo credit: [**unsplash**](https://unsplash.com/@grafish/)"
+ overlay_image: /images/splash/ukrainian-flag.jpg
+ actions: 
+   - label: "Help Ukraine"  
+     url: https://ukrainewar.carrd.co
+
+#excerpt: "arc42 is a template for architecture communication and documentation."
 
 
 feature_row1:
