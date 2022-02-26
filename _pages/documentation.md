@@ -3,10 +3,16 @@ title: "arc42 Documentation"
 layout: splash
 permalink: /documentation/
 header:
-  overlay_color: "#000"
-  overlay_filter: "0.4"
-  overlay_image: /images/splash/unsplash-documentation-sebastien-gabriel.jpg
-  caption: "Photo credit: [**unsplash**](https://unsplash.com/collections/3015/northside-01?photo=XOrFfUPUfeU)"
+  #overlay_color: "#000"
+  #overlay_filter: "0.4"
+  #overlay_image: /images/splash/unsplash-documentation-sebastien-gabriel.jpg
+  #caption: "Photo credit: [**unsplash**](https://unsplash.com/collections/3015/northside-01?photo=XOrFfUPUfeU)"
+ overlay_image: /images/splash/ukrainian-flag.jpg
+ actions: 
+   - label: "Help Ukraine"  
+     url: https://ukrainewar.carrd.co
+
+
 excerpt: "The info you need. Your questions answered."
 
 

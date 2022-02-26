@@ -3,10 +3,16 @@ title: "arc42 Examples"
 layout: splash
 permalink: /examples
 header:
-  overlay_color: "#000"
-  overlay_filter: "0.0"
-  overlay_image: /images/splash/unsplash-example-daniel-olah.jpg
-  caption: "Photo credit: [**unsplash**](https://unsplash.com/)"
+  #overlay_color: "#000"
+  #overlay_filter: "0.0"
+  #overlay_image: /images/splash/unsplash-example-daniel-olah.jpg
+  #caption: "Photo credit: [**unsplash**](https://unsplash.com/)"
+  overlay_image: /images/splash/ukrainian-flag.jpg
+  actions: 
+   - label: "Help Ukraine"  
+     url: https://ukrainewar.carrd.co
+
+
 excerpt: "arc42 examples."
 
 

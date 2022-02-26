@@ -3,15 +3,18 @@ title: "arc42"
 layout: splash
 permalink: /
 header:
-  overlay_color: "#d7ecf8"
-  overlay_filter: rgba(15, 80, 180, 0.4)
-  overlay_image: /images/splash/arc42-splash-landingpage.jpg
-  caption: "Photo credit: [**Thomas Bayer**](https://www.predic8.de/)"
+#  overlay_color: "#d7ecf8"
+#  overlay_filter: rgba(15, 80, 180, 0.4)
+#  overlay_image: /images/splash/arc42-splash-landingpage.jpg
+  overlay_image: /images/splash/ukrainian-flag.jpg
+#  caption: "Photo credit: [**Thomas Bayer**](https://www.predic8.de/)"
   actions: 
     - label: "Overview"
       url: /overview
     - label: "&#8594; German site..."
       url: "https://arc42.de"
+    - label: "Help Ukraine"  
+      url: https://ukrainewar.carrd.co
 excerpt: "All you ever need to construct, **communicate and document your software architecture**. Proven, **practical and pragmatic**.
 Free and open source, **takes the pain out of documentation**."
 
