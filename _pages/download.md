@@ -22,6 +22,8 @@ intro:
 
 Version 8.0, released February 2022.
 
+{: .notice}
+Personal note from Gernot Starke, April 2022: As a consequence to the inhuman and cruel invasion of Ukraine, we want to cut all ties to Russia. Even if it's only a small gesture, we decided to remove the Russian version from our repositories. 
 
 
 On this page you find all available arc42 template downloads,
@@ -43,7 +45,6 @@ These formats are generated based upon their AsciiDoc sources from the [Github r
 |  | DE | {% for type in types %} [.zip]({{PREFIX}}DE-{{type}}-{{format}}.zip) |{% endfor %}
 |  | ES | {% for type in types %} [.zip]({{PREFIX}}ES-{{type}}-{{format}}.zip) |{% endfor %}
 |  | IT | {% for type in types %} [.zip]({{PREFIX}}IT-{{type}}-{{format}}.zip) |{% endfor %}
-|  | RU | {% for type in types %} [.zip]({{PREFIX}}RU-{{type}}-{{format}}.zip) |{% endfor %}
 {% endfor %}
 
 # Confluence format
