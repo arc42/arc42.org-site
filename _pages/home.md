@@ -43,7 +43,8 @@ template_training_news:
   excerpt: "![](/images/home/news.png)<br>
 
     * Version 8 has been released and is available for [download](/download)
-    * Article [Principles of technical documentation](https://www.innoq.com/en/articles/2022/01/principles-of-technical-documentation/).
+  
+    * We now have a Dutch (NL) version of arc42! Thanx to @mverburg!
 
     * The new book as ideal preparation for iSAQB certification: [Software Architecture Foundation](/books#software-architecture-foundation-cpsa-f-exam-preparation).
 
