@@ -1,8 +1,8 @@
 ---
-title: "Publications"
+title: "More..."
 layout: splash
 
-permalink: /publications
+permalink: /more
 header:
   #overlay_filter: rgba(15, 80, 180, 0.5)
   #overlay_image: /images/splash/publications-unsplash.jpg
@@ -10,6 +10,10 @@ header:
   overlay_image: /images/splash/ukrainian-flag.jpg
   
   actions: 
+   - label: "Docs+Tipps"
+     url: https://docs.arc42.org
+   - label: "FAQ"
+     url: https://faq.arc42.org
    - label: "Books"
      url: /books
    - label: "Articles"
@@ -23,6 +27,25 @@ header:
 
 excerpt: "we talk and write about architecture...<span style='font-size:80px;'>&#128521;</span>"
 
+
+docs_feature:
+  - image_path: /images/publications/docs-feature.png
+    alt: "Docs"
+    title: "Doku und Tipps"
+    excerpt: 'Extensive documentation, more than hundred practical tips for using arc42. 
+    For all kinds of systems, small and large teams, all kinds of tools.'
+    url: https://docs.arc42.org
+    btn_label: "zu Doku & Tipps ..."
+    btn_class: "btn--primary"
+
+faq_feature:
+  - image_path: /images/publications/faq-feature.png
+    alt: "FAQ"
+    title: "FAQs"
+    excerpt: 'Frequently asked questions with answers, concerning methodical approaches, arc42-sections, agility, tools and more.'
+    url: https://faq.arc42.org
+    btn_label: "zu den FAQs ..."
+    btn_class: "btn--primary"
 
 books_feature:
   - image_path: /images/publications/book-feature.png
@@ -63,6 +86,9 @@ talks_feature:
 
 
 ---
+
+{% include feature_row id="docs_feature" type="left" %}
+{% include feature_row id="faq_feature" type="right" %}
 
 {% include feature_row id="books_feature" type="left" %}
 
