@@ -31,11 +31,11 @@ excerpt: "we talk and write about architecture...<span style='font-size:80px;'>&
 docs_feature:
   - image_path: /images/publications/docs-feature.png
     alt: "Docs"
-    title: "Doku und Tipps"
+    title: "Docu and Tips"
     excerpt: 'Extensive documentation, more than hundred practical tips for using arc42. 
     For all kinds of systems, small and large teams, all kinds of tools.'
     url: https://docs.arc42.org
-    btn_label: "zu Doku & Tipps ..."
+    btn_label: "Docs & Tips ..."
     btn_class: "btn--primary"
 
 faq_feature:
@@ -44,7 +44,7 @@ faq_feature:
     title: "FAQs"
     excerpt: 'Frequently asked questions with answers, concerning methodical approaches, arc42-sections, agility, tools and more.'
     url: https://faq.arc42.org
-    btn_label: "zu den FAQs ..."
+    btn_label: "FAQs ..."
     btn_class: "btn--primary"
 
 books_feature:
