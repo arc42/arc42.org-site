@@ -4,8 +4,8 @@ main:
     url: /overview
   - title: "Docs"
     url: /documentation
-  - title: Publications
-    url: /publications
+  - title: "More..."
+    url: /more
   - title: "Examples"
     url: /examples
   - title: "Training"
