@@ -50,7 +50,7 @@ These formats are generated based upon their AsciiDoc sources from the [Github r
 |  | ES | {% for type in types %} [.zip]({{PREFIX}}ES-{{type}}-{{format}}.zip) |{% endfor %}
 |  | IT | {% for type in types %} [.zip]({{PREFIX}}IT-{{type}}-{{format}}.zip) |{% endfor %}
 |  | NL | {% for type in types %} [.zip]({{PREFIX}}NL-{{type}}-{{format}}.zip) |{% endfor %}
-|  | UA | {% for type in types %} [.zip]({{PREFIX}}NL-{{type}}-{{format}}.zip) |{% endfor %}
+|  | UA | {% for type in types %} [.zip]({{PREFIX}}UA-{{type}}-{{format}}.zip) |{% endfor %}
 {% endfor %}
 
 # Confluence format
