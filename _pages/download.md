@@ -20,10 +20,14 @@ intro:
 
 ---
 
-Version 8.0, released February 2022.
+Version 8.0, released February 2022, UA version August 2022.
+
+{: .notice}
+We are incredibly happy to announce the availability of the Ukrainian version of arc42 - thanx to Ivan Bulyk and support from [Larysa Visengeriyeva](https://twitter.com/visenger).
 
 {: .notice}
 Personal note from Gernot Starke, April 2022: As a consequence to the inhuman and cruel invasion of Ukraine, we want to cut all ties to Russia. Even if it's only a small gesture, we decided to remove the Russian version from our repositories. 
+
 
 
 On this page you find all available arc42 template downloads,
