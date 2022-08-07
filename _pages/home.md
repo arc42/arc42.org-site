@@ -40,12 +40,12 @@ template_training_news:
 
 
 - title: "News"
-  excerpt: "![](/images/home/news.png)<br>
+  excerpt: "![](/images/home/arc42-ua.jpg)<br>
 
+    * We now have a Ukrainian (UA) version of arc42! Translated by @BulykIvan, supported by @visenger!
+    
     * Version 8 has been released and is available for [download](/download)
   
-    * We now have a Dutch (NL) version of arc42! Thanx to @mverburg!
-
     * The new book as ideal preparation for iSAQB certification: [Software Architecture Foundation](/books#software-architecture-foundation-cpsa-f-exam-preparation).
 
     * Even more examples of arc42 in the book arc42 by Example - [Vol 2. Embedded Systems and IoT](/books#arc42-by-example-vol2).
