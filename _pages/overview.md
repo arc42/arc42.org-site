@@ -119,7 +119,7 @@ feature_row11:
 - image_path: /images/template/11-risk-overview.png
   alt: "risk"
   title: "11. Risks and Technical Debt"
-  excerpt: 'Known technical risks or technical debt. What potential problems exist within or around the system? What does the development team feel miserable about?'
+  excerpt: 'Known technical risks or technical debt. What potential problems exist within or around the system? What does the development team feel miserable about?<br><small>Icon from Flaticon.com</small>'
   url: "https://docs.arc42.org/section-11/"
   btn_label: "Read More"
   btn_class: "btn--danger"    
