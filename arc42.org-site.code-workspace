@@ -42,7 +42,8 @@
 			"terminal.ansiMagenta": "#955AE7",
 			"terminal.ansiRed": "#BE4678",
 			"terminal.ansiWhite": "#585260",
-			"terminal.ansiYellow": "#A06E3B"
+			"terminal.ansiYellow": "#A06E3B",
+			"commandCenter.border": "#e7e7e799"
 		},
 		"peacock.color": "#1857a4"
 	}
