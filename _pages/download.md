@@ -8,7 +8,7 @@ header:
   #overlay_filter: linear-gradient(rgba(255, 0, 0, 0.7), rgba(0, 0, 255, 0.7))
   #overlay_image: /images/splash/download-landingpage.jpg
   #caption: "Photo credit: [**Ellery Sterling**](https://unsplash.com/photos/dPu5FIT1bGU)"
-  overlay_image: /images/splash/ukrainian-flag.jpg
+  overlay_image: /images/splash/ukrainan-flag.webp
   actions: 
    - label: "Help Ukraine"  
      url: https://ukrainewar.carrd.co

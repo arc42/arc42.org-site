@@ -7,7 +7,7 @@ header:
 #  overlay_filter: "0.2"
 #  overlay_image: /images/splash/unsplash-bridge-tom-van-hoogstraten.jpg
 #  caption: "Photo credit: [**unsplash**](https://unsplash.com/@grafish/)"
- overlay_image: /images/splash/ukrainian-flag.jpg
+ overlay_image: /images/splash/ukrainan-flag.webp
  actions: 
    - label: "Help Ukraine"  
      url: https://ukrainewar.carrd.co

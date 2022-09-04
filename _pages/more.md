@@ -7,7 +7,7 @@ header:
   #overlay_filter: rgba(15, 80, 180, 0.5)
   #overlay_image: /images/splash/publications-unsplash.jpg
   #caption: "Photo: [**Glen Carstens Peters**](https://unsplash.com/@glenncarstenspeters)"
-  overlay_image: /images/splash/ukrainian-flag.jpg
+  overlay_image: /images/splash/ukrainan-flag.webp
   
   actions: 
    - label: "Docs+Tipps"
