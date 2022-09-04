@@ -1,6 +1,6 @@
 ---
 title: Videos von und über arc42
-excerpt: "wir sprechen drüber..."
+excerpt: "we show it..."
 layout: single
 
 toc: right
@@ -9,7 +9,7 @@ toc_label: "Titel"
 permalink: /videos
 header:
   overlay_filter: rgba(15, 80, 180, 0.5)
-  overlay_image: /images/splash/video-unsplash.jpg
+  overlay_image: /images/splash/video-unsplash.webp
   caption: "Photo: [**Jakob Owens**]()"
 
 sidebar:
