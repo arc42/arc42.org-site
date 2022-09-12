@@ -4,7 +4,7 @@ layout: single
 permalink: /about
 header:
   #overlay_image: /images/splash/unsplash-bridge-tom-van-hoogstraten.jpg
- overlay_image: /images/splash/ukrainan-flag.webp
+ overlay_image: /images/splash/ukrainian-flag.webp
  actions: 
    - label: "Help Ukraine"  
      url: https://ukrainewar.carrd.co

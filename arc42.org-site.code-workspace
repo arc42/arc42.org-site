@@ -24,7 +24,7 @@
 			"titleBar.inactiveBackground": "#1857a499",
 			"titleBar.inactiveForeground": "#e7e7e799",
 			"terminal.foreground": "#67b1f7",
-			"terminal.background":"#024a63",
+			"terminal.background": "#024a63",
 			"terminalCursor.background": "#504945",
 			"terminalCursor.foreground": "#504945",
 			"terminal.ansiBlue": "#076678",
