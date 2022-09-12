@@ -7,7 +7,7 @@ header:
   #overlay_filter: "0.4"
   #overlay_image: /images/splash/unsplash-documentation-sebastien-gabriel.jpg
   #caption: "Photo credit: [**unsplash**](https://unsplash.com/collections/3015/northside-01?photo=XOrFfUPUfeU)"
- overlay_image: /images/splash/ukrainan-flag.webp
+ overlay_image: /images/splash/ukrainian-flag.webp
  actions: 
    - label: "Help Ukraine"  
      url: https://ukrainewar.carrd.co
