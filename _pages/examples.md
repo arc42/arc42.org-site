@@ -7,7 +7,7 @@ header:
   #overlay_filter: "0.0"
   #overlay_image: /images/splash/unsplash-example-daniel-olah.jpg
   #caption: "Photo credit: [**unsplash**](https://unsplash.com/)"
-  overlay_image: /images/splash/ukrainan-flag.webp
+  overlay_image: /images/splash/ukrainian-flag.webp
   actions: 
    - label: "Help Ukraine"  
      url: https://ukrainewar.carrd.co
