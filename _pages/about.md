@@ -41,3 +41,9 @@ It's built using [Netlify](https://www.netlify.com/) and
 
 * was last built on {{ site.time | date: '%c' }}
 * contains {{ site.pages | size }} pages
+
+### Our Logo
+(to have a URL for this logo, e.g. for demo applications)
+
+![arc42 logo](/images/about/arc42-logo-medium.jpg)
+
