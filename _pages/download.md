@@ -46,6 +46,7 @@ These formats are generated based upon their AsciiDoc sources from the [Github r
 | Format | Language | Plain <br> (without explanation) | With Help <br>(contains explanations for every section) |
 |--------|----------|-------|-----------| 
 {% for format in formats %}| {{ format }} | EN | {% for type in types %} [.zip]({{PREFIX}}EN-{{type}}-{{format}}.zip) |{% endfor %}
+|  | CZ | {% for type in types %} [.zip]({{PREFIX}}CZ-{{type}}-{{format}}.zip) |{% endfor %}
 |  | DE | {% for type in types %} [.zip]({{PREFIX}}DE-{{type}}-{{format}}.zip) |{% endfor %}
 |  | ES | {% for type in types %} [.zip]({{PREFIX}}ES-{{type}}-{{format}}.zip) |{% endfor %}
 |  | IT | {% for type in types %} [.zip]({{PREFIX}}IT-{{type}}-{{format}}.zip) |{% endfor %}
