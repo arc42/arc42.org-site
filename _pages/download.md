@@ -14,13 +14,16 @@ header:
      url: https://ukrainewar.carrd.co
 
 
-excerpt: "Version 8.0 - the most practical and effective arc42 ever."
+excerpt: "Version 8 - the most practical and effective arc42 ever."
 intro:
-  - excerpt: "Version 8.0, released February 2022."
+  - excerpt: "Version 8.1, released October 2022."
 
 ---
 
-Version 8.0, released February 2022, UA version August 2022.
+Version 8, released February 2022, UA version August 2022, CZ version October 2022.
+
+{: .notice}
+We are so happy to announce the availability of the Czech version of arc42 - thanx to Jakub RC. You rock!
 
 {: .notice}
 We are incredibly happy to announce the availability of the Ukrainian version of arc42 - thanx to Ivan Bulyk and support from [Larysa Visengeriyeva](https://twitter.com/visenger).
@@ -46,6 +49,7 @@ These formats are generated based upon their AsciiDoc sources from the [Github r
 | Format | Language | Plain <br> (without explanation) | With Help <br>(contains explanations for every section) |
 |--------|----------|-------|-----------| 
 {% for format in formats %}| {{ format }} | EN | {% for type in types %} [.zip]({{PREFIX}}EN-{{type}}-{{format}}.zip) |{% endfor %}
+|  | CZ | {% for type in types %} [.zip]({{PREFIX}}CZ-{{type}}-{{format}}.zip) |{% endfor %}
 |  | DE | {% for type in types %} [.zip]({{PREFIX}}DE-{{type}}-{{format}}.zip) |{% endfor %}
 |  | ES | {% for type in types %} [.zip]({{PREFIX}}ES-{{type}}-{{format}}.zip) |{% endfor %}
 |  | IT | {% for type in types %} [.zip]({{PREFIX}}IT-{{type}}-{{format}}.zip) |{% endfor %}
@@ -63,10 +67,12 @@ two flavors:
 
 | Language | flat | structured |
 |----------|------|------------|
+| CZ | [.zip]({{PREFIX}}CZ-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}CZ-withhelp-confluenceStructured.zip) |
 | DE | [.zip]({{PREFIX}}DE-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}DE-withhelp-confluenceStructured.zip) |
 | EN | [.zip]({{PREFIX}}EN-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}EN-withhelp-confluenceStructured.zip) |
 | ES | [.zip]({{PREFIX}}ES-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}ES-withhelp-confluenceStructured.zip) |
-| IT | [.zip]({{PREFIX}}IT-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}EIT-withhelp-confluenceStructured.zip) |
+| IT | [.zip]({{PREFIX}}IT-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}IT-withhelp-confluenceStructured.zip) |
+| UA | [.zip]({{PREFIX}}UA-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}UA-withhelp-confluenceStructured.zip) |
 
 These versions are generated for the latest version of confluence.
 
