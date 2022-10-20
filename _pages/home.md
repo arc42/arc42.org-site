@@ -14,7 +14,7 @@ header:
     - label: "&#8594; German site..."
       url: "https://arc42.de"
     - label: "Help Ukraine"  
-      url: https://ukrainewar.carrd.co
+      url: https://u24.gov.ua/
 excerpt: "All you ever need to construct, **communicate and document your software architecture**. Proven, **practical and pragmatic**.
 Free and open source, **takes the pain out of documentation**."
 
