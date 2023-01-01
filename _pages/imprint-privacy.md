@@ -29,6 +29,9 @@ Dr. Gernot Starke, Willi-Lauf Allee 43, D-50858 Köln
 
 Dr. Gernot Starke, mit Unterstützung von Dr. Peter Hruschka (Aachen).
 
+#### Web Analytics
+This page uses privacy-friendly web analytics from [plausible.io](https://plausible.io), but sets NO COOKIES.
+
 
 
 ## Privacy Statement (Datenschutzerklärung)
