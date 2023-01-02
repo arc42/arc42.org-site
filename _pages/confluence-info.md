@@ -12,13 +12,8 @@ header:
 
 You're looking for the arc42 Confluence?
 
-Since January 2017 our public confluence is hosted
-in the [Atlassian Cloud](https://arc42-template.atlassian.net/), not on our own site.
+Sorry, support for our public instance has been dropped.
 
-You will **NOT** be automatically redirected - so you have to
-click the link or copy/paste the following link:
+You can download our confluence template, though.
 
-#### [https://arc42-template.atlassian.net/](https://arc42-template.atlassian.net/)
-
-
-Have fun!
+Head over to the arc42 [downloads](/download).

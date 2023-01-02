@@ -186,7 +186,7 @@ of all markup languages, a full-blown [document preparation system](https://www.
 to invest some effort...
 
 **rst**
-: [ReStructuredText](http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html),  markup language, heavily used by [ReadTheDocs](https://readthedocs.org/) and in the Python world.
+: [ReStructuredText](https://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html),  markup language, heavily used by [ReadTheDocs](https://readthedocs.org/) and in the Python world.
 
 **textile**
 : Another simple markup language, [well-documented](https://txstyle.org/). 

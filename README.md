@@ -23,7 +23,7 @@ CNAME entry to point to Netlify.
 
 * Free images can be found at [Unsplash](https://unsplash.com/)
 * I bought several icons from [IconFinder](https://www.iconfinder.com?ref=gernotstarke), a great source for professional-grade icons. Recommended!
-* I generated the various favicon files with [RealFavIconGenerator](http://realfavicongenerator.net/).
+* I generated the various favicon files with [RealFavIconGenerator](https://realfavicongenerator.net/).
 
 
 ---

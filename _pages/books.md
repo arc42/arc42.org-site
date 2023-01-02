@@ -172,7 +172,7 @@ beispielsweise um Tipps zu Microservices ergänzt. Unsere Einführung zur _Schab
 
 Daneben gibt es natürlich auch Neues, etwa die Patterns _Hashwertschlüssel_ oder _Inbetriebnahme_.
 
-Mehr Details gibt's auf der [Website zum Buch](http://www.patterns-kompakt.de/).
+Mehr Details gibt's auf der [Website zum Buch](https://www.patterns-kompakt.de/).
 
 <br><br>
 
