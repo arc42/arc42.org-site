@@ -44,7 +44,7 @@ included here...
 [HTML Sanity Checker](https://hsc.aim42.org) (English)  
 Verbose example for the documentation of a Gradle plugin, created by Dr. Gernot Starke.
 
-[DocChess](http://www.dokchess.de/dokchess/arc42/) (German)  
+[DocChess](https://www.dokchess.de/dokchess/arc42/) (German)  
 Verbose example for a chess engine, created by Stefan Z&ouml;rner. There is also a book available which describes the creation of this example.
 
 [Gradle](https://www.embarc.de/arc42-starschnitt-gradle/) (German)  
@@ -53,7 +53,7 @@ A series of blog posts which describe certain aspects of Gradle and put them int
 [biking](https://biking.michael-simons.eu/docs/index.html) (English)
 A real world example for a bike activity tracker, created by Michael Simons
 
-[Angular 2](http://blog.fingersteps.ch/2015/12/01/blog-serie-architekturueberblick-von-angular-2/) (German)
+[Angular 2](https://blog.fingersteps.ch/2015/12/01/blog-serie-architekturueberblick-von-angular-2/) (German)
 A series of blog posts inspired by the Gradle "Starschnitt". Created by Patrick Roos.
 
 

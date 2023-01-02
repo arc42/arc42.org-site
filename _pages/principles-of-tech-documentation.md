@@ -774,6 +774,6 @@ Müller, Joachim Praetorius, Marco Stroppel and Peter Hruschka. Header image by 
 
 [^DocumentationPrinciplesWrite]: "Documentation Principles — Write the Docs.” https://www.writethedocs.org/guide/writing/docs-principles/.
 
-[^mullerDocToolchain]: R. D. Müller, "docToolchain."  http://doctoolchain.org/docToolchain/v2.0.x/.
+[^mullerDocToolchain]: R. D. Müller, "docToolchain."  https://doctoolchain.org/docToolchain/v2.0.x/.
 
 [^sutherlandDefinitionDone2014]: J. Sutherland, "Definition of Done," 07-Aug-2014. https://www.scruminc.com/definition-of done.
