@@ -78,7 +78,7 @@ These versions are generated for the latest version of confluence.
 
 **Notes for Confluence users**
 
-* We are operating a public confluence - as (briefly) described [here](/confluence-info).
+* We stopped operating a public confluence instance.
 
 * If you consider to use confluence, the [asciidoc2confluence](https://github.com/rdmueller/asciidoc2confluence) script might be helpful.
 
@@ -189,7 +189,7 @@ to invest some effort...
 : [ReStructuredText](https://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html),  markup language, heavily used by [ReadTheDocs](https://readthedocs.org/) and in the Python world.
 
 **textile**
-: Another simple markup language, [well-documented](https://txstyle.org/). 
+: Another simple markup language, documented on [textile-lang.com](https://textile-lang.com/)/). 
 
 **html**
 : Used only to _view_ the template, not to work with it.
