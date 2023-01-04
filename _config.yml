@@ -103,6 +103,8 @@ exclude:
 
 keep_files:
   - .git
+  - robots.txt
+  
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
@@ -145,6 +147,8 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-seo-tag
+
 
 # mimic GitHub Pages with --safe
 whitelist:
