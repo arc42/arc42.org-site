@@ -4,3 +4,5 @@ layout: none
 User-agent: *
 Sitemap: {{ site.url }}/sitemap.xml
 Disallow: /downloads/
+Disallow: /images/
+Disallow: /search/
