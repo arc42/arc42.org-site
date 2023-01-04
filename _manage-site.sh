@@ -40,12 +40,13 @@ fi
 
 case "$choice" in
   b|B|build) echo "build Docker image"
-                     docker-compose --file _docker-compose-dev.yml build --force-rm
-                     ;;
+        docker-compose --file _docker-compose-dev.yml build --force-rm
+        ;;
 
   d|D|dev|develop) echo "develop, incremental build"
-                   docker-compose --file _docker-compose-dev.yml up
-                   ;;
+        rm -r _site
+        docker-compose --file _docker-compose-dev.yml up
+        ;;
 
   r|R|remove) echo "remove running docker container"
              docker-compose --file _docker-compose-dev.yml down

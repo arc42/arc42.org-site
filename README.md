@@ -1,15 +1,14 @@
 # arc42.org Website
 
-> currently available on [arc42.org](https://arc42.org)
+> currently available on [arc42.org](https://www.arc42.org)
 
-ATTENTION: Site is currently beeing migrated to [netlify](https://netlify.com)
+Site is currently beeing built and served by [Netlify](https://netlify.com)
 
 
 ### How does it work?
 
 * home.md is the homepage, it's mapped (via permalink) to "/".
-* With the arc42.org hosting provider we configured a custom DNS
-CNAME entry to point to Netlify.
+* With the arc42.org hosting provider we configured a custom DNS CNAME entry to point to Netlify.
 
 
 ## Credits
