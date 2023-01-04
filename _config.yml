@@ -71,6 +71,8 @@ include:
   - .htaccess
   - _pages
   - downloads
+  - robots.txt
+
 exclude:
   - vendor
   - .asset-cache
@@ -84,22 +86,17 @@ exclude:
   - CHANGELOG
   - config
   - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
   - LICENSE
   - log
-  - node_modules
   - package.json
-  - Rakefile
-  - README
+  - README.*
   - tmp
   - Dockerfile
   - _manage-site.sh
   - _docker*
-  - zz-site/
   - _site/
-  - includes/subtle-ads/logo
-  - includes/subtle-ads/*.sh
+  - _includes/subtle-ads/logo
+  - _includes/subtle-ads/*.sh
 
 keep_files:
   - .git

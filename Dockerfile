@@ -1,7 +1,7 @@
 FROM jekyll/builder
 
 LABEL version="0.9.0"
-LABEL description="develop and generate arc42.org site"
+LABEL description="develop and generate arc42 site"
 LABEL vendor="arc42 (Gernot Starke)"
 
 COPY Gemfile .
