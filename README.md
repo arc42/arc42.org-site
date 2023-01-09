@@ -10,6 +10,16 @@ ATTENTION: Site is currently beeing migrated to [netlify](https://netlify.com)
 * home.md is the homepage, it's mapped (via permalink) to "/".
 * With the arc42.org hosting provider we configured a custom DNS
 CNAME entry to point to Netlify.
+  
+
+### How does the search page work?
+The search uses the [Simple-Jekyll-Search Javascript Function](https://github.com/christian-fei/Simple-Jekyll-Search),
+Copyright 2015-2020, Christian Fei, licensed under the MIT License.  
+This function is available in the [search-script.js file](search-script.js).  
+In the [search.json file](search.json), all content we want to include within the search is converted into 
+key-value pairs which can then be easily read by the search script.  
+In [search.html](_pages/search.html), we create the page that shows the search box and results, using the 
+script and the json, and with that, the search is ready. 
 
 
 ## Credits
