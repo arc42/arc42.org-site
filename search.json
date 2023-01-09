@@ -1,0 +1,17 @@
+---
+layout: none
+---
+[
+{% for page in site.pages %}
+{
+{% if page.title != nil %}
+{% if page.title != "Sorry, Page Not Found (404)" %}
+"title"    : "{{ page.title | escape }}",
+"content"  : {{ page.content | strip_html | strip_newlines | jsonify }},
+"url"      : "{{ site.baseurl }}{{ page.url }}",
+"date"     : "{{ page.date }}"
+{% endif %}
+{% endif %}
+} {% unless forloop.last %},{% endunless %}
+{% endfor %}
+]
