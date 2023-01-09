@@ -14,6 +14,8 @@ main:
     url: /download
   - title: "About"
     url: /about
+  - title: "Search"
+    url: /search
 
 about:
   - title: About arc42
