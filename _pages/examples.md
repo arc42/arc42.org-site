@@ -17,7 +17,7 @@ excerpt: "arc42 examples."
 
 
 feature_row1:
-  - image_path: /images/arc42-by-example-cover.png
+  - image_path: /images/books/arc42-by-example-2nd.png
     alt: "arc42 by Example"
     title: "Six Real-World Systems..."
     excerpt: 'The architecture of real systems, documented with the arc42 template. Helps you jumpstart your own documentation. Written by Gernot Starke, Michael Simons and Stefan Zörner.'
@@ -62,4 +62,4 @@ A series of blog posts inspired by the Gradle "Starschnitt". Created by Patrick 
 
 {% include subtle-ads/subtle-ads.html %}
 
-<a href="https://arc42.de" class="btn btn--success">Training site</a>
+<a href="https://arc42.de/schulungen" class="btn btn--success">Training site</a>

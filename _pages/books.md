@@ -149,7 +149,7 @@ Der Primer ist so kompakt, dass Sie selbst unter Zeitdruck angemessene (und leic
 
 ## arc42-by-Example, 2. Auflage
 
-![](/images/books/arc42-by-example-2nd.png){: .align-right}
+![](/images/books/arc42-by-example-2nd-small.png){: .align-right}
 Gernot Starke, Ralf D. Müller, Michael Simons, Stefan Zörner: arc42-by-Example, 2nd Edition, Leanpub 250 Seiten, eBook (auf Englisch), veröffentlicht bei [Leanpub](https://leanpub.com/arc42byexample). Verfügbar in verschiedenen Formaten (pdf, epub, kindle).
 
 Wir konnten Ralf Müller als vierten Autor dazu gewinnen, von ihm stammt die Architekturdokumentation seines "docToolchain" Systems. Die übrigen Beispiele haben wir an die Version 7 von arc42 angepasst, diverse Schönheitsfehler beseitigt und (um es mit den Youtube-Entwickler zu formulieren) _den Müll rausgebracht_.
