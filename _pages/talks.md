@@ -1,6 +1,6 @@
 ---
-title: Vorträge von Peter und Gernot
-excerpt: "wir sprechen drüber..."
+title: Talks by Peter and Gernot
+excerpt: "We talk about it..."
 layout: single
 
 toc: right
@@ -14,7 +14,7 @@ sidebar:
   nav: "publications"
 ---
 
-Einige ausgesuchte Vorträge finden Sie unten, für weitere schauen Sie auf [Speakerdeck](https://speakerdeck.com/gernotstarke)
+Some selected talks can be found below, for more take a look at [Speakerdeck](https://speakerdeck.com/gernotstarke)
 
 ## Im Stich gelassen (Gernot Starke mit Daniel Lauxtermann)
 
