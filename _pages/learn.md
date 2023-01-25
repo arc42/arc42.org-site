@@ -3,14 +3,9 @@ title: "Learn architecture"
 layout: splash
 permalink: /learn
 header:
-  #overlay_image: /images/splash/learn-header-helloquence.jpg
-  #caption: "Photo: [**helloquence**](https://unsplash.com/photos/5fNmWej4tAA)"
-  overlay_image: /images/splash/ukrainian-flag.webp
-  actions: 
-   - label: "Help Ukraine"  
-     url: https://ukrainewar.carrd.co
-
-
+  overlay_image: /images/splash/learn-header-helloquence.jpg
+  caption: "Photo: [**helloquence**](https://unsplash.com/photos/5fNmWej4tAA)"
+  
 ---
 
 # Become Certified Professional for Software Architecture!

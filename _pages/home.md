@@ -3,18 +3,15 @@ title: "arc42"
 layout: splash
 permalink: /
 header:
-#  overlay_color: "#d7ecf8"
-#  overlay_filter: rgba(15, 80, 180, 0.4)
-#  overlay_image: /images/splash/arc42-splash-landingpage.jpg
-  overlay_image: /images/splash/ukrainian-flag.webp
-#  caption: "Photo credit: [**Thomas Bayer**](https://www.predic8.de/)"
+  overlay_color: "#d7ecf8"
+  overlay_filter: rgba(15, 80, 180, 0.4)
+  overlay_image: /images/splash/arc42-splash-landingpage.jpg
+  caption: "Photo credit: [**Thomas Bayer**](https://www.predic8.de/)"
   actions: 
     - label: "Overview"
       url: /overview
     - label: "&#8594; German site..."
-      url: "https://arc42.de"
-    - label: "Help Ukraine"  
-      url: https://u24.gov.ua/
+      url: "https://www.arc42.de"
 excerpt: "All you ever need to construct, **communicate and document your software architecture**. Proven, **practical and pragmatic**.
 Free and open source, **takes the pain out of documentation**."
 
@@ -75,6 +72,12 @@ methode_publications_consulting:
   btn_label: "read more..."
   btn_class: "btn--primary"
 ---
+
+>### We stand with the people of Ukraine <span class="ua-text"><i class="fa-solid fa-heart"></i></span><span class="ua-size"><i class="fa-solid fa-heart fa-beat heart"></i></span>
+>
+>Please assist humanitarian efforts for the Ukrainian people and those affected by the military invasion of Ukraine by supporting international aid organizations, including the [International Committee of the Red Cross](https://www.icrc.org/en).
+
+
 
 {% include feature_row id="template_training_news" %}
 
