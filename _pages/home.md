@@ -73,10 +73,13 @@ methode_publications_consulting:
   btn_class: "btn--primary"
 ---
 
+<div class="ua-background" markdown="1">
+
 >### We stand with the people of Ukraine <span class="ua-text"><i class="fa-solid fa-heart"></i></span><span class="ua-size"><i class="fa-solid fa-heart fa-beat heart"></i></span>
 >
 >Please assist humanitarian efforts for the Ukrainian people and those affected by the military invasion of Ukraine by supporting international aid organizations, including the [International Committee of the Red Cross](https://www.icrc.org/en).
 
+</div>
 
 
 {% include feature_row id="template_training_news" %}
