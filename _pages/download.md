@@ -43,7 +43,7 @@ various [formats]({{page.url}}#format-overview) for various tools. For an overvi
 
 These formats are generated based upon their AsciiDoc sources from the [Github repository](https://github.com/arc42/arc42-template).
 
-{% assign formats = "docx|asciidoc|markdown|markdownMP|latex|html|rst|textile" | split: "|"  %}  
+{% assign formats = "docx|asciidoc|markdown|markdownMP|markdownStrict|markdownMPStrict|gitHubMarkdown|gitHubMarkdownMP|latex|html|rst|textile" | split: "|"  %}  
 {% assign types = "plain|withhelp" | split: "|"  %}  
 
 | Format | Language | Plain <br> (without explanation) | With Help <br>(contains explanations for every section) |
@@ -170,6 +170,9 @@ Please [contact us!](/contact)
 
 **markdown**
 : Widespread and simple markup language, [documented here](https://daringfireball.net/projects/markdown/syntax) by its inventor.
+
+**markdown (strict)**
+: A restricted markup, [documented here](https://daringfireball.net/projects/markdown/syntax) by its inventor.
 
 **markdownMP**
 : Same format as **markdown** above but every chapter is located in its own file.
