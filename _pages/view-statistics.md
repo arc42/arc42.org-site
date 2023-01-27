@@ -14,7 +14,8 @@ all-de-org:
   '
 
 - title: "arc42.de"
-  excerpt: '<iframe plausible-embed src="https://plausible.io/share/arc42.de?auth=IYzUmMI8s2PYKgggJhO7q&embed=true&theme=light" height="600" frameborder="0" loading="lazy" style="width: 1px; min-width: 100%;" ></iframe>
+  excerpt: '
+  <iframe plausible-embed src="https://plausible.io/share/arc42.de?auth=IYzUmMI8s2PYKgggJhO7q&embed=true&theme=light" height="600" frameborder="0" loading="lazy" style="width: 1px; min-width: 100%;" ></iframe>
   '
 
 - title: "arc42.org"
@@ -48,9 +49,13 @@ doc-faq-quality:
 
 <div style="font-size: 14px; padding-bottom: 14px;">All stats powered by <a target="_blank" style="color: #4F46E5; text-decoration: underline;" href="https://plausible.io">Plausible Analytics</a></div>
 
+Statistics for [subdomains docs.arc42.org, faq.arc42.org and quality.arc42.org](/viewer-statistics/#subdomains)
 
 {% include feature_row id="all-de-org" %}
 
+
+<a id="subdomains"/>
+## Subdomain Sites
 {% include feature_row id="doc-faq-quality" %}
 
 
