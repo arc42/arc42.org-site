@@ -39,7 +39,9 @@ template_training_news:
 - title: "News"
   excerpt: "![](/images/home/arc42-ua.webp)<br>
 
-    * We now have Czechian (CZ, translated by Jakub RC) and Ukrainian (UA, translated by @BulykIvan, supported by [@visenger](https://twitter.com/visenger)) versions of arc42 available, together with DE, EN, ES, IT and NL!
+    * Thanx to Stephan Lessing, we now have a [doxygen](https://www.doxygen.nl/) version in our [downloads](/downloads)
+   
+    * We now have Czechian (CZ) and Ukrainian (UA) versions of arc42 available, together with DE, EN, ES, IT and NL!
     
     * The new book as ideal preparation for iSAQB certification: [Software Architecture Foundation](/books#software-architecture-foundation-cpsa-f-exam-preparation).
 
