@@ -108,7 +108,8 @@ not be supported by us (as we don't have access to these legacy Confluence versi
 
 | doxygen |
 |--------------------------|
-| doxygen arc42 template: [arc42_doxygen_template.zip]({{GITHUBDIR}}doxygen/arc42_doxyten_template.zip)|
+| doxygen arc42 template: [arc42_doxygen_template.zip]({{GITHUBDIR}}doxygen/arc42_doxygen_template.zip)|
+
 
 This template is available in EN only. Contributed by Stephan Lessing, February 2023.
 
