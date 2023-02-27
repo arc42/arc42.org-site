@@ -39,7 +39,7 @@ template_training_news:
 - title: "News"
   excerpt: "![](/images/home/arc42-ua.webp)<br>
 
-    * Thanx to Stephan Lessing, we now have a [doxygen](https://www.doxygen.nl/) version in our [downloads](/downloads)
+    * Thanx to Stephan Lessing, we now have a [doxygen](https://www.doxygen.nl/) version in our [downloads](/download)
    
     * We now have Czechian (CZ) and Ukrainian (UA) versions of arc42 available, together with DE, EN, ES, IT and NL!
     
