@@ -99,18 +99,29 @@ These legacy versions have been provided (thanx!) by arc42 users - and can
 not be supported by us (as we don't have access to these legacy Confluence versions).
 {: .small}
 
+# Doxygen format
+
+>Doxygen is the de facto standard tool for generating documentation from annotated C++ sources, but it also supports other popular programming languages such as C, Objective-C, C#, PHP, Java, Python, IDL (Corba, Microsoft, and UNO/OpenOffice flavors), Fortran, and to some extent D. 
+>Doxygen also supports the hardware description language VHDL.
+>
+>[doxygen.nl](https://www.doxygen.nl/)
+
+| doxygen |
+|--------------------------|
+| doxygen arc42 template: [arc42_doxygen_template.zip]({{GITHUBDIR}}doxygen/arc42_doxyten_template.zip)|
+
+This template is available in EN only. Contributed by Stephan Lessing, February 2023.
 
 # Enterprise Architect&copy; format
-Enterprise Architect;copy; is a commercial UML modeling tool by
-SparxSystems.
+Enterprise Architect;copy; is a commercial UML modeling tool by [SparxSystems](https://sparxsystems.com/).
 
-The Enterprise-Architect version of arc42 contains only the diagram-intensive parts
-of the arc42 structure without help text. It's available in EN only.
+The Enterprise-Architect version of arc42 contains only the diagram-intensive parts of the arc42 structure without help text. 
+It's available in EN only.
 
-Please use this format only as a companion to any textual or wiki format,
-as it does not contain any explanations or rationales. Put your diagrams
-into an EA model, but text and tables should be created, kept and maintained
-differently.
+Please use this format only as a companion to any textual or wiki format, as it does not contain any explanations or rationales. 
+Put your diagrams into an EA model, but text and tables should be created, kept and maintained differently.
+
+>Please note: This template reflects version 6, and has not been updated since approx. 2015 (volunteer maintainers welcome!)
 
 | Enterprise Architect EAP |
 |--------------------------|
@@ -122,7 +133,9 @@ differently.
 is a commercial modeling tool by IBM, primarily suited
 for embedded systems.
 
-The Rhapsody version of arc42 contains the complete parts of the arc42 structure with minimum help text. It’s available in EN only. This rhapsody arc42 profile includes the complete arc42 structure within Rhapsody using UML/SysML.
+The Rhapsody version of arc42 contains the complete parts of the arc42 structure with minimum help text. 
+It’s available in EN only. 
+This rhapsody arc42 profile includes the complete arc42 structure within Rhapsody using UML/SysML.
 
 This version has been created and tested with Rhapsody version 8.2.1.
 
