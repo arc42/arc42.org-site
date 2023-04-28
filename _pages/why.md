@@ -73,7 +73,7 @@ documentation is awkward and clumsy. Creativity gone. That's **not** why people 
 # arc42 makes documentation efficient and effective
 
 arc42 has a clear, simple and effective structure to document and
-communicate your software system. Is is optimized for understandability
+communicate your software system. It is optimized for understandability
 and adequacy. arc42 naturally guides you to explain any kind of
 architecture information or decision in an understandable way,
 easy to maintain.
