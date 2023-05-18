@@ -27,8 +27,10 @@ might be visible during transit.
 
 * via [<i class="fab fa-fw fa-github"></i>issue tracker](https://github.com/arc42/arc42-template/issues) at [https://github.com/arc42/arc42-template/issues](https://github.com/arc42/arc42-template/issues).
 * on our Twitter accounts:
-  * [<i class="fab fa-fw fa-twitter"></i>@arc42Tipps](https://twitter.com/arc42Tipps)
   * [<i class="fab fa-fw fa-twitter"></i>@gernotstarke](https://twitter.com/gernotstarke)
+* on <i class="fab fa-fw fa-linkedin"></i>LinkedIn:
+  * [Gernot Starke](https://linkedin.com/in/gernot-starke-ba4096276)
+  * [Peter Hruschka](https://www.linkedin.com/in/peterhruschka/) 
 * on [<i class="fab fa-fw fa-stack-overflow"></i>Stackoverflow](https://stackoverflow.com/questions/tagged/arc42)
 
 
