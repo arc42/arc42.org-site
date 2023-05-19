@@ -29,7 +29,7 @@ might be visible during transit.
 * on our Twitter accounts:
   * [<i class="fab fa-fw fa-twitter"></i>@gernotstarke](https://twitter.com/gernotstarke)
 * on <i class="fab fa-fw fa-linkedin"></i>LinkedIn:
-  * [Gernot Starke](https://linkedin.com/in/gernot-starke-ba4096276)
+  * [Gernot Starke](https://linkedin.com/in/gernotstarke)
   * [Peter Hruschka](https://www.linkedin.com/in/peterhruschka/) 
 * on [<i class="fab fa-fw fa-stack-overflow"></i>Stackoverflow](https://stackoverflow.com/questions/tagged/arc42)
 
