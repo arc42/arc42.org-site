@@ -17,6 +17,7 @@ main:
   - title: "Search"
     url: /search
 
+# about
 about:
   - title: About arc42
     url: /about
@@ -27,3 +28,6 @@ about:
       url: "https://github.com/arc42/arc42-template/graphs/contributors"
     - title: "License"
       url: "/license"
+    - title: "Partner"
+      url: "/partner"
+
