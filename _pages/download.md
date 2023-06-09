@@ -20,7 +20,10 @@ intro:
 
 ---
 
-Version 8, released February 2022, UA version August 2022, CZ version October 2022.
+Version 8, released February 2022, UA version August 2022, CZ version October 2022, FR version June 2023
+
+{: .notice}
+Nous sommes heureux d'annoncer la disponibilité de la version française d'arc42 - merci beaucoup à Damien Lucas. Bon travail!
 
 {: .notice}
 We are so happy to announce the availability of the Czech version of arc42 - thanx to Jakub RC. You rock!
@@ -53,6 +56,7 @@ These formats are generated based upon their AsciiDoc sources from the [Github r
 |  | DE | {% for type in types %} [.zip]({{PREFIX}}DE-{{type}}-{{format}}.zip) |{% endfor %}
 |  | ES | {% for type in types %} [.zip]({{PREFIX}}ES-{{type}}-{{format}}.zip) |{% endfor %}
 |  | IT | {% for type in types %} [.zip]({{PREFIX}}IT-{{type}}-{{format}}.zip) |{% endfor %}
+|  | FR | {% for type in types %} [.zip]({{PREFIX}}FR-{{type}}-{{format}}.zip) |{% endfor %}
 |  | NL | {% for type in types %} [.zip]({{PREFIX}}NL-{{type}}-{{format}}.zip) |{% endfor %}
 |  | UA | {% for type in types %} [.zip]({{PREFIX}}UA-{{type}}-{{format}}.zip) |{% endfor %}
 {% endfor %}
@@ -67,14 +71,13 @@ two flavors:
 
 | Language | flat | structured |
 |----------|------|------------|
-| CZ | [.zip]({{PREFIX}}CZ-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}CZ-withhelp-confluenceStructured.zip) |
 | DE | [.zip]({{PREFIX}}DE-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}DE-withhelp-confluenceStructured.zip) |
 | EN | [.zip]({{PREFIX}}EN-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}EN-withhelp-confluenceStructured.zip) |
-| ES | [.zip]({{PREFIX}}ES-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}ES-withhelp-confluenceStructured.zip) |
-| IT | [.zip]({{PREFIX}}IT-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}IT-withhelp-confluenceStructured.zip) |
-| UA | [.zip]({{PREFIX}}UA-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}UA-withhelp-confluenceStructured.zip) |
 
-These versions are generated for the latest version of confluence.
+
+Unfortunately, we cannot generate for the latest versions confluence.
+It is based upon an older version of the template - due to technical difficulties in generating confluence from asciidoc.
+
 
 **Notes for Confluence users**
 
