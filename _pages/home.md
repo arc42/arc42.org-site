@@ -39,9 +39,9 @@ template_training_news:
 - title: "News"
   excerpt: "![](/images/home/arc42-ua.webp)<br>
 
-    * Thanx to Stephan Lessing, we now have a [doxygen](https://www.doxygen.nl/) version in our [downloads](/download)
+    * Thanx to Damien Lucas for submitting the French version of arc42!
    
-    * We now have Czechian (CZ) and Ukrainian (UA) versions of arc42 available, together with DE, EN, ES, IT and NL!
+    * We now have French (FR), Czechian (CZ) and Ukrainian (UA) versions of arc42 available, together with DE, EN, ES, IT and NL!
     
     * The new book as ideal preparation for iSAQB certification: [Software Architecture Foundation](/books#software-architecture-foundation-cpsa-f-exam-preparation).
 
