@@ -92,6 +92,8 @@ talks_feature:
 
 </div>
 
+<hr>
+
 {% include feature_row id="docs_feature" type="left" %}
 {% include feature_row id="faq_feature" type="right" %}
 

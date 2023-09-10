@@ -22,6 +22,7 @@ excerpt: "The info you need. Your questions answered."
 
 </div>
 
+<hr>
 
 
 ## arc42: Effective, lean and pragmatic architecture documentation and communication
