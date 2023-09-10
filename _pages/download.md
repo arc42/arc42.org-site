@@ -2,16 +2,13 @@
 title: "Download arc42"
 layout: single
 permalink: /download
-toc: true
 classes: wide
+
 header:
-  #overlay_filter: linear-gradient(rgba(255, 0, 0, 0.7), rgba(0, 0, 255, 0.7))
-  #overlay_image: /images/splash/download-landingpage.jpg
-  #caption: "Photo credit: [**Ellery Sterling**](https://unsplash.com/photos/dPu5FIT1bGU)"
-  overlay_image: /images/splash/ukrainian-flag.webp
-  actions: 
-   - label: "Help Ukraine"  
-     url: https://ukrainewar.carrd.co
+  overlay_filter: linear-gradient(rgba(255, 0, 0, 0.7), rgba(0, 0, 255, 0.7))
+  overlay_image: /images/splash/download-landingpage.jpg
+  caption: "Photo credit: [**Ellery Sterling**](https://unsplash.com/photos/dPu5FIT1bGU)"
+
 
 
 excerpt: "Version 8 - the most practical and effective arc42 ever."
@@ -19,6 +16,26 @@ intro:
   - excerpt: "Version 8.1, released October 2022."
 
 ---
+
+<div class="ua-background" markdown="1">
+
+>### We stand with the people of Ukraine <span class="parent"><span class="ua-text"><i class="fas fa-heart children"></i></span><span class="ua-size children"><i class="fas fa-heart beat heart children"></i></span></span>
+>
+>Please assist humanitarian efforts for the Ukrainian people and those affected by the military invasion of Ukraine by supporting international aid organizations, including the [International Committee of the Red Cross](https://www.icrc.org/en).
+
+</div>
+
+<hr>
+
+
+<aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#file-based-formats">File-based formats</a></li><li><a href="#confluence-format">Confluence format</a><ul><li><a href="#legacy-version-arc42-v6-for-confluence">Legacy Version (arc42 v6) for Confluence</a></li></ul></li><li><a href="#doxygen-format">Doxygen format</a></li><li><a href="#enterprise-architect-format">Enterprise Architect© format</a></li><li><a href="#ibm-rhapsody-format">IBM Rhapsody© format</a></li><li><a href="#formats-for-other-modeling-tools">Formats for other modeling tools</a></li><li><a href="#format-overview">Format overview</a></li><li><a href="#learn-more">Learn more!</a></li></ul>
+
+            </nav>
+          </aside>
+
 
 Version 8, released February 2022, UA version August 2022, CZ version October 2022, FR version June 2023
 
