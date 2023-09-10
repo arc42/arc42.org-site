@@ -10,6 +10,8 @@ header:
   actions: 
     - label: "Overview"
       url: /overview
+    - label: "Contact"
+      url: /contact
     - label: "&#8594; German site..."
       url: "https://www.arc42.de"
 excerpt: "All you ever need to construct, **communicate and document your software architecture**. Proven, **practical and pragmatic**.
