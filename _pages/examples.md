@@ -3,14 +3,10 @@ title: "arc42 Examples"
 layout: splash
 permalink: /examples
 header:
-  #overlay_color: "#000"
-  #overlay_filter: "0.0"
-  #overlay_image: /images/splash/unsplash-example-daniel-olah.jpg
-  #caption: "Photo credit: [**unsplash**](https://unsplash.com/)"
-  overlay_image: /images/splash/ukrainian-flag.webp
-  actions: 
-   - label: "Help Ukraine"  
-     url: https://ukrainewar.carrd.co
+  overlay_color: "#000"
+  overlay_filter: "0.0"
+  overlay_image: /images/splash/unsplash-example-daniel-olah.jpg
+  caption: "Photo credit: [**unsplash**](https://unsplash.com/)"
 
 
 excerpt: "arc42 examples."
@@ -29,6 +25,16 @@ feature_row1:
 
 
 ---
+
+<div class="ua-background" markdown="1">
+
+>### We stand with the people of Ukraine <span class="parent"><span class="ua-text"><i class="fas fa-heart children"></i></span><span class="ua-size children"><i class="fas fa-heart beat heart children"></i></span></span>
+>
+>Please assist humanitarian efforts for the Ukrainian people and those affected by the military invasion of Ukraine by supporting international aid organizations, including the [International Committee of the Red Cross](https://www.icrc.org/en).
+
+</div>
+
+
 
 
 <hr>
