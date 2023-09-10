@@ -4,10 +4,9 @@ layout: splash
 
 permalink: /more
 header:
-  #overlay_filter: rgba(15, 80, 180, 0.5)
-  #overlay_image: /images/splash/publications-unsplash.jpg
-  #caption: "Photo: [**Glen Carstens Peters**](https://unsplash.com/@glenncarstenspeters)"
-  overlay_image: /images/splash/ukrainian-flag.webp
+  overlay_filter: rgba(15, 80, 180, 0.5)
+  overlay_image: /images/splash/publications-unsplash.jpg 
+  caption: "Photo: [**Glen Carstens Peters**](https://unsplash.com/@glenncarstenspeters)"
   
   actions: 
    - label: "Docs+Tipps"
@@ -22,8 +21,6 @@ header:
      url: /videos  
    - label: "Talks"
      url: /talks
-   - label: "Help Ukraine"  
-     url: https://ukrainewar.carrd.co
 
 excerpt: "we talk and write about architecture...<span style='font-size:80px;'>&#128521;</span>"
 
@@ -86,6 +83,14 @@ talks_feature:
 
 
 ---
+
+<div class="ua-background" markdown="1">
+
+>### We stand with the people of Ukraine <span class="parent"><span class="ua-text"><i class="fas fa-heart children"></i></span><span class="ua-size children"><i class="fas fa-heart beat heart children"></i></span></span>
+>
+>Please assist humanitarian efforts for the Ukrainian people and those affected by the military invasion of Ukraine by supporting international aid organizations, including the [International Committee of the Red Cross](https://www.icrc.org/en).
+
+</div>
 
 {% include feature_row id="docs_feature" type="left" %}
 {% include feature_row id="faq_feature" type="right" %}
