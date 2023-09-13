@@ -104,7 +104,7 @@ your specific need.
 
 # Get it!
 
-You want aweseome communication/documentation support for your
+You want awesome communication/documentation support for your
 system or your next project:
 
 <a href="/download" class="btn btn--success">Download.</a>
