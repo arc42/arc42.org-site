@@ -27,7 +27,8 @@
 .buttonRed {background-color: #FF6347;} /* Tomato */
 .buttonGrey {background-color: DimGray; color: white;}
 .buttonRoyalBlue {background-color: #4169E1; color: seashell;} 
-.buttonHome {background-color: #EEE8AA; color: darkslategray;} 
+.buttonHome {background-color: #EEE8AA; color: darkslategray;}
+.buttonGreen {background-color: PaleGreen;color:black;}
 
 .buttonAnmeldung {background-color: #FF6347;} /* Tomato */
 .buttonDownload {background-color: #008CBA;} /* Blue */
@@ -47,4 +48,8 @@
     .margin_bottom {
         margin-bottom: 0px;
     }
+}
+
+.margin-top {
+    margin-top: 10px;
 }
