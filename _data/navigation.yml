@@ -25,9 +25,11 @@ about:
     - title: "Contact"
       url: /contact
     - title: "Contributors"
-      url: "https://github.com/arc42/arc42-template/graphs/contributors"
+      url: https://github.com/arc42/arc42-template/graphs/contributors
     - title: "License"
-      url: "/license"
+      url: /license
     - title: "Partner"
-      url: "/partner"
+      url: /partner
+    - title: "Impressions"
+      url: /gallery
 

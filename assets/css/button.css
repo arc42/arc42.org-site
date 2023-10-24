@@ -1,0 +1,50 @@
+/**
+  Credits to w3schools:
+  https://www.w3schools.com/css/css3_buttons.asp
+**/
+
+.button {
+  background-color: #374769;
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #4b7ba3;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  color: #EEE8AA;
+}
+
+.buttonBlue {background-color: #008CBA;} /* Blue */
+.buttonRed {background-color: #FF6347;} /* Tomato */
+.buttonGrey {background-color: DimGray; color: white;}
+.buttonRoyalBlue {background-color: #4169E1; color: seashell;} 
+.buttonHome {background-color: #EEE8AA; color: darkslategray;} 
+
+.buttonAnmeldung {background-color: #FF6347;} /* Tomato */
+.buttonDownload {background-color: #008CBA;} /* Blue */
+
+.buttonMSA {background-color: LightSkyBlue; color: black;} 
+.buttonReq4Arc {background-color: #F5B700; color: black;} 
+.buttonImprove {background-color: PaleGreen;color:black;} 
+.buttonAdoc {background-color: Pink; color: black;}
+
+.buttonTerms {background-color: DimGray;}
+
+.margin_bottom {
+    margin-bottom: 6px;
+}
+
+@media screen and (max-width: 600px) {
+    .margin_bottom {
+        margin-bottom: 0px;
+    }
+}
