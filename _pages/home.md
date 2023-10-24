@@ -108,4 +108,4 @@ See our [license page](/license) for details.
 
 {% include subtle-ads/subtle-ads.html %}
 
-<a href="https://arc42.de" class="btn btn--success">Training site</a>
+<a href="https://arc42.de/schulungen"><button class="margin-top button buttonGreen">Training site</button></a>
