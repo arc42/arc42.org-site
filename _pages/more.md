@@ -21,6 +21,8 @@ header:
      url: /videos  
    - label: "Talks"
      url: /talks
+   - label: "Gallery"
+     url: /gallery
 
 excerpt: "we talk and write about architecture...<span style='font-size:80px;'>&#128521;</span>"
 

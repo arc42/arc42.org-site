@@ -18,6 +18,10 @@ header:
 
 <hr>
 
+<a href="/gallery"><button class="button buttonRoyalBlue">Get some <br> impressions</button></a>
+
+<hr>
+
 # Become Certified Professional for Software Architecture!
 
 ![](/images/arc42-learn-cpsaf.png)
