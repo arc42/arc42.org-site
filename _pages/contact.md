@@ -27,8 +27,6 @@ might be visible during transit.
 * <a href="xmxaxixlxtxo:ixnxfxox@xaxrxcx4x2x.xdxex" onmouseover="this.href=this.href.replace(/x/g,'');"><i class="fa fa-fw fa-envelope"></i>Email (our adress is spam-protected)</a>
 
 * via [<i class="fab fa-fw fa-github"></i>issue tracker](https://github.com/arc42/arc42-template/issues) at [https://github.com/arc42/arc42-template/issues](https://github.com/arc42/arc42-template/issues).
-* on our Twitter accounts:
-  * [<i class="fab fa-fw fa-twitter"></i>@gernotstarke](https://twitter.com/gernotstarke)
 * on <i class="fab fa-fw fa-linkedin"></i>LinkedIn:
   * [Gernot Starke](https://linkedin.com/in/gernotstarke)
   * [Peter Hruschka](https://www.linkedin.com/in/peterhruschka/) 
