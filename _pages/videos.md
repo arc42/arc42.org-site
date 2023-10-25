@@ -1,10 +1,10 @@
 ---
-title: Videos von und über arc42
+title: Videos from and about arc42
 excerpt: "we show it..."
 layout: single
 
 toc: right
-toc_label: "Titel"
+toc_label: "Title"
 
 permalink: /videos
 header:
@@ -16,9 +16,11 @@ sidebar:
   nav: "publications"
 ---
 
-Manchmal drehen wir selbst, oft sprechen wir auf Konferenzen.
-Bei Interesse schauen Sie auch auf unseren 
-<a href="https://youtube.com/arc42-video" target="blank">Youtube-Kanal</a>.
+Sometimes we shoot ourselves, often we speak at conferences.  
+If you are interested also have a look at our
+<a href="https://youtube.com/arc42-video" target="blank">Youtube-Channel</a>. 
+
+Sorry, most of this is in German...
 
 
 

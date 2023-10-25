@@ -12,7 +12,7 @@ excerpt: "Systematic and process-agnostic to appropriate solutions."
 
 feature_row1:
   - image_path: /images/template/01-intro-and-goals.png
-    alt: "intro-image"
+    alt: "Introduction and goals - lists for: Quality Goals and Stakeholder"
     title: "Clarify requirements"
     excerpt: 'Development teams need a robust and sustainable foundation of goals, requirements and constraints, 
     in order to be able to make targeted decisions and develop.
@@ -38,11 +38,6 @@ We have to take these innovations into account when designing, implementing and 
 
 From our point of view, we can only do this if we make _learning independently_ a fundamental behavior.
 Thanks to the Internet and omnipresent access to information, we have the opportunity to do this; we just have to use it appropriately for ourselves.
-
-
-<hr>
-
-![](/images/method/arc42-prozess-2021-mit-lernen.png)
 
 
 <hr>

@@ -33,3 +33,16 @@ about:
     - title: "Impressions"
       url: /gallery
 
+
+publications:
+  - title: Publikations
+    children:
+      - title: Books
+        url: /books/
+      - title: Articles
+        url: /articles/
+      - title: Videos
+        url: /videos/
+      - title: Talks
+        url: /talks/
+
