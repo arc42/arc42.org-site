@@ -192,7 +192,7 @@ Now that you know about the template sections, you can dive deeper. Have a look 
 * Our (sketchy) [collection of software patterns](https://patterns.arc42.org).
 * Out (new) site on our [Quality Model](https://quality.arc42.org), collecting quality properties/attributes.
 
-<a href="/documentation" class="btn btn--success">show more documentation.</a>
+<a href="/documentation"><button class="button buttonGreen">Show more documentation</button></a>
 
 
 # Learn more!
