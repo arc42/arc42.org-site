@@ -21,7 +21,7 @@ Free and open source, **takes the pain out of documentation**."
 
 template_training_news:
 - title: "Template"
-  excerpt: "![](/images/home/template.webp)<br> 
+  excerpt: "![drawers of a cabinet](/images/home/template.webp)<br> 
   We provide you with the arc42 template for architecture documentation - 
   **Open Source, pragmatic, free of charge**. You fill it with your architecture decisions - 
   **Simple, effective and painless**."
@@ -30,7 +30,7 @@ template_training_news:
   btn_class: "btn--primary"
 
 - title: "Trainings"
-  excerpt: "![](/images/home/training.webp)<br>
+  excerpt: "![Raising a hand](/images/home/training.webp)<br>
   We have successfully trained hundreds of people in our proven **Mastering Software Architectures workshop**. 
   Practical, effective and sustainable. Perfectly prepares for the iSAQB Foundation certification."
   url: "/learn"
@@ -39,7 +39,7 @@ template_training_news:
 
 
 - title: "News"
-  excerpt: "![](/images/home/arc42-ua.webp)<br>
+  excerpt: "![arc42 Logo on ukrainian flag](/images/home/arc42-ua.webp)<br>
 
     * Thanx to Damien Lucas for submitting the French version of arc42!
    
@@ -52,7 +52,7 @@ template_training_news:
 
 methode_publications_consulting:
 - title: "The arc42-method"
-  excerpt: "![](/images/home/method.webp)<br>
+  excerpt: "![ToDo - Doing - Done slips of paper](/images/home/method.webp)<br>
   arc42 is systematic but flexible. Suitable for large and small teams in iterative or less agile processes.
   "
   url: "/method"
@@ -60,7 +60,7 @@ methode_publications_consulting:
   btn_class: "btn--primary"
 
 - title: "arc42 reading material"
-  excerpt: "![](/images/home/publikationen.webp)<br>
+  excerpt: "![Books in a bookshelf](/images/home/publikationen.webp)<br>
   There is a lot to read about arc42 and architecture. From methodology to _good practices_ 
   to complete examples of software architectures.
   Browse our books, articles, talks or videos."
@@ -69,7 +69,7 @@ methode_publications_consulting:
   btn_class: "btn--primary"
 
 - title: "Consulting"
-  excerpt: "![](/images/home/consulting.webp)<br>
+  excerpt: "![Several people in front of a laptop, explaining and listening](/images/home/consulting.webp)<br>
   We help in all life situations of your IT projects.
   Read more about our offers of consulting, reviews or practical support for your projects."
   url: "/consulting"

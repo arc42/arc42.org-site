@@ -150,7 +150,7 @@ arc42 answers the following two questions in a pragmatic way and can be tailored
 * _How_ should you document/communicate?
 
 
-![](/images/arc42-overview-V8.png)
+![overview of arc42 volume 8](/images/arc42-overview-V8.png)
 
 <hr>
 

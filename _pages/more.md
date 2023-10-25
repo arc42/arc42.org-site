@@ -29,8 +29,8 @@ excerpt: "we talk and write about architecture...<span style='font-size:80px;'>&
 
 docs_feature:
   - image_path: /images/publications/docs-feature.png
-    alt: "Docs"
-    title: "Docu and Tips"
+    alt: "a large 42"
+    title: "Docs and Info"
     excerpt: 'Extensive documentation, more than hundred practical tips for using arc42. 
     For all kinds of systems, small and large teams, all kinds of tools.'
     url: https://docs.arc42.org
@@ -39,7 +39,7 @@ docs_feature:
 
 faq_feature:
   - image_path: /images/publications/faq-feature.png
-    alt: "FAQ"
+    alt: "a 'super helpful' light sign"
     title: "FAQs"
     excerpt: 'Frequently asked questions with answers, concerning methodical approaches, arc42-sections, agility, tools and more.'
     url: https://faq.arc42.org
@@ -48,7 +48,7 @@ faq_feature:
 
 books_feature:
   - image_path: /images/publications/book-feature.png
-    alt: "books"
+    alt: "Books in a bookshelf"
     title: "Books"
     excerpt: 'Together we authored more than 25 books, their topics ranging from requirements engineering, business-analysis, architecture, documentation to patterns.'
     url: /books
@@ -58,7 +58,7 @@ books_feature:
 
 videos_feature:
   - image_path: /images/publications/video-feature.png
-    alt: "Videos"
+    alt: "Camera"
     title: "Videos"
     excerpt: 'Several of our conference talks have been recorded. A few times we tried to produce videos ourselves... Since 2020, arc42 hosts its own [Youtube-channel](https://www.youtube.com/arc42-video/)... '
     url: /videos
@@ -67,7 +67,7 @@ videos_feature:
 
 articles_feature:
   - image_path: /images/publications/article-feature.png
-    alt: "articles"
+    alt: "Several magazines"
     title: "Articles"
     excerpt: "More than a hundred articles in various publications (aah - most if that in German)."
     url: /articles
@@ -76,11 +76,11 @@ articles_feature:
 
 talks_feature:
   - image_path: /images/publications/talks-feature.jpeg
-    alt: "Vorträge"
-    title: "Vorträge"
-    excerpt: 'Wir haben über 25 Bücher geschrieben, von der Anforderungsklärung, Business-Analyse, Architektur, Dokumentation, Verhaltensmuster (Knigge) bis zu Patterns'
+    alt: "Gernot Starke on stage for a talk"
+    title: "Talks"
+    excerpt: 'We give presentations at conferences, on architecture, methodology, procedures, reviews and other topics.'
     url: /talks
-    btn_label: "mehr dazu ..."
+    btn_label: "more ..."
     btn_class: "btn--primary"
 
 

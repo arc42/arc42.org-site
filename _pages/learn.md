@@ -24,7 +24,7 @@ header:
 
 # Become Certified Professional for Software Architecture!
 
-![](/images/arc42-learn-cpsaf.png)
+![arc42-logo and arrow pointing towards CPSA-F-ISAQB-certified-logo](/images/arc42-learn-cpsaf.png)
 
 We are founding members of the iSAQB association, and actively participated
 in iSAQB standardization working groups ever since.
