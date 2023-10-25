@@ -156,29 +156,29 @@ arc42 answers the following two questions in a pragmatic way and can be tailored
 
 # More details
 
-{% include feature_row id="feature_row1" type="left" %}
+{% include lazyloading_feature_row id="feature_row1" type="left" %}
 
-{% include feature_row id="feature_row2" type="right" %}
+{% include lazyloading_feature_row id="feature_row2" type="right" %}
 
-{% include feature_row id="feature_row3" type="left" %}
+{% include lazyloading_feature_row id="feature_row3" type="left" %}
 
-{% include feature_row id="feature_row4" type="right" %}
+{% include lazyloading_feature_row id="feature_row4" type="right" %}
 
-{% include feature_row id="feature_row5" type="left" %}
+{% include lazyloading_feature_row id="feature_row5" type="left" %}
 
-{% include feature_row id="feature_row6" type="right" %}
+{% include lazyloading_feature_row id="feature_row6" type="right" %}
 
-{% include feature_row id="feature_row7" type="left" %}
+{% include lazyloading_feature_row id="feature_row7" type="left" %}
 
-{% include feature_row id="feature_row8" type="right" %}
+{% include lazyloading_feature_row id="feature_row8" type="right" %}
 
-{% include feature_row id="feature_row9" type="left" %}
+{% include lazyloading_feature_row id="feature_row9" type="left" %}
 
-{% include feature_row id="feature_row10" type="right" %}
+{% include lazyloading_feature_row id="feature_row10" type="right" %}
 
-{% include feature_row id="feature_row11" type="left" %}
+{% include lazyloading_feature_row id="feature_row11" type="left" %}
 
-{% include feature_row id="feature_row12" type="right" %}
+{% include lazyloading_feature_row id="feature_row12" type="right" %}
 
 <hr>
 
@@ -190,7 +190,7 @@ Now that you know about the template sections, you can dive deeper. Have a look 
 * FAQ - [Frequently asked questions](https://faq.arc42.org)
 * Our extensive [template documentation](https://docs.arc42.org), organized by template section.
 * Our (sketchy) [collection of software patterns](https://patterns.arc42.org).
-* Out (new) site on our [Quality Model](https://quality.arc42.org), collecting quality properties/attributes.
+* Our (new) site on our [Quality Model](https://quality.arc42.org), collecting quality properties/attributes.
 
 <a href="/documentation"><button class="button buttonGreen">Show more documentation</button></a>
 
