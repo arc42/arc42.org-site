@@ -70,7 +70,7 @@ make anyhow.
 You want awesome communication/documentation support for your
 system or your next project:
 
-<a href="/download" class="btn btn--success">Download.</a>
+<a href="/download"><button class="button buttonGreen">Download</button></a>
 
 
 # Learn more!
