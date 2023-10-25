@@ -1,6 +1,6 @@
 ---
-title: Bücher von Peter Hruschka und Gernot Starke
-excerpt: wir können's nicht lassen &#128540;
+title: Books by Peter Hruschka and Gernot Starke
+excerpt: We can't stop &#128540;
 layout: single
 classes: wide
 toc: false
@@ -15,13 +15,14 @@ sidebar:
   nav: "publications"
 ---
 
-Wir haben hier jeweils nur die letzten Auflagen unserer Bücher aufgeführt, um die Liste etwas kleiner zu halten.
-Seit den '90-er Jahren publizieren wir fleissig, und sind an mehr als 40 Büchern/Auflagen direkt beteiligt.
+We have only listed the latest editions of our books here to keep the list a little smaller.  
+We have been busy publishing since the '90s, and are directly involved in more than 40 books/editions.
 
+Sorry, most of this page is in german...
 # 2021
 ## Software Architecture Foundation: CPSA-F Exam Preparation
 
-![](/images/books/SWAF-vanHaren-cover.png){: .align-right}
+![Software Architecture Foundation: CPSA-F Exam Preparation Bookcover](/images/books/SWAF-vanHaren-cover.png){: .align-right}
 
 Gernot Starke and Alexander Lorz, published by van Haren International Publishing.
 
@@ -33,7 +34,7 @@ Highly recommended for anybody preparing for the certification examination.
 
 ## arc42-by-Example Vol.2
 
-![](/images/books/arc42byexample-Title300.png){: .align-left}
+![arc42-by-Example Vol.2 Bookcover](/images/books/arc42byexample-Title300.png){: .align-left}
 
 Peter Hruschka, Ivan Kostov, Wolfgang Reimesch: arc42 by Example Volume 2: Architecture Documentation for _Embedded Systems and IoT_, published by Leanpub.
 
@@ -49,7 +50,7 @@ Finally, examples from the area of _embedded_ systems: Numerous organizations ha
 
 9., überarbeitete Auflage. 8/2020 455 Seiten. Flexibler Einband.
 
-![](/images/books/ESA-9-Cover.png){: .align-right}
+![Effektive Softwarearchitekturen, 9. Auflage Bookcover](/images/books/ESA-9-Cover.png){: .align-right}
 
 Mit der neunten Auflage ist ESA nun volljährig: 18 Jahre am (Fachbuch-)Markt.
 
@@ -62,7 +63,7 @@ Insbesondere sind neue Beispielfragen für die iSAQB Prüfung hinzugekommen.
 
 ## Basiswissen Softwarearchitektur, 4. Auflage
 
-![](/images/books/Basiswissen-4A.jpg){: .align-left}
+![Basiswissen Softwarearchitektur, 4. Auflage Bookcover](/images/books/Basiswissen-4A.jpg){: .align-left}
 
 M.Gharbi, A.Koschel, A.Rausch, G.Starke: Basiswissen für Softwarearchitekten, dpunkt, 4. Auflage 2020.
 
