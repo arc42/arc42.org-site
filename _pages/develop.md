@@ -10,7 +10,7 @@ header:
 
 # Architecture Activities
 
-![](/images/arc42-process-with-icon.png)
+![arc42 process](/images/arc42-process-with-icon.png)
 
 We propose six core activities that software architects should carry out
 during development and maintenance of any system.

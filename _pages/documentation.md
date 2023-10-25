@@ -30,7 +30,7 @@ excerpt: "The info you need. Your questions answered."
 arc42 offers a clear, simple and effective structure to document and
 communicate your software system.
 
-![image-left](/images/cabinet-sanwal-deen-300px.jpg){: .align-left}
+![drawers of a cabinet](/images/cabinet-sanwal-deen-300px.jpg){: .align-left}
 Compare the arc42 sections to the _drawers_ of a cabinet. arc42 contains 12 such drawers, each one specialized to hold a specific kind of information about the architecture of a system.
 
 arc42 is optimized for understandability and adequacy. It naturally guides you to explain any kind of architecture information or decision in an understandable way.
