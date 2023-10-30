@@ -43,7 +43,7 @@ template_training_news:
 
     * Thanx to Damien Lucas for submitting the French version of arc42!
    
-    * We now have French (FR), Czechian (CZ) and Ukrainian (UA) versions of arc42 available, together with DE, EN, ES, IT and NL!
+    * We now have French (FR), Czech (CZ) and Ukrainian (UA) versions of arc42 available, together with DE, EN, ES, IT and NL!
     
     * The new book as ideal preparation for iSAQB certification: [Software Architecture Foundation](/books#software-architecture-foundation-cpsa-f-exam-preparation).
 
