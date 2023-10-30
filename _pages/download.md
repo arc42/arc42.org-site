@@ -212,7 +212,7 @@ Please [contact us!](/contact)
 : Same format as **markdown** above but every chapter is located in its own file.
 
 **gitHubMarkdown**
-: GitHub Flavored Markdown is a dialect of Markdown that is used on GitHub.com and GitHub Enterprise. See the [article here](https://help.github.com/categories/writing-on-github) .
+: GitHub Flavored Markdown is a dialect of Markdown that is used on GitHub.com and GitHub Enterprise. See the [article here](https://docs.github.com/en/get-started/writing-on-github) .
 
 **gitHubMarkdownMP**
 : Same format as **gitHubMarkdown** above but every chapter is located in its own file.
