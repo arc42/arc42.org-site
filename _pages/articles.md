@@ -19,6 +19,14 @@ sidebar:
 
 We write articles for various magazines and publishers, very old-school on paper, sometimes online.
 
+## Search Engine Optimization (SEO) #1 - Naming Images & Alternative Texts
+
+Per Starke
+
+In the posts of this series, I want to show you what you can do to optimize your site for search engines. The first post is all about naming images and alternative texts.
+
+[Read the full article](https://perstarke-webdev.de/posts/seo-one-en)
+
 ## Principles of technical documentation
 
 Gernot Starke
