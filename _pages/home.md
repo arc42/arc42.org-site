@@ -68,11 +68,10 @@ methode_publications_consulting:
   btn_label: "read more..."
   btn_class: "btn--primary"
 
-- title: "Consulting"
-  excerpt: "![Several people in front of a laptop, explaining and listening](/images/home/consulting.webp)<br>
-  We help in all life situations of your IT projects.
-  Read more about our offers of consulting, reviews or practical support for your projects."
-  url: "/consulting"
+- title: "Canvas"
+  excerpt: "![the arc42 canvas](/images/home/canvas-overview-850.webp)<br>
+  The shortest possible form of technical documentation, the elevator-pitch. All the  important stuff on a single page"
+  url: "/canvas"
   btn_label: "read more..."
   btn_class: "btn--primary"
 ---
