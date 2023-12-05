@@ -39,9 +39,9 @@ template_training_news:
 
 
 - title: "News"
-  excerpt: "![arc42 Logo on ukrainian flag](/images/home/arc42-ua.webp)<br>
+  excerpt: "![arc42 T-Shirt](/images/home/t-shirt.webp)<br>
 
-    * Thanx to Damien Lucas for submitting the French version of arc42!
+    * Our [merchandising shop]([https://arc42.myspread...](https://arc42.myspreadshop.de/all)) is online, go get T-Shirts, Hoodies and other arc42-branded goodies. High-quality, eco-friendly. Give it a try!
    
     * We now have French (FR), Czechian (CZ) and Ukrainian (UA) versions of arc42 available, together with DE, EN, ES, IT and NL!
     
