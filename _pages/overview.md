@@ -5,7 +5,7 @@ permalink: /overview
 header:
   overlay_color: "#000"
   overlay_filter: "0.2"
-  overlay_image: /images/splash/unsplash-bridge-tom-van-hoogstraten.jpg
+  overlay_image: /images/splash/unsplash-bridge-tom-van-hoogstraten.webp
   caption: "Photo credit: [**unsplash**](https://unsplash.com/@grafish/)"
 
 excerpt: "arc42 is a template for architecture communication and documentation."

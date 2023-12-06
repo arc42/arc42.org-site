@@ -3,7 +3,7 @@ title: "Partner"
 layout: single
 permalink: /partner
 header:
-  overlay_image: /images/splash/partner-header.jpg
+  overlay_image: /images/splash/partner-header.webp
   caption: "[**Claudio**](https://unsplash.com/de/fotos/k39RGHmLoV8)"
 
 sidebar:

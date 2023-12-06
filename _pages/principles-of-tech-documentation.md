@@ -9,7 +9,7 @@ toc_label: "Content"
 permalink: /principles-of-technical-documentation
 header:
   overlay_filter: rgba(15, 80, 180, 0.5)
-  overlay_image: /images/principles-of-tech-doc/header-retrosupply-jLwVAUtLOAQ-unsplash.jpg
+  overlay_image: /images/principles-of-tech-doc/header-retrosupply-jLwVAUtLOAQ-unsplash.webp
   caption: "Photo: [**Retrosupply**](https://unsplash.com/photos/jLwVAUtLOAQ)"
 
 
