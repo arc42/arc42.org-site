@@ -5,7 +5,7 @@ permalink: /method
 header:
   overlay_color: "#000"
   overlay_filter: "0.2"
-  overlay_image: /images/splash/method-splash.jpg
+  overlay_image: /images/splash/method-splash.webp
   caption: "Photo credit: [**Jamie Templeton**](https://unsplash.com/@jamietempleton)"
 excerpt: "Systematic and process-agnostic to appropriate solutions."
 

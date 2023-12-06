@@ -5,7 +5,7 @@ permalink: /documentation/
 header:
   overlay_color: "#000"
   overlay_filter: "0.4"
-  overlay_image: /images/splash/unsplash-documentation-sebastien-gabriel.jpg
+  overlay_image: /images/splash/unsplash-documentation-sebastien-gabriel.webp
   caption: "Photo credit: [**unsplash**](https://unsplash.com/collections/3015/northside-01?photo=XOrFfUPUfeU)"
 
 
