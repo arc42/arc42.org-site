@@ -41,7 +41,7 @@ template_training_news:
 - title: "News"
   excerpt: "![arc42 T-Shirt](/images/home/t-shirt.webp)<br>
 
-    * Our [merchandising shop]([https://arc42.myspread...](https://arc42.myspreadshop.de/all)) is online, go get T-Shirts, Hoodies and other arc42-branded goodies. High-quality, eco-friendly. Give it a try!
+    * Our [merchandising shop](https://arc42.myspreadshop.de) is online, go get T-Shirts, Hoodies and other arc42-branded goodies. High-quality, eco-friendly. Give it a try!
    
     * We now have French (FR), Czech (CZ) and Ukrainian (UA) versions of arc42 available, together with DE, EN, ES, IT and NL!
     
