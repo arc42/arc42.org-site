@@ -8,7 +8,7 @@ toc_label: "Erscheinungsjahr"
 permalink: /books
 header:
   overlay_filter: rgba(15, 80, 180, 0.5)
-  overlay_image: /images/splash/books-header-tom-hermans.jpg
+  overlay_image: /images/splash/books-header-tom-hermans.webp
   caption: "Photo: [**Tom Hermans**](https://unsplash.com/@tomhermans)"
 
 sidebar:

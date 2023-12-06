@@ -3,7 +3,8 @@ title: "About us (and arc42)!"
 layout: single
 permalink: /about
 header:
-  overlay_image: /images/splash/unsplash-bridge-tom-van-hoogstraten.jpg
+  overlay_image: /images/splash/unsplash-bridge-tom-van-hoogstraten.webp
+  overlay_image: /images/splash/unsplash-bridge-tom-van-hoogstraten.webp
 
 
 sidebar:

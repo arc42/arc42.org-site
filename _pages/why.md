@@ -4,7 +4,7 @@ layout: single
 permalink: /why
 header:
   overlay_filter: rgba(15, 80, 180, 0.5)
-  overlay_image: /images/splash/desperation-splash.jpg
+  overlay_image: /images/splash/desperation-splash.webp
   caption: "Photo credit: [**unsplash**](https://unsplash.com)"
 excerpt: "The sad state of architecture documentation."
 ---
@@ -22,7 +22,7 @@ arc42 can help to reduce or eliminate very effiently with low effort.
 ### Not Existing or Outdated
 The first problem is missing or outdated documentation:
 
-![A destroyed old bus in the desert](/images/desert-junk.jpg)
+![A destroyed old bus in the desert](/images/desert-junk.webp)
 [Photo: Pablo Garcia Saldana](https://unsplash.com/photos/I9qoPr82Csg){: .small}
 
 There's documentation, created somewhere in the past. Rumors say it had been
@@ -34,7 +34,7 @@ artifacts only waste disk space and provide no value at alll, for nobody.
 ### Chaotic
 The second problem is chaotic and confusing documentation.
 
-![A very chaotic desk](/images/chaotic-desk.jpg){: .align-left}{: width="40%"}
+![A very chaotic desk](/images/chaotic-desk.webp){: .align-left}{: width="40%"}
 Such documentation has often been created without clear purpose,
 by various people without proper coordination.
 
@@ -46,7 +46,7 @@ more harmful than helpful, due to the lack of appropriate structure.
 
 ### Too Much
 
-![A pile of documents stacked on top of each other](/images/document-pile.jpg){: .align-right}{: width="30%"}
+![A pile of documents stacked on top of each other](/images/document-pile.webp){: .align-right}{: width="30%"}
 You can hide any needle in a sufficiently large haystack - and nobody will
 be able to efficiently find it in there.
 Such piles of documents might seem impressive at first - unless someone tries
@@ -62,7 +62,7 @@ cares about documentation structure and -content.
 
 From typical developers' perspective, documentation is often a pain:
 
-![A man screaming in pain](/images/painful.jpg){: .align-left}{: width="30%"}
+![A man screaming in pain](/images/painful.webp){: .align-left}{: width="30%"}
 Formalities, inappropriate tools and formats, missing goals,
 unclear instructions on what and how to document. Stakeholders complaining,
 documentation is awkward and clumsy. Creativity gone. That's **not** why people became developer.  
