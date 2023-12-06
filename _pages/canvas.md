@@ -4,9 +4,9 @@ layout: splash
 
 permalink: /canvas
 header:
-  overlay_filter: rgba(15, 80, 180, 0.5)
-  overlay_image: /images/splash/consulting-unsplash.jpg
-  caption: "Photo: [**My Life Through A Lense**](https://unsplash.com/@bamagal)"
+  overlay_image: /images/splash/canvas-splash.webp
+  caption: "Background photo credit: [**Samantha Gades**](https://unsplash.com/de/@srosinger3997)"
+  overlay_filter: rgba(0, 0, 0, 0.6)
   actions:
   - label: "&#8594; The Canvas Website"
     url: https://canvas.arc42.org/
