@@ -5,7 +5,7 @@ permalink: /
 header:
   overlay_color: "#d7ecf8"
   overlay_filter: rgba(15, 80, 180, 0.4)
-  overlay_image: /images/splash/arc42-splash-landingpage.jpg
+  overlay_image: /images/splash/arc42-splash-landingpage.webp
   caption: "Photo credit: [**Thomas Bayer**](https://www.predic8.de/)"
   actions: 
     - label: "Overview"
