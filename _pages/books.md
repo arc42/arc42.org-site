@@ -15,22 +15,39 @@ sidebar:
   nav: "publications"
 ---
 
-We have only listed the latest editions of our books here to keep the list a little smaller.  
+We have mainly listed only the latest editions of our books here to keep the list a little smaller.  
 We have been busy publishing since the '90s, and are directly involved in more than 40 books/editions.
 
 Sorry, most of this page is in german...
-# 2021
-## Software Architecture Foundation: CPSA-F Exam Preparation
 
-![Software Architecture Foundation: CPSA-F Exam Preparation Bookcover](/images/books/SWAF-vanHaren-cover.png){: .align-right}
+# 2023
+
+## Software Architecture Foundation - 2nd edition
+![Software Architecture Foundation: CPSA-F Exam Preparation 2nd edition Bookcover](/images/books/SWAF-2nd-cover.webp){: .align-left .bookcover}
 
 Gernot Starke and Alexander Lorz, published by van Haren International Publishing.
 
 This book serves as study guide for the CPSA-F (Certified Professional for Software Architecture - Foundation Level) examination of iSAQB. It explains every single learning goal of the comprehensive CPSA-Foundation curriculum in detail, for best-possible exam preparation.
 
-In addition it describes the examination process, together with dozens of sample examination questions.
+In addition, it describes the examination process, together with dozens of sample examination questions.
 Highly recommended for anybody preparing for the certification examination.
-<br>
+
+## arc42 by Example - 3rd edition
+![arc42 by Example - 3rd edition Bookcover](/images/books/arc42-by-example-3rd.webp){: .align-right .bookcover}
+
+Gernot Starke, Michael Simons, Stefan Zörner, Ralf D. Müller, and Hendrik Lösch, published on Leanpub.
+
+This book contains several real-world software architectures, documented with the practical arc42 template.
+
+You will learn about the inner workings of a chess engine, a huge CRM system, a cool web system to track biking activities and an extremely small menu-bar application.
+
+Each of the examples starts with a brief description of the problem domain, including the quality requirements, before we explain the system context with all the external interfaces. Then we dive into an overview of the solution strategy to prepare you for the implementation building blocks and runtime scenarios (as major architectural views).
+
+Later on we explain the crosscutting concepts of every architecture and its implementation.
+
+You will learn that documentation can be compact, helpful and easy-to-read.
+
+# 2021
 
 ## arc42-by-Example Vol.2
 
