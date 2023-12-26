@@ -21,7 +21,6 @@
 }
 
 
-
 .footer-center {
     text-align: center;
     font-size: 80%;
@@ -60,6 +59,10 @@
   width: 100%;
   height: auto;
   max-width: 100%;
+}
+
+.bookcover {
+    max-width: 300px;
 }
 
 @media (max-width: 1000px) {
