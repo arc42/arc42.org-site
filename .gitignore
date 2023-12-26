@@ -4,3 +4,4 @@ _site/
 docs
 .DS_Store
 Gemfile.lock
+.idea
