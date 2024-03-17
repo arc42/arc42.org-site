@@ -117,7 +117,7 @@ Often it is also sufficient to inspect small parts of the source code to keep th
 
 ## Analyze and evaluate architecture
 
-Ask yourself as a software architect:at regular intervals whether your decisions and concepts achieve the desired effect or still seem appropriate from today's perspective.
+Ask yourself as a software architect at regular intervals whether your decisions and concepts achieve the desired effect or still seem appropriate from today's perspective.
 This simple feedback loop forms the basis of iterative (nowadays called: _agile_) processes.
 The Plan-Do-Check-Act cycle (PDCA or Deming circle) has elevated the systematic review (the check phase) to a system, for good reason:
 Just acting and deciding without reflection, without looking back, easily leads to missed goals and actionism.
