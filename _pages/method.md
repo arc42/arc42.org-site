@@ -70,7 +70,7 @@ arc42 suggests a whole zoo of topics that you could (but don't have to) solve _a
 * How, where and with what persistent data is stored, distributed and read again? Which databases are used?
 * How are business, validation or plausibility rules implemented?
 * How does the system and its building blocks handle error or exception situations?
-* How does the system handle logging and logging?
+* How does the system handle logging and monitoring?
 
 More details can be found in section 8 of the arc42 template...
 
