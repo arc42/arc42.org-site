@@ -135,18 +135,40 @@ This template is available in EN only. Contributed by Stephan Lessing, February 
 
 # Enterprise Architect&copy; format
 Enterprise Architect;copy; is a commercial UML modeling tool by [SparxSystems](https://sparxsystems.com/).
+Updated versions contributed by [Raphael Dumhart](https://github.com/raphael-dumhart), May 2024.
 
-The Enterprise-Architect version of arc42 contains only the diagram-intensive parts of the arc42 structure without help text. 
-It's available in EN only.
+This template includes the complete arc42 structure, based on version 8.2 from January 2023. 
+It uses only functions from the Professional Edition to support all editions of Enterprise Architect. 
+The template implementation uses UML diagrams and text documents, where diagrams are not suitable. 
+Some parts, like the glossary and risks use extended UML.
 
-Please use this format only as a companion to any textual or wiki format, as it does not contain any explanations or rationales. 
-Put your diagrams into an EA model, but text and tables should be created, kept and maintained differently.
+## Note on Enterprise Architect Versions
+The template is provided in a QEA and EAPX file format. QEA was introduced in EA 16 and is based on SQlite3. EAPX is the older default file format, which uses JET 4 as the repository database. 
+This format should be supported with EA 15 and below. 
 
->Please note: This template reflects version 6, and has not been updated since approx. 2015 (volunteer maintainers welcome!)
+If you are using a version earlier than EA 14, you want to rename the EAPX extension to EAP. 
+Pre EA 14 you could use JET 3.5 or JET 4 in EAP files. 
+In version 14, this was made explicit by introducing EPAX for JET 4 and using EAP for JET 3.5.
+
+If you only want to view a model, have a look at EA Lite edition, which is offered free of charge and can be downloaded [here](https://www.sparxsystems.eu/enterprise-architect/ea-lite-edition)
+
+## How to use
+
+1. Download the QAE or EAPX file in the language of your choice (DE or EN).
+2. Copy the template to your target location and rename it.
+3. Optional (see "Note on Enterprise Architect Version): Rename the file extension from EAPX to EAP.
+4. Open the file.
+5. Edit all the files according to your needs. You will find the official arc42 explanation provided as notes directly in the corresponding diagrams. Where needed, I added some additional help.
+6. You can delete the "Info" package if you want. It only contains meta information to the arc42 template.
+
 
 | Enterprise Architect EAP |
 |--------------------------|
-| Short EA template: [arc42-V6-short.eap.zip]({{GITHUBDIR}}eap/arc42-V6-short.eap.zip)|
+| EA template: [arc42 V8 (DE) with help, eapx-Version (EA V. <16.x)]({{GITHUBDIR}}eap/arc42-template-DE-withhelp-ea.eapx)|
+| EA template: [arc42 V8 (DE) with help, qea-Version (EA V. >=16.x)]({{GITHUBDIR}}eap/arc42-template-DE-withhelp-ea.qea)|
+| EA template: [arc42 V8 (EN) with help, eapx-Version (EA V. <16.x)]({{GITHUBDIR}}eap/arc42-template-EN-withhelp-ea.eapx)|
+| EA template: [arc42 V8 (EN) with help, qea-Version (EA V. >=16.x)]({{GITHUBDIR}}eap/arc42-template-EN-withhelp-ea.qea)|
+| EA template (outdated and short version v6): [arc42-V6-short.eap.zip]({{GITHUBDIR}}eap/arc42-V6-short.eap.zip)|
 
 
 # IBM Rhapsody&copy; format
