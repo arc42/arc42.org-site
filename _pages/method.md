@@ -72,7 +72,7 @@ arc42 suggests a whole zoo of topics that you could (but don't have to) solve _a
 * How does the system and its building blocks handle error or exception situations?
 * How does the system handle logging and monitoring?
 
-More details can be found in section 8 of the arc42 template...
+More details can be found in [section 8 of the arc42 template...](https://docs.arc42.org/section-8/)
 
 <hr>
 
