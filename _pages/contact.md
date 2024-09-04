@@ -15,7 +15,7 @@ Please note: In case you contact us:
 
 * we'll use your personal data (name, email)
 only for the purpose of answering your request. It will not be stored, kept
-or processed in sense of European General Data Protection Regulation [GDBPR](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation).
+or processed in sense of European General Data Protection Regulation [GDPR](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation).
 * you explicitely give your consent that your data will be used for the
 aforementioned objective.
 * you explicitely acknowledge and consent that some of the contact options
