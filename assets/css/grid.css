@@ -1,18 +1,17 @@
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  grid-auto-flow: row; /* Ensure the items flow row-wise, not column-wise */
+  grid-template-rows: repeat(7, auto); /* 7 rows */
   grid-gap: 10px;
 }
 
 .part {
-  padding: 10px; /* Reduced padding to make it smaller */
+  padding: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.247);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 100px; /* Optional: Adjust height if needed */
 }
 
 .part:hover, .part:link, .part:visited, .part:active {
@@ -25,14 +24,8 @@
   transition: transform 0.3s ease-in-out;
 }
 
-/* Custom colors matching the scheme */
-.introduction-goals, .constraints, .context-scope, .solution-strategy, .building-block-view, .runtime-view,
-.deployment-view, .crosscutting-concepts, .architectural-decisions, .quality-requirements,
-.risks-technical-debt, .glossary {
-  background-color: #ffffff; /* Default white background */
-}
-
-.introduction-goals, .context-scope, .building-block-view, .runtime-view, .deployment-view, .crosscutting-concepts {
+/* Custom colors */
+.introduction-goals, .context-scope, .building-block-view, .runtime-view, .crosscutting-concepts {
   background-color: rgb(143, 228, 180); /* Green */
 }
 
@@ -44,14 +37,69 @@
   background-color: rgb(148, 215, 239); /* Blue */
 }
 
-/* Add yellow color based on the second image */
 .deployment-view, .glossary {
   background-color: rgb(255, 235, 159); /* Yellow */
 }
 
-/* Larger cells (5th and 8th) - double the height */
-.larger-cell {
-  grid-row: span 2; /* Spans two rows vertically */
+/* Positioning for grid items */
+.introduction-goals {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.constraints {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.context-scope {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.solution-strategy {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+.building-block-view {
+  grid-column: 1;
+  grid-row: 5 / span 2; /* Spans two rows */
+}
+
+.runtime-view {
+  grid-column: 1;
+  grid-row: 7;
+}
+
+.deployment-view {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.crosscutting-concepts {
+  grid-column: 2;
+  grid-row: 2 / span 2; /* Spans two rows */
+}
+
+.architectural-decisions {
+  grid-column: 2;
+  grid-row: 4;
+}
+
+.quality-requirements {
+  grid-column: 2;
+  grid-row: 5;
+}
+
+.risks-technical-debt {
+  grid-column: 2;
+  grid-row: 6;
+}
+
+.glossary {
+  grid-column: 2;
+  grid-row: 7;
 }
 
 /* Flexbox Utilities */
