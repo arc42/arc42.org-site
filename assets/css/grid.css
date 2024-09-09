@@ -64,7 +64,7 @@
 
 .building-block-view {
   grid-column: 1;
-  grid-row: 5 / span 2; /* Spans two rows */
+  grid-row: 5 / span 2;
 }
 
 .runtime-view {
@@ -79,7 +79,7 @@
 
 .crosscutting-concepts {
   grid-column: 2;
-  grid-row: 2 / span 2; /* Spans two rows */
+  grid-row: 2 / span 2;
 }
 
 .architectural-decisions {
@@ -100,32 +100,4 @@
 .glossary {
   grid-column: 2;
   grid-row: 7;
-}
-
-/* Flexbox Utilities */
-.flex {
-  display: flex;
-}
-
-.column {
-  flex-direction: column;
-}
-
-.row {
-  flex-direction: row;
-}
-
-.space-between {
-  justify-content: space-between;
-}
-
-/* Typography */
-strong {
-  font-size: 1.2em;
-}
-
-small {
-  font-size: 0.9em;
-  color: darkslategrey;
-  margin-top: 5px; /* Reduce space between main text and subtext */
 }
