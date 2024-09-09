@@ -259,7 +259,7 @@ arc42 answers the following two questions in a pragmatic way and can be tailored
     <div class="flex row space-between">
       <div class="flex column">
         <strong>12. Glossary</strong><br>
-        <small>Important and specific terms (ubiquitous language)</small>
+        <small>Important and specific terms ("ubiquitous language")</small>
       </div>
     </div>
   </a>
