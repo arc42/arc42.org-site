@@ -150,35 +150,181 @@ arc42 answers the following two questions in a pragmatic way and can be tailored
 * _How_ should you document/communicate?
 
 
-![overview of arc42 volume 8](/images/arc42-overview-V8.png)
+
+
+
+
+<div class="grid-container arc42-architecture">
+
+  <a href="#introduction-goals" class="part introduction-goals">
+    <div class="flex row space-between">
+      <div class="flex column">
+        <strong>1. Introduction & Goals</strong><br>
+        <small>Fundamental requirements, esp. quality goals</small>
+      </div>
+    </div>
+  </a>
+
+  <a href="#constraints" class="part constraints">
+    <div class="flex row space-between">
+      <div class="flex column">
+        <strong>2. Constraints</strong><br>
+        <small>External systems & interfaces</small>
+      </div>
+    </div>
+  </a>
+
+  <a href="#context-scope" class="part context-scope">
+    <div class="flex row space-between">
+      <div class="flex column">
+        <strong>3. Context & Scope</strong><br>
+        <small>Core ideas and solution approaches</small>
+      </div>
+    </div>
+  </a>
+
+  <a href="#solution-strategy" class="part solution-strategy">
+    <div class="flex row space-between">
+      <div class="flex column">
+        <strong>4. Solution Strategy</strong><br>
+        <small>Structure of source code, modularization (hierarchical)</small>
+      </div>
+    </div>
+  </a>
+
+  <a href="#building-block-view" class="part building-block-view larger-cell">
+    <div class="flex row space-between">
+      <div class="flex column">
+        <strong>5. Building Block View</strong><br>
+        <small>Structure of source code, modularization (hierarchical)</small>
+      </div>
+    </div>
+  </a>
+
+  <a href="#runtime-view" class="part runtime-view">
+    <div class="flex row space-between">
+      <div class="flex column">
+        <strong>6. Runtime View</strong><br>
+        <small>Important runtime scenarios</small>
+      </div>
+    </div>
+  </a>
+
+  <a href="#deployment-view" class="part deployment-view">
+    <div class="flex row space-between">
+      <div class="flex column">
+        <strong>7. Deployment View</strong><br>
+        <small>Hardware, infrastructure & deployment</small>
+      </div>
+    </div>
+  </a>
+
+  <a href="#crosscutting-concepts" class="part crosscutting-concepts larger-cell">
+    <div class="flex row space-between">
+      <div class="flex column">
+        <strong>8. Crosscutting Concepts</strong><br>
+        <small>Cross-cutting topics, often very technical and detailed</small>
+      </div>
+    </div>
+  </a>
+
+  <a href="#architectural-decisions" class="part architectural-decisions">
+    <div class="flex row space-between">
+      <div class="flex column">
+        <strong>9. Architectural Decisions</strong><br>
+        <small>Important decisions (not described elsewhere)</small>
+      </div>
+    </div>
+  </a>
+
+  <a href="#quality-requirements" class="part quality-requirements">
+    <div class="flex row space-between">
+      <div class="flex column">
+        <strong>10. Quality Requirements</strong><br>
+        <small>Quality tree, quality scenarios</small>
+      </div>
+    </div>
+  </a>
+
+  <a href="#risks-technical-debt" class="part risks-technical-debt">
+    <div class="flex row space-between">
+      <div class="flex column">
+        <strong>11. Risks & Technical Debt</strong><br>
+        <small>Known problems and risks</small>
+      </div>
+    </div>
+  </a>
+
+  <a href="#glossary" class="part glossary">
+    <div class="flex row space-between">
+      <div class="flex column">
+        <strong>12. Glossary</strong><br>
+        <small>Important and specific terms ("ubiquitous language")</small>
+      </div>
+    </div>
+  </a>
+
+</div>
+
+
+
+
+
+
+
 
 <hr>
 
 # More details
 
-{% include lazyloading_feature_row id="feature_row1" type="left" %}
+<div id="introduction-goals">
+  {% include lazyloading_feature_row id="feature_row1" type="left" %}
+</div>
 
-{% include lazyloading_feature_row id="feature_row2" type="right" %}
+<div id="constraints">
+  {% include lazyloading_feature_row id="feature_row2" type="right" %}
+</div>
 
-{% include lazyloading_feature_row id="feature_row3" type="left" %}
+<div id="context-scope">
+  {% include lazyloading_feature_row id="feature_row3" type="left" %}
+</div>
 
-{% include lazyloading_feature_row id="feature_row4" type="right" %}
+<div id="solution-strategy">
+  {% include lazyloading_feature_row id="feature_row4" type="right" %}
+</div>
 
-{% include lazyloading_feature_row id="feature_row5" type="left" %}
+<div id="building-block-view">
+  {% include lazyloading_feature_row id="feature_row5" type="left" %}
+</div>
 
-{% include lazyloading_feature_row id="feature_row6" type="right" %}
+<div id="runtime-view">
+  {% include lazyloading_feature_row id="feature_row6" type="right" %}
+</div>
 
-{% include lazyloading_feature_row id="feature_row7" type="left" %}
+<div id="deployment-view">
+  {% include lazyloading_feature_row id="feature_row7" type="left" %}
+</div>
 
-{% include lazyloading_feature_row id="feature_row8" type="right" %}
+<div id="crosscutting-concepts">
+  {% include lazyloading_feature_row id="feature_row8" type="right" %}
+</div>
 
-{% include lazyloading_feature_row id="feature_row9" type="left" %}
+<div id="architectural-decisions">
+  {% include lazyloading_feature_row id="feature_row9" type="left" %}
+</div>
 
-{% include lazyloading_feature_row id="feature_row10" type="right" %}
+<div id="quality-requirements">
+  {% include lazyloading_feature_row id="feature_row10" type="right" %}
+</div>
 
-{% include lazyloading_feature_row id="feature_row11" type="left" %}
+<div id="risks-technical-debt">
+  {% include lazyloading_feature_row id="feature_row11" type="left" %}
+</div>
 
-{% include lazyloading_feature_row id="feature_row12" type="right" %}
+<div id="glossary">
+  {% include lazyloading_feature_row id="feature_row12" type="right" %}
+</div>
+
 
 <hr>
 
