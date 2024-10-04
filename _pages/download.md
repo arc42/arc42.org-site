@@ -75,6 +75,8 @@ These formats are generated based upon their AsciiDoc sources from the [Github r
 |  | IT | {% for type in types %} [.zip]({{PREFIX}}IT-{{type}}-{{format}}.zip) |{% endfor %}
 |  | FR | {% for type in types %} [.zip]({{PREFIX}}FR-{{type}}-{{format}}.zip) |{% endfor %}
 |  | NL | {% for type in types %} [.zip]({{PREFIX}}NL-{{type}}-{{format}}.zip) |{% endfor %}
+|  | PT | {% for type in types %} [.zip]({{PREFIX}}PT-{{type}}-{{format}}.zip) |{% endfor %}
+|  | RU | {% for type in types %} [.zip]({{PREFIX}}RU-{{type}}-{{format}}.zip) |{% endfor %}
 |  | UA | {% for type in types %} [.zip]({{PREFIX}}UA-{{type}}-{{format}}.zip) |{% endfor %}
 {% endfor %}
 
