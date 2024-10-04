@@ -13,7 +13,7 @@ header:
 
 excerpt: "Version 8 - the most practical and effective arc42 ever."
 intro:
-  - excerpt: "Version 8.1, released October 2022."
+  - excerpt: "Version 8.2.1, released October 2024."
 
 ---
 
@@ -37,7 +37,7 @@ intro:
           </aside>
 
 
-Version 8, released February 2022, UA version August 2022, CZ version October 2022, FR version June 2023
+Version 8, released February 2022, UA version August 2022, CZ version October 2022, FR version June 2023, PT version October 2024.
 
 {: .notice}
 Nous sommes heureux d'annoncer la disponibilité de la version française d'arc42 - merci beaucoup à Damien Lucas. Bon travail!
@@ -49,7 +49,7 @@ We are so happy to announce the availability of the Czech version of arc42 - tha
 We are incredibly happy to announce the availability of the Ukrainian version of arc42 - thanx to Ivan Bulyk and support from [Larysa Visengeriyeva](https://twitter.com/visenger).
 
 {: .notice}
-Personal note from Gernot Starke, April 2022: As a consequence to the inhuman and cruel invasion of Ukraine, we want to cut all ties to Russia. Even if it's only a small gesture, we decided to remove the Russian version from our repositories. 
+Thanx to Guilherme Weizenmann for the Portugese translation, and the constructive review by Pedro Mattiollo. Você é incrível!
 
 
 
