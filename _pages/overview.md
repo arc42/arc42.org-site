@@ -169,7 +169,7 @@ arc42 answers the following two questions in a pragmatic way and can be tailored
     <div class="flex row space-between">
       <div class="flex column">
         <strong>2. Constraints</strong><br>
-        <small>External systems & interfaces</small>
+        <small>Regulations and external constraints</small>
       </div>
     </div>
   </a>
@@ -178,7 +178,7 @@ arc42 answers the following two questions in a pragmatic way and can be tailored
     <div class="flex row space-between">
       <div class="flex column">
         <strong>3. Context & Scope</strong><br>
-        <small>Core ideas and solution approaches</small>
+        <small>External systems & interfaces</small>
       </div>
     </div>
   </a>
@@ -187,7 +187,7 @@ arc42 answers the following two questions in a pragmatic way and can be tailored
     <div class="flex row space-between">
       <div class="flex column">
         <strong>4. Solution Strategy</strong><br>
-        <small>Structure of source code, modularization (hierarchical)</small>
+        <small>Core ideas and solution approaches</small>
       </div>
     </div>
   </a>
