@@ -180,7 +180,7 @@ Teams must constantly adapt (_maintain_) their documentation, so it remains corr
   * If the answer to one of these questions is "no", then remove the corresponding part of the documentation. As everything is [version controlled](#sect-version-controlled), it would be available if needed later on.
 * Optimize your documentation (not only your system!) for maintainability.
 The section on [Easy to find](#sect-maintainable) contains numerous approaches that help to optimize maintainability.
-* [Automate the generation of certain parts](#sect-automate-certain-parts) of your documentation..
+* [Automate the generation of certain parts](#sect-automate-certain-parts) of your documentation.
 
 
 <h3 id="sect-understandable">Req-3: Understandable</h3>
@@ -393,7 +393,7 @@ interested in.
 Referenceable elements can be uniquely identified in the context of your
 documentation. Instead of writing “see the diagram below” or “the table
 above”, you should strive for “see diagram 5.2” or “the table 3.1”. You
-can chose any numbering or referencing scheme you like, but you should
+can choose any numbering or referencing scheme you like, but you should
 use it consistently.
 
 #### How to make documentation referenceable
@@ -548,7 +548,7 @@ coverage of automated (*living*) documentation.
 > users can find the information that they need.
 > [^hargisDevelopingQualityTechnical2004], p.213
 
-This requirements relates to both the content of the documentation and
+These requirements relate to both the content of the documentation and
 to the documentation itself. In reality, documentation is often located
 in access-controlled areas that are not covered by any search engine:
 That means you have to know where to look for the documentation.
@@ -602,7 +602,7 @@ But in reality that’s not always as simple as it sounds:
 -   Documentation authors, especially from non-technical roles, might
     not be able (or refuse to) use a VCS.
 
-Therefore I propose the following strategy:
+Therefore, I propose the following strategy:
 
 -   Ideally, add all documentation artifacts to a VCS, like `git`. Your
     VCS should facilitate branching and merging artifacts. Additionally,
