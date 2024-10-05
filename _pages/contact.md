@@ -16,15 +16,15 @@ Please note: In case you contact us:
 * we'll use your personal data (name, email)
 only for the purpose of answering your request. It will not be stored, kept
 or processed in sense of European General Data Protection Regulation [GDPR](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation).
-* you explicitely give your consent that your data will be used for the
+* you explicitly give your consent that your data will be used for the
 aforementioned objective.
-* you explicitely acknowledge and consent that some of the contact options
+* you explicitly acknowledge and consent that some of the contact options
 make use of unencrypted communication channels - therefore your personal data
 might be visible during transit.
 
 
 
-* <a href="xmxaxixlxtxo:ixnxfxox@xaxrxcx4x2x.xdxex" onmouseover="this.href=this.href.replace(/x/g,'');"><i class="fa fa-fw fa-envelope"></i>Email (our adress is spam-protected)</a>
+* <a href="xmxaxixlxtxo:ixnxfxox@xaxrxcx4x2x.xdxex" onmouseover="this.href=this.href.replace(/x/g,'');"><i class="fa fa-fw fa-envelope"></i>Email (our address is spam-protected)</a>
 
 * via [<i class="fab fa-fw fa-github"></i>issue tracker](https://github.com/arc42/arc42-template/issues) at [https://github.com/arc42/arc42-template/issues](https://github.com/arc42/arc42-template/issues).
 * on <i class="fab fa-fw fa-linkedin"></i>LinkedIn:
