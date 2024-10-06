@@ -17,7 +17,7 @@ about software architecture is hidden in single brains, scattered code
 or simply lost.
 
 Several typical problems hinder many software projects - which
-arc42 can help to reduce or eliminate very effiently with low effort.
+arc42 can help to reduce or eliminate very efficiently with low effort.
 
 ### Not Existing or Outdated
 The first problem is missing or outdated documentation:
@@ -27,7 +27,7 @@ The first problem is missing or outdated documentation:
 
 There's documentation, created somewhere in the past. Rumors say it had been
 correct a long time ago, the original authors unknown or vanished. Such _historical_
-artifacts only waste disk space and provide no value at alll, for nobody.
+artifacts only waste disk space and provide no value at all, for nobody.
 
 
 

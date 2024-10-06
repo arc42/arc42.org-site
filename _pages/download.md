@@ -61,7 +61,7 @@ various [formats]({{page.url}}#format-overview) for various tools. For an overvi
 
 # File-based formats
 
-These formats are generated based upon their AsciiDoc sources from the [Github repository](https://github.com/arc42/arc42-template).
+These formats are generated based upon their AsciiDoc sources from the [GitHub repository](https://github.com/arc42/arc42-template).
 
 {% assign formats = "docx|asciidoc|markdown|markdownMP|markdownStrict|markdownMPStrict|gitHubMarkdown|gitHubMarkdownMP|latex|html|rst|textile" | split: "|"  %}  
 {% assign types = "plain|withhelp" | split: "|"  %}  
@@ -104,7 +104,7 @@ It is based upon an older version of the template - due to technical difficultie
 
 * If you consider to use confluence, the [asciidoc2confluence](https://github.com/rdmueller/asciidoc2confluence) script might be helpful.
 
-* There is also a [confluence plugin available from the atlassian market place](https://marketplace.atlassian.com/plugins/com.networkedassets.plugins.space-blueprint/server/overview).
+* There is also a [confluence plugin available from the atlassian marketplace](https://marketplace.atlassian.com/plugins/com.networkedassets.plugins.space-blueprint/server/overview).
 
 ## Legacy Version (arc42 v6) for Confluence  
 
