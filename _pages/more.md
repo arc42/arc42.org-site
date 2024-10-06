@@ -71,7 +71,7 @@ articles_feature:
   - image_path: /images/publications/article-feature.png
     alt: "Several magazines"
     title: "Articles"
-    excerpt: "More than a hundred articles in various publications (aah - most if that in German)."
+    excerpt: "More than a hundred articles in various publications (aah - most of that in German)."
     url: /articles
     btn_label: "more ..."
     btn_class: "btn--primary"

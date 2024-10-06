@@ -2,7 +2,7 @@
 
 > currently available on [arc42.org](https://www.arc42.org)
 
-Site is currently beeing built and served by [Netlify](https://netlify.com)
+Site is currently being built and served by [Netlify](https://netlify.com)
 
 
 ### How does it work?

@@ -41,7 +41,7 @@ Read more at [systemsguild.eu](https://systemsguild.eu), [b-agile.de/en](https:/
 
 ### This site...
 
-is maintained on Github, based upon Jekyll, Markdown and other open-source
+is maintained on GitHub, based upon Jekyll, Markdown and other open-source
 technology.
 
 It's built using [Netlify](https://www.netlify.com/) and
