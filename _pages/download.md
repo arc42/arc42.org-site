@@ -32,9 +32,11 @@ intro:
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
               <ul class="toc__menu"><li><a href="#file-based-formats">File-based formats</a></li><li><a href="#confluence-format">Confluence format</a><ul><li><a href="#legacy-version-arc42-v6-for-confluence">Legacy Version (arc42 v6) for Confluence</a></li></ul></li><li><a href="#doxygen-format">Doxygen format</a></li><li><a href="#enterprise-architect-format">Enterprise Architect© format</a></li><li><a href="#ibm-rhapsody-format">IBM Rhapsody© format</a></li><li><a href="#formats-for-other-modeling-tools">Formats for other modeling tools</a></li><li><a href="#format-overview">Format overview</a></li><li><a href="#learn-more">Learn more!</a></li></ul>
-
             </nav>
           </aside>
+
+
+
 
 
 Version 8, released February 2022, UA version August 2022, CZ version October 2022, FR version June 2023, PT version October 2024.
@@ -59,26 +61,66 @@ various [formats]({{page.url}}#format-overview) for various tools. For an overvi
 {% assign GITHUBDIR = "https://github.com/arc42/arc42-template/raw/master/dist/" %}
 {% assign PREFIX = "https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-" %}
 
+
+
+
+
+
+
+
+
+
 # File-based formats
 
 These formats are generated based upon their AsciiDoc sources from the [GitHub repository](https://github.com/arc42/arc42-template).
 
 {% assign formats = "docx|asciidoc|markdown|markdownMP|markdownStrict|markdownMPStrict|gitHubMarkdown|gitHubMarkdownMP|latex|html|rst|textile" | split: "|"  %}  
-{% assign types = "plain|withhelp" | split: "|"  %}  
+{% assign types = "plain|withhelp" | split: "|"  %}
+{% assign languages = "EN|CZ|DE|ES|IT|FR|NL|PT|RU|UA" | split: "|" %}
+{% assign languages_full = "English|Czech|German|Spanish|Italian|French|Dutch|Portuguese|Russian|Ukrainian" | split: "|" %}
 
-| Format | Language | Plain <br> (without explanation) | With Help <br>(contains explanations for every section) |
-|--------|----------|-------|-----------| 
-{% for format in formats %}| {{ format }} | EN | {% for type in types %} [.zip]({{PREFIX}}EN-{{type}}-{{format}}.zip) |{% endfor %}
-|  | CZ | {% for type in types %} [.zip]({{PREFIX}}CZ-{{type}}-{{format}}.zip) |{% endfor %}
-|  | DE | {% for type in types %} [.zip]({{PREFIX}}DE-{{type}}-{{format}}.zip) |{% endfor %}
-|  | ES | {% for type in types %} [.zip]({{PREFIX}}ES-{{type}}-{{format}}.zip) |{% endfor %}
-|  | IT | {% for type in types %} [.zip]({{PREFIX}}IT-{{type}}-{{format}}.zip) |{% endfor %}
-|  | FR | {% for type in types %} [.zip]({{PREFIX}}FR-{{type}}-{{format}}.zip) |{% endfor %}
-|  | NL | {% for type in types %} [.zip]({{PREFIX}}NL-{{type}}-{{format}}.zip) |{% endfor %}
-|  | PT | {% for type in types %} [.zip]({{PREFIX}}PT-{{type}}-{{format}}.zip) |{% endfor %}
-|  | RU | {% for type in types %} [.zip]({{PREFIX}}RU-{{type}}-{{format}}.zip) |{% endfor %}
-|  | UA | {% for type in types %} [.zip]({{PREFIX}}UA-{{type}}-{{format}}.zip) |{% endfor %}
-{% endfor %}
+
+
+
+
+{% assign last_lang_index = languages.size | minus: 1 %}
+
+<table>
+  <thead>
+    <tr>
+      <th>Format/Language</th>
+      {% for lang in languages %}
+        <th>{{ lang }}</th>
+      {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    {% for format in formats %}
+    <tr>
+      <td><strong>{{ format }}</strong></td>
+      {% for lang_index in (0..last_lang_index) %}
+        <td>
+          <a href="{{ PREFIX }}{{ languages[lang_index] }}-plain-{{ format }}.zip" title="{{ languages_full[lang_index] }}">Plain</a><br><br>
+          <a href="{{ PREFIX }}{{ languages[lang_index] }}-withhelp-{{ format }}.zip" title="{{ languages_full[lang_index] }}">With Help</a>
+        </td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Confluence format
 Confluence versions are generated _with help_ and come in
@@ -250,7 +292,7 @@ to invest some effort...
 : [ReStructuredText](https://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html),  markup language, heavily used by [ReadTheDocs](https://readthedocs.org/) and in the Python world.
 
 **textile**
-: Another simple markup language, documented on [textile-lang.com](https://textile-lang.com/)/). 
+: Another simple markup language, documented on [textile-lang.com](https://textile-lang.com/). 
 
 **html**
 : Used only to _view_ the template, not to work with it.
