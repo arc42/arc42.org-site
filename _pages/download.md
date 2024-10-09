@@ -77,9 +77,13 @@ These formats are generated based upon their AsciiDoc sources from the [GitHub r
 {% assign formats = "docx|asciidoc|markdown|markdownMP|markdownStrict|markdownMPStrict|gitHubMarkdown|gitHubMarkdownMP|latex|html|rst|textile" | split: "|"  %}  
 {% assign types = "plain|withhelp" | split: "|"  %}
 {% assign languages = "EN|CZ|DE|ES|IT|FR|NL|PT|RU|UA" | split: "|" %}
+{% assign languages_full = "English|Czech|German|Spanish|Italian|French|Dutch|Portuguese|Russian|Ukrainian" | split: "|" %}
 
 
 
+
+
+{% assign last_lang_index = languages.size | minus: 1 %}
 
 <table>
   <thead>
@@ -94,16 +98,18 @@ These formats are generated based upon their AsciiDoc sources from the [GitHub r
     {% for format in formats %}
     <tr>
       <td><strong>{{ format }}</strong></td>
-      {% for lang in languages %}
+      {% for lang_index in (0..last_lang_index) %}
         <td>
-          <a href="{{ PREFIX }}{{ lang }}-plain-{{ format }}.zip">Plain</a><br><br>
-          <a href="{{ PREFIX }}{{ lang }}-withhelp-{{ format }}.zip">With Help</a>
+          <a href="{{ PREFIX }}{{ languages[lang_index] }}-plain-{{ format }}.zip" title="{{ languages_full[lang_index] }}">Plain</a><br><br>
+          <a href="{{ PREFIX }}{{ languages[lang_index] }}-withhelp-{{ format }}.zip" title="{{ languages_full[lang_index] }}">With Help</a>
         </td>
       {% endfor %}
     </tr>
     {% endfor %}
   </tbody>
 </table>
+
+
 
 
 
