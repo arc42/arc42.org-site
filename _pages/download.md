@@ -76,7 +76,7 @@ These formats are generated based upon their AsciiDoc sources from the [GitHub r
 
 {% assign formats = "docx|asciidoc|markdown|markdownMP|markdownStrict|markdownMPStrict|gitHubMarkdown|gitHubMarkdownMP|latex|html|rst|textile" | split: "|"  %}  
 {% assign types = "plain|withhelp" | split: "|"  %}
-{% assign languages = "EN|CZ|DE|ES|IT|FR|NL|PT|RU|UA" | split: "|" %}
+{% assign languages = "EN|CZ|DE|ES|IT|FR|NL|PT|RU|UKR" | split: "|" %}
 {% assign languages_full = "English|Čeština|Deutsch|Español|Italiano|Français|Nederlands|Português|Русский|Українська" | split: "|" %}
 
 
