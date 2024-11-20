@@ -43,7 +43,7 @@ template_training_news:
 
     * Our [merchandising shop](https://arc42.myspreadshop.de) is online, go get T-Shirts, Hoodies and other arc42-branded goodies. High-quality, eco-friendly. Give it a try!
    
-    * We now have Portugese (PT), ,French (FR), Czech (CZ) and Ukrainian (UA) versions of arc42 available, together with DE, EN, ES, IT and NL!
+    * We now offer a [quality model](https://quality.arc42.org), helping teams to improve their quality requirements. Contains 100+ specific examples.
     
     * The new book as ideal preparation for iSAQB certification: [Software Architecture Foundation](/books#software-architecture-foundation-cpsa-f-exam-preparation).
 
