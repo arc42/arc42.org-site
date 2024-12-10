@@ -26,19 +26,19 @@
 
 /* Custom colors */
 .introduction-goals, .context-scope, .building-block-view, .runtime-view, .crosscutting-concepts {
-  background-color: rgb(143, 228, 180); /* Green */
+  background-color: rgb(247, 247, 247); /* slightly white */
 }
 
 .constraints, .architectural-decisions, .risks-technical-debt {
-  background-color: rgb(255, 199, 198); /* Red */
+  background-color: rgb(247, 247, 247); /* slightly white */
 }
 
 .solution-strategy, .quality-requirements {
-  background-color: rgb(148, 215, 239); /* Blue */
+  background-color: rgb(247, 247, 247); /* slightly white */
 }
 
 .deployment-view, .glossary {
-  background-color: rgb(255, 235, 159); /* Yellow */
+  background-color: rgb(247, 247, 247); /* slightly white */
 }
 
 /* Positioning for grid items */
