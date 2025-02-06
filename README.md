@@ -2,13 +2,7 @@
 
 > currently available on [arc42.org](https://www.arc42.org)
 
-Site is currently being built and served by [Netlify](https://netlify.com)
-
-
-### How does it work?
-
-* home.md is the homepage, it's mapped (via permalink) to "/".
-* With the arc42.org hosting provider we configured a custom DNS CNAME entry to point to Netlify.
+Site is currently being built and served by [GitHub Pages]([https://netlify.com](https://pages.github.com/))
 
 
 ### How does the search page work?
