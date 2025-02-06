@@ -2,7 +2,7 @@
 
 > currently available on [arc42.org](https://www.arc42.org)
 
-Site is currently being built and served by [GitHub Pages]([https://netlify.com](https://pages.github.com/))
+Site is currently being built and served by [GitHub Pages](https://pages.github.com/)
 
 
 ### How does the search page work?
