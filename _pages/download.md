@@ -145,7 +145,7 @@ It is based upon an older version of the template - due to technical difficultie
 
 * If you consider to use confluence, the [asciidoc2confluence](https://github.com/rdmueller/asciidoc2confluence) script might be helpful.
 
-* There is also a [confluence plugin available from the atlassian marketplace](https://marketplace.atlassian.com/plugins/com.networkedassets.plugins.space-blueprint/server/overview).
+* There was  a confluence plugin available from the atlassian marketplace, but currently it seems Atlassian has discontinued support. We are afraid you're on your own...
 
 ## Legacy Version (arc42 v6) for Confluence  
 
