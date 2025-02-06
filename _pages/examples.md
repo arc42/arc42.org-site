@@ -59,9 +59,6 @@ A series of blog posts which describe certain aspects of Gradle and put them int
 [biking](https://biking.michael-simons.eu/docs/index.html) (English)
 A real world example for a bike activity tracker, created by Michael Simons
 
-[Angular 2](https://blog.fingersteps.ch/2015/12/01/blog-serie-architekturueberblick-von-angular-2/) (German)
-A series of blog posts inspired by the Gradle "Starschnitt". Created by Patrick Roos.
-
 
 
 # Learn more!
