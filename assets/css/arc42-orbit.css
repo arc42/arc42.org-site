@@ -1,0 +1,356 @@
+/* style for orbiting arc42 assets */
+:root {
+  /* Base size variables for responsiveness */
+  --orbital-base-size: min(80vh, 80vw); /* Responsive base size */
+  --center-size: calc(var(--orbital-base-size) * 0.2); /* Center element size */
+  
+  /* Planet size variables */
+  --planet-size-small: calc(var(--orbital-base-size) * 0.1);
+  --planet-size-medium: calc(var(--orbital-base-size) * 0.125);
+  --planet-size-large: calc(var(--orbital-base-size) * 0.15);
+  
+  /* Orbit size variables */
+  --orbit-horizontal-width: calc(var(--orbital-base-size) * 1);
+  --orbit-horizontal-height: calc(var(--orbital-base-size) * 0.58);
+  --orbit-vertical-width: calc(var(--orbital-base-size) * 0.58);
+  --orbit-vertical-height: calc(var(--orbital-base-size) * 1);
+  --orbit-diagonal-width: calc(var(--orbital-base-size) * 0.92);
+  --orbit-diagonal-height: calc(var(--orbital-base-size) * 0.67);
+  
+  /* Glow and visual effect variables */
+  --glow-size: calc(var(--orbital-base-size) * 0.03);
+  --logo-border-width: calc(var(--orbital-base-size) * 0.008);
+  --logo-border-color: white;
+  
+  /* Colors */
+  --space-color: #040720;
+  --primary-glow-color-1: rgba(255, 180, 0, 0.7);
+  --primary-glow-color-2: rgba(255, 140, 0, 0.9);
+  --secondary-glow-color-1: rgba(255, 140, 0, 0.5);
+  --secondary-glow-color-2: rgba(255, 100, 0, 0.7);
+  --item-glow-color: rgba(0, 162, 255, 0.4);
+  --tooltip-bg-color: rgba(10, 20, 40, 0.9);
+  --orbit-path-color: rgba(150, 150, 150, 0.5);
+}
+
+.space-background {
+  background-color: var(--space-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.orbital-system {
+  position: relative;
+  width: var(--orbital-base-size);
+  height: var(--orbital-base-size);
+}
+
+/* Center glowing image */
+.center-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--center-size);
+  height: var(--center-size);
+  border-radius: 50%;
+  box-shadow: 0 0 0 var(--logo-border-width) var(--logo-border-color);
+  z-index: 10;
+}
+
+.circular-center-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: 2;
+  object-fit: contain; /* Ensures logo maintains proportions */
+}
+
+.center-glow-layer {
+  position: absolute;
+  top: calc(-1 * var(--glow-size));
+  left: calc(-1 * var(--glow-size));
+  width: calc(100% + (var(--glow-size) * 2));
+  height: calc(100% + (var(--glow-size) * 2));
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0 0 60px 30px var(--primary-glow-color-1);
+  z-index: 1;
+  animation: primary-glow-animation 3s infinite;
+  pointer-events: none; /* Ensures it doesn't interfere with clicks */
+}
+
+.center-glow-layer::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 50px 20px var(--secondary-glow-color-1);
+  animation: secondary-glow-animation 4s infinite;
+}
+
+/* Orbital paths */
+.orbit-path {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px dotted var(--orbit-path-color);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Horizontal orbit (left to right) */
+.horizontal-orbit {
+  width: var(--orbit-horizontal-width);
+  height: var(--orbit-horizontal-height);
+  transform: translate(-50%, -50%);
+}
+
+/* Vertical orbit (north to south) */
+.vertical-orbit {
+  width: var(--orbit-vertical-width);
+  height: var(--orbit-vertical-height);
+  transform: translate(-50%, -50%);
+}
+
+/* Diagonal orbit (northeast to southwest) */
+.diagonal-orbit {
+  width: var(--orbit-diagonal-width);
+  height: var(--orbit-diagonal-height);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Orbital items */
+.orbital-item {
+  position: absolute;
+  transform-origin: center;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  border: none; /* Explicitly remove any border */
+  cursor: pointer; /* Show pointer cursor on hover */
+  overflow: hidden; /* Ensure planets remain circular */
+  border-radius: 50%;
+}
+
+.orbital-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: none; /* Explicitly remove any border */
+  shape-rendering: geometricPrecision; /* Ensure perfect circles */
+}
+
+/* Tooltip styles */
+.planet-tooltip {
+  position: absolute;
+  background-color: var(--tooltip-bg-color);
+  color: white;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.5);
+  width: 12.5rem;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  pointer-events: none;
+  font-size: 0.875rem;
+  text-align: center;
+  top: -6.25rem; /* Position above the planet */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.orbital-item:hover .planet-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Horizontal orbit items (clockwise) - TRUE ELLIPTICAL PATH */
+.horizontal-item {
+  animation-name: horizontal-elliptical-orbit;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Vertical orbit items (counterclockwise) - TRUE ELLIPTICAL PATH */
+.vertical-item {
+  animation-name: vertical-elliptical-orbit;
+  animation-duration: 25s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+/* Diagonal orbit items (clockwise) - TRUE ELLIPTICAL PATH */
+.diagonal-item {
+  animation-name: diagonal-elliptical-orbit;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Individual planet sizes */
+.planet-small {
+  width: var(--planet-size-small);
+  height: var(--planet-size-small);
+}
+
+.planet-medium {
+  width: var(--planet-size-medium);
+  height: var(--planet-size-medium);
+}
+
+.planet-large {
+  width: var(--planet-size-large);
+  height: var(--planet-size-large);
+}
+
+/* Item glow effect */
+.item-glow {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0 0 15px 5px var(--item-glow-color);
+  z-index: -1;
+  border: none; /* Ensuring no border */
+}
+
+/* TRUE ELLIPTICAL KEYFRAMES */
+@keyframes horizontal-elliptical-orbit {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(calc(var(--orbit-horizontal-width) / 2)) translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(90deg) translateX(calc(var(--orbit-horizontal-width) / 2)) translateY(0) rotate(-90deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg) translateX(calc(var(--orbit-horizontal-width) / 2)) translateY(0) rotate(-180deg);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(270deg) translateX(calc(var(--orbit-horizontal-width) / 2)) translateY(0) rotate(-270deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(calc(var(--orbit-horizontal-width) / 2)) translateY(0) rotate(-360deg);
+  }
+}
+
+@keyframes vertical-elliptical-orbit {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(0) translateY(calc(var(--orbit-vertical-height) / 2)) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(90deg) translateX(0) translateY(calc(var(--orbit-vertical-height) / 2)) rotate(-90deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg) translateX(0) translateY(calc(var(--orbit-vertical-height) / 2)) rotate(-180deg);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(270deg) translateX(0) translateY(calc(var(--orbit-vertical-height) / 2)) rotate(-270deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(0) translateY(calc(var(--orbit-vertical-height) / 2)) rotate(-360deg);
+  }
+}
+
+@keyframes diagonal-elliptical-orbit {
+  0% {
+    transform: translate(-50%, -50%) rotate(45deg) translateX(calc(var(--orbit-diagonal-width) / 2)) translateY(0) rotate(-45deg);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(135deg) translateX(calc(var(--orbit-diagonal-width) / 2)) translateY(0) rotate(-135deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(225deg) translateX(calc(var(--orbit-diagonal-width) / 2)) translateY(0) rotate(-225deg);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(315deg) translateX(calc(var(--orbit-diagonal-width) / 2)) translateY(0) rotate(-315deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(405deg) translateX(calc(var(--orbit-diagonal-width) / 2)) translateY(0) rotate(-405deg);
+  }
+}
+
+/* Keyframes for center glow */
+@keyframes primary-glow-animation {
+  0% {
+    opacity: 0.5;
+    box-shadow: 0 0 60px 30px var(--primary-glow-color-1);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 80px 40px var(--primary-glow-color-2);
+  }
+  100% {
+    opacity: 0.5;
+    box-shadow: 0 0 60px 30px var(--primary-glow-color-1);
+  }
+}
+
+@keyframes secondary-glow-animation {
+  0% {
+    opacity: 0.7;
+    box-shadow: 0 0 50px 20px var(--secondary-glow-color-1);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 70px 30px var(--secondary-glow-color-2);
+  }
+  100% {
+    opacity: 0.7;
+    box-shadow: 0 0 50px 20px var(--secondary-glow-color-1);
+  }
+}
+
+/* Different speeds for items - SLOWER */
+.speed-1 { animation-duration: 20s; }
+.speed-2 { animation-duration: 15s; }
+.speed-3 { animation-duration: 30s; }
+.speed-4 { animation-duration: 25s; }
+
+/* Media queries for additional responsiveness */
+@media screen and (max-width: 768px) {
+  :root {
+    --orbital-base-size: min(90vh, 90vw);
+  }
+  
+  .planet-tooltip {
+    width: 10rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  :root {
+    --orbital-base-size: min(95vh, 95vw);
+  }
+  
+  .planet-tooltip {
+    width: 8rem;
+    font-size: 0.7rem;
+  }
+}
