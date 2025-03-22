@@ -80,6 +80,34 @@
   z-index: 10;
 }
 
+@keyframes center-image-pulse {
+  0% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  15% { /* Quick rise - systole */
+    transform: scale(1.08);
+    filter: brightness(1.2);
+  }
+  30% { /* First peak */
+    transform: scale(1.05);
+    filter: brightness(1.08);
+  }
+  45% { /* Second rise - diastole */
+    transform: scale(1.04);
+    filter: brightness(0.9);
+  }
+  60% { /* Second peak */
+    transform: scale(1.02);
+    filter: brightness(0.8);
+  }
+  100% { /* Return to baseline */
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+
+
 .circular-center-image {
   display: block;
   width: 100%;
@@ -88,7 +116,12 @@
   border-radius: 50%;
   background: none;
   border: none;
+  animation: center-image-pulse 0.857s infinite; /* Same timing as the glow */
+  transform-origin: center;
+  will-change: transform, filter; /* Optimization hint for browsers */
 }
+
+
 
 .center-glow-layer {
   position: absolute;
@@ -102,6 +135,7 @@
   z-index: 1;
   animation: heartbeat-primary-glow 0.857s infinite; /* 70 BPM = 0.857s per beat */
   pointer-events: none; /* Ensures it doesn't interfere with clicks */
+  will-change: opacity, box-shadow;
 }
 
 .center-glow-layer::before {
