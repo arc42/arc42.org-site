@@ -1,7 +1,35 @@
+/* Orbital Animation CSS */
+
+.orbit-container {
+  /* Container for the entire orbital system */
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.space-background {
+  background-color: var(--space-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto; /* Auto height */
+  aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  border-radius: 1rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
 :root {
   /* Base size variables for responsiveness */
   --orbital-base-size: min(80vh, 80vw); /* Responsive base size */
-  --center-size: calc(var(--orbital-base-size) * 0.2); /* Center element size */
+  --center-size: calc(var(--orbital-base-size) * 0.1); /* Center element size */
   
   /* Planet size variables */
   --planet-size-small: calc(var(--orbital-base-size) * 0.1);
@@ -19,33 +47,14 @@
   /* Glow and visual effect variables */
   --glow-size: calc(var(--orbital-base-size) * 0.05); /* Increased glow size */
   
-  /* Colors - updated to be more yellow */
+  /* Colors  */
   --space-color: #040720;
   --primary-glow-color-1: rgba(255, 215, 0, 0.8); /* More yellow gold */
   --primary-glow-color-2: rgba(255, 200, 0, 1); /* Intensified yellow */
   --secondary-glow-color-1: rgba(255, 200, 0, 0.6); /* More yellow */
   --secondary-glow-color-2: rgba(255, 170, 0, 0.9); /* Intensified gold */
   --item-glow-color: rgba(0, 162, 255, 0.4);
-  --tooltip-bg-color: rgba(10, 20, 40, 0.9);
   --orbit-path-color: rgba(150, 150, 150, 0.5);
-}
-
-.space-background {
-  background-color: var(--space-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
-  overflow: hidden;
-  position: relative;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
 }
 
 .orbital-system {
@@ -159,32 +168,6 @@ body {
   object-fit: cover;
   border: none; /* Explicitly remove any border */
   shape-rendering: geometricPrecision; /* Ensure perfect circles */
-}
-
-/* Tooltip styles */
-.planet-tooltip {
-  position: absolute;
-  background-color: var(--tooltip-bg-color);
-  color: white;
-  padding: 0.625rem;
-  border-radius: 0.3125rem;
-  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.5);
-  width: 12.5rem;
-  z-index: 100;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
-  pointer-events: none;
-  font-size: 0.875rem;
-  text-align: center;
-  top: -6.25rem; /* Position above the planet */
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.orbital-item:hover .planet-tooltip {
-  opacity: 1;
-  visibility: visible;
 }
 
 /* Horizontal orbit items (clockwise) - TRUE ELLIPTICAL PATH */
@@ -359,24 +342,32 @@ body {
 .speed-4 { animation-duration: 45s; }
 
 /* Media queries for additional responsiveness */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   :root {
-    --orbital-base-size: min(90vh, 90vw);
+    --orbital-base-size: min(75vh, 75vw);
   }
   
-  .planet-tooltip {
-    width: 10rem;
-    font-size: 0.75rem;
+  .space-background {
+    aspect-ratio: 4/3; /* Slightly less wide on medium screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --orbital-base-size: min(85vh, 85vw);
+  }
+  
+  .space-background {
+    aspect-ratio: 1/1; /* Square for better viewing on tablets */
   }
 }
 
 @media screen and (max-width: 480px) {
   :root {
-    --orbital-base-size: min(95vh, 95vw);
+    --orbital-base-size: min(90vh, 90vw);
   }
   
-  .planet-tooltip {
-    width: 8rem;
-    font-size: 0.7rem;
+  .space-background {
+    border-radius: 0.5rem;
   }
 }
