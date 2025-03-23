@@ -1,10 +1,7 @@
 ---
 title: 20 Years and our Ecosystem
 layout: anniversary-blogpost
-
-
-toc: right
-toc_label: "Content"
+classes: wide
 
 permalink: /20yrs-ecosystem
 header:
@@ -15,81 +12,26 @@ header:
 
 ---
 
+February 2025 marks the 20th anniversary of the pragmatic architecture template arc42. 
+Reason enough to take a brief look back at its achievements and its ecosystem.
 
-<div class="orbit-container">
-    <div class="space-background">
-      <div class="orbital-system">
-        <!-- Center element with glow -->
-        <div class="center-wrapper">
-          <div class="center-glow-layer"></div>
-          <img src="images/blog/arc42-sunny-42.png" alt="arc42 logo" class="circular-center-image">
-        </div>
-        
+## How it all began
+We (Peter and Gernot) have been involved in consulting software development projects for many years. 
+Gernot focused primarily on commercial IT and information systems; Peter preferred embedded systems. 
+Despite the differences in application domains, we discovered a common pattern: 
+Development teams lacked adequate technical documentation for their systems. 
+In addition, teams often got lost in bike-shedding: their discussions revolved almost exclusively around tooling and possible structure of such documentation, instead of creating the documentation itself. 
+
+### Free and Open-Source
+We decided to provide a suitable architecture documentation schema as an open-source product for free and ask the development teams to _focus on their content_ instead of quarrelling about structure or formats. 
+
+That was the birth of arc42. 
+In February 2005, we first published the arc42 template in German, and shortly afterwards also in English. 
+The requirements schema VOLERE by Peter's colleagues Suzanne and James Robertson served as a model. 
+We decided to provide a similar “drawer model” for architects and developers. 
+
+View-based documentation was already established. 
+Therefore, the 3 views “building block view, runtime view and deployment view” form the core of the template to describe the key _structural decisions_ of the solution, and the chapter “cross-cutting concepts” contains many of the _technology decisions_ of the solution.
     
-<!-- Orbit paths (optional, for visualization) -->
-   <div class="orbit-path horizontal-orbit"></div>
-    <div class="orbit-path vertical-orbit"></div>
-    <div class="orbit-path diagonal-orbit"></div>
-    
-<!-- Horizontal orbit items (clockwise) -->
-   <div class="orbital-item horizontal-item speed-1 planet-medium" style="--start-pos: 0deg;">
-      <div class="item-glow"></div>
-      <img src="./planet-quality.png" alt="Orbital 1" class="orbital-image">
-      <div class="planet-tooltip">Documentation - Create comprehensive, clear documentation for your project</div>
-    </div>
-    <div class="orbital-item horizontal-item speed-2 planet-large" style="--start-pos: 72deg;">
-      <div class="item-glow"></div>
-      <img src="./planet-aim42.png" alt="Orbital 2" class="orbital-image">
-      <div class="planet-tooltip">Architecture - Design robust, scalable system architectures</div>
-    </div>
-    <div class="orbital-item horizontal-item speed-3 planet-small" style="--start-pos: 270deg;">
-      <div class="item-glow"></div>
-      <img src="./planet-example.png" alt="Orbital 3" class="orbital-image">
-      <div class="planet-tooltip">Quality Assurance - Ensure top-notch software quality</div>
-    </div>
-    <div class="orbital-item horizontal-item speed-4 planet-medium" style="--start-pos: 216deg;">
-      <div class="item-glow"></div>
-      <img src="./planet-canvas.png" alt="Orbital 4" class="orbital-image">
-      <div class="planet-tooltip">Development - Expert software development services</div>
-    </div>
-    
-    <!-- Vertical orbit items (counterclockwise) -->
-    <div class="orbital-item vertical-item speed-1 planet-large" style="--start-pos: 0deg;">
-      <div class="item-glow"></div>
-      <img src="./planet-knigge.png" alt="Orbital 5" class="orbital-image">
-      <div class="planet-tooltip">Training - Customized technical training programs</div>
-    </div>
-    <div class="orbital-item vertical-item speed-2 planet-small" style="--start-pos: 45deg;">
-      <div class="item-glow"></div>
-      <img src="./planet-arc42-primer.png" alt="Orbital 6" class="orbital-image">
-      <div class="planet-tooltip">Security - Protect your systems with comprehensive security</div>
-    </div>
-    <div class="orbital-item vertical-item speed-3 planet-medium" style="--start-pos: 180deg;">
-      <div class="item-glow"></div>
-      <img src="./planet-docs.png" alt="Orbital 7" class="orbital-image">
-      <div class="planet-tooltip">Consulting - Get expert advice on technical challenges</div>
-    </div>
-    <div class="orbital-item vertical-item speed-4 planet-small" style="--start-pos: 270deg;">
-      <div class="item-glow"></div>
-      <img src="/api/placeholder/70/70" alt="Orbital 8" class="orbital-image">
-      <div class="planet-tooltip">Analysis - In-depth analysis of your technical needs</div>
-    </div>
-    
-    <!-- Diagonal orbit items (clockwise) -->
-    <div class="orbital-item diagonal-item speed-1 planet-small" style="--start-pos: 0deg;">
-      <div class="item-glow"></div>
-      <img src="./planet-zertifizierung.png" alt="Orbital 9" class="orbital-image">
-      <div class="planet-tooltip">Integration - Seamless integration with existing systems</div>
-    </div>
-    <div class="orbital-item diagonal-item speed-2 planet-medium" style="--start-pos: 120deg;">
-      <div class="item-glow"></div>
-      <img src="./planet-communicating.png" alt="Orbital 10" class="orbital-image">
-      <div class="planet-tooltip">Cloud - Expert cloud migration and management</div>
-    </div>
-    <div class="orbital-item diagonal-item speed-3 planet-large" style="--start-pos: 240deg;">
-      <div class="item-glow"></div>
-      <img src="./planet-req4arc.png" alt="Orbital 11" class="orbital-image">
-      <div class="planet-tooltip">Strategy - Technology strategy and roadmapping</div>
-    </div>
-    
-  </div>
+<!-- the fancy, css-based orbital animation -->    
+{% include orbit-animation.html %}
