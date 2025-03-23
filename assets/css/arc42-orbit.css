@@ -1,4 +1,4 @@
-/* Orbital Animation CSS */
+/* Orbital Animation CSS with pulsating center */
 
 .orbit-container {
   /* Container for the entire orbital system */
@@ -28,8 +28,8 @@
 
 :root {
   /* Base size variables for responsiveness */
-  --orbital-base-size: min(80vh, 80vw); /* Responsive base size */
-  --center-size: calc(var(--orbital-base-size) * 0.1); /* Center element size */
+  --orbital-base-size: min(60vh, 60vw); /* Responsive base size */
+  --center-size: calc(var(--orbital-base-size) * 0.11); 
   
   /* Planet size variables */
   --planet-size-small: calc(var(--orbital-base-size) * 0.1);
@@ -37,17 +37,17 @@
   --planet-size-large: calc(var(--orbital-base-size) * 0.15);
   
   /* Orbit size variables */
-  --orbit-horizontal-width: calc(var(--orbital-base-size) * 1);
-  --orbit-horizontal-height: calc(var(--orbital-base-size) * 0.58);
+  --orbit-horizontal-width: calc(var(--orbital-base-size) * 0.8);
+  --orbit-horizontal-height: calc(var(--orbital-base-size) * 0.38);
   --orbit-vertical-width: calc(var(--orbital-base-size) * 0.58);
-  --orbit-vertical-height: calc(var(--orbital-base-size) * 1);
-  --orbit-diagonal-width: calc(var(--orbital-base-size) * 0.92);
+  --orbit-vertical-height: calc(var(--orbital-base-size) * 0.4);
+  --orbit-diagonal-width: calc(var(--orbital-base-size) * 0.75);
   --orbit-diagonal-height: calc(var(--orbital-base-size) * 0.67);
   
   /* Glow and visual effect variables */
   --glow-size: calc(var(--orbital-base-size) * 0.05); /* Increased glow size */
   
-  /* Colors  */
+  /* Colors - updated to be more yellow */
   --space-color: #040720;
   --primary-glow-color-1: rgba(255, 215, 0, 0.8); /* More yellow gold */
   --primary-glow-color-2: rgba(255, 200, 0, 1); /* Intensified yellow */
@@ -80,34 +80,7 @@
   z-index: 10;
 }
 
-@keyframes center-image-pulse {
-  0% {
-    transform: scale(1);
-    filter: brightness(1);
-  }
-  15% { /* Quick rise - systole */
-    transform: scale(1.08);
-    filter: brightness(1.2);
-  }
-  30% { /* First peak */
-    transform: scale(1.05);
-    filter: brightness(1.08);
-  }
-  45% { /* Second rise - diastole */
-    transform: scale(1.04);
-    filter: brightness(0.9);
-  }
-  60% { /* Second peak */
-    transform: scale(1.02);
-    filter: brightness(0.8);
-  }
-  100% { /* Return to baseline */
-    transform: scale(1);
-    filter: brightness(1);
-  }
-}
-
-
+/* Pulsating center image */
 .circular-center-image {
   display: block;
   width: 100%;
@@ -120,8 +93,6 @@
   transform-origin: center;
   will-change: transform, filter; /* Optimization hint for browsers */
 }
-
-
 
 .center-glow-layer {
   position: absolute;
@@ -207,26 +178,29 @@
 /* Horizontal orbit items (clockwise) - TRUE ELLIPTICAL PATH */
 .horizontal-item {
   animation-name: horizontal-elliptical-orbit;
-  animation-duration: 20s;
+  animation-duration: 30s; /* Base duration */
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  /* animation-delay will be set inline to distribute planets */
 }
 
 /* Vertical orbit items (counterclockwise) - TRUE ELLIPTICAL PATH */
 .vertical-item {
   animation-name: vertical-elliptical-orbit;
-  animation-duration: 25s;
+  animation-duration: 28s; /* Base duration */
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: reverse;
+  /* animation-delay will be set inline to distribute planets */
 }
 
 /* Diagonal orbit items (clockwise) - TRUE ELLIPTICAL PATH */
 .diagonal-item {
   animation-name: diagonal-elliptical-orbit;
-  animation-duration: 30s;
+  animation-duration: 35s; /* Base duration */
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  /* animation-delay will be set inline to distribute planets */
 }
 
 /* Individual planet sizes */
@@ -366,6 +340,34 @@
   100% { /* Return to baseline */
     opacity: 0.8;
     box-shadow: 0 0 60px 30px var(--secondary-glow-color-1);
+  }
+}
+
+/* Center image pulsation animation */
+@keyframes center-image-pulse {
+  0% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  15% { /* Quick rise - systole */
+    transform: scale(1.03);
+    filter: brightness(1.1);
+  }
+  30% { /* First peak */
+    transform: scale(1.02);
+    filter: brightness(1.08);
+  }
+  45% { /* Second rise - diastole */
+    transform: scale(1.04);
+    filter: brightness(1.15);
+  }
+  60% { /* Second peak */
+    transform: scale(1.02);
+    filter: brightness(1.08);
+  }
+  100% { /* Return to baseline */
+    transform: scale(1);
+    filter: brightness(1);
   }
 }
 
