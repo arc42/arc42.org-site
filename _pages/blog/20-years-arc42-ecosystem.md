@@ -39,8 +39,12 @@ Therefore, the 3 views “building block view, runtime view and deployment view�
 <!-- arc42 structure as div -->    
 {% include template-structure.html 
    color_scheme="red" 
-   building_block_bg="#ffebeb" %}
+   view_bg="#ffebeb" %}
 
+<!-- Add the legend separately -->
+{% include arc42-legend.html 
+   color="#ffebeb" 
+   text="Core architectural information" %}
 
 #### The template is strictly process agnostic:
 
@@ -68,3 +72,33 @@ More than 700 people participate each year and learn (among other useful things)
 
 That makes several thousand people that we know of. 
 Many more surprise us by showing up sooner or later with some questions. 
+
+## The Ecosystem
+
+An ecosystem has developed around the template that offers users assistance in many different areas (of course, everything is open-source and completely free to use, even in commercial settings):
+
+* The extensive [documentation site](https://docs.arc42.org) offers more than 140 practical tips and real examples for the individual template sections.
+*	The [FAQ-site](https://faq.arc42.org) answers over 130 frequently asked questions, about the template, architecture methodology, tools, customization and management.
+
+Two of the latest elements of this architecture-centric ecosystem are currently proving particularly popular:
+
+* The open-source catalog of [quality requirements](https://quality.arc42.org) and corresponding terminology collects more than 150 quality properties with concretely formulated quality scenarios. It helps teams to close the (usual) gap in quality requirements, which after all have a significant influence on architecture decisions.
+*	The [one-pager (aka: canvas)](https://canvas.arc42.org) supports highly stressed teams: useful architecture documentation on a single page!
+
+In addition to our websites, we have published a lot about arc42 over the last 20 years. 
+
+### The Examples
+
+Since copying from existing solutions is always easier than inventing new ones, we are especially proud about two books focussing on practical examples: 
+
+* arc42 by Example - Vol 1: Examples from the commercial world, XXX
+   
+* arc42 by Example - Vol 2 with examples from the embedded and IOT world. 
+
+A complete lists of books, articles, videos and more can be found at (arc42.org/more) or (arc42.de/more).
+
+## Where do we go from here…
+So, here’s to the next 20 years (and beyond!) of fuss-free, content-first architectural documentation. We’ll keep making arc42 slimmer, friendlier, and every bit as flexible, so that you can focus on the important stuff—like actually building and maintaining great software. We’ll keep championing open-source sharing, busting myths about documentation (yes, it really can be fun!), and surprising folks with new and practical additions to the arc42 family. Thank you for being part of this journey—together, we’ll continue to keep architecture clear, simple, and downright enjoyable!
+
+
+
