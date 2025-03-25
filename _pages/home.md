@@ -39,12 +39,11 @@ template_training_news:
 
 
 - title: "News"
-  excerpt: "![arc42 T-Shirt](/images/home/t-shirt.webp)<br>
+  excerpt: "
+    * We celebrate the 20th anniversary of the arc42 template - and started with a short blogpost on the [arc42 ecosystem](/20yrs-ecosystem).
 
     * Our [merchandising shop](https://arc42.myspreadshop.de) is online, go get T-Shirts, Hoodies and other arc42-branded goodies. High-quality, eco-friendly. Give it a try!
    
-    * We now offer a [quality model](https://quality.arc42.org), helping teams to improve their quality requirements. Contains 100+ specific examples.
-    
     * The new book as ideal preparation for iSAQB certification: [Software Architecture Foundation](/books#software-architecture-foundation-cpsa-f-exam-preparation).
 
     * Even more examples of arc42 in the book arc42 by Example - [Vol 2. Embedded Systems and IoT](/books#arc42-by-example-vol2).
