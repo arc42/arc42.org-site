@@ -1,6 +1,6 @@
 ---
 title: 20 Years and our Ecosystem
-layout: anniversary-blogpost
+layout: single
 classes: wide
 
 permalink: /20yrs-ecosystem

@@ -28,7 +28,8 @@ by Peter Hruschka & Gernot Starke
 
 February 2025 marks the 20th anniversary of the pragmatic architecture template arc42. Reason enough to take a brief look back at its achievements and ecosystem.
 
-![arc42 ecosystem](/images/blog/orbit-article-teaser.png)
+<!-- the fancy, css-based orbital animation -->    
+{% include orbit-animation.html %}
 
 [Read the full article](/20yrs-ecosystem)
 
