@@ -84,21 +84,34 @@ Two of the latest elements of this architecture-centric ecosystem are currently 
 
 * The open-source catalog of [quality requirements](https://quality.arc42.org) and corresponding terminology collects more than 150 quality properties with concretely formulated quality scenarios. It helps teams to close the (usual) gap in quality requirements, which after all have a significant influence on architecture decisions.
 *	The [one-pager (aka: canvas)](https://canvas.arc42.org) supports highly stressed teams: useful architecture documentation on a single page!
+You can use this canvas as the _elevator pitch_ of your architecture.
 
-In addition to our websites, we have published a lot about arc42 over the last 20 years. 
+In addition to our websites, we have published numerous books and articles on architecture in general and especially arc42 over the last 20 years. 
+Two books deserve special attention, as they help teams with the adoption of arc42:
 
 ### The Examples
 
 Since copying from existing solutions is always easier than inventing new ones, we are especially proud about two books focussing on practical examples: 
 
-* arc42 by Example - Vol 1: Examples from the commercial world, XXX
-   
-* arc42 by Example - Vol 2 with examples from the embedded and IOT world. 
+<img src="/images/blog/arc42-by-example-3A.png" alt="arc42 by Example Vol.1 cover"   style="float:left; width:100px; max-width:100%; height:auto; margin-right:20px" />
+[**arc42 by Example - Vol 1**](https://leanpub.com/arc42byexample): Examples of information systems (by Gernot Starke, Hendrik Lösch, Ralf D. Müller, Michael Simons and Stefan Zörner). You find the architecture of a chess engine, an HTML sanity checker, a bike-tour portal, the famous doctoolchain project and a photo-ordering system. The second edition was also published as print-book by [packt](https://www.packtpub.com/en-us/product/arc42-by-example-9781839214356).
 
-A complete lists of books, articles, videos and more can be found at (arc42.org/more) or (arc42.de/more).
+ <img src="/images/blog/arc42-by-example-vol2.png" alt="arc42 by Example, Vol. 2" style="float:left; width:100px; max-width:100%; height:auto; margin-right:20px;" />
+[**arc42 by Example - Vol 2**](https://leanpub.com/arc42byexample-volume2) with examples from the embedded, real-time and IOT world (by Peter Hruschka, Ivan Koslov and Wolfgang Reimesch). These examples will be useful for teams developing and maintaining embedded systems, having a strong relation to hardware.
+
+
+
+A complete lists of books, articles, videos and more can be found on our [books and articles page](https://arc42.org/more).
 
 ## Where do we go from here…
-So, here’s to the next 20 years (and beyond!) of fuss-free, content-first architectural documentation. We’ll keep making arc42 slimmer, friendlier, and every bit as flexible, so that you can focus on the important stuff—like actually building and maintaining great software. We’ll keep championing open-source sharing, busting myths about documentation (yes, it really can be fun!), and surprising folks with new and practical additions to the arc42 family. Thank you for being part of this journey—together, we’ll continue to keep architecture clear, simple, and downright enjoyable!
+So, here’s to the next 20 years (and beyond!) of fuss-free, content-first architectural documentation. 
+
+We promise to keep: 
+
+* making arc42 slimmer, friendlier, and every bit as flexible, so that you can focus on the important stuff—like actually building and maintaining great software. 
+* championing open-source sharing, busting myths about documentation (yes, it really can be fun!), and surprising folks with new and practical additions to the arc42 family. 
+
+>Thank you for being part of this journey—together, we’ll continue to keep architecture clear, simple, and downright enjoyable!
 
 
 
