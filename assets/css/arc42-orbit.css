@@ -1,4 +1,4 @@
-/* Orbital Animation CSS with pulsating center and flatter orbits */
+/* Orbital Animation CSS with pulsating center, flatter orbits, and twinkling stars */
 
 .orbit-container {
   /* Container for the entire orbital system */
@@ -24,6 +24,63 @@
   position: relative;
   border-radius: 1rem;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Add stars to the space background */
+.space-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(1px 1px at 10px 10px, rgba(255, 255, 255, 0.7) 50%, transparent 100%),
+                    radial-gradient(1px 1px at 30px 40px, rgba(255, 255, 255, 0.6) 50%, transparent 100%),
+                    radial-gradient(1px 1px at 70px 30px, rgba(255, 255, 255, 0.7) 50%, transparent 100%),
+                    radial-gradient(1px 1px at 100px 60px, rgba(255, 255, 255, 0.5) 50%, transparent 100%),
+                    radial-gradient(1px 1px at 130px 90px, rgba(255, 255, 255, 0.6) 50%, transparent 100%),
+                    radial-gradient(1px 1px at 170px 20px, rgba(255, 255, 255, 0.7) 50%, transparent 100%),
+                    radial-gradient(1px 1px at 210px 70px, rgba(255, 255, 255, 0.5) 50%, transparent 100%),
+                    radial-gradient(1px 1px at 250px 40px, rgba(255, 255, 255, 0.6) 50%, transparent 100%),
+                    radial-gradient(1px 1px at 280px 90px, rgba(255, 255, 255, 0.7) 50%, transparent 100%),
+                    radial-gradient(1.5px 1.5px at 320px 30px, rgba(255, 255, 255, 0.5) 50%, transparent 100%),
+                    radial-gradient(1px 1px at 350px 60px, rgba(255, 255, 255, 0.6) 50%, transparent 100%),
+                    radial-gradient(1px 1px at 390px 10px, rgba(255, 255, 255, 0.7) 50%, transparent 100%),
+                    radial-gradient(1.5px 1.5px at 430px 50px, rgba(255, 255, 255, 0.6) 50%, transparent 100%);
+  background-repeat: repeat;
+  background-size: 450px 100px; /* Creates more stars by repeating pattern */
+  opacity: 0.6;
+  z-index: 1;
+}
+
+/* Add twinkling effect with a separate layer */
+.space-background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(1px 1px at 50px 80px, rgba(255, 255, 255, 0.9) 50%, transparent 100%),
+                    radial-gradient(1px 1px at 150px 30px, rgba(255, 255, 255, 0.8) 50%, transparent 100%),
+                    radial-gradient(1px 1px at 190px 120px, rgba(255, 255, 255, 0.9) 50%, transparent 100%),
+                    radial-gradient(1.5px 1.5px at 240px 50px, rgba(255, 255, 255, 0.8) 50%, transparent 100%),
+                    radial-gradient(1px 1px at 310px 120px, rgba(255, 255, 255, 0.9) 50%, transparent 100%),
+                    radial-gradient(1px 1px at 370px 70px, rgba(255, 255, 255, 0.8) 50%, transparent 100%),
+                    radial-gradient(1.5px 1.5px at 400px 20px, rgba(255, 255, 255, 0.9) 50%, transparent 100%);
+  background-repeat: repeat;
+  background-size: 450px 150px;
+  opacity: 0;
+  z-index: 1;
+  animation: twinkle 6s linear infinite;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0; }
+  25% { opacity: 0.4; }
+  50% { opacity: 0; }
+  75% { opacity: 0.6; }
+  100% { opacity: 0; }
 }
 
 :root {
@@ -65,6 +122,7 @@
   position: relative;
   width: var(--orbital-base-size);
   height: var(--orbital-base-size);
+  z-index: 2; /* Ensure orbital system appears above stars */
 }
 
 /* Center glowing image */
