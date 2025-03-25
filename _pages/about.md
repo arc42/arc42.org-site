@@ -9,7 +9,7 @@ header:
 
 sidebar:
   nav: "about"
-
+classes: wide
 ---
 
 <div class="ua-background" markdown="1">
@@ -37,6 +37,11 @@ Read more at [systemsguild.eu](https://systemsguild.eu), [b-agile.de/en](https:/
 
 **Ralf D. Müller** is a Solutions Architect and an ambitious Grails developer. He is continually trying to simplify his work. Currently, his main concern is improving the holistic documentation of projects. He achieves this especially with the help of the arc42 template and docs-as-code approach. He maintains the arc42-generator which generates various formats of the arc42 template from a single AsciiDoc master. The generator was the basis for the [docToolchain](https://doctoolchain.github.io/docToolchain/) project.
 
+
+### Additional Contributors
+You find the current list of contributors on [GitHub](https://github.com/arc42/arc42-template/graphs/contributors), but we want to mention a few explicitly here:
+
+[**Damien Lucas**](https://www.linkedin.com/in/damien-lucas/) contributed to the French translation of the arc42 template and has given a few talks on arc42. Recommended: View his talk [at Devoxx France](https://www.youtube.com/watch?v=zQ0A75HqFuA).
 
 
 ### This site...
