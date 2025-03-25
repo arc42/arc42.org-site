@@ -8,7 +8,7 @@
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 github: metadata
 
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "default" 
 
 # Site Settings
 locale                   : "en"
@@ -37,8 +37,6 @@ bing_site_verification   :
 alexa_site_verification  :
 
 # Social Sharing
-twitter:
-  username               : arc42Tipps
 
 social:
   type                   : Organization # Person or Organization (defaults to Person)
@@ -128,12 +126,12 @@ kramdown:
 # Sass/SCSS
 sass:
   sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
 
 # Outputting
 permalink: /:categories/:title/
-timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
