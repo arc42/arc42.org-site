@@ -1,4 +1,4 @@
-/* Orbital Animation CSS with pulsating center and optimized planet distribution */
+/* Orbital Animation CSS with pulsating center and flatter orbits */
 
 .orbit-container {
   /* Container for the entire orbital system */
@@ -36,15 +36,18 @@
   --planet-size-medium: calc(var(--orbital-base-size) * 0.125);
   --planet-size-large: calc(var(--orbital-base-size) * 0.15);
   
-  /* Orbit size variables */
-/* Orbit size variables - ADJUSTED to keep planets inside container */
---orbit-horizontal-width: calc(var(--orbital-base-size) * 0.75); /* Reduced from 0.8 */
---orbit-horizontal-height: calc(var(--orbital-base-size) * 0.35); /* Reduced from 0.38 */
---orbit-vertical-width: calc(var(--orbital-base-size) * 0.46); /* Reduced from 0.58 */
---orbit-vertical-height: calc(var(--orbital-base-size) * 0.32); /* Reduced from 0.4 */
---orbit-diagonal-width: calc(var(--orbital-base-size) * 0.65); /* Reduced from 0.75 */
---orbit-diagonal-height: calc(var(--orbital-base-size) * 0.4); /* Reduced from 0.67 */
-
+  /* Updated orbit size variables - FLATTER ELLIPTICAL ORBITS */
+  --orbit-horizontal-width: calc(var(--orbital-base-size) * 0.75); /* Adjusted from 0.8 */
+  --orbit-horizontal-height: calc(var(--orbital-base-size) * 0.28); /* Significantly reduced from 0.38 to make flatter */
+  
+  /* Keep vertical orbit as is */
+  --orbit-vertical-width: calc(var(--orbital-base-size) * 0.58);
+  --orbit-vertical-height: calc(var(--orbital-base-size) * 0.4);
+  
+  /* Adjust diagonal orbit to be flatter */
+  --orbit-diagonal-width: calc(var(--orbital-base-size) * 0.7); /* Slightly reduced from 0.75 */
+  --orbit-diagonal-height: calc(var(--orbital-base-size) * 0.35); /* Significantly reduced from 0.67 to make flatter */
+  
   /* Glow and visual effect variables */
   --glow-size: calc(var(--orbital-base-size) * 0.05); /* Increased glow size */
   
@@ -56,29 +59,7 @@
   --secondary-glow-color-2: rgba(255, 170, 0, 0.9); /* Intensified gold */
   --item-glow-color: rgba(0, 162, 255, 0.4);
   --orbit-path-color: rgba(150, 150, 150, 0.5);
-
-
-
 }
-
-/* Optional - Increase container padding for extra safety margin */
-.space-background {
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-@media screen and (max-width: 768px) {
-  :root {
-    /* Further reduce orbit sizes on smaller screens */
-    --orbit-horizontal-width: calc(var(--orbital-base-size) * 0.7);
-    --orbit-horizontal-height: calc(var(--orbital-base-size) * 0.32);
-    --orbit-vertical-width: calc(var(--orbital-base-size) * 0.42);
-    --orbit-vertical-height: calc(var(--orbital-base-size) * 0.3);
-    --orbit-diagonal-width: calc(var(--orbital-base-size) * 0.6);
-    --orbit-diagonal-height: calc(var(--orbital-base-size) * 0.35);
-  }
-}
-
 
 .orbital-system {
   position: relative;
@@ -256,7 +237,7 @@
   border: none; /* Ensuring no border */
 }
 
-/* TRUE ELLIPTICAL KEYFRAMES */
+/* TRUE ELLIPTICAL KEYFRAMES - UPDATED FOR FLATTER ORBITS */
 @keyframes horizontal-elliptical-orbit {
   0% {
     transform: translate(-50%, -50%) rotate(0deg) translateX(calc(var(--orbit-horizontal-width) / 2)) translateY(0) rotate(0deg);

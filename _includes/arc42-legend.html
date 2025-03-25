@@ -1,0 +1,69 @@
+{% comment %}
+  Arc42 Legend Include
+  Parameters:
+  - color: Background color for the legend item
+  - text: Description text for the legend item (default: "Core architectural information")
+  - additional_items: Additional legend items in HTML format (optional)
+{% endcomment %}
+
+{% assign legend_text = include.text | default: "Core architectural information" %}
+{% assign color = include.color | default: "#ffebeb" %}
+
+<style>
+    /* Legend styles */
+    .arc42-legend {
+      margin-top: 30px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      font-size: 0.85em;
+      width: fit-content;
+    }
+    
+    .arc42-legend .legend-title {
+      font-weight: bold;
+      margin-bottom: 8px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .arc42-legend .legend-items {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    
+    .arc42-legend .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .arc42-legend .color-box {
+      width: 20px;
+      height: 20px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 3px;
+    }
+    
+    .arc42-legend .color-description {
+      flex: 1;
+    }
+    </style>
+    
+
+<div class="arc42-legend">
+  <div class="legend-title">Legend</div>
+<small>
+    <div class="legend-items">
+        <div class="legend-item">
+            <div class="color-box" style="background-color: {{ color }};"></div>
+            <div class="color-description">{{ legend_text }}</div>
+        </div>
+        {% if include.additional_items %}
+        {{ include.additional_items }}
+        {% endif %}
+    </div>
+</small>
+</div>
