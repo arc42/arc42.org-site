@@ -1,16 +1,3 @@
-{% comment %}
-  Arc42 Legend Include
-  Parameters:
-  - color: Background color for the legend item
-  - text: Description text for the legend item (default: "Core architectural information")
-  - additional_items: Additional legend items in HTML format (optional)
-{% endcomment %}
-
-{% assign legend_text = include.text | default: "Core architectural information" %}
-{% assign color = include.color | default: "#ffebeb" %}
-
-<style>
-/* Legend styles */
 .arc42-legend {
   margin-top: 15px;
   border: 1px solid #ddd;
@@ -50,17 +37,69 @@
 .arc42-legend .color-description {
   flex: 1;
 }
-</style>
 
-<div class="arc42-legend">
-  <div class="legend-title">Legend</div>
-  <div class="legend-items">
-    <div class="legend-item">
-      <div class="color-box" style="background-color: {{ color }};"></div>
-      <div class="color-description">{{ legend_text }}</div>
-    </div>
-    {% if include.additional_items %}
-      {{ include.additional_items }}
-    {% endif %}
-  </div>
-</div>
+.bookcover {
+  max-width: 300px;
+}
+
+
+.supported-by-innoq {
+  margin-bottom: 8px;
+  width: 110px;
+}
+
+.supported-by-innoq:hover {
+  opacity: 0.8;
+}
+
+
+@media (max-width: 900px) {
+  .supported-by-innoq {
+    width: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .supported-by-innoq {
+    width: 90px;
+  }
+}
+
+
+.footer-center {
+  text-align: center;
+  font-size: 80%;
+}
+
+.copyright-size {
+  font-size: 60% !important;
+}
+
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile {
+    display: block;
+}
+}
+
+.flex-item-canvas-examples {
+  width: 50%; /* Two items side by side on wide screens */
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.canvas-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .flex-item-canvas-examples {
+    width: 100%; /* Stack items on top of each other on smaller screens */
+  }
+}
