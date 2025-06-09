@@ -19,6 +19,19 @@ sidebar:
 
 We write articles for various magazines and publishers, very old-school on paper, sometimes online.
 
+
+## arc42-by-Example, Anniversary Edition
+![](/images/books/arc42-anniversary.webp)<br>
+
+To celebrate our 20th birthday, we have compiled a collection of all our arc42 examples.
+
+Nine real IT systems from different domains, described with arc42.
+
+If you look closely, you will also find the design of the new arc42 logo on the cover (thanks, Sebastian)
+
+Available on [Leanpub](https://leanpub.com/arc42byexample-20thanniversaryedition), free of charge until September 2025 (consider this a birthday present from us to you)!
+
+
 ## 20 Years arc42
 
 Peter Hruschka & Gernot Starke
