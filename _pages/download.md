@@ -11,9 +11,9 @@ header:
 
 
 
-excerpt: "Version 8 - the most practical and effective arc42 ever."
+excerpt: "Version 9 - the most practical and effective arc42 ever."
 intro:
-  - excerpt: "Version 8.2.1, released October 2024."
+  - excerpt: "Version 9.0.0, released October 2025 (EN, DE, FR, CZ), Version 8.2.1 (all other languages) released October 2024."
 
 ---
 
@@ -63,13 +63,6 @@ various [formats]({{page.url}}#format-overview) for various tools. For an overvi
 
 
 
-
-
-
-
-
-
-
 # File-based formats
 
 These formats are generated based upon their AsciiDoc sources from the [GitHub repository](https://github.com/arc42/arc42-template).
@@ -107,18 +100,6 @@ These formats are generated based upon their AsciiDoc sources from the [GitHub r
     {% endfor %}
   </tbody>
 </table>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # Confluence format
