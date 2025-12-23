@@ -13,7 +13,7 @@ header:
 
 excerpt: "Version 9 - the most practical and effective arc42 ever."
 intro:
-  - excerpt: "Version 9.0.0, released October 2025 (EN, DE, FR, CZ), Version 8.2.1 (all other languages) released October 2024."
+  - excerpt: "Version 9.0.0, released October 2025 (EN, DE, FR, CZ, ZH), Version 8.2.1 (all other languages) released October 2024."
 
 ---
 
@@ -37,6 +37,8 @@ intro:
 
 
 
+
+Version 9, now also offering a Chinese ZH translation. Thanx to Chris (Gentle) Y杨 and DannyGe.
 
 
 Version 8, released February 2022, UA version August 2022, CZ version October 2022, FR version June 2023, PT version October 2024.
@@ -69,8 +71,8 @@ These formats are generated based upon their AsciiDoc sources from the [GitHub r
 
 {% assign formats = "docx|asciidoc|markdown|markdownMP|markdownStrict|markdownMPStrict|gitHubMarkdown|gitHubMarkdownMP|latex|html|rst|textile" | split: "|"  %}  
 {% assign types = "plain|withhelp" | split: "|"  %}
-{% assign languages = "EN|CZ|DE|ES|IT|FR|NL|PT|RU|UKR" | split: "|" %}
-{% assign languages_full = "English|Čeština|Deutsch|Español|Italiano|Français|Nederlands|Português|Русский|Українська" | split: "|" %}
+{% assign languages = "EN|CZ|DE|ES|IT|FR|NL|PT|RU|UKR|ZH" | split: "|" %}
+{% assign languages_full = "English|Čeština|Deutsch|Español|Italiano|Français|Nederlands|Português|Русский|Українська|简体中文" | split: "|" %}
 
 
 
