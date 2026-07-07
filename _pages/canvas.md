@@ -2,7 +2,7 @@
 title: "Canvas"
 layout: splash
 
-permalink: /canvas
+permalink: /canvas/
 header:
   overlay_image: /images/splash/canvas-splash.webp
   caption: "Background photo credit: [**Samantha Gades**](https://unsplash.com/de/@srosinger3997)"

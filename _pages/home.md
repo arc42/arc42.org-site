@@ -9,9 +9,9 @@ header:
   caption: "Photo credit: [**Thomas Bayer**](https://www.predic8.de/)"
   actions: 
     - label: "Overview"
-      url: /overview
+      url: /overview/
     - label: "Contact"
-      url: /contact
+      url: /contact/
     - label: "&#8594; German site..."
       url: "https://www.arc42.de"
 excerpt: "All you ever need to construct, **communicate and document your software architecture**. Proven, **practical and pragmatic**.
@@ -25,15 +25,15 @@ template_training_news:
   We provide you with the arc42 template for architecture documentation - 
   **Open Source, pragmatic, free of charge**. You fill it with your architecture decisions - 
   **Simple, effective and painless**."
-  url: "/overview"
+  url: "/overview/"
   btn_label: "read more..."
   btn_class: "btn--primary"
 
 - title: "Trainings"
-  excerpt: "![Raising a hand](/images/home/training.webp)<br>
+  excerpt: "![Raising a hand](/images/home/Training.webp)<br>
   We have successfully trained hundreds of people in our proven **Mastering Software Architectures workshop**. 
   Practical, effective and sustainable. Perfectly prepares for the iSAQB Foundation certification."
-  url: "/learn"
+  url: "/learn/"
   btn_label: "read more..."
   btn_class: "btn--primary"
 
@@ -55,7 +55,7 @@ methode_publications_consulting:
   excerpt: "![ToDo - Doing - Done slips of paper](/images/home/method.webp)<br>
   arc42 is systematic but flexible. Suitable for large and small teams in iterative or less agile processes.
   "
-  url: "/method"
+  url: "/method/"
   btn_label: "read more..."
   btn_class: "btn--primary"
 
@@ -64,14 +64,14 @@ methode_publications_consulting:
   There is a lot to read about arc42 and architecture. From methodology to _good practices_ 
   to complete examples of software architectures.
   Browse our books, articles, talks or videos."
-  url: "/more"
+  url: "/more/"
   btn_label: "read more..."
   btn_class: "btn--primary"
 
 - title: "Canvas"
   excerpt: "![the arc42 canvas](/images/home/canvas-overview-850.webp)<br>
   The shortest possible form of technical documentation, the elevator-pitch. All the  important stuff on a single page"
-  url: "/canvas"
+  url: "/canvas/"
   btn_label: "read more..."
   btn_class: "btn--primary"
 ---
@@ -101,7 +101,7 @@ well-suited for **lean and agile** development approaches.
 
 arc42 is open-source and can be used **free of charge**, in commercial and
 private situations.
-See our [license page](/license) for details.
+See our [license page](/license/) for details.
 
 # Learn more!
 

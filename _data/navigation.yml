@@ -1,35 +1,35 @@
 # main links
 main:
   - title: "Overview"
-    url: /overview
+    url: /overview/
   - title: "Docs"
-    url: /documentation
+    url: /documentation/
   - title: "More..."
-    url: /more
+    url: /more/
   - title: "Examples"
-    url: /examples
+    url: /examples/
   - title: "Training"
-    url: /learn
+    url: /learn/
   - title: "Download"
-    url: /download
+    url: /download/
   - title: "About"
-    url: /about
+    url: /about/
   - title: "Search"
-    url: /search
+    url: /search/
 
 # about
 about:
   - title: About arc42
-    url: /about
+    url: /about/
     children:
     - title: "Contact"
-      url: /contact
+      url: /contact/
     - title: "Contributors"
       url: https://github.com/arc42/arc42-template/graphs/contributors
     - title: "License"
-      url: /license
+      url: /license/
     - title: "Impressions"
-      url: /gallery
+      url: /gallery/
 
 
 publications:

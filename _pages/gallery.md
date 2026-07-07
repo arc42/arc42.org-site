@@ -2,7 +2,7 @@
 title: "Impressions from our trainings"
 layout: splash
 
-permalink: /gallery
+permalink: /gallery/
 header:
   overlay_filter: rgba(15, 80, 180, 0.5)
   overlay_image: /images/splash/gallery-splash.webp

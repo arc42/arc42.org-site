@@ -1,7 +1,7 @@
 ---
 title: "Download arc42"
 layout: single
-permalink: /download
+permalink: /download/
 classes: wide
 
 header:
@@ -238,7 +238,7 @@ We appreciate the contribution of user `@nrnjnsk83` (Niranjan SK, Robert Bosch G
 We currently don't support additional modeling tools - but would love to...
 In case you use arc42 with such a tool, please think about contributing :-)
 
-Please [contact us!](/contact)
+Please [contact us!](/contact/)
 
 
 

@@ -1,7 +1,7 @@
 ---
 title: "arc42 Template Overview"
 layout: splash
-permalink: /overview
+permalink: /overview/
 header:
   overlay_color: "#000"
   overlay_filter: "0.2"
@@ -332,7 +332,7 @@ arc42 answers the following two questions in a pragmatic way and can be tailored
 
 Now that you know about the template sections, you can dive deeper. Have a look at our extensive documentation:
 
-* Real-world [examples](/examples)
+* Real-world [examples](/examples/)
 * FAQ - [Frequently asked questions](https://faq.arc42.org)
 * Our extensive [template documentation](https://docs.arc42.org), organized by template section.
 * Our (sketchy) [collection of software patterns](https://patterns.arc42.org).

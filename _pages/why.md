@@ -1,7 +1,7 @@
 ---
 title: "Why arc42"
 layout: single
-permalink: /why
+permalink: /why/
 header:
   overlay_filter: rgba(15, 80, 180, 0.5)
   overlay_image: /images/splash/desperation-splash.webp

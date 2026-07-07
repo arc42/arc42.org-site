@@ -1,7 +1,7 @@
 ---
 title: "arc42 method"
 layout: splash
-permalink: /method
+permalink: /method/
 header:
   overlay_color: "#000"
   overlay_filter: "0.2"

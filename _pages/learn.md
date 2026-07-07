@@ -1,7 +1,7 @@
 ---
 title: "Learn architecture"
 layout: splash
-permalink: /learn
+permalink: /learn/
 header:
   overlay_image: /images/splash/learn-header-helloquence.webp
   caption: "Photo: [**helloquence**](https://unsplash.com/photos/5fNmWej4tAA)"

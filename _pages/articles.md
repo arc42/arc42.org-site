@@ -7,7 +7,7 @@ layout: single
 toc: right
 toc_label: "Content"
 
-permalink: /articles
+permalink: /articles/
 header:
   overlay_filter: rgba(15, 80, 180, 0.5)
   overlay_image: /images/splash/magazines-unsplash.webp
@@ -54,11 +54,11 @@ Gernot Starke
 This article collects fundamental requirements for technical documentation, 
 especially software architecture documentation, together with ideas how to satisfy those.
 
-Read it [here](/principles-of-technical-documentation).
+Read it [here](/principles-of-technical-documentation/).
 
 Originally posted on the [INNOQ Blog](https://www.innoq.com/en/articles/2022/01/principles-of-technical-documentation/).
 
->You want to LEARN documentation: Join our 2-day hands-on workshop ADOC (find details [on our training site](https://arc42.de/termine)) or [here](/learn).
+>You want to LEARN documentation: Join our 2-day hands-on workshop ADOC (find details [on our training site](https://arc42.de/termine)) or [here](/learn/).
 
 ## Handeln statt jammern
 

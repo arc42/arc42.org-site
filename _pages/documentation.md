@@ -40,9 +40,9 @@ Apply it in agile, lean or formal projects - you decide.
 
 ## Documentation
 
-* [Why arc42?](/why): What problems does arc42 solve?
+* [Why arc42?](/why/): What problems does arc42 solve?
 
-* [One Minute Overview](/overview): arc42 illustrated on a single page.
+* [One Minute Overview](/overview/): arc42 illustrated on a single page.
 
 * Main documentation website [**docs.arc42.org**](https://docs.arc42.org), containing many examples
 
