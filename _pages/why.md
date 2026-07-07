@@ -99,11 +99,11 @@ make anyhow.
 arc42 is intended to be a lightweight tool that can easily be adapted to
 your specific need.
 
-<a href="/documentation"><button class="button buttonBlue">Back to documentation</button></a>
+<a href="/documentation" class="button buttonBlue">Back to documentation</a>
 
 # Get it!
 
 You want awesome communication/documentation support for your
 system or your next project:
 
-<a href="/download"><button class="button buttonGreen">Download</button></a>
+<a href="/download" class="button buttonGreen">Download</a>

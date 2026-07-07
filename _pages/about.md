@@ -38,10 +38,18 @@ Read more at [systemsguild.eu](https://systemsguild.eu), [b-agile.de/en](https:/
 **Ralf D. Müller** is a Solutions Architect and an ambitious Grails developer. He is continually trying to simplify his work. Currently, his main concern is improving the holistic documentation of projects. He achieves this especially with the help of the arc42 template and docs-as-code approach. He maintains the arc42-generator which generates various formats of the arc42 template from a single AsciiDoc master. The generator was the basis for the [docToolchain](https://doctoolchain.github.io/docToolchain/) project.
 
 
-### Additional Contributors
-You find the current list of contributors on [GitHub](https://github.com/arc42/arc42-template/graphs/contributors), but we want to mention a few explicitly here:
+### Translators &amp; contributors
 
-[**Damien Lucas**](https://www.linkedin.com/in/damien-lucas/) contributed to the French translation of the arc42 template and has given a few talks on arc42. Recommended: View his talk [at Devoxx France](https://www.youtube.com/watch?v=zQ0A75HqFuA).
+arc42 is available in a dozen languages thanks to a generous community. The full list lives on [GitHub](https://github.com/arc42/arc42-template/graphs/contributors); with special thanks to our translators:
+
+* **Čeština** — Jakub RC
+* **Français** — [Damien Lucas](https://www.linkedin.com/in/damien-lucas/), who has also given talks on arc42, including one [at Devoxx France](https://www.youtube.com/watch?v=zQ0A75HqFuA)
+* **Magyar** — László Séra
+* **Português** — Guilherme Weizenmann (review: Pedro Mattiollo)
+* **Українська** — Ivan Bulyk, with Larysa Visengeriyeva
+* **简体中文** — Chris (Gentle) Y杨 and DannyGe
+
+We're also grateful to those who contributed additional template formats — Stephan Lessing (Doxygen), Raphael Dumhart (Enterprise Architect) and Niranjan SK (IBM Rhapsody).
 
 
 ### This site...
@@ -54,8 +62,9 @@ It's built using [Netlify](https://www.netlify.com/) and
 * was last built on {{ site.time | date: '%c' }}
 * contains {{ site.pages | size }} pages
 
-### Our Logo
-(to have a URL for this logo, e.g. for demo applications)
+### Logo
+
+You're welcome to use the arc42 logo — for instance in demo applications. Here's a stable link:
 
 ![arc42 logo](/images/about/arc42-logo-medium.jpg)
 

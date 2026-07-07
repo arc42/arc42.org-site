@@ -27,7 +27,7 @@ to suit your current needs:
 
 
 
-<a href="https://canvas.arc42.org/"><button class="button buttonRoyalBlue buttonCanvas">Learn more on the Canvas Website</button></a>
+<a href="https://canvas.arc42.org/" class="button buttonRoyalBlue buttonCanvas">Learn more on the Canvas Website</a>
 
 <br>
 
