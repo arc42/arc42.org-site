@@ -40,7 +40,8 @@ template_training_news:
 
 - title: "News"
   excerpt: "
-    * We celebrate the 20th anniversary of the arc42 template - and started with a short blogpost on the [arc42 ecosystem](/20yrs-ecosystem).
+    * We're happy to release the Hungarian translation of arc42 to the public. Thanx to the effort by László Séra!
+  
 
     * Our [merchandising shop](https://arc42.myspreadshop.de) is online, go get T-Shirts, Hoodies and other arc42-branded goodies. High-quality, eco-friendly. Give it a try!
    
