@@ -1,11 +1,67 @@
 # arc42.org Website
 
-> currently available on [arc42.org](https://www.arc42.org)
+> Live at [arc42.org](https://www.arc42.org)
 
-Site is currently being built and served by [GitHub Pages](https://pages.github.com/)
+Built with [Jekyll](https://jekyllrb.com/) and served by [Netlify](https://www.netlify.com/).
 
+**Stack:** Jekyll 4 (Ruby) · [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) theme (fully vendored) · Docker Compose for local development · Netlify for build & deploy.
 
-### How does the search page work?
+---
+
+## Local development
+
+All development runs in Docker — **no local Ruby, Bundler, or Jekyll needed**, just Docker and `make`.
+
+```bash
+make build     # build the dev image once (installs the pinned gems — needs network)
+make dev       # start Jekyll with live reload at http://localhost:4000
+```
+
+Everything after the first `make build` works **fully offline** (e.g. on a train): the
+gems are baked into the Docker image and the theme is vendored into the repo, so no
+build step reaches out to the network.
+
+### Make targets
+
+| Command           | What it does                                                              |
+| ----------------- | ------------------------------------------------------------------------ |
+| `make help`       | List all targets.                                                        |
+| `make dev`        | Start the dev server with live reload at http://localhost:4000.          |
+| `make build`      | Build the `arc42-site:latest` Docker image from the pinned gems.         |
+| `make site`       | Generate the static site into `_site/`.                                  |
+| `make check-links`| Build, then validate internal links/images/HTML with html-proofer.      |
+| `make shell`      | Open a shell inside the container for debugging.                          |
+| `make install`    | Refresh gems in the image after editing the `Gemfile`.                    |
+| `make update`     | Update gems to their latest allowed versions (rewrites `Gemfile.lock`).  |
+| `make stop`       | Stop and remove the running container.                                    |
+| `make logs`       | Tail the dev server logs.                                                 |
+| `make clean`      | Remove `_site/` and local caches.                                         |
+
+After `make update` (or any change to `Gemfile.lock`), the container refuses to serve
+until you re-run `make build` — the entrypoint compares the lockfile against the gems
+baked into the image and fails loudly on drift, so you never run against stale gems.
+
+---
+
+## Theme
+
+The [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) theme (v4.24.0) is
+**vendored** into this repository — its `_layouts/`, `_includes/`, `_sass/`, and
+`assets/js/` live here directly rather than being pulled from a remote theme or gem at
+build time. This keeps builds fully offline and puts every template under version
+control. arc42-specific customizations (masthead, footer, head, SCSS) sit alongside the
+stock theme files and override them via Jekyll's normal precedence.
+
+## Deployment
+
+Netlify builds and deploys on push. The build configuration lives in
+[`netlify.toml`](netlify.toml) (build command, publish directory, `JEKYLL_ENV=production`)
+and the Ruby version is pinned in [`.ruby-version`](.ruby-version) — these override the
+Netlify dashboard's build settings.
+
+---
+
+## How does the search page work?
 The search uses the [Simple-Jekyll-Search Javascript Function](https://github.com/christian-fei/Simple-Jekyll-Search),
 Copyright 2015-2020, Christian Fei, licensed under the MIT License.  
 This function is available in the [search-script.js file](search-script.js).  

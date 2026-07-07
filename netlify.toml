@@ -1,0 +1,23 @@
+# Netlify build & deploy configuration, vendored into the repo instead of
+# living only in the Netlify dashboard. Dashboard "Build settings" are
+# overridden by the values here once this file is present.
+
+[build]
+  # Use the bundled, lockfile-pinned Jekyll (not whatever Jekyll Netlify guesses).
+  command = "bundle exec jekyll build"
+  publish  = "_site"
+
+[build.environment]
+  # Production build: enables jekyll-seo-tag canonical URLs, minified output,
+  # and drops development-only behaviour.
+  JEKYLL_ENV = "production"
+  # Ruby version also pinned via ./.ruby-version (the reliable mechanism on
+  # Netlify). Jekyll 4.4 needs Ruby >= 3.0; the build image default is older.
+
+# Long-cache the fingerprint-free theme assets. Jekyll doesn't hash filenames,
+# so keep these at a modest max-age; HTML stays uncached so content updates
+# show up immediately.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
