@@ -3,7 +3,7 @@ FROM ruby:3.2-slim
 LABEL description="arc42.org Jekyll dev image"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-      build-essential git \
+      build-essential git libcurl4 \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /tmp/bundle
