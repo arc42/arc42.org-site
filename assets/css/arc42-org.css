@@ -167,3 +167,87 @@
 .home-news { margin-top: 2.5rem; }
 .home-news ul { margin-top: 0.5rem; }
 .home-news li { margin-bottom: 0.4rem; }
+
+
+/* ==========================================================================
+   2026 layout — download page (Rev A): language finder + tool accordions
+   ========================================================================== */
+
+.dl-finder {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin: 1rem 0 1.25rem;
+}
+.dl-finder__label { font-weight: 700; color: #3d4144; }
+.dl-finder__select {
+  min-width: 240px;
+  padding: 0.5rem 0.7rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374769;
+  background: #ffffff;
+  border: 1px solid #ccd4dc;
+  border-radius: 8px;
+}
+.dl-finder__select:focus-visible { outline: 2px solid #4b7ba3; outline-offset: 2px; }
+
+.dl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+.dl-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.7rem 0.8rem;
+  background: #ffffff;
+  border: 1px solid #f2f3f3;
+  border-radius: 8px;
+}
+.dl-card--popular { border-color: #cdd8e4; background: #f7fafd; }
+.dl-card__fmt {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #1c2c44;
+}
+.dl-badge {
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #374769;
+  background: #e5eef6;
+  border-radius: 20px;
+  padding: 0.05rem 0.45rem;
+}
+.dl-card__links { display: flex; gap: 1rem; }
+.dl-card__links a { color: #374769; font-weight: 600; text-decoration: none; }
+.dl-card__links a:hover,
+.dl-card__links a:focus-visible { color: #4b7ba3; text-decoration: underline; }
+
+/* collapsible tool / history sections */
+.dl-details {
+  margin: 0.6rem 0;
+  padding: 0 1rem;
+  border: 1px solid #f2f3f3;
+  border-radius: 8px;
+}
+.dl-details > summary {
+  padding: 0.8rem 0.2rem;
+  font-weight: 700;
+  color: #374769;
+  cursor: pointer;
+  list-style: none;
+}
+.dl-details > summary::-webkit-details-marker { display: none; }
+.dl-details > summary::before { content: "\25B8\00a0"; color: #4b7ba3; }
+.dl-details[open] > summary::before { content: "\25BE\00a0"; }
+.dl-details[open] { padding-bottom: 1rem; }
+.dl-details > summary:focus-visible { outline: 2px solid #4b7ba3; outline-offset: 2px; }
