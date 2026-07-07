@@ -7,104 +7,80 @@ header:
   overlay_filter: rgba(15, 80, 180, 0.4)
   overlay_image: /images/splash/arc42-splash-landingpage.webp
   caption: "Photo credit: [**Thomas Bayer**](https://www.predic8.de/)"
-  actions: 
-    - label: "Overview"
+  actions:
+    - label: "&#8595; Download the templates"
+      url: /download/
+      class: "btn--arc42"
+    - label: "One-minute overview"
       url: /overview/
-    - label: "Contact"
-      url: /contact/
-    - label: "&#8594; German site..."
+    - label: "&#8594; German site"
       url: "https://www.arc42.de"
-excerpt: "All you ever need to construct, **communicate and document your software architecture**. Proven, **practical and pragmatic**.
-Free and open source, **takes the pain out of documentation**."
+excerpt: "All you need to construct, communicate and document your software architecture. **Proven, practical and pragmatic** — free, open source, and it takes the pain out of documentation."
 
-
-
-template_training_news:
-- title: "Template"
-  excerpt: "![drawers of a cabinet](/images/home/template.webp)<br> 
-  We provide you with the arc42 template for architecture documentation - 
-  **Open Source, pragmatic, free of charge**. You fill it with your architecture decisions - 
-  **Simple, effective and painless**."
-  url: "/overview/"
-  btn_label: "read more..."
-  btn_class: "btn--primary"
-
-- title: "Trainings"
-  excerpt: "![Raising a hand](/images/home/Training.webp)<br>
-  We have successfully trained hundreds of people in our proven **Mastering Software Architectures workshop**. 
-  Practical, effective and sustainable. Perfectly prepares for the iSAQB Foundation certification."
-  url: "/learn/"
-  btn_label: "read more..."
-  btn_class: "btn--primary"
-
-
-- title: "News"
-  excerpt: "
-    * We're happy to release the Hungarian translation of arc42 to the public. Thanx to the effort by László Séra!
-  
-
-    * Our [merchandising shop](https://arc42.myspreadshop.de) is online, go get T-Shirts, Hoodies and other arc42-branded goodies. High-quality, eco-friendly. Give it a try!
-   
-    * The new book as ideal preparation for iSAQB certification: [Software Architecture Foundation](/books#software-architecture-foundation-cpsa-f-exam-preparation).
-
-    * Even more examples of arc42 in the book arc42 by Example - [Vol 2. Embedded Systems and IoT](/books#arc42-by-example-vol2).
-      "
-
-methode_publications_consulting:
-- title: "The arc42-method"
-  excerpt: "![ToDo - Doing - Done slips of paper](/images/home/method.webp)<br>
-  arc42 is systematic but flexible. Suitable for large and small teams in iterative or less agile processes.
-  "
-  url: "/method/"
-  btn_label: "read more..."
-  btn_class: "btn--primary"
-
-- title: "arc42 reading material"
-  excerpt: "![Books in a bookshelf](/images/home/publikationen.webp)<br>
-  There is a lot to read about arc42 and architecture. From methodology to _good practices_ 
-  to complete examples of software architectures.
-  Browse our books, articles, talks or videos."
-  url: "/more/"
-  btn_label: "read more..."
-  btn_class: "btn--primary"
-
-- title: "Canvas"
-  excerpt: "![the arc42 canvas](/images/home/canvas-overview-850.webp)<br>
-  The shortest possible form of technical documentation, the elevator-pitch. All the  important stuff on a single page"
-  url: "/canvas/"
-  btn_label: "read more..."
-  btn_class: "btn--primary"
+starter:
+  - title: "Template"
+    excerpt: "![Drawers of a cabinet](/images/home/template.webp)<br>
+    The arc42 skeleton for architecture documentation — open source, pragmatic and free of charge. You fill it with your decisions: simple, effective and painless."
+    url: "/overview/"
+    btn_label: "Explore the template"
+    btn_class: "btn--arc42-outline"
+  - title: "The method"
+    excerpt: "![To-do, doing, done slips of paper](/images/home/method.webp)<br>
+    arc42 is systematic but flexible — suitable for large and small teams, in iterative or less agile processes."
+    url: "/method/"
+    btn_label: "See the method"
+    btn_class: "btn--arc42-outline"
+  - title: "Canvas"
+    excerpt: "![The arc42 canvas](/images/home/canvas-overview-850.webp)<br>
+    The shortest possible form of technical documentation — the elevator pitch, with all the important things on a single page."
+    url: "/canvas/"
+    btn_label: "View the canvas"
+    btn_class: "btn--arc42-outline"
 ---
 
 <div class="ua-background" markdown="1">
 
->### We stand with the people of Ukraine <span class="parent"><span class="ua-text"><i class="fa  fa-solid fa-heart children"></i></span><span class="ua-size children"><i class="fa fa-solid fa-heart heart beat children"></i></span></span>
+>### We stand with the people of Ukraine <span class="parent"><span class="ua-text"><i class="fa fa-solid fa-heart children"></i></span><span class="ua-size children"><i class="fa fa-solid fa-heart heart beat children"></i></span></span>
 >
 >Please assist humanitarian efforts for the Ukrainian people and those affected by the military invasion of Ukraine by supporting international aid organizations, including the [International Committee of the Red Cross](https://www.icrc.org/en).
 </div>
 
-{% include feature_row id="template_training_news" %}
+{% include feature_row id="starter" %}
 
-{% include feature_row id="methode_publications_consulting"%}
+<div class="training-section" markdown="1">
 
-arc42 is based on **practical experience** of many systems in various domains,
-from information and web systems, real-time and embedded to business intelligence
-and data warehouses.
+## Architecture trainings
 
-arc42 provides a template for **documentation and communication** of software and system
-architectures.
+![Participants in an arc42 training workshop](/images/home/Training.webp){: .align-right width="240"}
 
-arc42 supports **arbitrary technologies and tools**.
-
-arc42 is completely process-agnostic, and especially
-well-suited for **lean and agile** development approaches.
-
-arc42 is open-source and can be used **free of charge**, in commercial and
-private situations.
-See our [license page](/license/) for details.
-
-# Learn more!
+Learn arc42 and modern software architecture straight from its creators — iSAQB-certified Foundation trainings, on-site and remote. Upcoming dates:
 
 {% include subtle-ads/subtle-ads.html %}
 
-<a href="https://arc42.de/schulungen"><button class="margin-top button buttonGreen">Training site</button></a>
+<p class="training-section__actions">
+  <a class="btn btn--arc42 btn--large" href="https://trainings.arc42.org" rel="noopener">See all dates &amp; register &#8594;</a>
+  <a class="btn btn--arc42-outline btn--large" href="/learn/">Training details</a>
+</p>
+
+</div>
+
+## What is arc42?
+
+arc42 is based on practical experience with many systems across domains — information and web systems, real-time and embedded, business intelligence and data warehouses. It gives you a template for the **documentation and communication** of software and system architecture.
+
+- Supports arbitrary technologies and tools — nothing to install.
+- Process-agnostic, and especially well-suited to lean and agile teams.
+- Open source and free of charge, in commercial and private settings — see the [license](/license/).
+
+There's plenty to read about arc42, too — [browse our books, articles, talks and videos &#8594;](/more/).
+
+<div class="home-news" markdown="1">
+
+## Latest
+
+- The **Hungarian** translation of arc42 is now available — thanks to László Séra!
+- Our [merchandising shop](https://arc42.myspreadshop.de) is online: T-shirts, hoodies and other arc42-branded goodies.
+- [Software Architecture Foundation](/books#software-architecture-foundation-cpsa-f-exam-preparation) — ideal preparation for the iSAQB certification.
+- Even more worked examples in [arc42 by Example, Vol 2 — Embedded Systems &amp; IoT](/books#arc42-by-example-vol2).
+
+</div>

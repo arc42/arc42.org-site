@@ -25,4 +25,4 @@ WORKDIR /site
 EXPOSE 4000
 
 ENTRYPOINT ["jekyll-entrypoint"]
-CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--watch", "--incremental"]
+CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--watch"]

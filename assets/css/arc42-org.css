@@ -103,3 +103,67 @@
     width: 100%; /* Stack items on top of each other on smaller screens */
   }
 }
+
+
+/* ==========================================================================
+   2026 layout — homepage (Rev A)
+   ========================================================================== */
+
+/* Navy call-to-action button — hero "Download" + training "register".
+   Reads well on both the photo hero overlay and the white page body. */
+.btn.btn--arc42 {
+  background-color: #374769;
+  color: #ffffff;
+  border: 2px solid #374769;
+}
+.btn.btn--arc42:hover,
+.btn.btn--arc42:focus-visible {
+  background-color: #4b7ba3;
+  border-color: #4b7ba3;
+  color: #ffffff;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
+}
+
+/* Secondary (outline) navy button — used for the feature-card actions so the
+   solid hero "Download" stays the single primary action. */
+.btn.btn--arc42-outline {
+  background-color: transparent;
+  color: #374769;
+  border: 2px solid #374769;
+}
+.btn.btn--arc42-outline:hover,
+.btn.btn--arc42-outline:focus-visible {
+  background-color: #374769;
+  color: #ffffff;
+  border-color: #374769;
+}
+
+/* Trainings — subtle but identifiable; faint success-green wash per DESIGN.md */
+.training-section {
+  margin: 2.5rem 0;
+  padding: 1.5rem 1.5rem 1.75rem;
+  background-color: #f3fbf3;
+  border: 1px solid #cdeccd;
+  border-radius: 8px;
+}
+.training-section > h2 { margin-top: 0; }
+.training-section__intro { color: #3d4144; max-width: 65ch; }
+.training-section__actions { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; }
+
+/* Let the (externally-driven) subtle-ad training dates blend into the section */
+.training-section .subtle-ad {
+  width: 100%;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: #3d4144;
+}
+.training-section .subtle-ad::before { display: none; }
+.training-section .subtle-ad a { color: #374769; font-weight: 600; }
+
+/* Latest news, moved below the fold out of the feature grid */
+.home-news { margin-top: 2.5rem; }
+.home-news ul { margin-top: 0.5rem; }
+.home-news li { margin-bottom: 0.4rem; }

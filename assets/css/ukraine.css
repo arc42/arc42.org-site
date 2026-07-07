@@ -9,7 +9,10 @@
     position:relative;
     right:10px;
     font-size: 14px;
-    color: #fed401
+    color: #fed401;
+    /* dark halo so the flag-yellow heart stays legible on the beige banner
+       (was ~1.03:1 against #e7ddd8 — flagged by the Impeccable review) */
+    text-shadow: 0 0 1px rgba(0,0,0,0.7), 0 0 2px rgba(0,0,0,0.5);
 }
 
 .heart {
