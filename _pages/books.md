@@ -5,7 +5,7 @@ layout: single
 classes: wide
 toc: false
 toc_label: "Erscheinungsjahr"
-permalink: /books
+permalink: /books/
 header:
   overlay_filter: rgba(15, 80, 180, 0.5)
   overlay_image: /images/splash/books-header-tom-hermans.webp

@@ -6,15 +6,16 @@ services:
     environment:
       JEKYLL_ENV: development
       POLLING: "--force_polling"
-      JEKYLL_GITHUB_TOKEN: ${JEKYLL_GITHUB_TOKEN:-}
     volumes:
       - .:/site
       - jekyll_cache:/site/.jekyll-cache
       - sass_cache:/site/.sass-cache
     ports:
       - '4000:4000'
+    # No --incremental: full rebuild on change (~2.5s). Incremental silently
+    # leaves stale/relocated output when permalinks or front matter change.
     command: >
-      sh -c "bundle exec jekyll serve --host 0.0.0.0 --watch --incremental $${POLLING}"
+      sh -c "bundle exec jekyll serve --host 0.0.0.0 --watch $${POLLING}"
 
 volumes:
   jekyll_cache:

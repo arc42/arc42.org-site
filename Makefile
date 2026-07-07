@@ -6,6 +6,7 @@ help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2}'
 
 dev: ## Start the local Jekyll dev server with live reload (http://localhost:4000)
+	@echo "==> Open http://localhost:4000  (NOT http://0.0.0.0:4000 — Firefox refuses to connect to 0.0.0.0)"
 	docker compose up --build
 
 build: ## Build the Docker dev image (arc42-site:latest) from the Gemfile-pinned gems

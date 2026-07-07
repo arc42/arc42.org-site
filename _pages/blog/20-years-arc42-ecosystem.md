@@ -3,7 +3,7 @@ title: 20 Years and our Ecosystem
 layout: single
 classes: wide
 
-permalink: /20yrs-ecosystem
+permalink: /20yrs-ecosystem/
 header:
   overlay_filter: rgba(108, 148, 139, 0.5)
   overlay_image: /images/blog/20-year-jubilee-header-martin-reisch.webp

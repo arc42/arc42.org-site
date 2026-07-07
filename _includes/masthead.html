@@ -2,16 +2,15 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <a class="site-title" href="{{ '/' | absolute_url }}"><img src="/images/arc42-site-logo.webp" width="100" alt="{{ site.title }}"/></a>
+        <a class="site-title" href="{{ '/' | relative_url }}"><img src="/images/arc42-site-logo.webp" width="100" alt="{{ site.title }}"/></a>
         <ul class="visible-links">
           {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-            {% else %}
-              {% assign domain = site.url | append: site.baseurl %}
-            {% endif %}
             <li class="masthead__menu-item">
-              <a href="{{ domain }}{{ link.url }}" {% if link.description %}title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+              {% if link.url contains 'http' %}
+                <a href="{{ link.url }}" {% if link.description %}title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+              {% else %}
+                <a href="{{ link.url | relative_url }}" {% if link.description %}title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+              {% endif %}
             </li>
           {% endfor %}
         </ul>

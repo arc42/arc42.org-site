@@ -1,7 +1,7 @@
 ---
 title: "Contact us - we're listening!"
 layout: single
-permalink: /contact
+permalink: /contact/
 header:
   overlay_image: /images/splash/unsplash-contact-pavan-trikutam.webp
   overlay_filter: rgba(15, 80, 180, 0.6)

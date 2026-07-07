@@ -1,7 +1,7 @@
 ---
 title: "arc42 License"
 layout: single
-permalink: /license
+permalink: /license/
 header:
   overlay_image: /images/splash/privacy-274694-unsplash.webp
   caption: "[**Scott Webb**](https://unsplash.com/photos/yekGLpc3vro)"
