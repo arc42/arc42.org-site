@@ -249,7 +249,7 @@ Please [contact us!](/contact)
 
 **asciidoc**
 : Powerful yet simple markup language, used by arc42 itself. Ideally suited for architecture documentation. See
-[docToolchain](https://rdmueller.github.io/docToolchain/) or the [original source](https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/).
+[docToolchain](https://doctoolchain.github.io/docToolchain/) or the [original source](https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/).
 
 **markdown**
 : Widespread and simple markup language, [documented here](https://daringfireball.net/projects/markdown/syntax) by its inventor.
