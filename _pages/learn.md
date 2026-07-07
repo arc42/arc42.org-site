@@ -18,7 +18,7 @@ header:
 
 <hr>
 
-<a href="/gallery"><button class="button buttonRoyalBlue">Get some <br> impressions</button></a>
+<a href="/gallery" class="button buttonRoyalBlue">Get some <br> impressions</a>
 
 <hr>
 
@@ -60,4 +60,4 @@ for exact dates and conditions please refer to our [training site](https://arc42
 
 {% include subtle-ads/subtle-ads.html %}
 
-<a href="https://arc42.de/schulungen"><button class="margin-top button buttonGreen">Training site</button></a>
+<a href="https://arc42.de/schulungen" class="margin-top button buttonGreen">Training site</a>

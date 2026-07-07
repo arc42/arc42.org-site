@@ -338,11 +338,11 @@ Now that you know about the template sections, you can dive deeper. Have a look 
 * Our (sketchy) [collection of software patterns](https://patterns.arc42.org).
 * Our (new) site on our [Quality Model](https://quality.arc42.org), collecting quality properties/attributes.
 
-<a href="/documentation"><button class="button buttonGreen">Show more documentation</button></a>
+<a href="/documentation" class="button buttonGreen">Show more documentation</a>
 
 
 # Learn more!
 
 {% include subtle-ads/subtle-ads.html %}
 
-<a href="https://arc42.de/schulungen"><button class="margin-top button buttonGreen">Training site</button></a>
+<a href="https://arc42.de/schulungen" class="margin-top button buttonGreen">Training site</a>

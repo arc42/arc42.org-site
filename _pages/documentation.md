@@ -70,11 +70,11 @@ make anyhow.
 You want awesome communication/documentation support for your
 system or your next project:
 
-<a href="/download"><button class="button buttonGreen">Download</button></a>
+<a href="/download" class="button buttonGreen">Download</a>
 
 
 # Learn more!
 
 {% include subtle-ads/subtle-ads.html %}
 
-<a href="https://arc42.de/schulungen"><button class="margin-top button buttonGreen">Training site</button></a>
+<a href="https://arc42.de/schulungen" class="margin-top button buttonGreen">Training site</a>

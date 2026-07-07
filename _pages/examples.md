@@ -65,4 +65,4 @@ A real world example for a bike activity tracker, created by Michael Simons
 
 {% include subtle-ads/subtle-ads.html %}
 
-<a href="https://arc42.de/schulungen"><button class="margin-top button buttonGreen">Training site</button></a>
+<a href="https://arc42.de/schulungen" class="margin-top button buttonGreen">Training site</a>
