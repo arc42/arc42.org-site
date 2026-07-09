@@ -513,3 +513,18 @@ a.res-card:focus-visible { outline: 2px solid #4b7ba3; outline-offset: 2px; }
 
 /* section headings start below any floated images (matters on /why/) */
 .page__content h2 { clear: both; }
+
+/* --- version-grouped language rows in the download builder --- */
+.dlb__verrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+}
+.dlb__verrow + .dlb__verrow { margin-top: 0.45rem; }
+.dlb__verlabel {
+  flex: 0 0 100%;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #55657a;
+}

@@ -12,16 +12,18 @@ excerpt: "Version 9 — the most practical and effective arc42 ever. Every forma
 
 <section class="dl-hero">
   <div class="dl-hero__inner">
-    <p class="dl-hero__kicker">Version 9.0.0 · October 2025</p>
+    <p class="dl-hero__kicker">Template version 9 · 12 languages</p>
     <h1 class="dl-hero__title">Download arc42</h1>
-    <p class="dl-hero__sub">Build your download — pick a language and a format, <strong>plain</strong> or <strong>with help</strong>. Version 9 covers EN, DE, FR, CZ and ZH, plus Hungarian (July 2026); eight further languages are at v8.2.1. Free and open source.</p>
+    <p class="dl-hero__sub">Build your download — pick a language and a format, <strong>plain</strong> or <strong>with help</strong>. Version 9 covers English, German, French, Czech, Chinese and Hungarian; six more languages are available at version 8.2. Free and open source.</p>
   </div>
 </section>
 
 {% assign PREFIX = "https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-" %}
 {% assign GITHUBDIR = "https://github.com/arc42/arc42-template/raw/master/dist/" %}
-{% assign languages = "EN|DE|FR|CZ|ZH|HU|ES|IT|NL|PT|RU|UKR" | split: "|" %}
-{% assign languages_full = "English|Deutsch|Français|Čeština|简体中文|Magyar|Español|Italiano|Nederlands|Português|Русский|Українська" | split: "|" %}
+{% comment %} lang code, full name, template version, release date — per language
+   (source of truth: <lang>/version.properties in the arc42-template repo) {% endcomment %}
+{% assign lang_data_v9 = "EN,English,9.0,Jul 2025|DE,Deutsch,9.1,Dec 2025|FR,Français,9.0,Apr 2025|CZ,Čeština,9.0,Jan 2025|ZH,简体中文,9.0,Jul 2025|HU,Magyar,9.0,May 2026" | split: "|" %}
+{% assign lang_data_v82 = "ES,Español,8.2,Jan 2023|IT,Italiano,8.2,Mar 2023|NL,Nederlands,8.2,Mar 2023|PT,Português,8.2,Sep 2024|RU,Русский,8.2,Jan 2023|UKR,Українська,8.2,Jan 2023" | split: "|" %}
 {% assign fmt_ids = "asciidoc|markdown|docx|markdownMP|gitHubMarkdown|latex|rst|textile|html|markdownStrict|markdownMPStrict|gitHubMarkdownMP" | split: "|" %}
 {% assign fmt_labels = "AsciiDoc|Markdown|Word (.docx)|Markdown · multi-page|GitHub Markdown|LaTeX|reStructuredText|Textile|HTML|Markdown · strict|Markdown MP · strict|GitHub Markdown · MP" | split: "|" %}
 
@@ -29,18 +31,25 @@ excerpt: "Version 9 — the most practical and effective arc42 ever. Every forma
   <div class="dlb__pane dlb__pane--choose">
     <p class="dlb__step">1 &middot; Choose language</p>
     <div class="dlb__langs" role="group" aria-label="Language">
-      {% for lang in languages %}<button type="button" class="dlb__lang{% if forloop.first %} is-active{% endif %}" data-lang="{{ lang }}" data-full="{{ languages_full[forloop.index0] }}">{{ lang }}</button>{% endfor %}
+      <div class="dlb__verrow">
+        <span class="dlb__verlabel">Version 9</span>
+        {% for item in lang_data_v9 %}{% assign p = item | split: "," %}<button type="button" class="dlb__lang{% if forloop.first %} is-active{% endif %}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" data-lang="{{ p[0] }}" data-full="{{ p[1] }}" data-version="{{ p[2] }}" data-date="{{ p[3] }}">{{ p[0] }}</button>{% endfor %}
+      </div>
+      <div class="dlb__verrow">
+        <span class="dlb__verlabel">Version 8.2</span>
+        {% for item in lang_data_v82 %}{% assign p = item | split: "," %}<button type="button" class="dlb__lang" aria-pressed="false" data-lang="{{ p[0] }}" data-full="{{ p[1] }}" data-version="{{ p[2] }}" data-date="{{ p[3] }}">{{ p[0] }}</button>{% endfor %}
+      </div>
     </div>
     <p class="dlb__step">2 &middot; Choose format</p>
     <div class="dlb__fmts" role="group" aria-label="Format">
-      {% for f in fmt_ids %}<button type="button" class="dlb__fmt{% if forloop.first %} is-active{% endif %}" data-fmt="{{ f }}" data-label="{{ fmt_labels[forloop.index0] }}">{{ fmt_labels[forloop.index0] }}</button>{% endfor %}
+      {% for f in fmt_ids %}<button type="button" class="dlb__fmt{% if forloop.first %} is-active{% endif %}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" data-fmt="{{ f }}" data-label="{{ fmt_labels[forloop.index0] }}">{{ fmt_labels[forloop.index0] }}</button>{% endfor %}
     </div>
   </div>
 
   <div class="dlb__pane dlb__result" aria-live="polite">
     <p class="dlb__rlabel">Your download</p>
     <p class="dlb__combo" id="dlb-combo">arc42 &middot; English &middot; AsciiDoc</p>
-    <p class="dlb__meta">Version 9.0.0 · free &amp; open source</p>
+    <p class="dlb__meta" id="dlb-meta">Version 9.0 (Jul 2025) · free &amp; open source</p>
     <p class="dlb__buttons">
       <a class="btn btn--arc42 btn--large" id="dlb-plain" href="{{ PREFIX }}EN-plain-asciidoc.zip"><span aria-hidden="true">&#8595;</span> Plain .zip</a>
       <a class="btn btn--arc42-outline btn--large" id="dlb-help" href="{{ PREFIX }}EN-withhelp-asciidoc.zip">With help .zip</a>
@@ -164,7 +173,7 @@ We don't support additional modelling tools yet — but we'd love to. If you use
 <details class="dl-details" markdown="1">
 <summary>Version history &amp; translation credits</summary>
 
-**Version 9** adds a Chinese (ZH) translation — thanks to Chris (Gentle) Y杨 and DannyGe — and Hungarian (July 2026) by László Séra.
+**Version 9** adds a Chinese (ZH) translation — thanks to Chris (Gentle) Y杨 and DannyGe — and Hungarian (May 2026) by László Séra. German is currently at 9.1 (December 2025).
 
 **Version 8** was released February 2022; UA August 2022, CZ October 2022, FR June 2023, PT October 2024.
 
@@ -203,20 +212,28 @@ Want to go deeper? The creators of arc42 run iSAQB-certified architecture traini
     if (!root) { return; }
     var PREFIX = root.getAttribute('data-prefix');
     var lang = 'EN', full = 'English', fmt = 'asciidoc', label = 'AsciiDoc';
+    var version = '9.0', vdate = 'Jul 2025';
     var combo = document.getElementById('dlb-combo');
+    var meta = document.getElementById('dlb-meta');
     var plain = document.getElementById('dlb-plain');
     var help = document.getElementById('dlb-help');
     function refresh() {
       combo.textContent = 'arc42 · ' + full + ' · ' + label;
+      meta.textContent = 'Version ' + version + ' (' + vdate + ') · free & open source';
       plain.setAttribute('href', PREFIX + lang + '-plain-' + fmt + '.zip');
       help.setAttribute('href', PREFIX + lang + '-withhelp-' + fmt + '.zip');
     }
     function activate(group, btn) {
-      root.querySelectorAll(group).forEach(function (b) { b.classList.toggle('is-active', b === btn); });
+      root.querySelectorAll(group).forEach(function (b) {
+        var on = b === btn;
+        b.classList.toggle('is-active', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
     }
     root.querySelectorAll('.dlb__lang').forEach(function (b) {
       b.addEventListener('click', function () {
         lang = b.getAttribute('data-lang'); full = b.getAttribute('data-full');
+        version = b.getAttribute('data-version'); vdate = b.getAttribute('data-date');
         activate('.dlb__lang', b); refresh();
       });
     });
