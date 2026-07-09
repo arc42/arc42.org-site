@@ -18,23 +18,20 @@ Three canvases cover the most common needs:
 <div class="card-grid">
 
   <a class="res-card" href="https://canvas.arc42.org/architecture-inception-canvas">
-    <p class="res-card__kicker">Starting greenfield</p>
     <p class="res-card__title">Architecture Inception Canvas</p>
     <p class="res-card__text">Kick off new development: collaboratively capture goals, quality requirements and first solution ideas. Based on Patrick Roos' Software Architecture Canvas.</p>
     <p class="res-card__cta">See the Inception Canvas &#8594;</p>
   </a>
 
   <a class="res-card" href="https://canvas.arc42.org/architecture-communication-canvas">
-    <p class="res-card__kicker">Existing systems</p>
     <p class="res-card__title">Architecture Communication Canvas</p>
     <p class="res-card__text">Communicate the key elements of an existing architecture — think of it as the <em>zip version</em> of conventional arc42 documentation.</p>
     <p class="res-card__cta">See the Communication Canvas &#8594;</p>
   </a>
 
   <a class="res-card" href="https://techstackcanvas.io" rel="noopener">
-    <p class="res-card__kicker">By INNOQ</p>
     <p class="res-card__title">Tech Stack Canvas</p>
-    <p class="res-card__text">All relevant technologies of your stack on a single page — for planning new projects or documenting the status quo of existing products.</p>
+    <p class="res-card__text">All relevant technologies of your stack on a single page — an approach by INNOQ, for planning new projects or documenting the status quo of existing products.</p>
     <p class="res-card__cta">See the Tech Stack Canvas &#8594;</p>
   </a>
 

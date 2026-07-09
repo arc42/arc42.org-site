@@ -16,30 +16,26 @@ excerpt: "Books, articles, videos and talks about arc42 and software architectur
 <div class="card-grid">
 
   <a class="res-card" href="/books/">
-    <p class="res-card__kicker">25+ titles</p>
-    <p class="res-card__title">Books</p>
+    <p class="res-card__title">Books &mdash; 25+ titles</p>
     <p class="res-card__text">From requirements engineering and business analysis to architecture, documentation and patterns — including the arc42-by-Example series.</p>
     <p class="res-card__cta">Browse books &#8594;</p>
   </a>
 
   <a class="res-card" href="/articles/">
-    <p class="res-card__kicker">100+ articles</p>
     <p class="res-card__title">Articles</p>
-    <p class="res-card__text">Published in various magazines — most of them in German.</p>
+    <p class="res-card__text">More than a hundred, published in various magazines — most of them in German.</p>
     <p class="res-card__cta">Browse articles &#8594;</p>
   </a>
 
   <a class="res-card" href="/videos/">
-    <p class="res-card__kicker">YouTube channel since 2020</p>
     <p class="res-card__title">Videos</p>
-    <p class="res-card__text">Recorded conference talks and the arc42 YouTube channel, with introductions and practical walkthroughs.</p>
+    <p class="res-card__text">Recorded conference talks and the arc42 YouTube channel (running since 2020), with introductions and practical walkthroughs.</p>
     <p class="res-card__cta">Watch videos &#8594;</p>
   </a>
 
   <a class="res-card" href="/talks/">
-    <p class="res-card__kicker">Conference presentations</p>
     <p class="res-card__title">Talks</p>
-    <p class="res-card__text">Presentations on architecture, methodology, reviews and related topics.</p>
+    <p class="res-card__text">Conference presentations on architecture, methodology, reviews and related topics.</p>
     <p class="res-card__cta">See talks &#8594;</p>
   </a>
 
