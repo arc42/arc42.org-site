@@ -5,11 +5,6 @@ permalink: /canvas/
 excerpt: "Architecture on a single page — three canvases for kicking off, communicating, and documenting the tech stack of your system."
 ---
 
-<div class="ua-strip">
-  <span class="ua-strip__flag" aria-hidden="true"><i></i><i></i></span>
-  <span>We stand with Ukraine — please support the <a href="https://www.icrc.org/en">ICRC</a>'s humanitarian effort.</span>
-</div>
-
 <section class="dl-hero">
   <div class="dl-hero__inner">
     <p class="dl-hero__kicker">Short, shorter, canvas</p>

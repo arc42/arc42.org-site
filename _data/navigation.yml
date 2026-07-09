@@ -41,13 +41,13 @@ drawer:
         url: /contact/
       - title: "License"
         url: /license/
-      - title: "Impressions"
+      - title: "Gallery"
         url: /gallery/
   - title: "arc42 elsewhere"
     children:
       - title: "German site — arc42.de"
         url: https://www.arc42.de
-      - title: "Trainings & dates"
+      - title: "Training dates"
         url: https://trainings.arc42.org
       - title: "Status"
         url: https://status.arc42.org
@@ -63,13 +63,13 @@ about:
       url: https://github.com/arc42/arc42-template/graphs/contributors
     - title: "License"
       url: /license/
-    - title: "Impressions"
+    - title: "Gallery"
       url: /gallery/
 
 
 # publications  (consumed by page sidebars via _includes/nav_list — keep intact)
 publications:
-  - title: Publikations
+  - title: Publications
     children:
       - title: Books
         url: /books/

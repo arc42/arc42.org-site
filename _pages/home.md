@@ -11,11 +11,11 @@ starter:
     url: "/overview/"
     btn_label: "Explore the template"
     btn_class: "btn--arc42-outline"
-  - title: "Trainings"
+  - title: "Training"
     excerpt: "![Participants in an arc42 training workshop](/images/home/Training.webp)<br>
     Mastering Software Architectures — prepares for the iSAQB Foundation certification."
     url: "/learn/"
-    btn_label: "See trainings"
+    btn_label: "Explore training"
     btn_class: "btn--arc42-outline"
   - title: "The method"
     excerpt: "![To-do, doing, done slips of paper](/images/home/method.webp)<br>

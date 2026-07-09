@@ -5,11 +5,6 @@ permalink: /overview/
 excerpt: "The twelve sections of the arc42 template at a glance — each one links straight to its detailed documentation on docs.arc42.org."
 ---
 
-<div class="ua-strip">
-  <span class="ua-strip__flag" aria-hidden="true"><i></i><i></i></span>
-  <span>We stand with Ukraine — please support the <a href="https://www.icrc.org/en">ICRC</a>'s humanitarian effort.</span>
-</div>
-
 <section class="dl-hero">
   <div class="dl-hero__inner">
     <p class="dl-hero__kicker">The arc42 template &middot; 12 sections</p>
