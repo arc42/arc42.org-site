@@ -7,10 +7,6 @@ toc: right
 toc_label: "Title"
 
 permalink: /videos/
-header:
-  overlay_filter: rgba(15, 80, 180, 0.5)
-  overlay_image: /images/splash/video-unsplash.webp
-  caption: "Photo: [**Jakob Owens**]()"
 
 sidebar:
   nav: "publications"
@@ -18,7 +14,7 @@ sidebar:
 
 Sometimes we shoot ourselves, often we speak at conferences.  
 If you are interested also have a look at our
-<a href="https://youtube.com/arc42-video" target="blank">Youtube-Channel</a>. 
+<a href="https://youtube.com/arc42-video" target="_blank" rel="noopener">Youtube-Channel</a>. 
 
 Sorry, most of this is in German...
 

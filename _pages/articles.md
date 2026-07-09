@@ -8,10 +8,6 @@ toc: right
 toc_label: "Content"
 
 permalink: /articles/
-header:
-  overlay_filter: rgba(15, 80, 180, 0.5)
-  overlay_image: /images/splash/magazines-unsplash.webp
-  caption: "Photo: [**Charisse Kenion**](https://unsplash.com/@charissek)"
 
 sidebar:
   nav: "publications"

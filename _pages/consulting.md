@@ -1,13 +1,9 @@
 ---
 title: "Consulting"
-layout: splash
+layout: single
+classes: wide
 
 permalink: /consulting/
-header:
-  overlay_filter: rgba(15, 80, 180, 0.5)
-  overlay_image: /images/splash/consulting-unsplash.webp
-  caption: "Photo: [**My Life Through A Lense**](https://unsplash.com/@bamagal)"
-  
 
 excerpt: "we lend a hand..."
 
@@ -41,7 +37,7 @@ talks_feature:
     excerpt: 'We give talks on topics related to architecture, at conferences or at your company. Would you like an impulse talk, a keynote or a thematically focused deep dive?'
     url: /talks
     btn_label: "read more ..."
-    btn_class: "btn--primary"
+    btn_class: "btn--arc42-outline"
 
 
 ---
