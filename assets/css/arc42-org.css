@@ -221,11 +221,9 @@ html { overflow-x: clip; }                 /* scroll-safe full-bleed */
 .home-hero .home-hero__kicker,
 .dl-hero .dl-hero__kicker {
   margin: 0 0 0.8rem;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #2f537d;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #55657a;
 }
 .home-hero .home-hero__title,
 .dl-hero .dl-hero__title {
@@ -401,11 +399,9 @@ html { overflow-x: clip; }                 /* scroll-safe full-bleed */
 }
 .dlb__step {
   margin: 1.1rem 0 0.5rem;
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-size: 0.85rem;
   font-weight: 700;
-  color: #4b7ba3;
+  color: #55657a;
 }
 .dlb__step:first-child { margin-top: 0; }
 .dlb__langs,
@@ -449,11 +445,9 @@ html { overflow-x: clip; }                 /* scroll-safe full-bleed */
 }
 .dlb__rlabel {
   margin: 0 0 0.5rem;
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-size: 0.85rem;
   font-weight: 700;
-  color: #6f7f92;
+  color: #55657a;
 }
 .dlb__combo { margin: 0 0 0.15rem; font-size: 1.3rem; font-weight: 800; letter-spacing: -0.01em; color: #1c2c44; }
 .dlb__meta { margin: 0 0 1rem; font-size: 0.85rem; color: #6f7f92; }
@@ -482,14 +476,6 @@ a.res-card:hover,
 a.res-card:focus-visible { border-color: #4b7ba3; text-decoration: none; }
 a.res-card:hover .res-card__title { color: #4b7ba3; }
 a.res-card:focus-visible { outline: 2px solid #4b7ba3; outline-offset: 2px; }
-.res-card__kicker {
-  margin: 0;
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #4b7ba3;
-}
 .res-card__title { margin: 0; font-size: 1.15rem; font-weight: 800; color: #1c2c44; }
 .res-card__text { margin: 0; font-size: 0.9rem; line-height: 1.5; color: #55657a; }
 .res-card__cta { margin: auto 0 0; padding-top: 0.6rem; font-weight: 700; font-size: 0.9rem; color: #374769; }
@@ -501,9 +487,7 @@ a.res-card:focus-visible { outline: 2px solid #4b7ba3; outline-offset: 2px; }
   padding-top: 0.6rem;
 }
 .res-tag {
-  font-size: 0.68rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font-size: 0.75rem;
   font-weight: 700;
   color: #374769;
   background: #e5eef6;
