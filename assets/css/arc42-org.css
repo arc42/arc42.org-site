@@ -185,14 +185,30 @@
 .home-news ul { margin-top: 0.5rem; }
 .home-news li { margin-bottom: 0.4rem; }
 
-/* --- split hero + quick-download panel (full-bleed bands) --- */
-html { overflow-x: clip; }                 /* scroll-safe full-bleed */
+/* --- full-bleed bands (Ukraine strip + heroes) ---
+   Fallback: the classic 100vw negative-margin trick. 100vw includes the
+   vertical scrollbar on Windows/Android, so html{overflow-x:clip} guards
+   the resulting sliver of horizontal overflow.
+   Modern path: .initial-content is an inline-size query container, and
+   100cqw measures its real width (scrollbar excluded) - no overflow at
+   all, no clipping needed. */
+html { overflow-x: clip; }
 .ua-strip,
 .home-hero,
 .dl-hero {
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
+}
+@supports (width: 1cqw) {
+  .initial-content { container-type: inline-size; }
+  .ua-strip,
+  .home-hero,
+  .dl-hero {
+    width: 100cqw;
+    margin-left: calc(50% - 50cqw);
+    margin-right: calc(50% - 50cqw);
+  }
 }
 
 .ua-strip {
