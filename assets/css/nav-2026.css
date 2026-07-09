@@ -45,6 +45,20 @@
 .arc42-nav__inline > li > a:focus-visible {
   color: #374769;
 }
+/* current page */
+.arc42-nav__inline > li > a[aria-current="page"]:not(.arc42-nav__cta) {
+  color: #374769;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+.arc42-drawer__primary a[aria-current="page"]:not(.arc42-nav__cta),
+.arc42-drawer__group a[aria-current="page"] {
+  color: #374769;
+  font-weight: 700;
+  background: #f6f8fa;
+  border-radius: 4px;
+}
 
 /* ---- Download call-to-action (navy button) ---- */
 .arc42-nav .arc42-nav__cta,
@@ -169,15 +183,44 @@
   background: #f6f8fa;
 }
 
+/* screen-reader-only name for the icon-only mobile toggle */
+.arc42-nav__toggle-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ---- breakpoints ---- */
 @media (min-width: 800px) {
   .arc42-nav__inline { display: flex; }
   .arc42-nav__toggle { margin-left: 0; }   /* sits just after the inline links */
+  .arc42-nav__toggle-sr { display: none; } /* visible "More" is the name */
   .arc42-drawer__primary { display: none; } /* primary links already inline */
 }
 @media (max-width: 799px) {
-  .arc42-nav__toggle-txt { display: none; } /* icon-only hamburger */
+  .arc42-nav__toggle-txt { display: none; } /* icon-only hamburger, named "Menu" via the sr span */
   .arc42-nav__toggle { padding: 0.45rem 0.55rem; }
+
+  /* keep the primary CTA (Download) visible next to the hamburger;
+     browsers without :has() fall back to the drawer-only CTA */
+  .arc42-nav__inline {
+    display: flex;
+    margin-left: auto;
+    gap: 0;
+  }
+  .arc42-nav__inline > li { display: none; }
+  .arc42-nav__inline > li.arc42-nav__cta-item { display: block; }
+  .arc42-nav__inline > li.arc42-nav__cta-item .arc42-nav__cta {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  .arc42-nav__toggle { margin-left: 0.6rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
