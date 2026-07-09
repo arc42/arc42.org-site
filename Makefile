@@ -21,8 +21,11 @@ site: build ## Generate the static site into _site/
 check-links: site ## Validate internal links, images, and HTML in the built _site (html-proofer)
 	docker compose run --rm jekyll bundle exec htmlproofer ./_site --disable-external --allow-hash-href
 
-clean: ## Remove generated build artifacts (_site, caches)
+clean: ## Remove generated _site AND the Docker cache volumes (a true reset)
 	rm -rf _site .sass-cache .jekyll-cache .jekyll-metadata
+	@# .jekyll-cache/.sass-cache live in named Docker volumes, not on the host,
+	@# so a host rm alone leaves them stale — wipe the volumes too.
+	-docker compose down -v --remove-orphans
 
 install: build ## Install/refresh gems into the dev image after editing the Gemfile
 	docker compose run --rm jekyll bundle install
