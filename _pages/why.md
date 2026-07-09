@@ -5,11 +5,6 @@ permalink: /why/
 excerpt: "The sad state of architecture documentation — and how arc42 fixes it with low effort."
 ---
 
-<div class="ua-strip">
-  <span class="ua-strip__flag" aria-hidden="true"><i></i><i></i></span>
-  <span>We stand with Ukraine — please support the <a href="https://www.icrc.org/en">ICRC</a>'s humanitarian effort.</span>
-</div>
-
 <section class="dl-hero">
   <div class="dl-hero__inner">
     <p class="dl-hero__kicker">Why arc42?</p>

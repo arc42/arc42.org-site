@@ -5,11 +5,6 @@ permalink: /method/
 excerpt: "How to work with arc42: iterative, feedback-driven and process-agnostic — the recurring tasks of practical architecture work."
 ---
 
-<div class="ua-strip">
-  <span class="ua-strip__flag" aria-hidden="true"><i></i><i></i></span>
-  <span>We stand with Ukraine — please support the <a href="https://www.icrc.org/en">ICRC</a>'s humanitarian effort.</span>
-</div>
-
 <section class="dl-hero">
   <div class="dl-hero__inner">
     <p class="dl-hero__kicker">Iterative &middot; feedback-driven &middot; process-agnostic</p>

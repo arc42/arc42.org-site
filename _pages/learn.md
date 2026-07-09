@@ -5,11 +5,6 @@ permalink: /learn/
 excerpt: "Learn arc42 and software architecture — self-paced with books, videos and free documentation, or in iSAQB-certified seminars taught by the creators of arc42."
 ---
 
-<div class="ua-strip">
-  <span class="ua-strip__flag" aria-hidden="true"><i></i><i></i></span>
-  <span>We stand with Ukraine — please support the <a href="https://www.icrc.org/en">ICRC</a>'s humanitarian effort.</span>
-</div>
-
 <section class="dl-hero">
   <div class="dl-hero__inner">
     <p class="dl-hero__kicker">Self-study &middot; instructor-led seminars &middot; iSAQB CPSA-F</p>

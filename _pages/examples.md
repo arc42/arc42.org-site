@@ -5,11 +5,6 @@ permalink: /examples/
 excerpt: "Real-world systems documented with arc42 — browse them online or in the arc42-by-Example books."
 ---
 
-<div class="ua-strip">
-  <span class="ua-strip__flag" aria-hidden="true"><i></i><i></i></span>
-  <span>We stand with Ukraine — please support the <a href="https://www.icrc.org/en">ICRC</a>'s humanitarian effort.</span>
-</div>
-
 <section class="dl-hero">
   <div class="dl-hero__inner">
     <p class="dl-hero__kicker">Real systems &middot; real documentation</p>

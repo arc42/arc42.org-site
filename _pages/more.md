@@ -5,11 +5,6 @@ permalink: /more/
 excerpt: "Books, articles, videos and talks about arc42 and software architecture — plus pointers to the free arc42 documentation."
 ---
 
-<div class="ua-strip">
-  <span class="ua-strip__flag" aria-hidden="true"><i></i><i></i></span>
-  <span>We stand with Ukraine — please support the <a href="https://www.icrc.org/en">ICRC</a>'s humanitarian effort.</span>
-</div>
-
 <section class="dl-hero">
   <div class="dl-hero__inner">
     <p class="dl-hero__kicker">Books &middot; articles &middot; videos &middot; talks</p>
