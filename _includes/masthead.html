@@ -9,11 +9,11 @@
 
       <ul class="arc42-nav__inline">
         {%- for link in site.data.navigation.main -%}
-          <li>
+          <li{% if link.cta %} class="arc42-nav__cta-item"{% endif %}>
             {%- if link.url contains '://' -%}
               <a href="{{ link.url }}"{% if link.cta %} class="arc42-nav__cta"{% endif %} rel="noopener">{{ link.title }}</a>
             {%- else -%}
-              <a href="{{ link.url | relative_url }}"{% if link.cta %} class="arc42-nav__cta"{% endif %}>{%- if link.cta %}<span class="arc42-nav__dl" aria-hidden="true">&#8595;</span> {% endif -%}{{ link.title }}</a>
+              <a href="{{ link.url | relative_url }}"{% if link.cta %} class="arc42-nav__cta"{% endif %}{% if page.url == link.url %} aria-current="page"{% endif %}>{%- if link.cta %}<span class="arc42-nav__dl" aria-hidden="true">&#8595;</span> {% endif -%}{{ link.title }}</a>
             {%- endif -%}
           </li>
         {%- endfor -%}
@@ -22,6 +22,7 @@
       <button class="arc42-nav__toggle" type="button" aria-expanded="false" aria-controls="arc42-drawer">
         <span class="arc42-nav__bars" aria-hidden="true"><span></span><span></span><span></span></span>
         <span class="arc42-nav__toggle-txt">More</span>
+        <span class="arc42-nav__toggle-sr">Menu</span>
       </button>
 
     </nav>
@@ -35,7 +36,7 @@
           {%- if link.url contains '://' -%}
             <a href="{{ link.url }}"{% if link.cta %} class="arc42-nav__cta"{% endif %} rel="noopener">{{ link.title }}</a>
           {%- else -%}
-            <a href="{{ link.url | relative_url }}"{% if link.cta %} class="arc42-nav__cta"{% endif %}>{{ link.title }}</a>
+            <a href="{{ link.url | relative_url }}"{% if link.cta %} class="arc42-nav__cta"{% endif %}{% if page.url == link.url %} aria-current="page"{% endif %}>{{ link.title }}</a>
           {%- endif -%}
         {%- endfor -%}
       </nav>
@@ -49,7 +50,7 @@
                 {%- if child.url contains '://' -%}
                   <a href="{{ child.url }}" rel="noopener" target="_blank">{{ child.title }}</a>
                 {%- else -%}
-                  <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
+                  <a href="{{ child.url | relative_url }}"{% if page.url == child.url %} aria-current="page"{% endif %}>{{ child.title }}</a>
                 {%- endif -%}
               </li>
             {%- endfor -%}
