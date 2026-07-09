@@ -71,6 +71,16 @@ starter:
 
 {% include feature_row id="starter" %}
 
+## What is arc42?
+
+arc42 is based on practical experience with many systems across domains — information and web systems, real-time and embedded, business intelligence and data warehouses. It gives you a template for the **documentation and communication** of software and system architecture.
+
+- Supports arbitrary technologies and tools — nothing to install.
+- Process-agnostic, and especially well-suited to lean and agile teams.
+- Open source and free of charge, in commercial and private settings — see the [license](/license/).
+
+There's plenty to read about arc42, too — [browse our books, articles, talks and videos &#8594;](/more/).
+
 <div class="training-section" markdown="1">
 
 ## Architecture trainings
@@ -85,16 +95,6 @@ Learn arc42 and modern software architecture straight from its creators — iSAQ
 </p>
 
 </div>
-
-## What is arc42?
-
-arc42 is based on practical experience with many systems across domains — information and web systems, real-time and embedded, business intelligence and data warehouses. It gives you a template for the **documentation and communication** of software and system architecture.
-
-- Supports arbitrary technologies and tools — nothing to install.
-- Process-agnostic, and especially well-suited to lean and agile teams.
-- Open source and free of charge, in commercial and private settings — see the [license](/license/).
-
-There's plenty to read about arc42, too — [browse our books, articles, talks and videos &#8594;](/more/).
 
 <div class="home-news" markdown="1">
 

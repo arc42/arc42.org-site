@@ -519,3 +519,12 @@ a.res-card:focus-visible { outline: 2px solid #4b7ba3; outline-offset: 2px; }
   letter-spacing: -0.02em;
   text-wrap: balance;
 }
+
+/* --- bound the training-date list ---
+   The subtle-ads backend currently returns ~15 dates in two languages;
+   until it caps output server-side, keep the block scannable: bounded
+   height, scrollable, with the register CTA always visible below. */
+.training-section .subtle-ad {
+  max-height: 320px;
+  overflow-y: auto;
+}
