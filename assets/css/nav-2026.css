@@ -1,7 +1,7 @@
 /* ==========================================================================
    arc42 top navigation — 2026 layout
    Priority links inline + "More…" hamburger drawer.
-   Palette per DESIGN.md: navy #374769, steel #4b7ba3, slate #6f777d.
+   Palette via the --arc42-* tokens defined in arc42-org.css.
    ========================================================================== */
 
 .arc42-nav {
@@ -34,7 +34,7 @@
 }
 .arc42-nav__inline li { margin: 0; }
 .arc42-nav__inline > li > a {
-  color: #6f777d;
+  color: var(--arc42-slate);
   font-weight: 600;
   font-size: 0.95rem;
   text-decoration: none;
@@ -43,18 +43,18 @@
 }
 .arc42-nav__inline > li > a:hover,
 .arc42-nav__inline > li > a:focus-visible {
-  color: #374769;
+  color: var(--arc42-primary);
 }
 /* current page */
 .arc42-nav__inline > li > a[aria-current="page"]:not(.arc42-nav__cta) {
-  color: #374769;
+  color: var(--arc42-primary);
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 6px;
 }
 .arc42-drawer__primary a[aria-current="page"]:not(.arc42-nav__cta),
 .arc42-drawer__group a[aria-current="page"] {
-  color: #374769;
+  color: var(--arc42-primary);
   font-weight: 700;
   background: #f6f8fa;
   border-radius: 4px;
@@ -64,7 +64,7 @@
 .arc42-nav .arc42-nav__cta,
 .arc42-drawer .arc42-nav__cta {
   color: #ffffff;
-  background: #374769;
+  background: var(--arc42-primary);
   border-radius: 8px;
   padding: 0.5rem 1rem;
   font-weight: 700;
@@ -76,7 +76,7 @@
 .arc42-drawer .arc42-nav__cta:hover,
 .arc42-drawer .arc42-nav__cta:focus-visible {
   color: #ffffff;
-  background: #4b7ba3;
+  background: var(--arc42-primary-hover);
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
 }
 .arc42-nav__dl { font-weight: 700; }
@@ -91,14 +91,14 @@
   background: transparent;
   border: 1px solid #e2e6ea;
   border-radius: 8px;
-  color: #374769;
+  color: var(--arc42-primary);
   font-family: inherit;
   font-weight: 600;
   font-size: 0.9rem;
   cursor: pointer;
 }
-.arc42-nav__toggle:hover { border-color: #4b7ba3; color: #4b7ba3; }
-.arc42-nav__toggle:focus-visible { outline: 2px solid #4b7ba3; outline-offset: 2px; }
+.arc42-nav__toggle:hover { border-color: var(--arc42-primary-hover); color: var(--arc42-primary-hover); }
+.arc42-nav__toggle:focus-visible { outline: 2px solid var(--arc42-primary-hover); outline-offset: 2px; }
 .arc42-nav__bars {
   display: inline-flex;
   flex-direction: column;
@@ -119,7 +119,7 @@
   right: 0;
   top: 100%;
   background: #ffffff;
-  border-top: 1px solid #f2f3f3;
+  border-top: 1px solid var(--arc42-border-light);
   border-bottom: 1px solid #e2e6ea;
   box-shadow: 0 12px 20px -8px rgba(20, 40, 70, 0.18);
   z-index: 19;
@@ -141,15 +141,15 @@
   gap: 0.15rem;
   grid-column: 1 / -1;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #f2f3f3;
+  border-bottom: 1px solid var(--arc42-border-light);
 }
 .arc42-drawer__primary a {
-  color: #3d4144;
+  color: var(--arc42-ink);
   font-weight: 600;
   text-decoration: none;
   padding: 0.5rem 0.25rem;
 }
-.arc42-drawer__primary a:hover { color: #374769; }
+.arc42-drawer__primary a:hover { color: var(--arc42-primary); }
 .arc42-drawer__primary a.arc42-nav__cta { align-self: flex-start; margin-top: 0.35rem; }
 
 .arc42-drawer__title {
@@ -158,7 +158,7 @@
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #6f777d;
+  color: var(--arc42-slate);
 }
 .arc42-drawer__group ul {
   list-style: none;
@@ -172,14 +172,14 @@
 .arc42-drawer__group a {
   display: block;
   padding: 0.35rem 0.25rem;
-  color: #3d4144;
+  color: var(--arc42-ink);
   font-size: 0.92rem;
   text-decoration: none;
   border-radius: 4px;
 }
 .arc42-drawer__group a:hover,
 .arc42-drawer__group a:focus-visible {
-  color: #374769;
+  color: var(--arc42-primary);
   background: #f6f8fa;
 }
 
@@ -207,8 +207,8 @@
   .arc42-nav__toggle-txt { display: none; } /* icon-only hamburger, named "Menu" via the sr span */
   .arc42-nav__toggle { padding: 0.45rem 0.55rem; }
 
-  /* keep the primary CTA (Download) visible next to the hamburger;
-     browsers without :has() fall back to the drawer-only CTA */
+  /* keep the primary CTA (Download) visible next to the hamburger
+     (server-rendered .arc42-nav__cta-item class marks its list item) */
   .arc42-nav__inline {
     display: flex;
     margin-left: auto;
