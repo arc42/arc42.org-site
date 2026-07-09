@@ -2,79 +2,59 @@
 title: "arc42 Documentation"
 layout: splash
 permalink: /documentation/
-header:
-  overlay_color: "#000"
-  overlay_filter: "0.4"
-  overlay_image: /images/splash/unsplash-documentation-sebastien-gabriel.webp
-  caption: "Photo credit: [**unsplash**](https://unsplash.com/collections/3015/northside-01?photo=XOrFfUPUfeU)"
-
-
-excerpt: "The info you need. Your questions answered."
-
-
+excerpt: "How arc42 is structured and how to work with it — template documentation, practical tips, guides, FAQ, and docs-as-code tooling."
 ---
 
-<div class="ua-background" markdown="1">
-
->### We stand with the people of Ukraine <span class="parent"><span class="ua-text"><i class="fas fa-heart children"></i></span><span class="ua-size children"><i class="fas fa-heart beat heart children"></i></span></span>
->
->Please assist humanitarian efforts for the Ukrainian people and those affected by the military invasion of Ukraine by supporting international aid organizations, including the [International Committee of the Red Cross](https://www.icrc.org/en).
-
+<div class="ua-strip">
+  <span class="ua-strip__flag" aria-hidden="true"><i></i><i></i></span>
+  <span>We stand with Ukraine — please support the <a href="https://www.icrc.org/en">ICRC</a>'s humanitarian effort.</span>
 </div>
 
-<hr>
+<section class="dl-hero">
+  <div class="dl-hero__inner">
+    <p class="dl-hero__kicker">Guides &middot; practical tips &middot; FAQ</p>
+    <h1 class="dl-hero__title">Documentation</h1>
+    <p class="dl-hero__sub">Everything about working with arc42 — the structure of the template, more than a hundred practical tips, and answers to frequently asked questions.</p>
+  </div>
+</section>
 
-
-## arc42: Effective, lean and pragmatic architecture documentation and communication
-
-arc42 offers a clear, simple and effective structure to document and
-communicate your software system.
+## The template structure
 
 ![drawers of a cabinet](/images/cabinet-sanwal-deen-300px.jpg){: .align-left}
-Compare the arc42 sections to the _drawers_ of a cabinet. arc42 contains 12 such drawers, each one specialized to hold a specific kind of information about the architecture of a system.
+Think of the arc42 sections as the *drawers* of a cabinet: twelve of them, each specialized to hold one specific kind of information about the architecture of a system. arc42 is optimized for understandability and adequacy, and supports your style of working, your domain and your technology — in agile, lean or formal projects.
 
-arc42 is optimized for understandability and adequacy. It naturally guides you to explain any kind of architecture information or decision in an understandable way.
+* The [one-minute overview](/overview/) shows all twelve sections on a single page.
+* [docs.arc42.org](https://docs.arc42.org) documents every section in detail — purpose, contents, practical tips, and many examples.
 
-arc42 supports your style of working, your domain and your technology.
-Apply it in agile, lean or formal projects - you decide.
+## Guides &amp; FAQ
 
-## Documentation
+* [Why arc42?](/why/) explains the problems arc42 solves.
+* The [FAQ](https://faq.arc42.org) answers hundreds of questions on methodical approaches, template sections, agility and tools.
+* The [quality model](https://quality.arc42.org) collects quality properties and attributes, and our [pattern collection](https://patterns.arc42.org) covers recurring software patterns.
 
-* [Why arc42?](/why/): What problems does arc42 solve?
+## Docs-as-Code
 
-* [One Minute Overview](/overview/): arc42 illustrated on a single page.
+arc42 works particularly well as *docs-as-code*: treat your architecture documentation like source code.
 
-* Main documentation website [**docs.arc42.org**](https://docs.arc42.org), containing many examples
+* Get the template in [AsciiDoc or Markdown](/download/) — plain-text formats that diff cleanly.
+* Keep it in git, right next to your code, and review changes through pull requests.
+* Build and publish it with [docToolchain](https://doctoolchain.org), an open-source toolchain with first-class arc42 support — or with any static-site generator of your choice.
 
-* Extensive [FAQ](https://faq.arc42.org)
-  
+## Get the template
 
-## Painless documentation
+<a href="/download/" class="btn btn--arc42"><span aria-hidden="true">&#8595;</span> Download arc42</a>
 
-arc42 users **like** the _understandability_, that mainly results from its standardized
-  structure.
+<div class="training-section" markdown="1">
 
-But what they really **love** is the _manageable effort_ it takes to create and
-maintain arc42-based architecture documentation. We call it “_painless documentation_”,
-using the arc42 template does not require additional effort:
+## Learn arc42 in a training
 
-*	You only describe things that your stakeholders really have to know.
-*	You explain facts and issues that are necessary to understand the system or
-individual design decisions.
-*	You only keep track of important architecture decision that you had to
-make anyhow.
-
-
-## Get it!
-
-You want awesome communication/documentation support for your
-system or your next project:
-
-<a href="/download" class="button buttonGreen">Download</a>
-
-
-# Learn more!
+We teach arc42 and modern software architecture in iSAQB-certified Foundation trainings — on-site and remote. Upcoming dates:
 
 {% include subtle-ads/subtle-ads.html %}
 
-<a href="https://arc42.de/schulungen" class="margin-top button buttonGreen">Training site</a>
+<p class="training-section__actions">
+  <a class="btn btn--arc42 btn--large" href="https://trainings.arc42.org" rel="noopener">See all dates &amp; register &#8594;</a>
+  <a class="btn btn--arc42-outline btn--large" href="/learn/">Training details</a>
+</p>
+
+</div>

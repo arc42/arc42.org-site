@@ -1,114 +1,55 @@
 ---
-title: "More..."
+title: "Publications"
 layout: splash
-
 permalink: /more/
-header:
-  overlay_filter: rgba(15, 80, 180, 0.5)
-  overlay_image: /images/splash/publications-unsplash.webp 
-  caption: "Photo: [**Glen Carstens Peters**](https://unsplash.com/@glenncarstenspeters)"
-  
-  actions: 
-   - label: "Docs+Tipps"
-     url: https://docs.arc42.org
-   - label: "FAQ"
-     url: https://faq.arc42.org
-   - label: "Books"
-     url: /books
-   #- label: "Recommended readings"
-   #  url: /recommendations
-   - label: "Articles"
-     url: "/articles"
-   - label: "Videos"
-     url: /videos  
-   - label: "Talks"
-     url: /talks
-   - label: "Gallery"
-     url: /gallery
-
-excerpt: "we talk and write about architecture...<span style='font-size:80px;'>&#128521;</span>"
-
-
-docs_feature:
-  - image_path: /images/publications/docs-feature.png
-    alt: "a large 42"
-    title: "Docs and Info"
-    excerpt: 'Extensive documentation, more than hundred practical tips for using arc42. 
-    For all kinds of systems, small and large teams, all kinds of tools.'
-    url: https://docs.arc42.org
-    btn_label: "Docs & Tips ..."
-    btn_class: "btn--primary"
-
-faq_feature:
-  - image_path: /images/publications/faq-feature.png
-    alt: "a 'super helpful' light sign"
-    title: "FAQs"
-    excerpt: 'Frequently asked questions with answers, concerning methodical approaches, arc42-sections, agility, tools and more.'
-    url: https://faq.arc42.org
-    btn_label: "FAQs ..."
-    btn_class: "btn--primary"
-
-books_feature:
-  - image_path: /images/publications/book-feature.png
-    alt: "Books in a bookshelf"
-    title: "Books"
-    excerpt: 'Together we authored more than 25 books, their topics ranging from requirements engineering, business-analysis, architecture, documentation to patterns.'
-    url: /books
-    btn_label: "more ..."
-    btn_class: "btn--primary"
-
-
-videos_feature:
-  - image_path: /images/publications/video-feature.png
-    alt: "Camera"
-    title: "Videos"
-    excerpt: 'Several of our conference talks have been recorded. A few times we tried to produce videos ourselves... Since 2020, arc42 hosts its own [Youtube-channel](https://www.youtube.com/arc42-video/)... '
-    url: /videos
-    btn_label: "more ..."
-    btn_class: "btn--primary"
-
-articles_feature:
-  - image_path: /images/publications/article-feature.png
-    alt: "Several magazines"
-    title: "Articles"
-    excerpt: "More than a hundred articles in various publications (aah - most of that in German)."
-    url: /articles
-    btn_label: "more ..."
-    btn_class: "btn--primary"
-
-talks_feature:
-  - image_path: /images/publications/talks-feature.jpeg
-    alt: "Gernot Starke on stage for a talk"
-    title: "Talks"
-    excerpt: 'We give presentations at conferences, on architecture, methodology, procedures, reviews and other topics.'
-    url: /talks
-    btn_label: "more ..."
-    btn_class: "btn--primary"
-
-
+excerpt: "Books, articles, videos and talks about arc42 and software architecture — plus pointers to the free arc42 documentation."
 ---
 
-<div class="ua-background" markdown="1">
+<div class="ua-strip">
+  <span class="ua-strip__flag" aria-hidden="true"><i></i><i></i></span>
+  <span>We stand with Ukraine — please support the <a href="https://www.icrc.org/en">ICRC</a>'s humanitarian effort.</span>
+</div>
 
->### We stand with the people of Ukraine <span class="parent"><span class="ua-text"><i class="fas fa-heart children"></i></span><span class="ua-size children"><i class="fas fa-heart beat heart children"></i></span></span>
->
->Please assist humanitarian efforts for the Ukrainian people and those affected by the military invasion of Ukraine by supporting international aid organizations, including the [International Committee of the Red Cross](https://www.icrc.org/en).
+<section class="dl-hero">
+  <div class="dl-hero__inner">
+    <p class="dl-hero__kicker">Books &middot; articles &middot; videos &middot; talks</p>
+    <h1 class="dl-hero__title">Publications</h1>
+    <p class="dl-hero__sub">We talk and write about software architecture — more than 25 books, over a hundred articles, recorded conference talks, and our own YouTube channel.</p>
+  </div>
+</section>
+
+<div class="card-grid">
+
+  <a class="res-card" href="/books/">
+    <p class="res-card__kicker">25+ titles</p>
+    <p class="res-card__title">Books</p>
+    <p class="res-card__text">From requirements engineering and business analysis to architecture, documentation and patterns — including the arc42-by-Example series.</p>
+    <p class="res-card__cta">Browse books &#8594;</p>
+  </a>
+
+  <a class="res-card" href="/articles/">
+    <p class="res-card__kicker">100+ articles</p>
+    <p class="res-card__title">Articles</p>
+    <p class="res-card__text">Published in various magazines — most of them in German.</p>
+    <p class="res-card__cta">Browse articles &#8594;</p>
+  </a>
+
+  <a class="res-card" href="/videos/">
+    <p class="res-card__kicker">YouTube channel since 2020</p>
+    <p class="res-card__title">Videos</p>
+    <p class="res-card__text">Recorded conference talks and the arc42 YouTube channel, with introductions and practical walkthroughs.</p>
+    <p class="res-card__cta">Watch videos &#8594;</p>
+  </a>
+
+  <a class="res-card" href="/talks/">
+    <p class="res-card__kicker">Conference presentations</p>
+    <p class="res-card__title">Talks</p>
+    <p class="res-card__text">Presentations on architecture, methodology, reviews and related topics.</p>
+    <p class="res-card__cta">See talks &#8594;</p>
+  </a>
 
 </div>
 
-<hr>
+## Looking for documentation instead?
 
-{% include feature_row id="docs_feature" type="left" %}
-{% include feature_row id="faq_feature" type="right" %}
-
-{% include feature_row id="books_feature" type="left" %}
-
-{% include feature_row id="articles_feature" type="right" %}
-
-{% include feature_row id="videos_feature" type="left" %}
-
-{% include feature_row id="talks_feature" type="right" %}
-
-
-
- 
+The free arc42 reference material lives on its own sites: the [template documentation](https://docs.arc42.org) with more than a hundred practical tips, and the [FAQ](https://faq.arc42.org) answering questions on method, sections, agility and tools. Our [documentation page](/documentation/) gives you the full map.

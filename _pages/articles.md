@@ -1,6 +1,6 @@
 ---
 title: Articles authored by Peter Hruschka or Gernot Starke
-excerpt: we can't stop writing &#128540;
+excerpt: "More than a hundred articles in magazines and blogs — many of them in German."
 layout: single
 
 
@@ -54,11 +54,9 @@ Gernot Starke
 This article collects fundamental requirements for technical documentation, 
 especially software architecture documentation, together with ideas how to satisfy those.
 
-Read it [here](/principles-of-technical-documentation/).
+Read the [principles of technical documentation](/principles-of-technical-documentation/) on this site — originally posted on the [INNOQ Blog](https://www.innoq.com/en/articles/2022/01/principles-of-technical-documentation/).
 
-Originally posted on the [INNOQ Blog](https://www.innoq.com/en/articles/2022/01/principles-of-technical-documentation/).
-
->You want to LEARN documentation: Join our 2-day hands-on workshop ADOC (find details [on our training site](https://arc42.de/termine)) or [here](/learn/).
+>Want to *learn* documentation? Join our two-day hands-on workshop ADOC — see [our training page](/learn/) or the [dates on trainings.arc42.org](https://trainings.arc42.org).
 
 ## Handeln statt jammern
 

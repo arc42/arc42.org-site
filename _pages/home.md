@@ -2,56 +2,78 @@
 title: "arc42"
 layout: splash
 permalink: /
-header:
-  overlay_color: "#d7ecf8"
-  overlay_filter: rgba(15, 80, 180, 0.4)
-  overlay_image: /images/splash/arc42-splash-landingpage.webp
-  caption: "Photo credit: [**Thomas Bayer**](https://www.predic8.de/)"
-  actions:
-    - label: "&#8595; Download the templates"
-      url: /download/
-      class: "btn--arc42"
-    - label: "One-minute overview"
-      url: /overview/
-    - label: "&#8594; German site"
-      url: "https://www.arc42.de"
-excerpt: "All you need to construct, communicate and document your software architecture. **Proven, practical and pragmatic** — free, open source, and it takes the pain out of documentation."
+excerpt: "All you need to construct, communicate and document your software architecture. Proven, practical, pragmatic — free and open source."
 
 starter:
   - title: "Template"
     excerpt: "![Drawers of a cabinet](/images/home/template.webp)<br>
-    The arc42 skeleton for architecture documentation — open source, pragmatic and free of charge. You fill it with your decisions: simple, effective and painless."
+    The arc42 skeleton for architecture docs — you fill it with your decisions."
     url: "/overview/"
     btn_label: "Explore the template"
     btn_class: "btn--arc42-outline"
+  - title: "Trainings"
+    excerpt: "![Participants in an arc42 training workshop](/images/home/Training.webp)<br>
+    Mastering Software Architectures — prepares for the iSAQB Foundation certification."
+    url: "/learn/"
+    btn_label: "See trainings"
+    btn_class: "btn--arc42-outline"
   - title: "The method"
     excerpt: "![To-do, doing, done slips of paper](/images/home/method.webp)<br>
-    arc42 is systematic but flexible — suitable for large and small teams, in iterative or less agile processes."
+    Systematic but flexible — suits large and small teams, agile or not."
     url: "/method/"
     btn_label: "See the method"
     btn_class: "btn--arc42-outline"
-  - title: "Canvas"
-    excerpt: "![The arc42 canvas](/images/home/canvas-overview-850.webp)<br>
-    The shortest possible form of technical documentation — the elevator pitch, with all the important things on a single page."
-    url: "/canvas/"
-    btn_label: "View the canvas"
-    btn_class: "btn--arc42-outline"
 ---
 
-<div class="ua-background" markdown="1">
+{% assign PREFIX = "https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-" %}
 
->### We stand with the people of Ukraine <span class="parent"><span class="ua-text"><i class="fa fa-solid fa-heart children"></i></span><span class="ua-size children"><i class="fa fa-solid fa-heart heart beat children"></i></span></span>
->
->Please assist humanitarian efforts for the Ukrainian people and those affected by the military invasion of Ukraine by supporting international aid organizations, including the [International Committee of the Red Cross](https://www.icrc.org/en).
+<div class="ua-strip">
+  <span class="ua-strip__flag" aria-hidden="true"><i></i><i></i></span>
+  <span>We stand with Ukraine — please support the <a href="https://www.icrc.org/en">ICRC</a>'s humanitarian effort.</span>
 </div>
+
+<section class="home-hero">
+  <div class="home-hero__inner">
+    <div class="home-hero__intro">
+      <p class="home-hero__kicker">Open source · 12 languages · since 2005</p>
+      <h1 class="home-hero__title">Document your architecture — painlessly.</h1>
+      <p class="home-hero__sub">The proven, pragmatic template to <strong>construct, communicate and document</strong> software architecture. Free and open source.</p>
+      <p class="home-hero__actions">
+        <a class="btn btn--arc42 btn--large" href="/download/"><span aria-hidden="true">&#8595;</span> Download the templates</a>
+        <a class="btn btn--arc42-outline btn--large" href="/method/">Explore the method</a>
+      </p>
+    </div>
+
+    <aside class="quick-dl" aria-label="Quick download">
+      <div class="quick-dl__head">
+        <span class="quick-dl__title">Quick download</span>
+        <span class="quick-dl__langs" role="group" aria-label="Language">
+          <button type="button" class="quick-dl__lang is-active" data-lang="EN">EN</button>
+          <button type="button" class="quick-dl__lang" data-lang="DE">DE</button>
+        </span>
+      </div>
+      <a class="quick-dl__row" data-fmt="asciidoc" href="{{ PREFIX }}EN-plain-asciidoc.zip">
+        <span class="quick-dl__label"><span class="quick-dl__fmt">AsciiDoc</span><span class="quick-dl__meta">recommended</span></span>
+        <span class="quick-dl__arrow" aria-hidden="true">&#8595;</span>
+      </a>
+      <a class="quick-dl__row" data-fmt="docx" href="{{ PREFIX }}EN-plain-docx.zip">
+        <span class="quick-dl__label"><span class="quick-dl__fmt">Word (.docx)</span><span class="quick-dl__meta">plain &middot; with help</span></span>
+        <span class="quick-dl__arrow" aria-hidden="true">&#8595;</span>
+      </a>
+      <a class="quick-dl__row" data-fmt="markdown" href="{{ PREFIX }}EN-plain-markdown.zip">
+        <span class="quick-dl__label"><span class="quick-dl__fmt">Markdown</span><span class="quick-dl__meta">single &middot; multi-page</span></span>
+        <span class="quick-dl__arrow" aria-hidden="true">&#8595;</span>
+      </a>
+      <a class="quick-dl__all" href="/download/">All 12 formats &#8594;</a>
+    </aside>
+  </div>
+</section>
 
 {% include feature_row id="starter" %}
 
 <div class="training-section" markdown="1">
 
 ## Architecture trainings
-
-![Participants in an arc42 training workshop](/images/home/Training.webp){: .align-right width="240"}
 
 Learn arc42 and modern software architecture straight from its creators — iSAQB-certified Foundation trainings, on-site and remote. Upcoming dates:
 
@@ -84,3 +106,23 @@ There's plenty to read about arc42, too — [browse our books, articles, talks a
 - Even more worked examples in [arc42 by Example, Vol 2 — Embedded Systems &amp; IoT](/books#arc42-by-example-vol2).
 
 </div>
+
+<script>
+  (function () {
+    var PREFIX = "https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-";
+    var panel = document.querySelector('.quick-dl');
+    if (!panel) { return; }
+    var lang = "EN";
+    function apply() {
+      panel.querySelectorAll('.quick-dl__row').forEach(function (row) {
+        row.setAttribute('href', PREFIX + lang + '-plain-' + row.getAttribute('data-fmt') + '.zip');
+      });
+      panel.querySelectorAll('.quick-dl__lang').forEach(function (b) {
+        b.classList.toggle('is-active', b.getAttribute('data-lang') === lang);
+      });
+    }
+    panel.querySelectorAll('.quick-dl__lang').forEach(function (b) {
+      b.addEventListener('click', function () { lang = b.getAttribute('data-lang'); apply(); });
+    });
+  })();
+</script>

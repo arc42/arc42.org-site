@@ -1,45 +1,62 @@
 ---
 title: "Canvas"
 layout: splash
-
 permalink: /canvas/
-header:
-  overlay_image: /images/splash/canvas-splash.webp
-  caption: "Background photo credit: [**Samantha Gades**](https://unsplash.com/de/@srosinger3997)"
-  overlay_filter: rgba(0, 0, 0, 0.6)
-  actions:
-  - label: "&#8594; The Canvas Website"
-    url: https://canvas.arc42.org/
-
-excerpt: "short, shorter, canvas..."
-
+excerpt: "Architecture on a single page — three canvases for kicking off, communicating, and documenting the tech stack of your system."
 ---
 
+<div class="ua-strip">
+  <span class="ua-strip__flag" aria-hidden="true"><i></i><i></i></span>
+  <span>We stand with Ukraine — please support the <a href="https://www.icrc.org/en">ICRC</a>'s humanitarian effort.</span>
+</div>
 
+<section class="dl-hero">
+  <div class="dl-hero__inner">
+    <p class="dl-hero__kicker">Short, shorter, canvas</p>
+    <h1 class="dl-hero__title">Architecture on a single page</h1>
+    <p class="dl-hero__sub">Sometimes full documentation is more than you need. A canvas — inspired by the famous <a href="https://www.strategyzer.com">Business Model Canvas</a> — captures the key elements of a system in a structured, visual way, on one page.</p>
+  </div>
+</section>
 
-A canvas provides a structured framework that facilitates the visualization of key elements of a system.
-Based upon ideas from the famous [Business Model Canvas](https://www.strategyzer.com) we created three different canvases
-to suit your current needs:
+Three canvases cover the most common needs:
 
-- The "Architecture Inception Canvas" is based upon Patrick Roos' original work "Software Architecture Canvas", and addresses greenfield approaches to software development. Additional info [here](https://canvas.arc42.org/architecture-inception-canvas).  
-- The "Architecture Communication Canvas" helps to communicate key elements of existing software architectures. Consider it to be the _zip-version_ of conventional arc42 documentation. Additional info [here](https://canvas.arc42.org/architecture-communication-canvas).  
-- Finally, the [tech stack canvas](https://techstackcanvas.io) is a new approach by [INNOQ](https://innoq.com) to have all relevant technologies of your stack documented on a single page. Document the planned technologies for a new project but also document the status quo of existing products. Highly recommended!
+<div class="card-grid">
 
+  <a class="res-card" href="https://canvas.arc42.org/architecture-inception-canvas">
+    <p class="res-card__kicker">Starting greenfield</p>
+    <p class="res-card__title">Architecture Inception Canvas</p>
+    <p class="res-card__text">Kick off new development: collaboratively capture goals, quality requirements and first solution ideas. Based on Patrick Roos' Software Architecture Canvas.</p>
+    <p class="res-card__cta">See the Inception Canvas &#8594;</p>
+  </a>
 
+  <a class="res-card" href="https://canvas.arc42.org/architecture-communication-canvas">
+    <p class="res-card__kicker">Existing systems</p>
+    <p class="res-card__title">Architecture Communication Canvas</p>
+    <p class="res-card__text">Communicate the key elements of an existing architecture — think of it as the <em>zip version</em> of conventional arc42 documentation.</p>
+    <p class="res-card__cta">See the Communication Canvas &#8594;</p>
+  </a>
 
-<a href="https://canvas.arc42.org/" class="button buttonRoyalBlue buttonCanvas">Learn more on the Canvas Website</a>
+  <a class="res-card" href="https://techstackcanvas.io" rel="noopener">
+    <p class="res-card__kicker">By INNOQ</p>
+    <p class="res-card__title">Tech Stack Canvas</p>
+    <p class="res-card__text">All relevant technologies of your stack on a single page — for planning new projects or documenting the status quo of existing products.</p>
+    <p class="res-card__cta">See the Tech Stack Canvas &#8594;</p>
+  </a>
 
-<br>
+</div>
+
+<a href="https://canvas.arc42.org/" class="btn btn--arc42">Explore all canvases on canvas.arc42.org</a>
+
+## Examples
 
 <div class="flex-container-canvas-examples">
   <div class="flex-item-canvas-examples">
-    <h2> Example: Architecture Communication Canvas for status.arc42.org </h2>
+    <h3>Architecture Communication Canvas for status.arc42.org</h3>
     <p><a href="https://canvas.arc42.org/canvas-details/acc-status-arc42-org"><img class="canvas-image" src="/images/acc-status-arc42-org.webp" alt="Architecture Communication Canvas for status.arc42.org"/></a></p>
   </div>
 
   <div class="flex-item-canvas-examples">
-    <h2> Example: Architecture Communication Canvas for HtmlSanityCheck </h2>
+    <h3>Architecture Communication Canvas for HtmlSanityCheck</h3>
     <p><a href="https://canvas.arc42.org/examples"><img class="canvas-image" src="/images/acc-4-htmlSanityCheck.png.webp" alt="Architecture Communication Canvas for HtmlSanityCheck"/></a></p>
   </div>
 </div>
-

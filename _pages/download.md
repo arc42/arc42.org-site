@@ -1,62 +1,57 @@
 ---
 title: "Download arc42"
-layout: single
+layout: splash
 permalink: /download/
-classes: wide
-
-header:
-  overlay_filter: rgba(27, 44, 68, 0.55)
-  overlay_image: /images/splash/download-landingpage.webp
-  caption: "Photo credit: [**Ellery Sterling**](https://unsplash.com/photos/dPu5FIT1bGU)"
-
 excerpt: "Version 9 — the most practical and effective arc42 ever. Every format, 12 languages, free and open source."
 ---
 
-<div class="ua-background" markdown="1">
-
->### We stand with the people of Ukraine <span class="parent"><span class="ua-text"><i class="fa fa-solid fa-heart children"></i></span><span class="ua-size children"><i class="fa fa-solid fa-heart heart beat children"></i></span></span>
->
->Please assist humanitarian efforts for the Ukrainian people and those affected by the military invasion of Ukraine by supporting international aid organizations, including the [International Committee of the Red Cross](https://www.icrc.org/en).
-
+<div class="ua-strip">
+  <span class="ua-strip__flag" aria-hidden="true"><i></i><i></i></span>
+  <span>We stand with Ukraine — please support the <a href="https://www.icrc.org/en">ICRC</a>'s humanitarian effort.</span>
 </div>
 
-**Version 9.0.0** (October 2025) is available in English, German, French, Czech and Chinese, with a Hungarian translation added in July 2026. All other languages are at version 8.2.1 (October 2024).
-
-## Downloads
-{: #downloads}
-
-Pick your language, then choose a format. Every template comes **plain** (structure only) or **with help** (the official arc42 explanations embedded in each section — ideal if you're new to the template).
+<section class="dl-hero">
+  <div class="dl-hero__inner">
+    <p class="dl-hero__kicker">Version 9.0.0 · October 2025</p>
+    <h1 class="dl-hero__title">Download arc42</h1>
+    <p class="dl-hero__sub">Build your download — pick a language and a format, <strong>plain</strong> or <strong>with help</strong>. Version 9 covers EN, DE, FR, CZ and ZH, plus Hungarian (July 2026); eight further languages are at v8.2.1. Free and open source.</p>
+  </div>
+</section>
 
 {% assign PREFIX = "https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-" %}
 {% assign GITHUBDIR = "https://github.com/arc42/arc42-template/raw/master/dist/" %}
-{% assign formats = "asciidoc|markdown|docx|markdownMP|markdownStrict|markdownMPStrict|gitHubMarkdown|gitHubMarkdownMP|latex|html|rst|textile" | split: "|" %}
-{% assign formats_label = "AsciiDoc|Markdown|Word · docx|Markdown · multi-page|Markdown · strict|Markdown MP · strict|GitHub Markdown|GitHub Markdown · MP|LaTeX|HTML|reStructuredText|Textile" | split: "|" %}
 {% assign languages = "EN|DE|FR|CZ|ZH|HU|ES|IT|NL|PT|RU|UKR" | split: "|" %}
 {% assign languages_full = "English|Deutsch|Français|Čeština|简体中文|Magyar|Español|Italiano|Nederlands|Português|Русский|Українська" | split: "|" %}
+{% assign fmt_ids = "asciidoc|markdown|docx|markdownMP|gitHubMarkdown|latex|rst|textile|html|markdownStrict|markdownMPStrict|gitHubMarkdownMP" | split: "|" %}
+{% assign fmt_labels = "AsciiDoc|Markdown|Word (.docx)|Markdown · multi-page|GitHub Markdown|LaTeX|reStructuredText|Textile|HTML|Markdown · strict|Markdown MP · strict|GitHub Markdown · MP" | split: "|" %}
 
-<div class="dl-finder">
-  <label class="dl-finder__label" for="dl-lang">Language</label>
-  <select class="dl-finder__select" id="dl-lang">
-    {% for lang in languages %}<option value="{{ lang }}">{{ languages_full[forloop.index0] }} ({{ lang }})</option>{% endfor %}
-  </select>
-</div>
-
-{% for lang in languages %}
-<div class="dl-lang" data-lang="{{ lang }}"{% unless forloop.first %} hidden{% endunless %}>
-  <div class="dl-grid">
-    {% for fmt in formats %}
-    <div class="dl-card{% if forloop.index0 < 3 %} dl-card--popular{% endif %}">
-      <span class="dl-card__fmt">{{ formats_label[forloop.index0] }}{% if forloop.index0 < 3 %} <span class="dl-badge">popular</span>{% endif %}</span>
-      <span class="dl-card__links"><a href="{{ PREFIX }}{{ lang }}-plain-{{ fmt }}.zip">plain</a><a href="{{ PREFIX }}{{ lang }}-withhelp-{{ fmt }}.zip">with&nbsp;help</a></span>
+<div class="dlb" data-prefix="{{ PREFIX }}">
+  <div class="dlb__pane dlb__pane--choose">
+    <p class="dlb__step">1 &middot; Choose language</p>
+    <div class="dlb__langs" role="group" aria-label="Language">
+      {% for lang in languages %}<button type="button" class="dlb__lang{% if forloop.first %} is-active{% endif %}" data-lang="{{ lang }}" data-full="{{ languages_full[forloop.index0] }}">{{ lang }}</button>{% endfor %}
     </div>
-    {% endfor %}
+    <p class="dlb__step">2 &middot; Choose format</p>
+    <div class="dlb__fmts" role="group" aria-label="Format">
+      {% for f in fmt_ids %}<button type="button" class="dlb__fmt{% if forloop.first %} is-active{% endif %}" data-fmt="{{ f }}" data-label="{{ fmt_labels[forloop.index0] }}">{{ fmt_labels[forloop.index0] }}</button>{% endfor %}
+    </div>
+  </div>
+
+  <div class="dlb__pane dlb__result" aria-live="polite">
+    <p class="dlb__rlabel">Your download</p>
+    <p class="dlb__combo" id="dlb-combo">arc42 &middot; English &middot; AsciiDoc</p>
+    <p class="dlb__meta">Version 9.0.0 · free &amp; open source</p>
+    <p class="dlb__buttons">
+      <a class="btn btn--arc42 btn--large" id="dlb-plain" href="{{ PREFIX }}EN-plain-asciidoc.zip"><span aria-hidden="true">&#8595;</span> Plain .zip</a>
+      <a class="btn btn--arc42-outline btn--large" id="dlb-help" href="{{ PREFIX }}EN-withhelp-asciidoc.zip">With help .zip</a>
+    </p>
+    <p class="dlb__hint"><strong>With help</strong> embeds the official arc42 explanations in every section — ideal when you're new to the template. <strong>Plain</strong> gives you the bare structure.</p>
   </div>
 </div>
-{% endfor %}
 
-These formats are generated from their AsciiDoc sources in the [GitHub repository](https://github.com/arc42/arc42-template). Not sure which format to pick? See the [format overview](#format-overview) below.
+These formats are generated from their AsciiDoc sources in the [GitHub repository](https://github.com/arc42/arc42-template). Not sure which to pick? See the [format overview](#format-overview) below.
 
-## More tools &amp; formats
+## Specialised &amp; tool formats
 
 <details class="dl-details" markdown="1">
 <summary>Confluence</summary>
@@ -146,19 +141,10 @@ We don't support additional modelling tools yet — but we'd love to. If you use
 : Powerful yet simple markup, used by arc42 itself — ideally suited to architecture documentation. See [docToolchain](https://doctoolchain.github.io/docToolchain/) or the [AsciiDoc quick reference](https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/).
 
 **markdown**
-: Widespread, simple markup — [documented here](https://daringfireball.net/projects/markdown/syntax) by its inventor.
-
-**markdown (strict)**
-: A restricted Markdown, [documented here](https://daringfireball.net/projects/markdown/syntax).
-
-**markdownMP**
-: As **markdown** above, but every chapter lives in its own file.
+: Widespread, simple markup — [documented here](https://daringfireball.net/projects/markdown/syntax) by its inventor. The **strict** variants restrict it further; the **multi-page (MP)** variants split every chapter into its own file.
 
 **gitHubMarkdown**
 : GitHub Flavored Markdown, used on GitHub.com and GitHub Enterprise — see the [guide](https://docs.github.com/en/get-started/writing-on-github).
-
-**gitHubMarkdownMP**
-: As **gitHubMarkdown** above, but every chapter in its own file.
 
 **latex**
 : The [document preparation system](https://www.latex-project.org/) — for those who need beauty and are willing to invest some effort.
@@ -213,13 +199,31 @@ Want to go deeper? The creators of arc42 run iSAQB-certified architecture traini
 
 <script>
   (function () {
-    var sel = document.getElementById('dl-lang');
-    if (!sel) { return; }
-    var panels = document.querySelectorAll('.dl-lang');
-    sel.addEventListener('change', function () {
-      panels.forEach(function (p) {
-        if (p.getAttribute('data-lang') === sel.value) { p.removeAttribute('hidden'); }
-        else { p.setAttribute('hidden', ''); }
+    var root = document.querySelector('.dlb');
+    if (!root) { return; }
+    var PREFIX = root.getAttribute('data-prefix');
+    var lang = 'EN', full = 'English', fmt = 'asciidoc', label = 'AsciiDoc';
+    var combo = document.getElementById('dlb-combo');
+    var plain = document.getElementById('dlb-plain');
+    var help = document.getElementById('dlb-help');
+    function refresh() {
+      combo.textContent = 'arc42 · ' + full + ' · ' + label;
+      plain.setAttribute('href', PREFIX + lang + '-plain-' + fmt + '.zip');
+      help.setAttribute('href', PREFIX + lang + '-withhelp-' + fmt + '.zip');
+    }
+    function activate(group, btn) {
+      root.querySelectorAll(group).forEach(function (b) { b.classList.toggle('is-active', b === btn); });
+    }
+    root.querySelectorAll('.dlb__lang').forEach(function (b) {
+      b.addEventListener('click', function () {
+        lang = b.getAttribute('data-lang'); full = b.getAttribute('data-full');
+        activate('.dlb__lang', b); refresh();
+      });
+    });
+    root.querySelectorAll('.dlb__fmt').forEach(function (b) {
+      b.addEventListener('click', function () {
+        fmt = b.getAttribute('data-fmt'); label = b.getAttribute('data-label');
+        activate('.dlb__fmt', b); refresh();
       });
     });
   })();
