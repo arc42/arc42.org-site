@@ -72,8 +72,9 @@
 }
 
 .copyright-size {
-  font-size: 60% !important;
+  font-size: 0.8rem;
 }
+.footer-innoq { margin: 0 0 0.5rem; }
 
 
 .mobile {
