@@ -44,12 +44,12 @@ starter:
       </p>
     </div>
 
-    <aside class="quick-dl" aria-label="Quick download">
+    <aside class="quick-dl" data-prefix="{{ PREFIX }}" aria-label="Quick download">
       <div class="quick-dl__head">
         <span class="quick-dl__title">Quick download</span>
         <span class="quick-dl__langs" role="group" aria-label="Language">
-          <button type="button" class="quick-dl__lang is-active" data-lang="EN">EN</button>
-          <button type="button" class="quick-dl__lang" data-lang="DE">DE</button>
+          <button type="button" class="quick-dl__lang is-active" aria-pressed="true" data-lang="EN">EN</button>
+          <button type="button" class="quick-dl__lang" aria-pressed="false" data-lang="DE">DE</button>
         </span>
       </div>
       <a class="quick-dl__row" data-fmt="asciidoc" href="{{ PREFIX }}EN-plain-asciidoc.zip">
@@ -107,22 +107,4 @@ Learn arc42 and modern software architecture straight from its creators — iSAQ
 
 </div>
 
-<script>
-  (function () {
-    var PREFIX = "https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-";
-    var panel = document.querySelector('.quick-dl');
-    if (!panel) { return; }
-    var lang = "EN";
-    function apply() {
-      panel.querySelectorAll('.quick-dl__row').forEach(function (row) {
-        row.setAttribute('href', PREFIX + lang + '-plain-' + row.getAttribute('data-fmt') + '.zip');
-      });
-      panel.querySelectorAll('.quick-dl__lang').forEach(function (b) {
-        b.classList.toggle('is-active', b.getAttribute('data-lang') === lang);
-      });
-    }
-    panel.querySelectorAll('.quick-dl__lang').forEach(function (b) {
-      b.addEventListener('click', function () { lang = b.getAttribute('data-lang'); apply(); });
-    });
-  })();
-</script>
+<script src="/assets/js/quick-download.js" defer></script>
