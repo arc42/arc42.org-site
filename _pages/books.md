@@ -1,6 +1,6 @@
 ---
 title: Books by Peter Hruschka and Gernot Starke
-excerpt: We can't stop &#128540;
+excerpt: "More than 25 books — on architecture, documentation, requirements and patterns."
 layout: single
 classes: wide
 toc: false

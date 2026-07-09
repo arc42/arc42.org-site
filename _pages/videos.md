@@ -1,6 +1,6 @@
 ---
 title: Videos from and about arc42
-excerpt: "we show it..."
+excerpt: "Recorded talks, tutorials, and the arc42 YouTube channel."
 layout: single
 
 toc: right

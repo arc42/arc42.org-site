@@ -1,63 +1,56 @@
 ---
-title: "Learn architecture"
+title: "Training"
 layout: splash
 permalink: /learn/
-header:
-  overlay_image: /images/splash/learn-header-helloquence.webp
-  caption: "Photo: [**helloquence**](https://unsplash.com/photos/5fNmWej4tAA)"
-  
+excerpt: "Learn arc42 and software architecture — self-paced with books, videos and free documentation, or in iSAQB-certified seminars taught by the creators of arc42."
 ---
 
-<div class="ua-background" markdown="1">
-
->### We stand with the people of Ukraine <span class="parent"><span class="ua-text"><i class="fas fa-heart children"></i></span><span class="ua-size children"><i class="fas fa-heart beat heart children"></i></span></span>
->
->Please assist humanitarian efforts for the Ukrainian people and those affected by the military invasion of Ukraine by supporting international aid organizations, including the [International Committee of the Red Cross](https://www.icrc.org/en).
-
+<div class="ua-strip">
+  <span class="ua-strip__flag" aria-hidden="true"><i></i><i></i></span>
+  <span>We stand with Ukraine — please support the <a href="https://www.icrc.org/en">ICRC</a>'s humanitarian effort.</span>
 </div>
 
-<hr>
+<section class="dl-hero">
+  <div class="dl-hero__inner">
+    <p class="dl-hero__kicker">Self-study &middot; instructor-led seminars &middot; iSAQB CPSA-F</p>
+    <h1 class="dl-hero__title">Training</h1>
+    <p class="dl-hero__sub">Learn arc42 and systematic software architecture — at your own pace with books, videos and our free documentation, or in an <strong>iSAQB-certified seminar</strong> taught by the creators of arc42.</p>
+  </div>
+</section>
 
-<a href="/gallery" class="button buttonRoyalBlue">Get some <br> impressions</a>
+## Self-study
 
-<hr>
+Everything you need to learn arc42 is freely available — pick what suits your learning style:
 
-# Become Certified Professional for Software Architecture!
+* The [template documentation](https://docs.arc42.org) explains every section: purpose, contents, and practical tips.
+* [Real-world examples](/examples/) show complete architecture documentation you can learn from.
+* The [FAQ](https://faq.arc42.org) answers hundreds of questions about using arc42 in practice.
+* [Books](/books/) — [Software Architecture Foundation](/books/#software-architecture-foundation---2nd-edition) prepares you for the iSAQB CPSA-F examination, and the arc42-by-Example volumes walk through real systems.
+* [Videos](/videos/) and [conference talks](/talks/) offer recorded introductions and deep dives.
 
-![arc42-logo and arrow pointing towards CPSA-F-ISAQB-certified-logo](/images/arc42-learn-cpsaf.png)
+## Instructor-led seminars
 
-We are founding members of the iSAQB association, and actively participated
-in iSAQB standardization working groups ever since.
+![arc42 logo with an arrow pointing towards the iSAQB CPSA-F certification logo](/images/arc42-learn-cpsaf.png)
 
-Since 2016, Gernot Starke serves as working group lead of the FLWG,
-the iSAQB task force for the (Foundation Level) curriculum.
+We are founding members of the iSAQB association and have actively participated in its standardization working groups ever since. Since 2016, Gernot Starke serves as lead of the iSAQB task force for the Foundation Level curriculum.
 
-Peter and Gernot have successfully trained and coached more than 2000 (now certified)
-software architecture professionals, both within inhouse and public seminars
-and workshops.
+Peter and Gernot have trained and coached more than 2000 now-certified software architecture professionals, in both inhouse and public seminars. Their well-known workshop [Mastering Software Architectures](https://trainings.arc42.org) coaches developers, designers and architects in the systematic development, communication and evaluation of software architectures.
 
-Their well-known workshop "Mastering Software Architectures" attracts developers,
-software designers and software architects, to coach systematic development,
-communication and analysis/evaluation of software architectures.
+They pioneered the *dual-trainer* mode, in which two experienced trainers teach in parallel — a lively, diverse and highly motivating learning experience. Their backgrounds complement each other: Peter comes from embedded and real-time systems, Gernot from information, web and batch systems, so participants get first-hand experience from both worlds.
 
-Peter and Gernot pioneered the "_dual trainer_" mode - where two experienced
-trainers are conducting training in parallel - yielding a lively, diverse
-and highly motivation learning experience. They have gained their vast experience
-from different backgrounds (Peter more from embedded and real-time systems,
-  Gernot more from information-, web- and batch systems) - giving
-  training participants many opportunities to get first-hand experience
-  from these various domains.
+### Ideal preparation for the CPSA-F examination
 
-## Ideal Preparation for CPSA-F Examination
-arc42 trainings provide ideal and effective preparation for
-the iSAQB CPSA (Certified Professional for Software Architecture) certifications.
+arc42 trainings are effective preparation for the iSAQB CPSA (Certified Professional for Software Architecture) certification. Our public trainings are currently held in Munich, Frankfurt and Vienna.
 
-Our popular public trainings are currently held in Munic, Frankfurt and Vienna,
-for exact dates and conditions please refer to our [training site](https://arc42.de/termine).
+<div class="training-section" markdown="1">
 
-
-# Next dates
+## Next training dates
 
 {% include subtle-ads/subtle-ads.html %}
 
-<a href="https://arc42.de/schulungen" class="margin-top button buttonGreen">Training site</a>
+<p class="training-section__actions">
+  <a class="btn btn--arc42 btn--large" href="https://trainings.arc42.org" rel="noopener">See all dates &amp; register &#8594;</a>
+  <a class="btn btn--arc42-outline btn--large" href="/gallery/">View training gallery</a>
+</p>
+
+</div>

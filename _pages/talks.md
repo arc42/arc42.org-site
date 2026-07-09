@@ -1,6 +1,6 @@
 ---
 title: Talks by Peter and Gernot
-excerpt: "We talk about it..."
+excerpt: "Conference presentations on architecture, methodology, reviews and more."
 layout: single
 
 toc: right
