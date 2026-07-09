@@ -15,7 +15,7 @@
 .part {
   padding: 12px 14px;
   background: #ffffff;
-  border: 1px solid #e4e9f0;
+  border: 1px solid var(--arc42-border);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -27,20 +27,20 @@
 .part:visited,
 .part:active {
   text-decoration: none !important;
-  color: #1c2c44;
+  color: var(--arc42-ink-strong);
 }
 
-.part strong { color: #1c2c44; }
-.part small { color: #55657a; }
+.part strong { color: var(--arc42-ink-strong); }
+.part small { color: var(--arc42-text-muted); }
 
 .part:hover,
 .part:focus-visible {
   text-decoration: none !important;
-  color: #1c2c44;
-  border-color: #4b7ba3;
+  color: var(--arc42-ink-strong);
+  border-color: var(--arc42-primary-hover);
   box-shadow: 0 6px 14px -6px rgba(20, 40, 70, 0.35); /* hover-only, per DESIGN.md */
 }
-.part:focus-visible { outline: 2px solid #4b7ba3; outline-offset: 2px; }
+.part:focus-visible { outline: 2px solid var(--arc42-primary-hover); outline-offset: 2px; }
 
 @media (prefers-reduced-motion: reduce) {
   .part { transition: none; }
