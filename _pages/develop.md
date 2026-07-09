@@ -2,13 +2,10 @@
 title: "arc42 for architecture development"
 layout: single
 permalink: /develop/
-header:
-  overlay_image: /images/splash/develop-header.webp
-  caption: "Photo: [**Ilya Pavlov**](https://unsplash.com/search/photos/code?photo=OqtafYT5kTw)"
 
 ---
 
-# Architecture Activities
+## Architecture Activities
 
 ![arc42 process](/images/arc42-process-with-icon.png)
 

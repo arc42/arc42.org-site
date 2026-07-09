@@ -512,3 +512,10 @@ a.res-card:focus-visible { outline: 2px solid #4b7ba3; outline-offset: 2px; }
   font-weight: 700;
   color: #55657a;
 }
+
+/* --- tier-2 page titles align with the hero titles --- */
+.page__title {
+  color: #1c2c44;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}

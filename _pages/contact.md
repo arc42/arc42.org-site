@@ -2,10 +2,6 @@
 title: "Contact us - we're listening!"
 layout: single
 permalink: /contact/
-header:
-  overlay_image: /images/splash/unsplash-contact-pavan-trikutam.webp
-  overlay_filter: rgba(15, 80, 180, 0.6)
-  caption: "Photo: [**Pavan Trikutam**](https://unsplash.com/collections/389099/contact?photo=71CjSSB83Wo)"
 sidebar:
   nav: "about"
 ---

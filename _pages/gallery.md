@@ -1,13 +1,9 @@
 ---
-title: "Impressions from our trainings"
-layout: splash
+title: "Training gallery"
+layout: single
+classes: wide
 
 permalink: /gallery/
-header:
-  overlay_filter: rgba(15, 80, 180, 0.5)
-  overlay_image: /images/splash/gallery-splash.webp
-  caption: "Photo: [**Oleg Pylypenko**](https://alegpilipenko.com/)"
-  
 
 gallery:
   - url: /images/photos/training/q/DSCF8178.webp
