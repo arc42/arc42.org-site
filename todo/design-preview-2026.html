@@ -1,0 +1,642 @@
+<title>arc42.org — Design Revision Set</title>
+<style>
+  /* ============ TOKENS ============ */
+  :root{
+    --paper:#eef1f5; --sheet:#ffffff; --ink:#16202e; --ink-soft:#566475;
+    --line:#c7d2dd; --line-soft:#dde4ec;
+    --navy:#374769; --steel:#3f78a0; --steel-bright:#4b7ba3;
+    --fix:#1f7a5c; --flag:#b06a1f; --stop:#b23a3a;
+    --mono:ui-monospace,"SF Mono","JetBrains Mono","Cascadia Code",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Roboto,Helvetica,Arial,sans-serif;
+    --grid:rgba(63,120,160,.10);
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --paper:#0d1826; --sheet:#132437; --ink:#dbe7f3; --ink-soft:#8ea3ba;
+      --line:#2b4360; --line-soft:#20344a;
+      --navy:#7f9fca; --steel:#79aed6; --steel-bright:#8bbce4;
+      --fix:#43b085; --flag:#d59a52; --stop:#dd6b6b;
+      --grid:rgba(120,175,215,.10);
+    }
+  }
+  :root[data-theme="light"]{
+    --paper:#eef1f5; --sheet:#ffffff; --ink:#16202e; --ink-soft:#566475;
+    --line:#c7d2dd; --line-soft:#dde4ec;
+    --navy:#374769; --steel:#3f78a0; --steel-bright:#4b7ba3;
+    --fix:#1f7a5c; --flag:#b06a1f; --stop:#b23a3a; --grid:rgba(63,120,160,.10);
+  }
+  :root[data-theme="dark"]{
+    --paper:#0d1826; --sheet:#132437; --ink:#dbe7f3; --ink-soft:#8ea3ba;
+    --line:#2b4360; --line-soft:#20344a;
+    --navy:#7f9fca; --steel:#79aed6; --steel-bright:#8bbce4;
+    --fix:#43b085; --flag:#d59a52; --stop:#dd6b6b; --grid:rgba(120,175,215,.10);
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0}
+  .wrap{
+    font-family:var(--sans); color:var(--ink); background:var(--paper);
+    background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:26px 26px; background-position:-1px -1px;
+    line-height:1.6; min-height:100vh; padding-bottom:5rem;
+  }
+  .col{max-width:1120px; margin:0 auto; padding:0 clamp(1rem,4vw,2.4rem)}
+
+  /* ============ TITLE-BLOCK TOP BAR ============ */
+  .topbar{
+    position:sticky; top:0; z-index:20; background:var(--navy);
+    color:#eaf1f8; border-bottom:2px solid rgba(0,0,0,.25);
+  }
+  :root[data-theme="dark"] .topbar,
+  .topbar{ --tbfg:#eaf1f8 }
+  @media (prefers-color-scheme:dark){ .topbar{ background:#0a1524 } }
+  :root[data-theme="dark"] .topbar{ background:#0a1524 }
+  :root[data-theme="light"] .topbar{ background:#374769 }
+  .topbar .col{display:flex; align-items:stretch; gap:0; min-height:52px; flex-wrap:wrap}
+  .tb-cell{display:flex; flex-direction:column; justify-content:center; padding:.45rem 1.1rem;
+    border-left:1px solid rgba(255,255,255,.16); font-family:var(--mono)}
+  .tb-cell:first-child{border-left:none; padding-left:0}
+  .tb-k{font-size:9.5px; letter-spacing:.14em; text-transform:uppercase; color:rgba(234,241,248,.62)}
+  .tb-v{font-size:13px; letter-spacing:.02em; color:#eaf1f8; font-weight:600}
+  .tb-cell.brand .tb-v{font-size:18px; font-weight:800; letter-spacing:-.01em}
+  .tb-cell.push{margin-left:auto; border-left:1px solid rgba(255,255,255,.16)}
+  .score-chip{display:inline-flex; align-items:baseline; gap:.4rem}
+  .score-chip b{font-size:15px}
+  .theme-hint{font-size:9.5px; color:rgba(234,241,248,.55); letter-spacing:.1em}
+
+  /* ============ HERO / INTRO ============ */
+  .lede{padding:clamp(2.4rem,6vw,4rem) 0 1.4rem}
+  .eyebrow{font-family:var(--mono); font-size:11px; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--steel-bright); margin:0 0 1rem}
+  h1.title{font-size:clamp(1.9rem,5vw,3rem); line-height:1.05; letter-spacing:-.025em; font-weight:800;
+    margin:0 0 1rem; text-wrap:balance; max-width:20ch}
+  .lede p{font-size:clamp(1rem,1.6vw,1.15rem); color:var(--ink-soft); max-width:64ch; margin:0 0 .6rem}
+  .lede p strong{color:var(--ink); font-weight:650}
+
+  /* findings strip */
+  .findings{display:grid; grid-template-columns:repeat(auto-fill,minmax(215px,1fr)); gap:.7rem; margin:2rem 0 1rem}
+  .finding{border:1px solid var(--line); background:var(--sheet); border-radius:3px; padding:.75rem .85rem;
+    display:flex; flex-direction:column; gap:.35rem}
+  .finding .sev{font-family:var(--mono); font-size:10px; letter-spacing:.1em; font-weight:700; display:inline-flex; align-items:center; gap:.4rem}
+  .finding .sev::before{content:""; width:8px; height:8px; border-radius:1px; background:currentColor}
+  .sev.p1{color:var(--stop)} .sev.p2{color:var(--flag)} .sev.min{color:var(--ink-soft)}
+  .finding h3{margin:0; font-size:13.5px; font-weight:700; letter-spacing:-.01em}
+  .finding p{margin:0; font-size:12px; color:var(--ink-soft); line-height:1.45}
+
+  /* ============ SHEET SECTIONS ============ */
+  .sheet{padding:clamp(2rem,5vw,3.4rem) 0 .5rem; border-top:1px solid var(--line); margin-top:2.6rem}
+  .sheet-head{display:flex; align-items:flex-end; justify-content:space-between; gap:1rem; flex-wrap:wrap; margin-bottom:1.4rem}
+  .sheet-code{font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--steel-bright); margin:0 0 .4rem}
+  .sheet-head h2{font-size:clamp(1.4rem,3vw,2rem); letter-spacing:-.02em; font-weight:800; margin:0; line-height:1.1}
+  .sheet-head .sub{color:var(--ink-soft); font-size:.95rem; max-width:52ch; margin:.5rem 0 0}
+
+  /* tabs */
+  .tabs{display:flex; gap:0; border:1px solid var(--line); border-radius:4px; overflow:hidden; background:var(--sheet); flex-wrap:wrap}
+  .tab{appearance:none; border:none; background:transparent; color:var(--ink-soft); cursor:pointer;
+    font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; font-weight:600;
+    padding:.6rem 1rem; border-right:1px solid var(--line); transition:background .15s,color .15s; flex:1 1 auto; min-width:150px; text-align:left}
+  .tab:last-child{border-right:none}
+  .tab .rev{color:var(--steel-bright); margin-right:.5rem}
+  .tab[aria-selected="true"]{background:var(--navy); color:#fff}
+  .tab[aria-selected="true"] .rev{color:#cfe0f0}
+  .tab:focus-visible{outline:2px solid var(--steel-bright); outline-offset:-2px}
+
+  .panel{display:none; margin-top:1.3rem}
+  .panel.active{display:block; animation:fade .25s ease}
+  @keyframes fade{from{opacity:0; transform:translateY(4px)} to{opacity:1; transform:none}}
+  @media (prefers-reduced-motion:reduce){ .panel.active{animation:none} }
+
+  .layout{display:grid; grid-template-columns:minmax(0,1fr) 260px; gap:1.4rem; align-items:start}
+  @media (max-width:820px){ .layout{grid-template-columns:1fr} }
+
+  /* screenshot frame */
+  .frame{border:1px solid var(--line); border-radius:7px; overflow:hidden; background:#fff;
+    box-shadow:0 12px 34px -18px rgba(20,40,70,.45); }
+  .frame .bar{display:flex; align-items:center; gap:.45rem; padding:.5rem .75rem; background:#e9edf2; border-bottom:1px solid #dbe2ea}
+  .frame .dot{width:9px; height:9px; border-radius:50%; background:#c4ccd6}
+  .frame .url{margin-left:.6rem; font-family:var(--mono); font-size:10.5px; color:#5c6b7d; background:#fff; border:1px solid #d7dee6;
+    border-radius:20px; padding:.16rem .7rem; flex:1; max-width:340px}
+  .scr{overflow-x:auto}
+
+  /* ---- title block (spec sidebar) ---- */
+  .tblock{border:1px solid var(--line); border-radius:4px; background:var(--sheet); font-family:var(--mono); position:sticky; top:70px}
+  .tblock .row{padding:.6rem .8rem; border-bottom:1px solid var(--line-soft)}
+  .tblock .row:last-child{border-bottom:none}
+  .tblock .k{font-size:9.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 .25rem}
+  .tblock .v{font-size:12.5px; color:var(--ink); line-height:1.45; font-family:var(--sans)}
+  .tblock .v.big{font-size:14px; font-weight:700; letter-spacing:-.01em; font-family:var(--sans)}
+  .tblock .rec{background:var(--fix); color:#fff; text-align:center; font-size:10px; letter-spacing:.14em; padding:.35rem; text-transform:uppercase; font-weight:700}
+  ul.fixlist{margin:.3rem 0 0; padding:0; list-style:none; display:flex; flex-direction:column; gap:.35rem}
+  ul.fixlist li{font-family:var(--sans); font-size:11.5px; color:var(--ink); line-height:1.35; padding-left:1.1rem; position:relative}
+  ul.fixlist li::before{content:"✓"; position:absolute; left:0; color:var(--fix); font-weight:700}
+  ul.fixlist li .tag{font-family:var(--mono); font-size:9px; color:var(--stop); letter-spacing:.06em; font-weight:700}
+  ul.fixlist li .tag.p2{color:var(--flag)}
+  .tradeoff{font-family:var(--sans); font-size:11.5px; color:var(--ink-soft); line-height:1.4}
+
+  /* ============ MOCKUP INTERNALS (fixed light "screenshot" palette) ============ */
+  .m{--m-navy:#374769; --m-steel:#4b7ba3; --m-ink:#202b3a; --m-soft:#657588; --m-line:#e4e9f0;
+    background:#fff; color:var(--m-ink); font-family:var(--sans); font-size:13px; line-height:1.5}
+  .m *{box-sizing:border-box}
+  .m .nav{display:flex; align-items:center; gap:1.1rem; padding:.7rem 1.1rem; border-bottom:1px solid var(--m-line)}
+  .m .logo{font-weight:800; color:var(--m-navy); font-size:17px; letter-spacing:-.02em}
+  .m .nav a{color:#41506a; text-decoration:none; font-size:12px}
+  .m .nav .sp{margin-left:auto}
+  .m .nav .search{width:15px; height:15px; border:2px solid #9aa7b8; border-radius:50%; position:relative}
+  .m .nav .search::after{content:""; position:absolute; width:6px; height:2px; background:#9aa7b8; transform:rotate(45deg); right:-4px; bottom:0}
+
+  /* hero variants */
+  .m .hero{background:linear-gradient(135deg,#dbeaf6 0%,#c5d9ee 55%,#b7cbe6 100%); position:relative}
+  .m .hero.wash{padding:1.6rem 1.4rem}
+  .m .hero-split{display:grid; grid-template-columns:1.15fr .85fr; gap:1.2rem; align-items:center}
+  @media (max-width:620px){ .m .hero-split{grid-template-columns:1fr} }
+  .m .kicker{font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:#2f537d; font-weight:700; margin:0 0 .5rem}
+  .m h1{font-size:clamp(1.35rem,3.4vw,2rem); line-height:1.08; letter-spacing:-.02em; color:#1c2c44; margin:0 0 .6rem; font-weight:800; text-wrap:balance}
+  .m .sub{color:#33445c; margin:0 0 1rem; font-size:13.5px; max-width:34ch}
+  .m .sub b{color:#1c2c44}
+  .btnrow{display:flex; gap:.6rem; flex-wrap:wrap}
+  .btn{display:inline-flex; align-items:center; gap:.45rem; font-size:12.5px; font-weight:700; text-decoration:none;
+    padding:.6rem 1rem; border-radius:7px; border:1.5px solid transparent; cursor:default}
+  .btn.pri{background:var(--m-navy); color:#fff}
+  .btn.pri:hover{background:#2c3b59}
+  .btn.ghost{background:rgba(255,255,255,.6); color:var(--m-navy); border-color:var(--m-navy)}
+  .btn.sm{padding:.4rem .7rem; font-size:11.5px; border-radius:6px}
+  .btn .ar{font-size:14px; line-height:1}
+
+  /* quick download card */
+  .qd{background:#fff; border:1px solid #d7e0ea; border-radius:9px; padding:.8rem; box-shadow:0 8px 22px -14px rgba(30,55,90,.5)}
+  .qd .qh{display:flex; align-items:center; justify-content:space-between; margin-bottom:.6rem}
+  .qd .qh b{font-size:12px; color:#1c2c44}
+  .pills{display:flex; gap:.3rem}
+  .pill{font-family:var(--mono); font-size:10px; padding:.16rem .5rem; border-radius:20px; border:1px solid #cdd8e4; color:#556; background:#fff}
+  .pill.on{background:var(--m-navy); color:#fff; border-color:var(--m-navy)}
+  .qrow{display:flex; align-items:center; justify-content:space-between; padding:.5rem .2rem; border-top:1px solid #eef2f6}
+  .qrow:first-of-type{border-top:none}
+  .qrow .fmt{font-size:12.5px; color:#2b3a52; font-weight:600}
+  .qrow .meta{font-size:10.5px; color:#8494a6}
+  .qrow .dl{color:var(--m-steel); font-weight:800; font-size:14px}
+  .qd .more{display:block; text-align:center; font-size:10.5px; color:#7a899c; margin-top:.5rem; font-family:var(--mono); letter-spacing:.05em}
+
+  /* ukraine banner fixed */
+  .ua{display:flex; align-items:center; gap:.6rem; background:#20304d; color:#eaf1f8; padding:.5rem 1.1rem; font-size:11.5px}
+  .ua .flag{width:20px; height:13px; border-radius:2px; overflow:hidden; flex:none; display:flex; flex-direction:column; border:1px solid rgba(255,255,255,.3)}
+  .ua .flag i{display:block; height:50%} .ua .flag .b{background:#0057b7} .ua .flag .y{background:#ffd700}
+  .ua a{color:#bcd6f5; font-weight:700}
+  .ua.footnote{background:transparent; color:var(--m-soft); border-top:1px solid var(--m-line); font-size:10.5px}
+  .ua.footnote .flag{opacity:.85}
+
+  /* card row */
+  .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:.8rem; padding:1.2rem 1.1rem}
+  @media (max-width:620px){ .cards{grid-template-columns:1fr} }
+  .card{border:1px solid var(--m-line); border-radius:8px; overflow:hidden; display:flex; flex-direction:column; background:#fff}
+  .imgph{aspect-ratio:16/9; background:
+     repeating-linear-gradient(45deg,#eef3f8 0 9px,#e4ecf4 9px 18px);
+     display:flex; align-items:center; justify-content:center}
+  .imgph span{font-family:var(--mono); font-size:9px; letter-spacing:.1em; color:#9fb0c2; text-transform:uppercase}
+  .card .cb{padding:.7rem .75rem; display:flex; flex-direction:column; gap:.4rem; flex:1}
+  .card h4{margin:0; font-size:13.5px; color:#1c2c44; font-weight:700}
+  .card p{margin:0; font-size:11.5px; color:var(--m-soft); flex:1}
+  .card .clink{font-size:12px; font-weight:700; color:var(--m-navy); text-decoration:none; display:inline-flex; align-items:center; gap:.3rem}
+  .card .clink::after{content:"→"; color:var(--m-steel)}
+
+  /* section band */
+  .band{padding:1.1rem 1.1rem 1.3rem; border-top:1px solid var(--m-line)}
+  .band h2, .m h2.sec{font-size:15px; color:#1c2c44; margin:0 0 .7rem; letter-spacing:-.01em; font-weight:800}
+  .whatgrid{display:grid; grid-template-columns:1fr 1fr; gap:.5rem .9rem}
+  @media (max-width:620px){ .whatgrid{grid-template-columns:1fr} }
+  .whatgrid .wi{font-size:12px; color:#3a4a60; padding-left:1rem; position:relative; line-height:1.45}
+  .whatgrid .wi::before{content:""; position:absolute; left:0; top:.5em; width:6px; height:6px; background:var(--m-steel); border-radius:1px}
+  .whatgrid .wi b{color:#1c2c44}
+
+  /* news strip */
+  .newsstrip{display:flex; align-items:center; gap:.7rem; padding:.7rem 1.1rem; background:#f6f8fb; border-top:1px solid var(--m-line); font-size:11.5px; color:#4a5a70; flex-wrap:wrap}
+  .newsstrip .lbl{font-family:var(--mono); font-size:9.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--m-steel); font-weight:700}
+  .newsstrip a{color:var(--m-navy); text-decoration:none; font-weight:600}
+  .newsstrip .dotm{color:#c2cdda}
+
+  /* editorial (Direction B) */
+  .m.edito .ehero{padding:2rem 1.4rem 1.6rem; background:#fbfcfe}
+  .ehero .word{font-size:clamp(2.4rem,8vw,4rem); font-weight:800; letter-spacing:-.04em; color:#1c2c44; line-height:.9; margin:0}
+  .ehero .stmt{font-size:clamp(1rem,2.4vw,1.35rem); color:#2b3a52; max-width:24ch; margin:.9rem 0 1.2rem; line-height:1.25; text-wrap:balance}
+  .ehero .stmt b{color:var(--m-navy)}
+  .specline{font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:#7c8ba0; margin:1.1rem 0 0; padding-top:.9rem; border-top:1px solid var(--m-line)}
+  .idx{border-top:1px solid var(--m-line)}
+  .idx .ir{display:grid; grid-template-columns:44px 1fr auto; gap:.9rem; align-items:center; padding:.85rem 1.4rem; border-bottom:1px solid var(--m-line); text-decoration:none}
+  .idx .ir:hover{background:#f7f9fc}
+  .idx .num{font-family:var(--mono); font-size:12px; color:var(--m-steel); font-weight:700}
+  .idx .it b{color:#1c2c44; font-size:13.5px} .idx .it span{color:var(--m-soft); font-size:11.5px; display:block}
+  .idx .go{font-size:12px; color:var(--m-navy); font-weight:700; white-space:nowrap}
+  .idx .go::after{content:" →"; color:var(--m-steel)}
+
+  /* download finder (Dir A) */
+  .finder{padding:1.1rem 1.1rem}
+  .filterbar{display:flex; gap:.5rem; align-items:center; flex-wrap:wrap; margin-bottom:.9rem}
+  .sel{font-family:var(--mono); font-size:11px; border:1px solid #cdd8e4; border-radius:6px; padding:.4rem .7rem; color:#33445c; background:#fff; display:inline-flex; gap:.5rem; align-items:center}
+  .sel .cv{color:#9aa7b8}
+  .fchip{font-size:11px; padding:.32rem .65rem; border-radius:20px; border:1px solid #cdd8e4; color:#4a5a70; background:#fff}
+  .fchip.on{background:#eaf2f8; border-color:var(--m-steel); color:var(--m-navy); font-weight:700}
+  .matrix{overflow-x:auto; border:1px solid var(--m-line); border-radius:8px}
+  table.mx{border-collapse:collapse; width:100%; font-size:11.5px; min-width:460px}
+  table.mx th, table.mx td{border-bottom:1px solid var(--m-line); border-right:1px solid var(--m-line); padding:.5rem .6rem; text-align:left}
+  table.mx th{background:#f4f7fa; font-size:10px; letter-spacing:.05em; text-transform:uppercase; color:#5c6b7d; font-weight:700}
+  table.mx td:first-child, table.mx th:first-child{font-weight:700; color:#2b3a52; position:sticky; left:0; background:#fff}
+  table.mx th:first-child{background:#f4f7fa}
+  table.mx a{color:var(--m-steel); text-decoration:none; font-weight:600}
+  table.mx .plain{color:var(--m-navy)}
+  .verline{display:flex; align-items:center; gap:.6rem; padding:.5rem 0 0; font-size:11px; color:var(--m-soft); font-family:var(--mono)}
+  .collapse{margin:.9rem 0 0; border:1px solid var(--m-line); border-radius:7px; padding:.6rem .8rem; font-size:11.5px; color:#4a5a70; display:flex; align-items:center; gap:.5rem}
+  .collapse .tw{color:var(--m-steel); font-weight:800}
+
+  /* download two-pane (Dir B) */
+  .picker{display:grid; grid-template-columns:1fr 1fr; gap:1rem; padding:1.2rem 1.1rem}
+  @media (max-width:620px){ .picker{grid-template-columns:1fr} }
+  .pane{border:1px solid var(--m-line); border-radius:9px; padding:.9rem}
+  .pane .step{font-family:var(--mono); font-size:9.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--m-steel); font-weight:700; margin:0 0 .55rem}
+  .langgrid{display:flex; flex-wrap:wrap; gap:.35rem; margin-bottom:1rem}
+  .fmtlist{display:flex; flex-direction:column; gap:.3rem}
+  .fmtlist .fi{display:flex; align-items:center; justify-content:space-between; padding:.45rem .6rem; border:1px solid var(--m-line); border-radius:6px; font-size:12px; color:#3a4a60}
+  .fmtlist .fi.on{border-color:var(--m-steel); background:#eaf2f8; color:var(--m-navy); font-weight:700}
+  .fmtlist .fi small{font-size:10px; color:#8494a6; font-weight:400}
+  .result{background:linear-gradient(160deg,#f3f7fb,#e7eff7); border:1px solid #d7e0ea; border-radius:9px; padding:1rem; height:100%; display:flex; flex-direction:column}
+  .result .rlabel{font-family:var(--mono); font-size:9.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--m-soft); margin:0 0 .5rem}
+  .result .combo{font-size:15px; font-weight:800; color:#1c2c44; letter-spacing:-.01em; margin:0 0 .2rem}
+  .result .combo small{display:block; font-size:11px; font-weight:500; color:var(--m-soft); margin-top:.2rem}
+  .result .dlbtns{display:flex; gap:.5rem; margin:.9rem 0 .6rem; flex-wrap:wrap}
+  .result .note{font-size:10.5px; color:var(--m-soft); margin-top:auto}
+  .special{padding:0 1.1rem 1.2rem}
+  .special h3{font-size:12px; color:#1c2c44; margin:0 0 .6rem; font-weight:800}
+  .specgrid{display:grid; grid-template-columns:repeat(4,1fr); gap:.5rem}
+  @media (max-width:620px){ .specgrid{grid-template-columns:repeat(2,1fr)} }
+  .specgrid .sc{border:1px solid var(--m-line); border-radius:7px; padding:.6rem; font-size:11px; color:#3a4a60}
+  .specgrid .sc b{display:block; color:#1c2c44; font-size:12px; margin-bottom:.15rem}
+
+  /* ============ CLOSING ============ */
+  .closing{margin-top:3rem; border-top:1px solid var(--line); padding-top:2.2rem}
+  .closing h2{font-size:1.4rem; letter-spacing:-.02em; margin:0 0 1rem}
+  .cmdgrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:.7rem; margin:1.2rem 0}
+  .cmd{border:1px solid var(--line); border-radius:4px; background:var(--sheet); padding:.8rem .9rem}
+  .cmd code{font-family:var(--mono); font-size:12px; color:var(--steel-bright); font-weight:700}
+  .cmd p{margin:.35rem 0 0; font-size:12px; color:var(--ink-soft); line-height:1.45}
+  .note-final{font-size:13px; color:var(--ink-soft); max-width:66ch; line-height:1.6}
+  .note-final b{color:var(--ink)}
+  .foot{margin-top:2.5rem; font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; color:var(--ink-soft); text-transform:uppercase; border-top:1px solid var(--line-soft); padding-top:1.2rem}
+</style>
+
+<div class="wrap">
+
+  <!-- ===== TOP TITLE BLOCK ===== -->
+  <header class="topbar">
+    <div class="col">
+      <div class="tb-cell brand"><span class="tb-k">Project</span><span class="tb-v">arc42.org</span></div>
+      <div class="tb-cell"><span class="tb-k">Document</span><span class="tb-v">Design Revision Set</span></div>
+      <div class="tb-cell"><span class="tb-k">Basis</span><span class="tb-v">Impeccable critique · 2026-07-07</span></div>
+      <div class="tb-cell push"><span class="tb-k">Health score</span><span class="tb-v score-chip"><b>25/40</b> Acceptable</span></div>
+    </div>
+  </header>
+
+  <!-- ===== LEDE ===== -->
+  <section class="col lede">
+    <p class="eyebrow">Layout study · Homepage &amp; Download</p>
+    <h1 class="title">Two revised directions for each page, drawn against the critique.</h1>
+    <p>The Impeccable review scored the homepage <strong>25/40</strong> — functional, right vocabulary, but let down by one structural gap and several accessibility snags. The headline verdict: <strong>the site's primary job is to hand people the template, yet neither page opens with a download.</strong></p>
+    <p>Below are the findings I'm designing against, then <strong>two alternative layouts per page</strong> — a pragmatic conversion-first take and a more confident editorial take. Switch between them with the revision tabs. Every mockup uses the real arc42 palette (navy <strong>#374769</strong>, steel <strong>#4b7ba3</strong>); image areas are shown as wireframe placeholders.</p>
+
+    <div class="findings">
+      <div class="finding"><span class="sev p1">P1 · CTA</span><h3>No download button</h3><p>Primary purpose buried behind "Overview" and "read more…". High friction to the one action that matters.</p></div>
+      <div class="finding"><span class="sev p1">P1 · A11y</span><h3>Invalid HTML nesting</h3><p><code>&lt;a&gt;&lt;button&gt;</code> breaks screen readers &amp; keyboard nav. Must be a real link styled as a button.</p></div>
+      <div class="finding"><span class="sev p1">P1 · Contrast</span><h3>Illegible colour pairs</h3><p>Ukraine banner ~1.03:1; button hover PaleGoldenrod-on-steel 3.6:1. Both fail WCAG AA.</p></div>
+      <div class="finding"><span class="sev p2">P2 · Clarity</span><h3>Five identical "read more…"</h3><p>No context for screen-reader users; forces reliance on visual proximity.</p></div>
+      <div class="finding"><span class="sev p2">P2 · Rhythm</span><h3>Unbalanced grid + double H1</h3><p>News column has no image/button; <code>#&nbsp;Learn&nbsp;more</code> creates a second H1.</p></div>
+      <div class="finding"><span class="sev min">MIN · Noise</span><h3>Heartbeat animation</h3><p>Distracting on an otherwise static, professional page; excessive bolding adds visual noise.</p></div>
+    </div>
+  </section>
+
+  <!-- ===== SHEET 01 — HOMEPAGE ===== -->
+  <section class="col sheet" id="home">
+    <div class="sheet-head">
+      <div>
+        <p class="sheet-code">Sheet 01</p>
+        <h2>Homepage</h2>
+        <p class="sub">The landing page's single job is to route people to the template and communicate what arc42 is, fast.</p>
+      </div>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Homepage directions">
+      <button class="tab" role="tab" id="t-h-a" aria-controls="p-h-a" aria-selected="true"><span class="rev">REV A</span>Conversion split</button>
+      <button class="tab" role="tab" id="t-h-b" aria-controls="p-h-b" aria-selected="false"><span class="rev">REV B</span>Editorial blueprint</button>
+    </div>
+
+    <!-- ---- HOME REV A ---- -->
+    <div class="panel active" id="p-h-a" role="tabpanel" aria-labelledby="t-h-a">
+      <div class="layout">
+        <div class="frame">
+          <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">arc42.org</span></div>
+          <div class="scr">
+          <div class="m" style="min-width:560px">
+            <nav class="nav">
+              <span class="logo">arc42</span>
+              <a href="#">Overview</a><a href="#">Method</a><a href="#">Download</a><a href="#">Books</a><a href="#">Canvas</a>
+              <span class="sp"></span><span class="search" aria-hidden="true"></span>
+            </nav>
+            <div class="ua"><span class="flag" aria-hidden="true"><i class="b"></i><i class="y"></i></span>We stand with Ukraine — please support the <a href="#">ICRC</a>'s humanitarian effort.</div>
+            <div class="hero wash">
+              <div class="hero-split">
+                <div>
+                  <p class="kicker">Open source · 12 languages · since 2005</p>
+                  <h1>Document your architecture — painlessly.</h1>
+                  <p class="sub">The proven, pragmatic template to <b>construct, communicate and document</b> software architecture. Free and open source.</p>
+                  <div class="btnrow">
+                    <a class="btn pri"><span class="ar">↓</span> Download the templates</a>
+                    <a class="btn ghost">Explore the method</a>
+                  </div>
+                </div>
+                <div class="qd">
+                  <div class="qh"><b>Quick download</b><span class="pills"><span class="pill on">EN</span><span class="pill">DE</span></span></div>
+                  <div class="qrow"><span><span class="fmt">AsciiDoc</span><br><span class="meta">recommended</span></span><span class="dl">↓</span></div>
+                  <div class="qrow"><span><span class="fmt">Word (.docx)</span><br><span class="meta">plain · with help</span></span><span class="dl">↓</span></div>
+                  <div class="qrow"><span><span class="fmt">Markdown</span><br><span class="meta">single · multi-page</span></span><span class="dl">↓</span></div>
+                  <span class="more">All 12 formats →</span>
+                </div>
+              </div>
+            </div>
+            <div class="cards">
+              <div class="card"><div class="imgph"><span>Template</span></div><div class="cb"><h4>Template</h4><p>The arc42 skeleton for architecture docs — you fill it with your decisions.</p><a class="clink">Get the template</a></div></div>
+              <div class="card"><div class="imgph"><span>Trainings</span></div><div class="cb"><h4>Trainings</h4><p>Mastering Software Architectures — prepares for iSAQB Foundation.</p><a class="clink">See trainings</a></div></div>
+              <div class="card"><div class="imgph"><span>Method</span></div><div class="cb"><h4>Method</h4><p>Systematic but flexible — suits large and small teams, agile or not.</p><a class="clink">Explore the method</a></div></div>
+            </div>
+            <div class="band">
+              <h2 class="sec">What is arc42?</h2>
+              <div class="whatgrid">
+                <div class="wi">Built on <b>practical experience</b> across web, real-time, embedded and BI systems.</div>
+                <div class="wi">A template for <b>documentation and communication</b> of software architecture.</div>
+                <div class="wi">Supports <b>arbitrary technologies and tools</b> — nothing to install.</div>
+                <div class="wi"><b>Process-agnostic</b> — especially well-suited to lean and agile teams.</div>
+              </div>
+            </div>
+            <div class="newsstrip"><span class="lbl">Latest</span>Hungarian translation released<span class="dotm">•</span><a href="#">Software Architecture Foundation</a> book<span class="dotm">•</span>arc42 by Example Vol. 2<span class="dotm">•</span><a href="#">All news →</a></div>
+          </div>
+          </div>
+        </div>
+
+        <aside class="tblock">
+          <div class="rec">Recommended</div>
+          <div class="row"><p class="k">Revision</p><p class="v big">A · Conversion split</p></div>
+          <div class="row"><p class="k">Intent</p><p class="v">Put the template one click from the fold. Hero states the value; the panel next to it lets power users grab a format immediately.</p></div>
+          <div class="row"><p class="k">Fixes</p>
+            <ul class="fixlist">
+              <li><span class="tag">P1</span> Primary "Download the templates" CTA + a quick-pick panel in the hero</li>
+              <li><span class="tag">P1</span> All buttons are real links; navy button, white hover text (AA)</li>
+              <li><span class="tag">P1</span> Ukraine banner → navy bar, legible white text</li>
+              <li><span class="tag p2">P2</span> "Get the template / See trainings / Explore the method" replace "read more…"</li>
+              <li><span class="tag p2">P2</span> 3-card balanced row; News demoted to a slim strip; one H1</li>
+            </ul>
+          </div>
+          <div class="row"><p class="k">Trade-off</p><p class="tradeoff">Densest option — the hero carries a headline, sub, two CTAs and a panel. Needs disciplined spacing on mobile (panel stacks under).</p></div>
+        </aside>
+      </div>
+    </div>
+
+    <!-- ---- HOME REV B ---- -->
+    <div class="panel" id="p-h-b" role="tabpanel" aria-labelledby="t-h-b" hidden>
+      <div class="layout">
+        <div class="frame">
+          <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">arc42.org</span></div>
+          <div class="scr">
+          <div class="m edito" style="min-width:560px">
+            <nav class="nav">
+              <span class="logo">arc42</span>
+              <a href="#">Overview</a><a href="#">Method</a><a href="#">Download</a><a href="#">Books</a><a href="#">Canvas</a>
+              <span class="sp"></span><span class="search" aria-hidden="true"></span>
+            </nav>
+            <div class="ehero">
+              <p class="word">arc42</p>
+              <p class="stmt">All you need to <b>construct, communicate and document</b> software architecture. Proven, practical, pragmatic.</p>
+              <div class="btnrow"><a class="btn pri"><span class="ar">↓</span> Get the templates</a><a class="btn ghost">See an example</a></div>
+              <p class="specline">Open source · free of charge · 12 languages · 12 formats · in use since 2005</p>
+            </div>
+            <div class="idx">
+              <a class="ir" href="#"><span class="num">01</span><span class="it"><b>Template</b><span>The skeleton — pragmatic, free, yours to fill in.</span></span><span class="go">Download</span></a>
+              <a class="ir" href="#"><span class="num">02</span><span class="it"><b>Method</b><span>Systematic but flexible; agile or plan-driven.</span></span><span class="go">Learn how</span></a>
+              <a class="ir" href="#"><span class="num">03</span><span class="it"><b>Canvas</b><span>The one-page elevator pitch for your architecture.</span></span><span class="go">View canvas</span></a>
+              <a class="ir" href="#"><span class="num">04</span><span class="it"><b>Trainings</b><span>Mastering Software Architectures · iSAQB Foundation.</span></span><span class="go">See dates</span></a>
+              <a class="ir" href="#"><span class="num">05</span><span class="it"><b>Reading</b><span>Books, articles, talks and worked examples.</span></span><span class="go">Browse</span></a>
+            </div>
+            <div class="band">
+              <h2 class="sec">What is arc42?</h2>
+              <div class="whatgrid">
+                <div class="wi">Built on <b>practical experience</b> across many domains.</div>
+                <div class="wi">A template for <b>documentation and communication</b>.</div>
+                <div class="wi">Supports <b>arbitrary technologies</b> and toolchains.</div>
+                <div class="wi"><b>Process-agnostic</b>, ideal for lean &amp; agile teams.</div>
+              </div>
+            </div>
+            <div class="ua footnote"><span class="flag" aria-hidden="true"><i class="b"></i><i class="y"></i></span>arc42 stands with Ukraine — support the <a href="#">ICRC</a>.</div>
+          </div>
+          </div>
+        </div>
+
+        <aside class="tblock">
+          <div class="row"><p class="k">Revision</p><p class="v big">B · Editorial blueprint</p></div>
+          <div class="row"><p class="k">Intent</p><p class="v">A confident, print-inspired page. Type does the work; the wordmark is the hero; sections become an indexed contents list like a spec sheet.</p></div>
+          <div class="row"><p class="k">Fixes</p>
+            <ul class="fixlist">
+              <li><span class="tag">P1</span> Single, unmissable "Get the templates" CTA in the hero</li>
+              <li><span class="tag">P1</span> No nested button markup anywhere; links throughout</li>
+              <li><span class="tag">P1</span> Ukraine message as a legible footnote, not a colour clash</li>
+              <li><span class="tag p2">P2</span> Numbered index carries real order + descriptive verbs, zero "read more…"</li>
+              <li><span class="tag p2">P2</span> One H1 (the wordmark); imagery removed → no grid imbalance; no heartbeat animation</li>
+            </ul>
+          </div>
+          <div class="row"><p class="k">Trade-off</p><p class="tradeoff">Boldest departure from today's look. Drops the feature imagery, so it leans entirely on typography and copy quality to feel premium.</p></div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SHEET 02 — DOWNLOAD ===== -->
+  <section class="col sheet" id="download">
+    <div class="sheet-head">
+      <div>
+        <p class="sheet-code">Sheet 02</p>
+        <h2>Download</h2>
+        <p class="sub">Today it opens with a wall of translation notices, then a 12×12 format table. The job: get the right file into the right hands in seconds.</p>
+      </div>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Download directions">
+      <button class="tab" role="tab" id="t-d-a" aria-controls="p-d-a" aria-selected="true"><span class="rev">REV A</span>Quick-start + finder</button>
+      <button class="tab" role="tab" id="t-d-b" aria-controls="p-d-b" aria-selected="false"><span class="rev">REV B</span>Guided two-pane picker</button>
+    </div>
+
+    <!-- ---- DOWNLOAD REV A ---- -->
+    <div class="panel active" id="p-d-a" role="tabpanel" aria-labelledby="t-d-a">
+      <div class="layout">
+        <div class="frame">
+          <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">arc42.org/download/</span></div>
+          <div class="scr">
+          <div class="m" style="min-width:560px">
+            <nav class="nav"><span class="logo">arc42</span><a href="#">Overview</a><a href="#">Method</a><a href="#">Download</a><a href="#">Books</a><span class="sp"></span><span class="search" aria-hidden="true"></span></nav>
+            <div class="hero wash">
+              <div class="hero-split">
+                <div>
+                  <p class="kicker">Version 9.0.0 · October 2025</p>
+                  <h1>Download arc42</h1>
+                  <p class="sub">Every format, <b>12 languages</b>, free and open source. Pick a popular file, or use the finder below.</p>
+                  <div class="btnrow"><a class="btn pri">Jump to all formats</a></div>
+                </div>
+                <div class="qd">
+                  <div class="qh"><b>Most popular</b><span class="pills"><span class="pill on">EN</span><span class="pill">DE</span><span class="pill">FR</span></span></div>
+                  <div class="qrow"><span class="fmt">AsciiDoc</span><span class="dl">↓</span></div>
+                  <div class="qrow"><span class="fmt">Word (.docx)</span><span class="dl">↓</span></div>
+                  <div class="qrow"><span class="fmt">Markdown</span><span class="dl">↓</span></div>
+                  <span class="more">Plain &amp; with-help variants →</span>
+                </div>
+              </div>
+            </div>
+            <div class="finder">
+              <h2 class="sec">Format finder</h2>
+              <div class="filterbar">
+                <span class="sel">Language <span class="cv">English ▾</span></span>
+                <span class="fchip on">Plain</span><span class="fchip">With help</span>
+                <span class="sel">Tool <span class="cv">All ▾</span></span>
+              </div>
+              <div class="matrix">
+                <table class="mx">
+                  <thead><tr><th>Format</th><th>EN</th><th>DE</th><th>FR</th><th>ZH</th><th>…</th></tr></thead>
+                  <tbody>
+                    <tr><td>AsciiDoc</td><td><a class="plain">Plain</a></td><td><a class="plain">Plain</a></td><td><a class="plain">Plain</a></td><td><a class="plain">Plain</a></td><td>…</td></tr>
+                    <tr><td>docx</td><td><a class="plain">Plain</a></td><td><a class="plain">Plain</a></td><td><a class="plain">Plain</a></td><td><a class="plain">Plain</a></td><td>…</td></tr>
+                    <tr><td>Markdown</td><td><a class="plain">Plain</a></td><td><a class="plain">Plain</a></td><td><a class="plain">Plain</a></td><td><a class="plain">Plain</a></td><td>…</td></tr>
+                    <tr><td>LaTeX</td><td><a class="plain">Plain</a></td><td><a class="plain">Plain</a></td><td><a class="plain">Plain</a></td><td><a class="plain">Plain</a></td><td>…</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="verline">12 formats × 12 languages · plain or with-help</div>
+              <div class="collapse"><span class="tw">▸</span> Version history &amp; translation credits <span style="color:#9aa7b8">(v9 ZH, HU · v8 UA, CZ, FR, PT …)</span></div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <aside class="tblock">
+          <div class="rec">Recommended</div>
+          <div class="row"><p class="k">Revision</p><p class="v big">A · Quick-start + finder</p></div>
+          <div class="row"><p class="k">Intent</p><p class="v">Serve the 80% (AsciiDoc/Word/Markdown in EN/DE) instantly at the top; keep the full matrix for everyone else, but filtered and scannable.</p></div>
+          <div class="row"><p class="k">Fixes</p>
+            <ul class="fixlist">
+              <li><span class="tag">P1</span> Download options are the first thing on the page</li>
+              <li><span class="tag p2">P2</span> Language/variant filter shrinks the 12×12 wall to what you need</li>
+              <li><span class="tag p2">P2</span> Translation notices collapsed into "Version history" — no wall of banners</li>
+              <li><span class="tag">P1</span> Consistent link-styled buttons; AA-contrast hover states</li>
+            </ul>
+          </div>
+          <div class="row"><p class="k">Trade-off</p><p class="tradeoff">Closest to today's structure, so lowest build cost — but the big matrix still exists (now filtered), it isn't reimagined.</p></div>
+        </aside>
+      </div>
+    </div>
+
+    <!-- ---- DOWNLOAD REV B ---- -->
+    <div class="panel" id="p-d-b" role="tabpanel" aria-labelledby="t-d-b" hidden>
+      <div class="layout">
+        <div class="frame">
+          <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">arc42.org/download/</span></div>
+          <div class="scr">
+          <div class="m" style="min-width:560px">
+            <nav class="nav"><span class="logo">arc42</span><a href="#">Overview</a><a href="#">Method</a><a href="#">Download</a><a href="#">Books</a><span class="sp"></span><span class="search" aria-hidden="true"></span></nav>
+            <div class="hero wash" style="padding:1.3rem 1.4rem">
+              <p class="kicker">Version 9.0.0 · October 2025 · EN DE FR CZ ZH HU + more</p>
+              <h1 style="margin-bottom:.3rem">Build your download</h1>
+              <p class="sub" style="max-width:44ch">Choose a language and a format — we'll hand you the exact file, plain or with embedded help.</p>
+            </div>
+            <div class="picker">
+              <div class="pane">
+                <p class="step">1 · Choose language</p>
+                <div class="langgrid">
+                  <span class="pill on">EN</span><span class="pill">DE</span><span class="pill">FR</span><span class="pill">CZ</span><span class="pill">ZH</span><span class="pill">HU</span><span class="pill">ES</span><span class="pill">IT</span><span class="pill">NL</span><span class="pill">PT</span><span class="pill">RU</span><span class="pill">UKR</span>
+                </div>
+                <p class="step">2 · Choose format</p>
+                <div class="fmtlist">
+                  <div class="fi on">AsciiDoc <small>recommended</small></div>
+                  <div class="fi">Word · docx <small>Office</small></div>
+                  <div class="fi">Markdown <small>single / multi-page</small></div>
+                  <div class="fi">LaTeX · reST · Textile <small>advanced</small></div>
+                </div>
+              </div>
+              <div class="pane" style="padding:0; border:none">
+                <div class="result">
+                  <p class="rlabel">Your download</p>
+                  <p class="combo">arc42 · English · AsciiDoc<small>Version 9.0.0 · ~120 KB · MIT-style licence</small></p>
+                  <div class="dlbtns"><a class="btn pri sm"><span class="ar">↓</span> Plain .zip</a><a class="btn ghost sm">With help .zip</a></div>
+                  <p class="note">“With help” embeds the official arc42 explanations in every section — ideal when you're new to the template.</p>
+                </div>
+              </div>
+            </div>
+            <div class="special">
+              <h3>Specialised &amp; tool formats</h3>
+              <div class="specgrid">
+                <div class="sc"><b>Confluence</b>flat · structured</div>
+                <div class="sc"><b>Enterprise Architect</b>QEA · EAPX</div>
+                <div class="sc"><b>IBM Rhapsody</b>UML / SysML</div>
+                <div class="sc"><b>Doxygen</b>C/C++ &amp; more</div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <aside class="tblock">
+          <div class="row"><p class="k">Revision</p><p class="v big">B · Guided two-pane picker</p></div>
+          <div class="row"><p class="k">Intent</p><p class="v">Turn "read a 12×12 grid" into "answer two questions." Pick language, pick format, get exactly one clear result with plain/with-help side by side.</p></div>
+          <div class="row"><p class="k">Fixes</p>
+            <ul class="fixlist">
+              <li><span class="tag">P1</span> Two obvious download buttons, always in view; no hunting the grid</li>
+              <li><span class="tag p2">P2</span> "Plain vs with-help" finally explained at the point of choice</li>
+              <li><span class="tag p2">P2</span> Niche tool formats (EA, Rhapsody…) demoted to a secondary shelf</li>
+              <li><span class="tag">MIN</span> Removes the stacked <code>.notice</code> banners entirely</li>
+            </ul>
+          </div>
+          <div class="row"><p class="k">Trade-off</p><p class="tradeoff">Needs a little JavaScript to be truly interactive, and power users who want to eyeball everything lose the all-at-once table (link one from the picker).</p></div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CLOSING ===== -->
+  <section class="col closing">
+    <h2>How these map to the fixes</h2>
+    <p class="note-final">Each direction is <b>non-destructive</b> — these are layout studies, not committed changes. The homepage lives in Jekyll frontmatter (<code>feature_row</code> blocks), so REV A is a moderate template edit; REV B is a larger rework of the splash into a custom layout. My recommendation: <b>ship the homepage REV A + download REV A first</b> (they clear every P1 with the least churn), then trial the editorial REV B on a branch if you want a bolder identity.</p>
+    <div class="cmdgrid">
+      <div class="cmd"><code>$impeccable layout</code><p>Adds the hero download CTA and rebalances the card grid (the two P1/P2 structural fixes).</p></div>
+      <div class="cmd"><code>$impeccable polish</code><p>Replaces <code>&lt;a&gt;&lt;button&gt;</code> with real link-buttons — the accessibility P1.</p></div>
+      <div class="cmd"><code>$impeccable colorize</code><p>Fixes the Ukraine banner &amp; button-hover contrast to WCAG AA.</p></div>
+      <div class="cmd"><code>$impeccable clarify</code><p>Swaps five "read more…" for descriptive, per-card link text.</p></div>
+    </div>
+    <p class="foot">arc42.org · design revision set · rev A/B · drawn 2026-07-07 · palette #374769 / #4b7ba3 · mockups are wireframes, not final art</p>
+  </section>
+
+</div>
+
+<script>
+  (function(){
+    document.querySelectorAll('[role="tablist"]').forEach(function(list){
+      var tabs = Array.prototype.slice.call(list.querySelectorAll('[role="tab"]'));
+      function select(tab){
+        tabs.forEach(function(t){
+          var sel = t === tab;
+          t.setAttribute('aria-selected', sel ? 'true' : 'false');
+          var panel = document.getElementById(t.getAttribute('aria-controls'));
+          if(panel){ panel.classList.toggle('active', sel); if(sel){ panel.removeAttribute('hidden'); } else { panel.setAttribute('hidden',''); } }
+        });
+      }
+      tabs.forEach(function(tab, i){
+        tab.addEventListener('click', function(){ select(tab); });
+        tab.addEventListener('keydown', function(e){
+          var idx = null;
+          if(e.key === 'ArrowRight') idx = (i+1) % tabs.length;
+          if(e.key === 'ArrowLeft') idx = (i-1+tabs.length) % tabs.length;
+          if(idx !== null){ e.preventDefault(); tabs[idx].focus(); select(tabs[idx]); }
+        });
+      });
+    });
+  })();
+</script>
