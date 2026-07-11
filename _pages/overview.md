@@ -148,8 +148,8 @@ Prefer learning from a trainer? We teach arc42 and modern software architecture 
 {% include subtle-ads/subtle-ads.html %}
 
 <p class="training-section__actions">
-  <a class="btn btn--arc42 btn--large" href="https://trainings.arc42.org" rel="noopener">See all dates &amp; register &#8594;</a>
-  <a class="btn btn--arc42-outline btn--large" href="/learn/">Training details</a>
+  <a class="btn btn--arc42" href="https://trainings.arc42.org" rel="noopener">See all dates &amp; register &#8594;</a>
+  <a class="btn btn--arc42-outline" href="/learn/">Training details</a>
 </p>
 
 </div>
