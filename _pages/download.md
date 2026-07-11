@@ -12,9 +12,9 @@ excerpt: "Version 9 — the most practical and effective arc42 ever. Every forma
 
 <section class="dl-hero">
   <div class="dl-hero__inner">
-    <p class="dl-hero__kicker">Template version 9 · 12 languages</p>
+    <p class="dl-hero__kicker">12 languages · every format</p>
     <h1 class="dl-hero__title">Download arc42</h1>
-    <p class="dl-hero__sub">Build your download — pick a language and a format, <strong>plain</strong> or <strong>with help</strong>. Version 9 covers English, German, French, Czech, Chinese and Hungarian; six more languages are available at version 8.2. Free and open source.</p>
+    <p class="dl-hero__sub">Build your download — pick a language and a format, <strong>plain</strong> or <strong>with help</strong>. Twelve languages, every common format, free and open source.</p>
   </div>
 </section>
 
@@ -22,8 +22,7 @@ excerpt: "Version 9 — the most practical and effective arc42 ever. Every forma
 {% assign GITHUBDIR = "https://github.com/arc42/arc42-template/raw/master/dist/" %}
 {% comment %} lang code, full name, template version, release date — per language
    (source of truth: <lang>/version.properties in the arc42-template repo) {% endcomment %}
-{% assign lang_data_v9 = "EN,English,9.0,Jul 2025|DE,Deutsch,9.1,Dec 2025|FR,Français,9.0,Apr 2025|CZ,Čeština,9.0,Jan 2025|ZH,简体中文,9.0,Jul 2025|HU,Magyar,9.0,May 2026" | split: "|" %}
-{% assign lang_data_v82 = "ES,Español,8.2,Jan 2023|IT,Italiano,8.2,Mar 2023|NL,Nederlands,8.2,Mar 2023|PT,Português,8.2,Sep 2024|RU,Русский,8.2,Jan 2023|UKR,Українська,8.2,Jan 2023" | split: "|" %}
+{% assign lang_data = "EN,English,9.0,Jul 2025|DE,Deutsch,9.1,Dec 2025|FR,Français,9.0,Apr 2025|CZ,Čeština,9.0,Jan 2025|ZH,简体中文,9.0,Jul 2025|HU,Magyar,9.0,May 2026|ES,Español,8.2,Jan 2023|IT,Italiano,8.2,Mar 2023|NL,Nederlands,8.2,Mar 2023|PT,Português,8.2,Sep 2024|RU,Русский,8.2,Jan 2023|UKR,Українська,8.2,Jan 2023" | split: "|" %}
 {% assign fmt_ids = "asciidoc|markdown|docx|markdownMP|gitHubMarkdown|latex|rst|textile|html|markdownStrict|markdownMPStrict|gitHubMarkdownMP" | split: "|" %}
 {% assign fmt_labels = "AsciiDoc|Markdown|Word (.docx)|Markdown · multi-page|GitHub Markdown|LaTeX|reStructuredText|Textile|HTML|Markdown · strict|Markdown MP · strict|GitHub Markdown · MP" | split: "|" %}
 
@@ -31,14 +30,7 @@ excerpt: "Version 9 — the most practical and effective arc42 ever. Every forma
   <div class="dlb__pane dlb__pane--choose">
     <p class="dlb__step">1 &middot; Choose language</p>
     <div class="dlb__langs" role="group" aria-label="Language">
-      <div class="dlb__verrow">
-        <span class="dlb__verlabel">Version 9</span>
-        {% for item in lang_data_v9 %}{% assign p = item | split: "," %}<button type="button" class="dlb__lang{% if forloop.first %} is-active{% endif %}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" data-lang="{{ p[0] }}" data-full="{{ p[1] }}" data-version="{{ p[2] }}" data-date="{{ p[3] }}">{{ p[0] }}</button>{% endfor %}
-      </div>
-      <div class="dlb__verrow">
-        <span class="dlb__verlabel">Version 8.2</span>
-        {% for item in lang_data_v82 %}{% assign p = item | split: "," %}<button type="button" class="dlb__lang" aria-pressed="false" data-lang="{{ p[0] }}" data-full="{{ p[1] }}" data-version="{{ p[2] }}" data-date="{{ p[3] }}">{{ p[0] }}</button>{% endfor %}
-      </div>
+      {% for item in lang_data %}{% assign p = item | split: "," %}<button type="button" class="dlb__lang{% if forloop.first %} is-active{% endif %}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" data-lang="{{ p[0] }}" data-full="{{ p[1] }}" data-version="{{ p[2] }}" data-date="{{ p[3] }}">{{ p[0] }}</button>{% endfor %}
     </div>
     <p class="dlb__step">2 &middot; Choose format</p>
     <div class="dlb__fmts" role="group" aria-label="Format">
@@ -200,8 +192,8 @@ Want to go deeper? The creators of arc42 run iSAQB-certified architecture traini
 {% include subtle-ads/subtle-ads.html %}
 
 <p class="training-section__actions">
-  <a class="btn btn--arc42 btn--large" href="https://trainings.arc42.org" rel="noopener">See all dates &amp; register &#8594;</a>
-  <a class="btn btn--arc42-outline btn--large" href="/learn/">Training details</a>
+  <a class="btn btn--arc42" href="https://trainings.arc42.org" rel="noopener">See all dates &amp; register &#8594;</a>
+  <a class="btn btn--arc42-outline" href="/learn/">Training details</a>
 </p>
 
 </div>
