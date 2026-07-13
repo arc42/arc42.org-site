@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Long-form arc42 documentation prototype"><title>Documentation | Field Manual 42</title>
+  <link rel="stylesheet" href="styles.css"><script src="prototype.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="prototype-note"><div class="shell"><span><strong>Visual prototype</strong> · Long-form reading pattern</span><span><a href="system.html">View the design system</a></span></div></div>
+  <header class="masthead"><div class="shell masthead__inner"><a class="brand" href="index.html" aria-label="arc42 prototype home"><img src="../../assets/ARC42_black.svg" alt="arc42"></a><nav class="site-nav" data-site-nav aria-label="Primary navigation"><a href="overview.html">Understand</a><a href="documentation.html" aria-current="page">Use arc42</a><a href="examples.html">Examples</a><a href="resources.html">Resources</a><a href="about.html">About</a></nav><a class="nav-download" href="download.html">↓ Download</a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="Open navigation">☰</button></div></header>
+
+  <main id="main">
+    <header class="page-header page-header--compact"><div class="shell page-header__inner"><div><p class="index-label">04 / Practical guidance</p><h1>Write the architecture people need.</h1><p class="lede">arc42 tells you where information belongs. Good architecture work decides what is worth communicating, to whom, and at which level of detail.</p><div class="action-row"><a class="button" href="download.html">Use the template</a><a class="button button--secondary" href="overview.html">Browse all sections</a></div></div><aside class="annotation"><strong>Reading pattern</strong>This page demonstrates a compact contents rail, a 72-character reading column, figures, and contextual notes.</aside></div></header>
+
+    <article class="band"><div class="shell section doc-layout">
+      <nav class="toc" aria-label="On this page"><strong>On this page</strong><a href="#start">Start with stakeholders</a><a href="#goals">Quality goals</a><a href="#constraints">Constraints</a><a href="#context">Context</a><a href="#strategy">Solution strategy</a><a href="#feedback">Feedback loop</a></nav>
+      <div class="prose">
+        <p class="index-label">Guide 01 / Getting started</p>
+        <h2 id="start">Start with stakeholders, not sections.</h2>
+        <p>Architecture documentation has value only when it helps someone make a decision, perform a task, understand a risk, or change a system safely. Before filling in a template, identify those people and their questions.</p>
+        <p>A new developer may need system boundaries and essential concepts. An operator needs deployment, failure behavior, and observability. A security reviewer needs trust boundaries, sensitive data flows, and recorded decisions. They should not have to read the same document from beginning to end.</p>
+        <div class="doc-figure"><img src="../../images/arc42-overview-V8.svg" alt="The arc42 template sections arranged as an architecture documentation map"><p class="caption"><strong>Figure 01</strong><span>The sections form a stable index, not a mandatory writing sequence.</span></p></div>
+
+        <h2 id="goals">Make quality goals concrete.</h2>
+        <p>Terms such as maintainable, secure, scalable, and user-friendly are intentions, not requirements. Connect a quality to a situation, a measurable response, and an affected stakeholder.</p>
+        <p>Prioritize a small number of quality goals. When everything is important, architecture decisions have no usable direction.</p>
+        <h3>A useful scenario contains</h3>
+        <ul><li>A source that triggers an event.</li><li>The event and operating conditions.</li><li>The part of the system that must respond.</li><li>An observable response and measure.</li></ul>
+
+        <h2 id="constraints">Record constraints without defending them.</h2>
+        <p>Constraints reduce the solution space. Some are negotiable, others are not. Recording their source and expected lifetime helps future teams distinguish deliberate limits from historical accidents.</p>
+
+        <h2 id="context">Draw the boundary before the internals.</h2>
+        <p>A context view names the system, its users, external systems, and important exchanges. It is often the fastest way to expose missing responsibilities and ambiguous ownership.</p>
+
+        <h2 id="strategy">Explain the few decisions that shape everything else.</h2>
+        <p>The solution strategy should fit on one or two pages. It connects quality goals and constraints to fundamental choices. Detailed component descriptions belong later.</p>
+
+        <h2 id="feedback">Review documentation against the running system.</h2>
+        <p>Architecture knowledge changes when code, infrastructure, responsibilities, and risks change. Review the documentation during normal delivery work. A small correction made today costs less than a recovery project next year.</p>
+      </div>
+      <aside class="annotation"><strong>Field note</strong>Do not complete sections in numerical order. Write the smallest set that answers today's stakeholder questions, then use feedback to decide what comes next.</aside>
+    </div></article>
+
+    <section class="band band--blue"><div class="shell recommended"><div class="recommended__main"><span class="recommendation-mark">→</span><div><p class="index-label">Continue with evidence</p><h2>Compare your first draft with a real system.</h2><p>Examples reveal how different teams tailor the same twelve sections to different domains, sizes, and technologies.</p></div></div><div class="recommended__meta"><a class="button" href="examples.html">Browse example systems</a></div></div></section>
+  </main>
+  <footer class="colophon"><div class="shell colophon__inner"><div><h2>arc42</h2><p>Architecture communication that earns its maintenance cost.</p></div><div><h3>Use arc42</h3><a href="download.html">Download templates</a><a href="overview.html">Template overview</a><a href="documentation.html">Documentation</a></div><div><h3>Learn</h3><a href="examples.html">Examples</a><a href="resources.html">Books and articles</a><a href="about.html">About the project</a></div><div><h3>Project</h3><a href="https://github.com/arc42">GitHub</a><a href="https://status.arc42.org">Service status</a><a href="system.html">Prototype system</a></div></div><div class="shell colophon__end">Field Manual 42 visual prototype · Not the production arc42.org website</div></footer>
+</body>
+</html>
