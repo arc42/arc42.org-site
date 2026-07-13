@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Field Manual 42 prototype for arc42.org">
+  <title>Field Manual 42 | arc42 prototype</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="prototype.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="prototype-note">
+    <div class="shell"><span><strong>Visual prototype</strong> · Field Manual 42</span><span><a href="system.html">View the design system</a></span></div>
+  </div>
+  <header class="masthead">
+    <div class="shell masthead__inner">
+      <a class="brand" href="index.html" aria-label="arc42 prototype home"><img src="../../assets/ARC42_black.svg" alt="arc42"></a>
+      <nav class="site-nav" data-site-nav aria-label="Primary navigation">
+        <a href="overview.html">Understand</a>
+        <a href="documentation.html">Use arc42</a>
+        <a href="examples.html">Examples</a>
+        <a href="resources.html">Resources</a>
+        <a href="about.html">About</a>
+      </nav>
+      <a class="nav-download" href="download.html">↓ Download</a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="Open navigation">☰</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="page-header">
+      <div class="shell page-header__inner">
+        <div>
+          <p class="index-label">01 / arc42 template</p>
+          <h1>Document architecture without ceremony.</h1>
+          <p class="lede">A proven structure for constructing, communicating, and documenting software architecture. Free, open source, and shaped by real projects.</p>
+          <div class="action-row">
+            <a class="button button--signal" href="download.html">Get the template <span aria-hidden="true">↓</span></a>
+            <a class="button button--secondary" href="overview.html">See how arc42 works</a>
+          </div>
+        </div>
+        <figure class="field-figure">
+          <div class="field-figure__frame">
+            <img src="../../images/home/canvas-overview-850.webp" alt="An arc42 canvas organizing architecture information on one page">
+            <span class="field-figure__marker">12</span>
+          </div>
+          <figcaption><strong>One structure, twelve sections</strong><span>Tailor it to your system</span></figcaption>
+        </figure>
+      </div>
+    </header>
+
+    <section class="band band--blue">
+      <div class="shell recommended">
+        <div class="recommended__main">
+          <span class="recommendation-mark" aria-hidden="true">01</span>
+          <div>
+            <p class="index-label">Recommended start</p>
+            <h2>AsciiDoc, English, with help</h2>
+            <p>Best for a version-controlled architecture document. Official guidance is embedded inside every section, so first-time users know what belongs where.</p>
+          </div>
+        </div>
+        <div class="recommended__meta">
+          <p class="meta-line"><span>Version 9.0</span><span>July 2025</span></p>
+          <p><span class="status status--current">Current</span></p>
+          <a class="button" href="download.html">Configure and download</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="shell section">
+        <div class="section-heading">
+          <div><span class="section-number">02 / PURPOSE</span><h2>Architecture knowledge that stays useful.</h2></div>
+          <p class="section-heading__note">arc42 gives every important architecture concern a stable home. The result is easier to write, review, find, and maintain.</p>
+        </div>
+        <div class="indexed-list">
+          <article class="indexed-row">
+            <span class="indexed-row__number">01</span>
+            <h3>Structure the knowledge</h3>
+            <p>Twelve sections separate goals, constraints, context, solution decisions, views, risks, and quality requirements.</p>
+            <a class="row-link" href="overview.html">View the structure →</a>
+          </article>
+          <article class="indexed-row">
+            <span class="indexed-row__number">02</span>
+            <h3>Communicate decisions</h3>
+            <p>Give developers, operators, product leaders, and auditors the context they need without forcing them through one giant document.</p>
+            <a class="row-link" href="documentation.html">Read the method →</a>
+          </article>
+          <article class="indexed-row">
+            <span class="indexed-row__number">03</span>
+            <h3>Keep it maintainable</h3>
+            <p>Use only the sections your system needs. Apply docs-as-code, office documents, or modeling tools according to your workflow.</p>
+            <a class="row-link" href="examples.html">Inspect examples →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band--warm">
+      <div class="shell section split">
+        <aside class="annotation"><strong>Field note</strong>Start small. Document the goals, context, important decisions, and risks first. Add detail when a real stakeholder needs it.</aside>
+        <div>
+          <p class="index-label">03 / The working method</p>
+          <h2>A template is useful only when people use it.</h2>
+          <div class="prose">
+            <p>arc42 is iterative, feedback-driven, and process-agnostic. Teams can use it with agile delivery, formal governance, legacy modernization, or a small product that needs only a few pages.</p>
+            <p>The structure remains stable while the level of detail changes. That stability makes architecture information easier to compare across systems and easier for new team members to learn.</p>
+          </div>
+          <div class="action-row"><a class="button button--secondary" href="documentation.html">Explore practical guidance</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="shell section">
+        <div class="section-heading">
+          <div><span class="section-number">04 / SECTIONS</span><h2>The first four drawers.</h2></div>
+          <p class="section-heading__note">Each section answers a different question. The full overview contains all twelve, with direct links into the documentation.</p>
+        </div>
+        <div class="section-map">
+          <a href="overview.html#section-1"><span class="section-map__number">01</span><div><h3>Introduction and goals</h3><p>Why does the system exist, and what must it achieve?</p></div></a>
+          <a href="overview.html#section-2"><span class="section-map__number">02</span><div><h3>Constraints</h3><p>Which organizational and technical limits shape the solution?</p></div></a>
+          <a href="overview.html#section-3"><span class="section-map__number">03</span><div><h3>Context and scope</h3><p>Who and what interacts with the system?</p></div></a>
+          <a href="overview.html#section-4"><span class="section-map__number">04</span><div><h3>Solution strategy</h3><p>Which fundamental decisions guide the architecture?</p></div></a>
+        </div>
+        <div class="action-row"><a class="button button--secondary" href="overview.html">View all twelve sections</a></div>
+      </div>
+    </section>
+
+    <section class="band band--ink">
+      <div class="shell section">
+        <div class="section-heading">
+          <div><span class="section-number" style="color:var(--signal)">05 / PROOF</span><h2 style="color:var(--paper)">Real systems, not toy diagrams.</h2></div>
+          <p class="section-heading__note" style="color:color-mix(in oklch,var(--paper) 70%,var(--ink))">Browse complete architecture documentation from different domains and technology stacks. See what concise, useful arc42 documentation looks like in practice.</p>
+        </div>
+        <div class="action-row"><a class="button button--signal" href="examples.html">Browse example systems</a><a class="button" style="border-color:var(--paper)" href="resources.html">Find books and articles</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <div class="shell colophon__inner">
+      <div><h2>arc42</h2><p>Architecture communication that earns its maintenance cost.</p></div>
+      <div><h3>Use arc42</h3><a href="download.html">Download templates</a><a href="overview.html">Template overview</a><a href="documentation.html">Documentation</a></div>
+      <div><h3>Learn</h3><a href="examples.html">Examples</a><a href="resources.html">Books and articles</a><a href="about.html">About the project</a></div>
+      <div><h3>Project</h3><a href="https://github.com/arc42">GitHub</a><a href="https://status.arc42.org">Service status</a><a href="system.html">Prototype system</a></div>
+    </div>
+    <div class="shell colophon__end">Field Manual 42 visual prototype · Not the production arc42.org website</div>
+  </footer>
+</body>
+</html>
