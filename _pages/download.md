@@ -129,7 +129,7 @@ Contributed by Niranjan SK (Robert Bosch GmbH) — thank you!
 <details class="dl-details" markdown="1">
 <summary>Other modelling tools</summary>
 
-We don't support additional modelling tools yet — but we'd love to. If you use arc42 with one, please consider [contributing](/contact/)!
+We don't support additional modelling tools yet, but we'd love to. If you use arc42 with one, please consider [contributing](/about/#contact)!
 
 </details>
 

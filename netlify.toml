@@ -21,3 +21,47 @@
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=3600"
+
+# Preserve old publication URLs as permanent redirects. The Jekyll redirect
+# pages provide the same behavior in local and non-Netlify previews.
+[[redirects]]
+  from = "/books/*"
+  to = "/resources/?type=book"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/articles/*"
+  to = "/resources/?type=article"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/talks/*"
+  to = "/resources/?type=talk"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/videos/*"
+  to = "/resources/?type=video"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/more/*"
+  to = "/resources/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact/*"
+  to = "/about/#contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/gallery/*"
+  to = "/learn/#inside-a-training"
+  status = 301
+  force = true

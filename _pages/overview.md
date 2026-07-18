@@ -137,6 +137,8 @@ Now that you know the template sections, dive deeper at your own pace:
 * Our [collection of software patterns](https://patterns.arc42.org)
 * The [arc42 quality model](https://quality.arc42.org), a structured collection of quality attributes
 
+Need something lighter than twelve sections? An [arc42 canvas](/canvas/) captures a whole system on a single page.
+
 <a href="/documentation/" class="btn btn--arc42-outline">Browse all documentation</a>
 
 <div class="training-section" markdown="1">

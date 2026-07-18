@@ -1,10 +1,17 @@
 # arc42 visual design proposals
 
-This directory contains three independent static design proposals.
+This directory contains seven independent static design proposals.
 
 - `field-manual/`: V1, Field Manual 42
 - `field-manual-v2/`: V2, Founders' Notebook
 - `field-manual-v3/`: V3, Living Architecture
+- `ghost-structures/`: V4, Ghost Structures (transparent photo + diagram headers)
+- `petrol-apricot/`: V5, Petrol & Apricot (friendly full palette)
+- `twelve/`: V6, Twelve (Swiss poster grid around the 12 sections)
+- `evergreen/`: V7, Evergreen Press (drenched pine green, book pacing)
+
+V4 through V7 each cover four pages (Home, Method, Download, Resources) on the
+simplified 2026 information architecture.
 
 Open `prototype/index.html` to compare them.
 

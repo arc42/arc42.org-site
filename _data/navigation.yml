@@ -3,12 +3,18 @@
 #   main   -> inline priority links shown in the masthead bar
 #             (Download is flagged `cta: true` and rendered as the navy button)
 #   drawer -> the "More…" hamburger contents (secondary / resource links)
+#
+# Story told by the inline row: Overview (what) -> Method (how you work) ->
+# Docs (reference) -> Examples -> Training -> Download.
+# About lives in the footer and the drawer, not the masthead.
 # ---------------------------------------------------------------------------
 
 # inline priority links (order matters)
 main:
   - title: "Overview"
     url: /overview/
+  - title: "Method"
+    url: /method/
   - title: "Docs"
     url: /documentation/
   - title: "Examples"
@@ -18,31 +24,18 @@ main:
   - title: "Download"
     url: /download/
     cta: true
-  - title: "About"
-    url: /about/
 
 # "More…" hamburger drawer — grouped secondary links
 drawer:
-  - title: "Publications"
+  - title: "Explore"
     children:
-      - title: "Books"
-        url: /books/
-      - title: "Articles"
-        url: /articles/
-      - title: "Videos"
-        url: /videos/
-      - title: "Talks"
-        url: /talks/
-  - title: "On this site"
-    children:
+      - title: "About"
+        url: /about/
+      - title: "Resources"
+        url: /resources/
+        hint: "books · articles · talks · videos"
       - title: "Search"
         url: /search/
-      - title: "Contact"
-        url: /contact/
-      - title: "License"
-        url: /license/
-      - title: "Gallery"
-        url: /gallery/
   - title: "arc42 elsewhere"
     children:
       - title: "German site — arc42.de"
@@ -51,31 +44,3 @@ drawer:
         url: https://trainings.arc42.org
       - title: "Status"
         url: https://status.arc42.org
-
-# about  (consumed by page sidebars via _includes/nav_list — keep intact)
-about:
-  - title: About arc42
-    url: /about/
-    children:
-    - title: "Contact"
-      url: /contact/
-    - title: "Contributors"
-      url: https://github.com/arc42/arc42-template/graphs/contributors
-    - title: "License"
-      url: /license/
-    - title: "Gallery"
-      url: /gallery/
-
-
-# publications  (consumed by page sidebars via _includes/nav_list — keep intact)
-publications:
-  - title: Publications
-    children:
-      - title: Books
-        url: /books/
-      - title: Articles
-        url: /articles/
-      - title: Videos
-        url: /videos/
-      - title: Talks
-        url: /talks/

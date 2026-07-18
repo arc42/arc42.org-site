@@ -13,6 +13,17 @@ excerpt: "How arc42 is structured and how to work with it — template documenta
   </div>
 </section>
 
+## Why arc42? {#why}
+
+Real-life systems have well-written code, motivated teams and productive operations, yet the knowledge about their architecture is locked in a few brains, scattered across the code, or simply lost. Architecture documentation tends to fail in four familiar ways:
+
+* **Not existing, or outdated** — a historical artifact nobody trusts or maintains.
+* **Chaotic** — created without a clear purpose, by various people, without coordination.
+* **Too much** — piles of documents in which nobody can *find* or *update* anything.
+* **Painful** — formalities, wrong tools, unclear instructions; not why people became developers.
+
+arc42 gives every kind of architecture information a clear place, twelve well-defined sections optimized for understandability and adequacy. That fixes *chaotic* and *too much*, and it makes documentation **painless**: you only describe what stakeholders really need, only explain what is necessary to understand the system, and only record the decisions you had to make anyway. Low-effort documentation is documentation that stays up to date, which takes care of *outdated*, too.
+
 ## The template structure
 
 ![drawers of a cabinet](/images/cabinet-sanwal-deen-300px.jpg){: .align-left}
@@ -20,10 +31,10 @@ Think of the arc42 sections as the *drawers* of a cabinet: twelve of them, each 
 
 * The [one-minute overview](/overview/) shows all twelve sections on a single page.
 * [docs.arc42.org](https://docs.arc42.org) documents every section in detail — purpose, contents, practical tips, and many examples.
+* Need something lighter? A [canvas](/canvas/) captures a whole system on a single page.
 
 ## Guides &amp; FAQ
 
-* [Why arc42?](/why/) explains the problems arc42 solves.
 * The [FAQ](https://faq.arc42.org) answers hundreds of questions on methodical approaches, template sections, agility and tools.
 * The [quality model](https://quality.arc42.org) collects quality properties and attributes, and our [pattern collection](https://patterns.arc42.org) covers recurring software patterns.
 

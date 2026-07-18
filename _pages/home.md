@@ -39,8 +39,7 @@ starter:
       <h1 class="home-hero__title">Document your architecture — painlessly.</h1>
       <p class="home-hero__sub">The proven, pragmatic template to <strong>construct, communicate and document</strong> software architecture. Free and open source.</p>
       <p class="home-hero__actions">
-        <a class="btn btn--arc42 btn--large" href="/download/"><span aria-hidden="true">&#8595;</span> Download the templates</a>
-        <a class="btn btn--arc42-outline btn--large" href="/method/">Explore the method</a>
+        <a class="btn btn--arc42 btn--large" href="/overview/">See the template &#8594;</a>
       </p>
     </div>
 
@@ -64,7 +63,7 @@ starter:
         <span class="quick-dl__label"><span class="quick-dl__fmt">Markdown</span><span class="quick-dl__meta">single &middot; multi-page</span></span>
         <span class="quick-dl__arrow" aria-hidden="true">&#8595;</span>
       </a>
-      <a class="quick-dl__all" href="/download/">All 12 formats &#8594;</a>
+      <a class="quick-dl__all" href="/download/">All languages and formats &#8595;</a>
     </aside>
   </div>
 </section>
@@ -79,7 +78,7 @@ arc42 is based on practical experience with many systems across domains — info
 - Process-agnostic, and especially well-suited to lean and agile teams.
 - Open source and free of charge, in commercial and private settings — see the [license](/license/).
 
-There's plenty to read about arc42, too — [browse our books, articles, talks and videos &#8594;](/more/).
+There is plenty to learn from, too: [browse our books, articles, talks and videos &#8594;](/resources/).
 
 <div class="training-section" markdown="1">
 
@@ -102,8 +101,8 @@ Learn arc42 and modern software architecture straight from its creators — iSAQ
 
 - The **Hungarian** translation of arc42 is now available — thanks to László Séra!
 - Our [merchandising shop](https://arc42.myspreadshop.de) is online: T-shirts, hoodies and other arc42-branded goodies.
-- [Software Architecture Foundation](/books#software-architecture-foundation-cpsa-f-exam-preparation) — ideal preparation for the iSAQB certification.
-- Even more worked examples in [arc42 by Example, Vol 2 — Embedded Systems &amp; IoT](/books#arc42-by-example-vol2).
+- [Software Architecture Foundation](/resources/?type=book) is ideal preparation for the iSAQB certification.
+- Even more worked examples in [arc42 by Example, Volume 2: Embedded Systems &amp; IoT](/resources/?type=book#arc42-by-example-vol2).
 
 </div>
 
