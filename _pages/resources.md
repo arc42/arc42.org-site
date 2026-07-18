@@ -9,7 +9,7 @@ excerpt: "Books, articles, talks and videos from the people behind arc42, collec
   <div class="dl-hero__inner">
     <p class="dl-hero__kicker">Books &middot; articles &middot; talks &middot; videos</p>
     <h1 class="dl-hero__title">Resources</h1>
-    <p class="dl-hero__sub">A compact library of what we have written, presented and recorded about arc42 and software architecture. Filter it to match how you prefer to learn.</p>
+    <p class="dl-hero__sub">A compact library of what we have written, presented and recorded about arc42 and software architecture. Browse the whole collection, or filter it to your favorite format.</p>
   </div>
 </section>
 
