@@ -1,0 +1,31 @@
+# Further arc42 contributors (arc42-template repo) with more than one contribution,
+# excluding the founders/core people featured above and everyone already credited in
+# the translator list. Rendered on /about (#community) as a "with thanks to" roll.
+#
+# Fields: name (required), github (optional login for the profile link).
+# Where no real name is published, the GitHub handle is used as the name.
+
+- name: "Gerd Aschemann"
+  github: "ascheman"
+- name: "barthel"
+  github: "barthel"
+- name: "Benno Bielmeier"
+  github: "bbenno"
+- name: "fritzmark"
+  github: "fritzmark"
+- name: "Christian Gesell"
+  github: "gesellc"
+- name: "Ralf Hergert"
+  github: "ralfhergert"
+- name: "plafue"
+  github: "plafue"
+- name: "Oliver Lietz"
+  github: "oliverlietz"
+- name: "Per Starke"
+  github: "Per-Starke"
+- name: "unfinishe"
+  github: "unfinishe"
+- name: "Benjamin Wolf"
+  github: "programming-wolf"
+- name: "Stefan Zörner"
+  github: "StefanZoerner"

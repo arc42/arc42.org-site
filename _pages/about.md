@@ -137,6 +137,13 @@ excerpt: "The people, history and open-source community behind arc42."
     </div>
   </div>
   {%- endif -%}
+  {%- if site.data.contributors and site.data.contributors.size > 0 -%}
+  <div class="about-thanks">
+    <h3>With thanks to our contributors</h3>
+    <p>Beyond translations, many more people have improved the arc42 template, its formats and tooling over the years:
+      {% for c in site.data.contributors %}{% if c.github %}<a href="https://github.com/{{ c.github }}" rel="noopener">{{ c.name }}</a>{% else %}{{ c.name }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}.</p>
+  </div>
+  {%- endif -%}
 </section>
 
 <section id="contact" class="about-section about-section--dark about-contact">
