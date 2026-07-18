@@ -1039,6 +1039,15 @@ a.res-card:focus-visible { outline: 2px solid var(--arc42-primary-hover); outlin
   gap: 0.35rem 1rem;
 }
 .translator-card__link { font-size: 0.85rem; font-weight: 600; }
+.about-thanks { margin-top: clamp(2.5rem, 5vw, 4rem); }
+.about-thanks h3 { margin: 0 0 0.75rem; color: var(--arc42-ink-strong); }
+.about-thanks p {
+  margin: 0;
+  max-width: 65ch;
+  color: var(--arc42-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
 .about-section--dark {
   color: #f6f8fa;
   background: var(--arc42-primary);
@@ -1189,4 +1198,29 @@ a.res-card:focus-visible { outline: 2px solid var(--arc42-primary-hover); outlin
   .about-brand { grid-template-columns: 6rem 1fr; }
   .about-brand img { width: 6rem; }
   .training-impressions { padding-inline: 1.25rem; }
+}
+
+/* ------------------------------------------------------------------ */
+/* Method page: six-activities diagram (_includes/method-activities-diagram.svg) */
+.method-diagram {
+  margin: 2.5rem auto;
+  max-width: 42rem;
+}
+.method-diagram svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* theme the inline SVG via its custom properties */
+  --ink: var(--arc42-ink-strong);
+  --muted: var(--arc42-slate);
+  --line: var(--arc42-border);
+  --paper: #ffffff;
+  --accent: var(--arc42-primary-hover);
+}
+.method-diagram svg .olap { fill: #f5b700; opacity: 0.4; } /* amber gold: the structures/concepts overlap */
+.method-diagram figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--arc42-text-muted);
+  text-align: center;
 }
