@@ -44,7 +44,7 @@ excerpt: "Version 9 — the most practical and effective arc42 ever. Every forma
     <p class="dlb__meta" id="dlb-meta">Version 9.0 (Jul 2025) · free &amp; open source</p>
     <p class="dlb__buttons">
       <a class="btn btn--arc42 btn--large" id="dlb-plain" href="{{ PREFIX }}EN-plain-asciidoc.zip"><span aria-hidden="true">&#8595;</span> Plain .zip</a>
-      <a class="btn btn--arc42-outline btn--large" id="dlb-help" href="{{ PREFIX }}EN-withhelp-asciidoc.zip">With help .zip</a>
+      <a class="btn btn--arc42-outline btn--large" id="dlb-help" href="{{ PREFIX }}EN-withhelp-asciidoc.zip"><span aria-hidden="true">&#8595;</span> With help .zip</a>
     </p>
     <p class="dlb__hint"><strong>With help</strong> embeds the official arc42 explanations in every section — ideal when you're new to the template. <strong>Plain</strong> gives you the bare structure.</p>
   </div>
