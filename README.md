@@ -115,12 +115,53 @@ instead of straight out.
 
 Write Markdown **below the front matter** and it becomes the body of that detail page
 — headings, lists, a longer description, a cover, a buy/watch button (from `link:`).
-[`_resources/effektive-softwarearchitekturen-9.md`](_resources/effektive-softwarearchitekturen-9.md)
+[`_resources/effektive-softwarearchitekturen.md`](_resources/effektive-softwarearchitekturen.md)
 is the worked example; the layout is [`_layouts/resource.html`](_layouts/resource.html).
 
 > **Remember:** [`sitemap.xml`](sitemap.xml) is maintained by hand. When you publish a
 > `detail: true` page, add its URL there — the other auto-generated item pages are
 > orphaned landing pages and are intentionally left out of the sitemap.
+
+## Translators (About page)
+
+The translator credits in the [`/about/`](https://www.arc42.org/about/#community) page's
+community section are **data-driven** from [`_data/translators.yml`](_data/translators.yml).
+Add or edit people there — no HTML to touch.
+
+### Add a translator
+
+One block per **person** (not per language):
+
+```yaml
+- name: "Mario Giustiniani"   # required
+  language: "Italiano"        # required — in its own script
+  bio: "One to three sentences."                        # optional
+  portrait: "/images/translators/mario-giustiniani.webp" # optional
+  links:                                                # optional — list of labelled links
+    - label: "GitHub"
+      url: "https://github.com/mgiustiniani"
+```
+
+The About page ([`_pages/about.md`](_pages/about.md)) renders this in **two tiers**:
+
+1. **Full credit roll** — every entry, grouped by `language` (co-translators of one
+   language auto-join with commas and "and"). A name links to its first `links:` entry
+   when present.
+2. **"Meet some of our translators"** — entries that have a `bio` **or** a `portrait`,
+   shown as cards. The whole tier stays hidden until at least one entry qualifies, so it
+   never looks half-finished.
+
+### Portraits and the monogram fallback
+
+- With `portrait:` → the card shows that image (square, round-cropped via CSS). Put
+  portraits in `/images/translators/` as ~320px square `webp`.
+- Without `portrait:` → the card falls back to an **initials monogram** on a tinted
+  disc (e.g. "Damien Lucas" → **DL**), so cards with and without a photo sit together
+  cleanly.
+
+Styles live under `.translator-grid` / `.translator-card` in
+[`assets/css/arc42-org.css`](assets/css/arc42-org.css). No sitemap entry is needed —
+this is a section of an existing page, not a new URL.
 
 ## How does the search page work?
 The search uses the [Simple-Jekyll-Search Javascript Function](https://github.com/christian-fei/Simple-Jekyll-Search),

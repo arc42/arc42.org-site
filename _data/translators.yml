@@ -1,0 +1,118 @@
+# arc42 translators.
+#
+# One entry per PERSON. Rendered on /about (#community) in two tiers:
+#   1. Full credit roll  — every entry, grouped by `language`. A name links to
+#      its first `links:` entry when present.
+#   2. "Meet some of our translators" — entries that have a `bio` OR a `portrait`,
+#      shown as cards (portrait optional; falls back to an initials monogram).
+#
+# Fields:
+#   name      (required) full name as it should appear
+#   language  (required) the language they translated, in its own script
+#   bio       (optional) 1-3 sentences
+#   portrait  (optional) e.g. /images/translators/damien-lucas.webp (square, ~320px)
+#   links     (optional) list of { label, url }; first one also links the name in tier 1
+
+- name: "Jakub Tomíšek"
+  language: "Čeština"
+  portrait: "/images/translators/jakub-tomisek.webp"
+  bio: >
+    A software architect focused on automating and integrating software delivery
+    pipelines, DevOps workflows and complex development processes. He contributes to
+    arc42 because its clear, universal structure enables seamless communication across
+    teams, cultures and languages, making software architecture accessible and
+    actionable throughout the entire delivery lifecycle.
+  links:
+    - label: "LinkedIn"
+      url: "https://www.linkedin.com/in/jakub-tomisek/"
+
+- name: "Isidoro Treviño"
+  language: "Español"
+
+- name: "Jakub J Jablonski"
+  language: "Español"
+  links:
+    - label: "GitHub"
+      url: "https://github.com/jakubjablonski"
+
+- name: "Damien Lucas"
+  language: "Français"
+  portrait: "/images/translators/damien-lucas.webp"
+  links:
+    - label: "GitHub"
+      url: "https://github.com/dlucasd"
+
+- name: "njikejr"
+  language: "Français"
+  links:
+    - label: "GitHub"
+      url: "https://github.com/njikejr"
+
+- name: "Mario Giustiniani"
+  language: "Italiano"
+  bio: >
+    A software developer currently focused on Java and microservice architectures,
+    who explores open-source ideas around software design, testing and architecture
+    documentation, including JavaSpec, a Java testing tool inspired by PhpSpec. His
+    interest in arc42 grew from its potential to bring Documentation as Code into
+    DevOps: the arc42 guidelines keep essential architecture documentation
+    structured, lightweight and continuously up to date.
+  links:
+    - label: "GitHub"
+      url: "https://github.com/mgiustiniani"
+    - label: "JavaSpec"
+      url: "https://github.com/mgiustiniani/javaspec/tree/develop"
+
+- name: "László Séra"
+  language: "Magyar"
+
+- name: "mverburg"
+  language: "Nederlands"
+  links:
+    - label: "GitHub"
+      url: "https://github.com/mverburg"
+
+- name: "Guilherme I F L Weizenmann"
+  language: "Português"
+  links:
+    - label: "GitHub"
+      url: "https://github.com/giflw"
+
+- name: "Pedro Mattiollo"
+  language: "Português"
+  links:
+    - label: "GitHub"
+      url: "https://github.com/pmattiollo"
+
+- name: "Nikita Erilin"
+  language: "Русский"
+  links:
+    - label: "GitHub"
+      url: "https://github.com/nerilin"
+
+- name: "Alexey Valikov"
+  language: "Русский"
+  links:
+    - label: "GitHub"
+      url: "https://github.com/highsource"
+
+- name: "Max Arshinov"
+  language: "Русский"
+  links:
+    - label: "GitHub"
+      url: "https://github.com/max-arshinov"
+
+- name: "Ivan Bulyk"
+  language: "Українська"
+
+- name: "Larysa Visengeriyeva"
+  language: "Українська"
+
+- name: "Chris (Gentle) Y杨"
+  language: "简体中文"
+
+- name: "Danny Ge"
+  language: "简体中文"
+  links:
+    - label: "GitHub"
+      url: "https://github.com/dannyge"

@@ -990,6 +990,55 @@ a.res-card:focus-visible { outline: 2px solid var(--arc42-primary-hover); outlin
 }
 .about-contributors li span { color: var(--arc42-text-muted); }
 .about-contributors > p { color: var(--arc42-text-muted); font-size: 0.9rem; }
+.translator-bios { margin-top: clamp(2.5rem, 5vw, 4rem); }
+.translator-bios h3 { margin: 0 0 1.5rem; color: var(--arc42-ink-strong); }
+.translator-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1.75rem 2rem;
+  align-items: start;
+}
+.translator-card {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  gap: 0 1rem;
+}
+.translator-card__portrait,
+.translator-card__monogram {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+}
+.translator-card__portrait { object-fit: cover; }
+.translator-card__monogram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef2f8;
+  color: var(--arc42-primary);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+.translator-card__body { min-width: 0; }
+.translator-card__name { margin: 0; font-weight: 600; color: var(--arc42-ink-strong); }
+.translator-card__lang { margin: 0.1rem 0 0; font-size: 0.85rem; color: var(--arc42-text-muted); }
+.translator-card__bio {
+  grid-column: 1 / -1;
+  margin: 0.75rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--arc42-ink);
+}
+.translator-card__links {
+  grid-column: 1 / -1;
+  margin: 0.5rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+}
+.translator-card__link { font-size: 0.85rem; font-weight: 600; }
 .about-section--dark {
   color: #f6f8fa;
   background: var(--arc42-primary);

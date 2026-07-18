@@ -94,16 +94,49 @@ excerpt: "The people, history and open-source community behind arc42."
     <div class="about-contributors">
       <h3>Special thanks to our translators</h3>
       <ul>
-        <li><strong>Čeština</strong><span>Jakub RC</span></li>
-        <li><strong>Français</strong><span>Damien Lucas</span></li>
-        <li><strong>Magyar</strong><span>László Séra</span></li>
-        <li><strong>Português</strong><span>Guilherme Weizenmann and Pedro Mattiollo</span></li>
-        <li><strong>Українська</strong><span>Ivan Bulyk and Larysa Visengeriyeva</span></li>
-        <li><strong>简体中文</strong><span>Chris (Gentle) Y杨 and DannyGe</span></li>
+        {%- assign translator_langs = site.data.translators | group_by: "language" -%}
+        {%- for group in translator_langs -%}
+        <li><strong>{{ group.name }}</strong><span>
+          {%- for t in group.items -%}
+            {%- if forloop.last and forloop.first == false %} and {% elsif forloop.first == false %}, {% endif -%}
+            {%- if t.links and t.links.size > 0 -%}<a href="{{ t.links.first.url }}" rel="noopener">{{ t.name }}</a>{%- else -%}{{ t.name }}{%- endif -%}
+          {%- endfor -%}
+        </span></li>
+        {%- endfor -%}
       </ul>
       <p>Additional template formats were contributed by Stephan Lessing (Doxygen), Raphael Dumhart (Enterprise Architect) and Niranjan SK (IBM Rhapsody).</p>
     </div>
   </div>
+  {%- assign translator_bios = site.data.translators | where_exp: "t", "t.bio or t.portrait" -%}
+  {%- if translator_bios.size > 0 -%}
+  <div class="translator-bios">
+    <h3>Meet some of our translators</h3>
+    <div class="translator-grid">
+      {%- for t in translator_bios -%}
+      {%- assign parts = t.name | split: " " -%}
+      {%- assign initials = parts.first | slice: 0 -%}
+      {%- if parts.size > 1 -%}{%- assign last_initial = parts.last | slice: 0 -%}{%- assign initials = initials | append: last_initial -%}{%- endif -%}
+      <figure class="translator-card">
+        {%- if t.portrait -%}
+        <img class="translator-card__portrait" src="{{ t.portrait }}" alt="{{ t.name | escape }}" loading="lazy">
+        {%- else -%}
+        <div class="translator-card__monogram" aria-hidden="true">{{ initials | upcase }}</div>
+        {%- endif -%}
+        <figcaption class="translator-card__body">
+          <p class="translator-card__name">{{ t.name }}</p>
+          <p class="translator-card__lang">{{ t.language }}</p>
+          {%- if t.bio -%}<p class="translator-card__bio">{{ t.bio }}</p>{%- endif -%}
+          {%- if t.links and t.links.size > 0 -%}
+          <p class="translator-card__links">
+            {%- for l in t.links -%}<a class="translator-card__link" href="{{ l.url }}" rel="noopener">{{ l.label }} &#8599;</a>{%- endfor -%}
+          </p>
+          {%- endif -%}
+        </figcaption>
+      </figure>
+      {%- endfor -%}
+    </div>
+  </div>
+  {%- endif -%}
 </section>
 
 <section id="contact" class="about-section about-section--dark about-contact">
