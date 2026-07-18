@@ -17,6 +17,11 @@ The [template](/overview/) answers **where** architecture information belongs; t
 
 Along the way it takes clear stances: clarify the **most important quality requirements** before anything else, structure the system along its **domain** (domain-driven), and choose the crosscutting **concepts** that actually make those quality goals achievable (quality-driven architecture). Two principles run through all of it — *learn constantly*, and *iterate with continuous feedback*. None of these tasks is ever truly "finished".
 
+<figure class="method-diagram">
+  {% include method-activities-diagram.svg %}
+  <figcaption>The six activities and how they feed each other. Structures and cross-cutting concepts overlap: neither can be designed without the other.</figcaption>
+</figure>
+
 ## Learn constantly
 
 IT is a dynamic industry: new technologies, methods, libraries and frameworks appear all the time. To design, implement and operate systems responsibly, you need to assess the impact of such innovations on your current system — which only works if *independent learning* becomes a fundamental habit.
