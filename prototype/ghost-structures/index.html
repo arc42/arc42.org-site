@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>arc42. Document your architecture, painlessly.</title>
+<meta name="description" content="The proven, pragmatic template to construct, communicate and document software architecture. Free and open source.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap masthead__inner">
+    <a class="masthead__logo" href="index.html" aria-current="page">
+      <img src="../../images/arc42-site-logo.png" alt="arc42 logo">
+      <span>arc42</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#" title="Not in prototype">Overview</a>
+      <a href="method.html">Method</a>
+      <a href="#" title="Not in prototype">Docs</a>
+      <a href="#" title="Not in prototype">Examples</a>
+      <a href="#" title="Not in prototype">Training</a>
+      <a class="nav-cta" href="download.html">Download</a>
+    </nav>
+  </div>
+</header>
+
+<section class="ghost-band ghost-band--home">
+  <div class="ghost-band__layers" aria-hidden="true">
+    <img class="ghost-band__photo" src="../../images/splash/arc42-splash-landingpage.webp" alt="" loading="eager">
+    <img class="ghost-band__diagram" src="../../images/arc42-overview-V8.svg" alt="">
+  </div>
+  <div class="wrap ghost-band__content">
+    <p class="ghost-band__kicker">Open source &middot; 12 languages &middot; since 2005</p>
+    <h1>Document your architecture, painlessly.</h1>
+    <p class="ghost-band__sub">The proven, pragmatic template to <strong>construct, communicate and document</strong> software architecture. Free and open source.</p>
+    <div class="ghost-band__actions">
+      <a class="btn btn--cta" href="download.html">Download arc42</a>
+      <a class="btn btn--ghost" href="method.html">See the method</a>
+    </div>
+  </div>
+</section>
+
+<div class="quickdl">
+  <div class="wrap">
+    <span class="quickdl__label">Quick download, English:</span>
+    <a class="fmt" href="https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-EN-plain-asciidoc.zip">AsciiDoc</a>
+    <a class="fmt" href="https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-EN-plain-markdown.zip">Markdown</a>
+    <a class="fmt" href="https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-EN-plain-docx.zip">Word (.docx)</a>
+    <a class="all" href="download.html">All languages and formats &#8594;</a>
+  </div>
+</div>
+
+<section class="band">
+  <div class="wrap split">
+    <div>
+      <h2 class="band-title">What is arc42?</h2>
+      <p class="lead">arc42 answers two questions in a pragmatic way: <strong>what</strong> should you document and communicate about your architecture, and <strong>how</strong>.</p>
+      <p>It is based on practical experience with many systems across domains: information and web systems, real-time and embedded, business intelligence and data warehouses. Twelve sections, each with a clear purpose, tailorable to your specific needs.</p>
+      <p>arc42 supports arbitrary technologies and tools, nothing to install. It is process-agnostic and especially well suited to lean and agile teams. Open source and free of charge, in commercial and private settings.</p>
+    </div>
+    <figure>
+      <img src="../../images/structure-overview.png" alt="Schematic overview of the arc42 template structure">
+      <figcaption>The arc42 structure: overview first, then views, concepts, decisions and quality.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="band band--deep band--ghosted" id="sections">
+  <img class="ghost-echo" src="../../images/arc42-overview-V8.svg" alt="" aria-hidden="true">
+  <div class="wrap">
+    <h2 class="band-title">Twelve sections. One plan.</h2>
+    <p class="lead">Every section has a clear purpose and links straight to its detailed documentation on docs.arc42.org. Hover a row to preview its structure.</p>
+    <ol class="section-index">
+      <li><a href="https://docs.arc42.org/section-1/">
+        <span class="section-index__no">01</span>
+        <span class="section-index__body"><strong>Introduction &amp; Goals</strong><small>Fundamental requirements, esp. quality goals</small></span>
+        <img class="section-index__thumb" src="../../images/template/01-intro-and-goals.png" alt="" loading="lazy">
+      </a></li>
+      <li><a href="https://docs.arc42.org/section-2/">
+        <span class="section-index__no">02</span>
+        <span class="section-index__body"><strong>Constraints</strong><small>Regulations and external constraints</small></span>
+        <img class="section-index__thumb" src="../../images/template/02-constraints-overview.png" alt="" loading="lazy">
+      </a></li>
+      <li><a href="https://docs.arc42.org/section-3/">
+        <span class="section-index__no">03</span>
+        <span class="section-index__body"><strong>Context &amp; Scope</strong><small>External systems and interfaces</small></span>
+        <img class="section-index__thumb" src="../../images/template/03-context-overview.png" alt="" loading="lazy">
+      </a></li>
+      <li><a href="https://docs.arc42.org/section-4/">
+        <span class="section-index__no">04</span>
+        <span class="section-index__body"><strong>Solution Strategy</strong><small>Core ideas and solution approaches</small></span>
+        <img class="section-index__thumb" src="../../images/template/04-solution-strategy-overview.png" alt="" loading="lazy">
+      </a></li>
+      <li><a href="https://docs.arc42.org/section-5/">
+        <span class="section-index__no">05</span>
+        <span class="section-index__body"><strong>Building Block View</strong><small>Structure of source code, modularization</small></span>
+        <img class="section-index__thumb" src="../../images/template/05-building-block-overview.png" alt="" loading="lazy">
+      </a></li>
+      <li><a href="https://docs.arc42.org/section-6/">
+        <span class="section-index__no">06</span>
+        <span class="section-index__body"><strong>Runtime View</strong><small>Important runtime scenarios</small></span>
+        <img class="section-index__thumb" src="../../images/template/06-runtime-overview.png" alt="" loading="lazy">
+      </a></li>
+      <li><a href="https://docs.arc42.org/section-7/">
+        <span class="section-index__no">07</span>
+        <span class="section-index__body"><strong>Deployment View</strong><small>Hardware, infrastructure and deployment</small></span>
+        <img class="section-index__thumb" src="../../images/template/07-deployment-overview.png" alt="" loading="lazy">
+      </a></li>
+      <li><a href="https://docs.arc42.org/section-8/">
+        <span class="section-index__no">08</span>
+        <span class="section-index__body"><strong>Crosscutting Concepts</strong><small>Topics that cut across the whole system</small></span>
+        <img class="section-index__thumb" src="../../images/template/08-concepts-overview.png" alt="" loading="lazy">
+      </a></li>
+      <li><a href="https://docs.arc42.org/section-9/">
+        <span class="section-index__no">09</span>
+        <span class="section-index__body"><strong>Architectural Decisions</strong><small>Important decisions, not described elsewhere</small></span>
+        <img class="section-index__thumb" src="../../images/template/09-decision-overview.png" alt="" loading="lazy">
+      </a></li>
+      <li><a href="https://docs.arc42.org/section-10/">
+        <span class="section-index__no">10</span>
+        <span class="section-index__body"><strong>Quality Requirements</strong><small>Quality tree, quality scenarios</small></span>
+        <img class="section-index__thumb" src="../../images/template/10-q-scenario-overview.png" alt="" loading="lazy">
+      </a></li>
+      <li><a href="https://docs.arc42.org/section-11/">
+        <span class="section-index__no">11</span>
+        <span class="section-index__body"><strong>Risks &amp; Technical Debt</strong><small>Known problems and risks</small></span>
+        <img class="section-index__thumb" src="../../images/template/11-risk-overview.png" alt="" loading="lazy">
+      </a></li>
+      <li><a href="https://docs.arc42.org/section-12/">
+        <span class="section-index__no">12</span>
+        <span class="section-index__body"><strong>Glossary</strong><small>Important and specific terms ("ubiquitous language")</small></span>
+        <img class="section-index__thumb" src="../../images/template/12-glossary-overview.png" alt="" loading="lazy">
+      </a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap split split--flip">
+    <figure>
+      <img src="../../images/template/05-building-block-overview.png" alt="Hierarchical building block view diagram from the arc42 template">
+      <figcaption>Design structures: one of the six recurring activities of the arc42 method.</figcaption>
+    </figure>
+    <div>
+      <h2 class="band-title">More than a template.</h2>
+      <p class="lead">arc42 is also an opinionated <strong>method</strong> for developing and evolving software architecture: six recurring, interrelated activities, held together by constant learning and continuous feedback.</p>
+      <p>The template answers <strong>where</strong> architecture information belongs; the method answers <strong>how you work</strong> to produce it. It keeps your architecture, your code and your stakeholders in sync, in agile, lean or formal projects alike.</p>
+      <p><a class="btn btn--ink" href="method.html">Explore the method</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="band band--deep">
+  <div class="wrap founders">
+    <img src="../../images/about/peter+gernot.webp" alt="Dr. Peter Hruschka and Dr. Gernot Starke, the creators of arc42">
+    <div>
+      <h2 class="band-title">Twenty years of practice, two authors.</h2>
+      <p>arc42 was created by <strong>Dr. Gernot Starke</strong> and <strong>Dr. Peter Hruschka</strong> and has been refined in real projects for more than twenty years. They still maintain it, teach it in iSAQB-certified architecture trainings, and write about it.</p>
+      <p>There is plenty to learn from: <a href="resources.html">browse our books, articles, talks and videos &#8594;</a></p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div>
+      <h2>arc42</h2>
+      <p>All you need to construct, communicate and document your software architecture. Proven, practical, pragmatic. Open source and <strong>free to use, even commercially</strong>.</p>
+      <p>arc42 by Dr. Gernot Starke and Dr. Peter Hruschka.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="method.html">Method</a>
+      <a href="download.html">Download</a>
+      <a href="resources.html">Resources</a>
+      <a href="https://docs.arc42.org">docs.arc42.org</a>
+      <a href="https://faq.arc42.org">faq.arc42.org</a>
+      <a href="https://quality.arc42.org">quality.arc42.org</a>
+      <a href="https://github.com/arc42">arc42 on GitHub</a>
+    </nav>
+  </div>
+  <div class="foot-legal">
+    <div class="wrap">
+      <p>Prototype V4 "Ghost Structures". arc42 is open source: use it in any context, commercial or private, free of charge.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

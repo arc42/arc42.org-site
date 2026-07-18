@@ -43,7 +43,7 @@ excerpt: "Real-world systems documented with arc42 — browse them online or in 
 
 </div>
 
-Would you like your system listed here? [Contact us](/contact/).
+Would you like your system listed here? [Contact us](/about/#contact).
 
 ## In book form
 
@@ -55,7 +55,7 @@ Each example starts from the problem domain and quality requirements, walks thro
 
 <a href="https://leanpub.com/arc42byexample" class="btn btn--arc42-outline" rel="noopener">Read on Leanpub</a>
 
-For *embedded systems and IoT*, [arc42 by Example Volume 2](/books/#arc42-by-example-vol2) by Peter Hruschka, Ivan Kostov and Wolfgang Reimesch adds two documented hardware/software co-design architectures.
+For *embedded systems and IoT*, [arc42 by Example Volume 2](/resources/?type=book#arc42-by-example-vol2) by Peter Hruschka, Ivan Kostov and Wolfgang Reimesch adds two documented hardware/software co-design architectures.
 
 <div class="training-section" markdown="1">
 

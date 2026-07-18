@@ -2,18 +2,20 @@
 title: "arc42 method"
 layout: splash
 permalink: /method/
-excerpt: "How to work with arc42: iterative, feedback-driven and process-agnostic — the recurring tasks of practical architecture work."
+excerpt: "arc42 is more than a documentation template: an opinionated, iterative method for developing and evolving software architecture — six recurring activities, driven by constant learning and continuous feedback."
 ---
 
 <section class="dl-hero">
   <div class="dl-hero__inner">
-    <p class="dl-hero__kicker">Iterative &middot; feedback-driven &middot; process-agnostic</p>
+    <p class="dl-hero__kicker">More than a template</p>
     <h1 class="dl-hero__title">The arc42 method</h1>
-    <p class="dl-hero__sub">The <a href="/overview/">template</a> tells you <strong>where</strong> architecture information belongs. The method is about <strong>how you work</strong>: a small set of recurring tasks that keep your architecture, your code and your stakeholders in sync — in agile, lean or formal projects alike.</p>
+    <p class="dl-hero__sub">arc42 is best known as a documentation template, but it is more than that. It is also an opinionated <strong>method</strong> for developing and evolving software architecture: six recurring, interrelated activities, held together by constant learning and continuous feedback, that keep your architecture, your code and your stakeholders in sync — in agile, lean or formal projects alike.</p>
   </div>
 </section>
 
-Architecture work should always be *iterative*: complement analytical and constructive tasks with systematic *feedback*. The following tasks recur throughout the life of every system — none of them is ever "finished".
+The [template](/overview/) answers **where** architecture information belongs; the method answers **how you work** to produce it. And arc42 does take a position on the *how*. It proposes six core activities, with no fixed order and highly interrelated, so the results of any one refine the others in the next increment.
+
+Along the way it takes clear stances: clarify the **most important quality requirements** before anything else, structure the system along its **domain** (domain-driven), and choose the crosscutting **concepts** that actually make those quality goals achievable (quality-driven architecture). Two principles run through all of it — *learn constantly*, and *iterate with continuous feedback*. None of these tasks is ever truly "finished".
 
 ## Learn constantly
 

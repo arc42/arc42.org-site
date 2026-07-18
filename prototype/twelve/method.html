@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>arc42 method : the 12 sections</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600..900&family=Ysabeau+Office:ital,wght@0,400..700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="frame">
+
+<header class="masthead">
+  <a class="wordmark" href="index.html">arc<span class="mark-12">42</span></a>
+  <nav aria-label="Main">
+    <a href="#" title="not in prototype">Overview</a>
+    <a href="method.html" aria-current="page">Method</a>
+    <a href="#" title="not in prototype">Docs</a>
+    <a href="#" title="not in prototype">Examples</a>
+    <a href="#" title="not in prototype">Training</a>
+    <a href="resources.html">Resources</a>
+    <a class="nav-cta" href="download.html">Download</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="page-hero">
+  <div class="pg-numeral" aria-hidden="true">1&#8202;&#8594;&#8202;12</div>
+  <div class="pg-text">
+    <h1>The template, and the method behind it</h1>
+    <p class="pg-sub">Twelve sections, each with a clear purpose, tailorable to
+       your needs. arc42 answers <strong>what</strong> to document and
+       communicate about your architecture, and <strong>how</strong>.
+       Each cell below links to its detailed documentation on docs.arc42.org.</p>
+  </div>
+</section>
+
+<section class="grid-12" aria-label="The 12 sections of the arc42 template">
+
+  <a class="cell wide" id="s1" href="https://docs.arc42.org/section-1/">
+    <span class="n" aria-hidden="true">1</span>
+    <h3>Introduction &amp; Goals</h3>
+    <p>Fundamental requirements, especially the top quality goals, and the
+       stakeholders who care about them. Everything else follows from here.</p>
+    <span class="thumb"><img src="../../images/template/01-intro-and-goals.png" alt="Diagram: requirements, quality goals and stakeholders"></span>
+  </a>
+
+  <a class="cell" id="s2" href="https://docs.arc42.org/section-2/">
+    <span class="n" aria-hidden="true">2</span>
+    <h3>Constraints</h3>
+    <p>Regulations and external constraints you have to live with.</p>
+    <span class="thumb"><img src="../../images/template/02-constraints-overview.png" alt="Diagram: constraints acting on the system"></span>
+  </a>
+
+  <a class="cell" id="s3" href="https://docs.arc42.org/section-3/">
+    <span class="n" aria-hidden="true">3</span>
+    <h3>Context &amp; Scope</h3>
+    <p>External systems and interfaces: your system as a black box in its environment.</p>
+    <span class="thumb"><img src="../../images/template/03-context-overview.png" alt="Diagram: system context with neighbouring systems"></span>
+  </a>
+
+  <a class="cell" id="s4" href="https://docs.arc42.org/section-4/">
+    <span class="n" aria-hidden="true">4</span>
+    <h3>Solution Strategy</h3>
+    <p>Core ideas and solution approaches, in brief.</p>
+    <span class="thumb"><img src="../../images/template/04-solution-strategy-overview.png" alt="Diagram: fundamental solution decisions"></span>
+  </a>
+
+  <a class="cell wide" id="s5" href="https://docs.arc42.org/section-5/">
+    <span class="n" aria-hidden="true">5</span>
+    <h3>Building Block View</h3>
+    <p>Structure of the source code: hierarchical modularization, from system
+       whitebox down to the level of detail you actually need.</p>
+    <span class="thumb"><img src="../../images/template/05-building-block-overview.png" alt="Diagram: hierarchical building block decomposition"></span>
+  </a>
+
+  <a class="cell" id="s6" href="https://docs.arc42.org/section-6/">
+    <span class="n" aria-hidden="true">6</span>
+    <h3>Runtime View</h3>
+    <p>Important runtime scenarios: how building blocks interact.</p>
+    <span class="thumb"><img src="../../images/template/06-runtime-overview.png" alt="Diagram: runtime interactions"></span>
+  </a>
+
+  <a class="cell" id="s7" href="https://docs.arc42.org/section-7/">
+    <span class="n" aria-hidden="true">7</span>
+    <h3>Deployment View</h3>
+    <p>Hardware, infrastructure and deployment of your artifacts.</p>
+    <span class="thumb"><img src="../../images/template/07-deployment-overview.png" alt="Diagram: deployment onto infrastructure"></span>
+  </a>
+
+  <a class="cell wide" id="s8" href="https://docs.arc42.org/section-8/">
+    <span class="n" aria-hidden="true">8</span>
+    <h3>Crosscutting Concepts</h3>
+    <p>Topics that cut across the whole system: persistence, UI structure,
+       error handling, logging, security. Often technical, always decisive
+       for your quality goals.</p>
+    <span class="thumb"><img src="../../images/template/08-concepts-overview.png" alt="Diagram: concepts cutting across building blocks"></span>
+  </a>
+
+  <a class="cell" id="s9" href="https://docs.arc42.org/section-9/">
+    <span class="n" aria-hidden="true">9</span>
+    <h3>Architectural Decisions</h3>
+    <p>Important decisions not described elsewhere.</p>
+    <span class="thumb"><img src="../../images/template/09-decision-overview.png" alt="Diagram: architecture decision records"></span>
+  </a>
+
+  <a class="cell" id="s10" href="https://docs.arc42.org/section-10/">
+    <span class="n" aria-hidden="true">10</span>
+    <h3>Quality Requirements</h3>
+    <p>Quality tree and concrete quality scenarios.</p>
+    <span class="thumb"><img src="../../images/template/10-q-scenario-overview.png" alt="Diagram: quality scenarios"></span>
+  </a>
+
+  <a class="cell" id="s11" href="https://docs.arc42.org/section-11/">
+    <span class="n" aria-hidden="true">11</span>
+    <h3>Risks &amp; Technical Debt</h3>
+    <p>Known problems and risks, stated openly.</p>
+    <span class="thumb"><img src="../../images/template/11-risk-overview.png" alt="Diagram: risks and technical debt"></span>
+  </a>
+
+  <a class="cell wide" id="s12" href="https://docs.arc42.org/section-12/">
+    <span class="n" aria-hidden="true">12</span>
+    <h3>Glossary</h3>
+    <p>Important and specific terms: the ubiquitous language of your system,
+       so that everyone means the same thing by the same word.</p>
+    <span class="thumb"><img src="../../images/template/12-glossary-overview.png" alt="Diagram: glossary of terms"></span>
+  </a>
+
+</section>
+
+<section class="band">
+  <h2>More than a template: how you work</h2>
+  <p>The template answers <strong>where</strong> architecture information
+     belongs; the method answers <strong>how you work</strong> to produce it.
+     arc42 proposes six core activities, with no fixed order and highly
+     interrelated, so the results of any one refine the others in the next
+     increment. Two principles run through all of it: <strong>learn
+     constantly</strong>, and <strong>iterate with continuous
+     feedback</strong>. None of these tasks is ever truly finished.</p>
+</section>
+
+<ol class="acts" aria-label="The six activities of the arc42 method">
+  <li>
+    <span class="an" aria-hidden="true">01</span>
+    <div class="ab">
+      <h3>Clarify requirements</h3>
+      <p>Development teams need a robust foundation of goals, requirements and
+         constraints to make targeted decisions. Question quality requirements,
+         categorize functional requirements, identify technical risks: clarify
+         the most important quality requirements before anything else.</p>
+    </div>
+  </li>
+  <li>
+    <span class="an" aria-hidden="true">02</span>
+    <div class="ab">
+      <h3>Design structures</h3>
+      <p>Building a system out of smaller parts is one of the fundamental tasks
+         of architecture. arc42 calls these parts building blocks, deliberately
+         technology-neutral, and structures the system along its domain. This
+         produces the Building Block View, the Runtime View, and the interfaces
+         that connect them with each other and the outside world.</p>
+    </div>
+  </li>
+  <li>
+    <span class="an" aria-hidden="true">03</span>
+    <div class="ab">
+      <h3>Design crosscutting concepts</h3>
+      <p>Some decisions cut across the whole system: base technology and
+         infrastructure, frameworks and libraries, recurring patterns, the
+         approach to build, deployment, test and release. Choose the concepts
+         that actually make your quality goals achievable.</p>
+    </div>
+  </li>
+  <li>
+    <span class="an" aria-hidden="true">04</span>
+    <div class="ab">
+      <h3>Communicate and document</h3>
+      <p>Coordinate decisions with the relevant stakeholders and incorporate
+         their feedback. Communicate intensively in person, and put decisions in
+         writing as sparingly as possible: the template supports both extremes,
+         very sparse and very thorough documentation.</p>
+    </div>
+  </li>
+  <li>
+    <span class="an" aria-hidden="true">05</span>
+    <div class="ab">
+      <h3>Accompany the implementation</h3>
+      <p>Work with your team to ensure the code implements the intended
+         structures and concepts, which means actually looking into the source
+         code. It works both ways: find the gold pieces where developers had
+         better ideas, and coach where a concept was misunderstood.</p>
+    </div>
+  </li>
+  <li>
+    <span class="an" aria-hidden="true">06</span>
+    <div class="ab">
+      <h3>Analyze and evaluate</h3>
+      <p>Ask at regular intervals whether your decisions still achieve the
+         desired effect from today's perspective. A methodical look in the
+         rear-view mirror either confirms your decisions or reveals weaknesses
+         and risks early enough to plan improvements.</p>
+    </div>
+  </li>
+</ol>
+
+<section class="band">
+  <h2>Put the method to work</h2>
+  <div class="btn-row">
+    <a class="btn btn--fill" href="download.html">&#8595; Download arc42</a>
+    <a class="btn" href="resources.html">Learn from books &amp; talks</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="colophon">
+  <div class="foot-grid">
+    <div>
+      <h2>arc42</h2>
+      <p>The pragmatic template and method for software architecture
+         communication and documentation. Open source, free to use,
+         even commercially.</p>
+    </div>
+    <div>
+      <h2>Site</h2>
+      <ul>
+        <li><a href="method.html">Method &amp; template</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="#" title="not in prototype">Examples</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Elsewhere</h2>
+      <ul>
+        <li><a href="https://docs.arc42.org">docs.arc42.org</a></li>
+        <li><a href="https://faq.arc42.org">faq.arc42.org</a></li>
+        <li><a href="https://github.com/arc42">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-base">
+    <span>arc42 by Dr. Gernot Starke and Dr. Peter Hruschka</span>
+    <span class="v">1 &#8594; 12, since 2005</span>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

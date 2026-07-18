@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The arc42 method. More than a template.</title>
+<meta name="description" content="arc42 is an opinionated, iterative method for developing and evolving software architecture: six recurring activities, driven by constant learning and continuous feedback.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap masthead__inner">
+    <a class="masthead__logo" href="index.html">
+      <img src="../../images/arc42-site-logo.png" alt="arc42 logo">
+      <span>arc42</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#" title="Not in prototype">Overview</a>
+      <a href="method.html" aria-current="page">Method</a>
+      <a href="#" title="Not in prototype">Docs</a>
+      <a href="#" title="Not in prototype">Examples</a>
+      <a href="#" title="Not in prototype">Training</a>
+      <a class="nav-cta" href="download.html">Download</a>
+    </nav>
+  </div>
+</header>
+
+<section class="ghost-band ghost-band--method">
+  <div class="ghost-band__layers" aria-hidden="true">
+    <img class="ghost-band__photo" src="../../images/splash/method-splash.webp" alt="" loading="eager">
+    <img class="ghost-band__diagram" src="../../images/template/05-building-block-overview.png" alt="">
+  </div>
+  <div class="wrap ghost-band__content">
+    <p class="ghost-band__kicker">More than a template</p>
+    <h1>The arc42 method</h1>
+    <p class="ghost-band__sub">Six recurring, interrelated activities, held together by constant learning and continuous feedback. They keep your architecture, your code and your stakeholders in sync, in agile, lean or formal projects alike.</p>
+    <div class="ghost-band__actions">
+      <a class="btn btn--cta" href="download.html">Download arc42</a>
+      <a class="btn btn--ghost" href="index.html#sections">Explore the template</a>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="lead" style="max-width: 62ch;">The template answers <strong>where</strong> architecture information belongs; the method answers <strong>how you work</strong> to produce it. And arc42 does take a position on the how: six core activities, with no fixed order and highly interrelated, so the results of any one refine the others in the next increment.</p>
+    <p style="max-width: 68ch;">Along the way it takes clear stances: clarify the <strong>most important quality requirements</strong> before anything else, structure the system along its <strong>domain</strong>, and choose the crosscutting <strong>concepts</strong> that actually make those quality goals achievable. Two principles run through all of it: <em>learn constantly</em>, and <em>iterate with continuous feedback</em>. None of these tasks is ever truly finished.</p>
+  </div>
+</section>
+
+<section class="band band--deep band--ghosted">
+  <img class="ghost-echo" src="../../images/template/06-runtime-overview.png" alt="" aria-hidden="true">
+  <div class="wrap">
+    <h2 class="band-title">Six activities, no fixed order.</h2>
+    <ol class="section-index section-index--activities">
+      <li><a href="#" title="Not in prototype">
+        <span class="section-index__no">01</span>
+        <span class="section-index__body">
+          <strong>Learn constantly</strong>
+          <p>IT is a dynamic industry: new technologies, methods, libraries and frameworks appear all the time. To design, implement and operate systems responsibly, you need to assess their impact on your current system, which only works if independent learning becomes a fundamental habit.</p>
+        </span>
+      </a></li>
+      <li><a href="https://docs.arc42.org/section-1/">
+        <span class="section-index__no">02</span>
+        <span class="section-index__body">
+          <strong>Clarify requirements</strong>
+          <p>Development teams need a robust foundation of goals, requirements and constraints to make targeted decisions. Architects contribute decisively here: by questioning quality requirements, categorizing functional requirements, and identifying technical risks.</p>
+        </span>
+        <img class="section-index__thumb" src="../../images/template/01-intro-and-goals.png" alt="" loading="lazy">
+      </a></li>
+      <li><a href="https://docs.arc42.org/section-5/">
+        <span class="section-index__no">03</span>
+        <span class="section-index__body">
+          <strong>Design structures</strong>
+          <p>Building a system out of smaller parts is one of the fundamental tasks of architecture. arc42 calls these parts building blocks, deliberately technology-neutral. This produces the static Building Block View, its dynamic counterpart, the Runtime View, and the interfaces that connect them with each other and the outside world.</p>
+        </span>
+        <img class="section-index__thumb" src="../../images/template/05-building-block-overview.png" alt="" loading="lazy">
+      </a></li>
+      <li><a href="https://docs.arc42.org/section-8/">
+        <span class="section-index__no">04</span>
+        <span class="section-index__body">
+          <strong>Design crosscutting concepts</strong>
+          <p>Some decisions cut across the whole system: base technology and infrastructure, frameworks and libraries, recurring patterns, the approach to build, deployment, test and release. How is the UI structured? Where is persistent data stored? How are errors, logging and monitoring handled?</p>
+        </span>
+        <img class="section-index__thumb" src="../../images/template/08-concepts-overview.png" alt="" loading="lazy">
+      </a></li>
+      <li><a href="https://docs.arc42.org/section-9/">
+        <span class="section-index__no">05</span>
+        <span class="section-index__body">
+          <strong>Communicate and document</strong>
+          <p>Coordinate decisions with the relevant stakeholders, solicit their feedback, and incorporate it where appropriate. Communicate intensively in person, and put decisions in writing as sparingly as possible: written documentation creates maintenance effort for every future change. The template supports both extremes, very sparse and very thorough.</p>
+        </span>
+        <img class="section-index__thumb" src="../../images/template/09-decision-overview.png" alt="" loading="lazy">
+      </a></li>
+      <li><a href="https://docs.arc42.org/section-11/">
+        <span class="section-index__no">06</span>
+        <span class="section-index__body">
+          <strong>Accompany the implementation, then analyze and evaluate</strong>
+          <p>Good design discussions are not enough: deviations from agreed decisions creep into source code, on purpose or by accident. Look into the code (reviews), find the gold pieces where developers improved on the design, coach where a concept was misunderstood. And at regular intervals, take a methodical look in the rear-view mirror: either your decisions still achieve the desired effect (great, move on), or weaknesses surface early enough to plan improvements.</p>
+        </span>
+        <img class="section-index__thumb" src="../../images/template/11-risk-overview.png" alt="" loading="lazy">
+      </a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap split">
+    <div>
+      <h2 class="band-title">Quality-driven, domain-driven.</h2>
+      <p>arc42 proposes to clarify the most important quality requirements first, and to let them drive the crosscutting concepts of the architecture. Structure follows the domain, not the org chart or the framework of the week.</p>
+      <p>This simple feedback loop, decide, act, reflect, is the basis of every iterative process. Deciding and acting without reflection easily leads to missed goals and actionism.</p>
+      <p>
+        <a class="btn btn--cta" href="download.html">Download arc42</a>
+        <a class="btn btn--ghost" href="index.html#sections">See the twelve sections</a>
+      </p>
+    </div>
+    <figure>
+      <img src="../../images/template/10-q-scenario-overview.png" alt="Quality scenario diagram from the arc42 template">
+      <figcaption>Quality scenarios make vague quality goals concrete and testable.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div>
+      <h2>arc42</h2>
+      <p>All you need to construct, communicate and document your software architecture. Proven, practical, pragmatic. Open source and <strong>free to use, even commercially</strong>.</p>
+      <p>arc42 by Dr. Gernot Starke and Dr. Peter Hruschka.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="method.html">Method</a>
+      <a href="download.html">Download</a>
+      <a href="resources.html">Resources</a>
+      <a href="https://docs.arc42.org">docs.arc42.org</a>
+      <a href="https://faq.arc42.org">faq.arc42.org</a>
+      <a href="https://quality.arc42.org">quality.arc42.org</a>
+      <a href="https://github.com/arc42">arc42 on GitHub</a>
+    </nav>
+  </div>
+  <div class="foot-legal">
+    <div class="wrap">
+      <p>Prototype V4 "Ghost Structures". arc42 is open source: use it in any context, commercial or private, free of charge.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
