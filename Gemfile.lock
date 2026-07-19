@@ -50,6 +50,7 @@ GEM
     faraday-net_http (3.4.4)
       net-http (~> 0.5)
     ffi (1.17.4-aarch64-linux-gnu)
+    ffi (1.17.4-arm64-darwin)
     ffi (1.17.4-x86_64-linux-gnu)
     ffi (1.17.4-x86_64-linux-musl)
     fiber-annotation (0.2.0)
@@ -133,6 +134,8 @@ GEM
       uri (>= 0.11.1)
     nokogiri (1.19.4-aarch64-linux-gnu)
       racc (~> 1.4)
+    nokogiri (1.19.4-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.19.4-x86_64-linux-gnu)
       racc (~> 1.4)
     nokogiri (1.19.4-x86_64-linux-musl)
@@ -182,6 +185,7 @@ GEM
 
 PLATFORMS
   aarch64-linux
+  arm64-darwin-25
   x86_64-linux
   x86_64-linux-musl
 

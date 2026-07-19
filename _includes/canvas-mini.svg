@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 204" role="img" aria-label="Miniature of the arc42 canvas: one page with a handful of cells" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+  <style>
+    svg { --ink: #1c2c44; --muted: #6f777d; --line: #cfd8e3; --paper: #ffffff; --gold: #f5b700; }
+    .sheet { fill: var(--paper); stroke: var(--ink); stroke-width: 1.5; }
+    .cell  { fill: none; stroke: var(--line); stroke-width: 1; }
+    .goldcell { fill: var(--gold); opacity: .25; }
+    .txt   { stroke: var(--muted); stroke-width: 2.5; stroke-linecap: round; opacity: .55; }
+    .hd    { stroke: var(--ink); stroke-width: 3; stroke-linecap: round; opacity: .8; }
+  </style>
+  <rect class="sheet" x="6" y="6" width="308" height="192" rx="4"/>
+  <!-- cell borders -->
+  <path class="cell" d="M108,6 V70 M212,6 V70 M6,70 H314 M160,70 V134 M6,134 H314 M108,134 V198 M212,134 V198"/>
+  <rect class="goldcell" x="212.5" y="6.5" width="101" height="63"/>
+  <!-- placeholder headings and text lines -->
+  <path class="hd" d="M18,20 h44 M120,20 h40 M224,20 h48 M18,84 h52 M172,84 h48 M18,148 h40 M120,148 h44 M224,148 h36"/>
+  <path class="txt" d="M18,34 h72 M18,44 h58 M18,54 h66 M120,34 h68 M120,44 h52 M224,34 h72 M224,44 h60 M224,54 h48
+                      M18,98 h116 M18,108 h96 M18,118 h108 M172,98 h116 M172,108 h88
+                      M18,162 h70 M18,172 h54 M120,162 h74 M120,172 h60 M224,162 h72 M224,172 h50"/>
+</svg>

@@ -1,23 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 560" role="img" aria-labelledby="bt bd" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 505" role="img" aria-labelledby="bt bd" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
   <title id="bt">The arc42 method: six activities and their relations</title>
-  <desc id="bd">Six activity boxes connected by double-headed arrows. Clarify requirements and constraints at the top, involving stakeholders. Design structures and design cross-cutting concepts overlap in the middle: structural decisions and concepts influence each other directly. Below: communicate architecture to stakeholders, accompany the implementation, and analyze and evaluate, which feeds back into clarifying requirements.</desc>
+  <desc id="bd">Six numbered activity boxes connected by double-headed arrows; each box links to its description below. One stakeholder group at the upper left exchanges with both clarify requirements and communicate and document. Design structures and design cross-cutting concepts overlap in the middle: structural decisions and concepts influence each other directly. Below: communicate and document, accompany the implementation, and analyze and evaluate, which feeds back into clarifying requirements.</desc>
   <style>
-    svg { --ink: #2b3440; --accent: #c94f2e; --muted: #7a838c; --line: #b9c0c7; --paper: #ffffff; }
-    .box    { fill: var(--paper); stroke: var(--ink); stroke-width: 1.5; }
+    svg { --ink: #1c2c44; --accent: #4b7ba3; --muted: #6f777d; --line: #e4e9f0; --paper: #ffffff; --box: #f2f7fc; }
+    .box    { fill: var(--box, #f2f7fc); stroke: var(--ink); stroke-width: 1.5; }
     .olap   { fill: var(--accent); opacity: .28; }
-    .lbl    { fill: var(--ink); font-size: 17px; font-weight: 600; text-anchor: middle; }
+    .lbl    { fill: var(--ink); font-size: 20px; font-weight: 600; text-anchor: middle; }
+    .badge  { fill: var(--accent); }
+    .bno    { fill: var(--paper); font-size: 13.5px; font-weight: 700; text-anchor: middle; }
     .rel    { fill: none; stroke: var(--muted); stroke-width: 1.6; }
-    .people { fill: var(--muted); }
-    .activity { cursor: default; }
-    .activity:hover .box { stroke: var(--accent); stroke-width: 2.25; }
-    .activity:hover .lbl { fill: var(--accent); }
+    .people { fill: var(--accent); }
+    .plbl   { fill: var(--muted); font-size: 14px; font-weight: 600; }
+    svg a { text-decoration: none; cursor: pointer; }
+    a:hover .box, a:focus-visible .box { stroke: var(--accent); stroke-width: 2.25; fill: var(--paper); }
+    a:hover .lbl, a:focus-visible .lbl { fill: var(--accent); }
+    a:focus-visible { outline: none; }
   </style>
   <defs>
     <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0,0 L10,5 L0,10 z" fill="#7a838c" style="fill:var(--muted)"/>
+      <path d="M0,0 L10,5 L0,10 z" fill="#6f777d" style="fill:var(--muted)"/>
     </marker>
     <g id="bperson"><circle cx="0" cy="0" r="4.2"/><rect x="-5.8" y="5.2" width="11.6" height="9.5" rx="5"/></g>
-    <g id="bpair"><use href="#bperson"/><use href="#bperson" x="13" y="4" opacity=".55"/></g>
+    <g id="btrio"><use href="#bperson"/><use href="#bperson" x="13" y="4" opacity=".55"/><use href="#bperson" x="26" y="1" opacity=".78"/></g>
   </defs>
 
   <!-- relations, all bidirectional -->
@@ -27,49 +31,59 @@
   <path class="rel" marker-start="url(#ah)" marker-end="url(#ah)" d="M228,316 L172,389"/>
   <path class="rel" marker-start="url(#ah)" marker-end="url(#ah)" d="M352,316 L372,389"/>
   <path class="rel" marker-start="url(#ah)" marker-end="url(#ah)" d="M492,301 L556,384"/>
-  <path class="rel" marker-start="url(#ah)" marker-end="url(#ah)" d="M484,72 L562,64"/>
-  <path class="rel" marker-start="url(#ah)" marker-end="url(#ah)" d="M120,481 L97,503"/>
-  <path class="rel" marker-start="url(#ah)" marker-end="url(#ah)" d="M178,481 L201,503"/>
+  <!-- stakeholder relations: clarify (1) and communicate (4) talk to the same people -->
+  <path class="rel" marker-start="url(#ah)" marker-end="url(#ah)" d="M164,88 L234,72"/>
+  <path class="rel" marker-start="url(#ah)" marker-end="url(#ah)" d="M100,146 C88,244 96,322 114,389"/>
 
-  <!-- clarify requirements -->
-  <g class="activity">
+  <!-- 1 clarify requirements -->
+  <a href="#clarify-requirements" aria-label="Activity 1: clarify requirements">
     <rect class="box" x="240" y="28" width="240" height="86"/>
-    <text class="lbl" x="360" y="62">Clarify requirements</text>
-    <text class="lbl" x="360" y="86">and constraints</text>
-  </g>
+    <text class="lbl" x="360" y="78">Clarify requirements</text>
+    <circle class="badge" cx="240" cy="28" r="13"/>
+    <text class="bno" x="240" y="33">1</text>
+  </a>
 
-  <!-- concepts first, structures on top: their overlap is the point -->
-  <g class="activity">
-    <rect class="box" x="335" y="185" width="190" height="110"/>
-    <text class="lbl" x="447" y="230">Design cross-</text>
-    <text class="lbl" x="447" y="254">cutting concepts</text>
-  </g>
-  <g class="activity">
+  <!-- 3 concepts first, 2 structures on top: their overlap is the point -->
+  <a href="#design-concepts" aria-label="Activity 3: design cross-cutting concepts">
+    <rect class="box" x="335" y="185" width="215" height="110"/>
+    <text class="lbl" x="460" y="230">Design cross-</text>
+    <text class="lbl" x="460" y="254">cutting concepts</text>
+    <circle class="badge" cx="550" cy="185" r="13"/>
+    <text class="bno" x="550" y="190">3</text>
+  </a>
+  <a href="#design-structures" aria-label="Activity 2: design structures">
     <rect class="box" x="180" y="230" width="190" height="80"/>
     <text class="lbl" x="258" y="262">Design</text>
     <text class="lbl" x="258" y="286">structures</text>
-  </g>
-  <rect class="olap" x="335" y="230" width="35" height="65"/>
+    <circle class="badge" cx="180" cy="230" r="13"/>
+    <text class="bno" x="180" y="235">2</text>
+  </a>
+  <rect class="olap" x="335" y="230" width="35" height="65" pointer-events="none"/>
 
   <!-- bottom row -->
-  <g class="activity">
+  <a href="#communicate" aria-label="Activity 4: communicate and document">
     <rect class="box" x="60" y="395" width="185" height="84"/>
     <text class="lbl" x="152" y="429">Communicate</text>
-    <text class="lbl" x="152" y="453">architecture</text>
-  </g>
-  <g class="activity">
+    <text class="lbl" x="152" y="453">and document</text>
+    <circle class="badge" cx="60" cy="395" r="13"/>
+    <text class="bno" x="60" y="400">4</text>
+  </a>
+  <a href="#accompany-implementation" aria-label="Activity 5: accompany the implementation">
     <rect class="box" x="295" y="395" width="165" height="84"/>
-    <text class="lbl" x="377" y="429">Accompany</text>
+    <text class="lbl" x="377" y="429">Accompany the</text>
     <text class="lbl" x="377" y="453">implementation</text>
-  </g>
-  <g class="activity">
+    <circle class="badge" cx="295" cy="395" r="13"/>
+    <text class="bno" x="295" y="400">5</text>
+  </a>
+  <a href="#analyze-evaluate" aria-label="Activity 6: analyze and evaluate">
     <rect class="box" x="500" y="390" width="180" height="92"/>
     <text class="lbl" x="590" y="424">Analyze and</text>
     <text class="lbl" x="590" y="448">evaluate</text>
-  </g>
+    <circle class="badge" cx="500" cy="390" r="13"/>
+    <text class="bno" x="500" y="395">6</text>
+  </a>
 
-  <!-- stakeholders -->
-  <g class="people" transform="translate(586,56)"><use href="#bpair"/></g>
-  <g class="people" transform="translate(84,516)"><use href="#bpair"/></g>
-  <g class="people" transform="translate(202,516)"><use href="#bpair"/></g>
+  <!-- stakeholders: one group, upper left; activities 1 and 4 exchange with them -->
+  <g class="people" transform="translate(82,74) scale(1.7)"><use href="#btrio"/></g>
+  <text class="plbl" x="112" y="132" text-anchor="middle">Stakeholders</text>
 </svg>
