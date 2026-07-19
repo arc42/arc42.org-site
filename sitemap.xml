@@ -53,6 +53,16 @@
   <priority>0.60</priority>
 </url>
 <url>
+  <loc>https://arc42.org/resources/fundamentals-of-software-architecture/</loc>
+  <lastmod>2026-07-19T00:00:00+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://arc42.org/resources/whats-in-a-name/</loc>
+  <lastmod>2026-07-19T00:00:00+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
   <loc>https://arc42.org/examples</loc>
   <lastmod>2023-10-25T15:51:27+00:00</lastmod>
   <priority>0.80</priority>
