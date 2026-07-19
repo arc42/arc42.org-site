@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download arc42 · every edition, every language</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Petrona:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead__inner">
+    <a class="wordmark" href="index.html">arc42<small>Evergreen Press</small></a>
+    <nav aria-label="Main">
+      <a href="#" title="Not in this prototype">Overview</a>
+      <a href="method.html">Method</a>
+      <a href="#" title="Not in this prototype">Docs</a>
+      <a href="#" title="Not in this prototype">Examples</a>
+      <a href="#" title="Not in this prototype">Training</a>
+      <a class="nav-cta" href="download.html" aria-current="page">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <header class="page-head">
+    <div class="page-head__inner">
+      <p class="page-head__no">Version 9 &middot; 12 languages &middot; every format</p>
+      <h1>One template, many editions</h1>
+      <p class="page-head__sub">The same twelve sections, typeset for the way your team works. Pick a language, pick an edition, <strong>plain</strong> or <strong>with help</strong>. Free and open source, also for commercial use.</p>
+    </div>
+  </header>
+
+  <section class="paper" id="editions">
+    <div class="langs" role="group" aria-label="Language">
+      <span class="langs__label">Language of your copy:</span>
+      <button type="button" class="lang-chip is-active" aria-pressed="true" data-lang="EN" data-full="English">EN</button>
+      <button type="button" class="lang-chip" aria-pressed="false" data-lang="DE" data-full="Deutsch">DE</button>
+      <button type="button" class="lang-chip" aria-pressed="false" data-lang="FR" data-full="Fran&ccedil;ais">FR</button>
+      <button type="button" class="lang-chip" aria-pressed="false" data-lang="ES" data-full="Espa&ntilde;ol">ES</button>
+      <button type="button" class="lang-chip" aria-pressed="false" data-lang="IT" data-full="Italiano">IT</button>
+      <button type="button" class="lang-chip" aria-pressed="false" data-lang="NL" data-full="Nederlands">NL</button>
+      <button type="button" class="lang-chip" aria-pressed="false" data-lang="PT" data-full="Portugu&ecirc;s">PT</button>
+      <button type="button" class="lang-chip" aria-pressed="false" data-lang="CZ" data-full="&Ccaron;e&scaron;tina">CZ</button>
+      <button type="button" class="lang-chip" aria-pressed="false" data-lang="HU" data-full="Magyar">HU</button>
+      <button type="button" class="lang-chip" aria-pressed="false" data-lang="ZH" data-full="&#31616;&#20307;&#20013;&#25991;">ZH</button>
+      <button type="button" class="lang-chip" aria-pressed="false" data-lang="RU" data-full="&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;">RU</button>
+      <button type="button" class="lang-chip" aria-pressed="false" data-lang="UKR" data-full="&#1059;&#1082;&#1088;&#1072;&#1111;&#1085;&#1089;&#1100;&#1082;&#1072;">UKR</button>
+      <p class="langs__meta" aria-live="polite">Selected: <strong data-lang-full>English</strong>. <strong>With help</strong> embeds the official arc42 explanations in every section; <strong>plain</strong> gives you the bare structure.</p>
+    </div>
+
+    <div class="editions">
+      <article class="edition edition--lead">
+        <div>
+          <h3>The AsciiDoc Edition<span class="ed-flag">Recommended</span></h3>
+          <p>Powerful yet simple markup, used by arc42 itself and ideally suited to architecture documentation. Plays well with docToolchain and every CI pipeline.</p>
+        </div>
+        <div class="edition__get">
+          <a class="btn-ed" data-dl data-fmt="asciidoc" data-kind="plain" href="https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-EN-plain-asciidoc.zip">&#8595; Plain .zip</a>
+          <a class="btn-ed btn-ed--ghost" data-dl data-fmt="asciidoc" data-kind="withhelp" href="https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-EN-withhelp-asciidoc.zip">With help .zip</a>
+        </div>
+      </article>
+
+      <article class="edition">
+        <div>
+          <h3>The Markdown Edition</h3>
+          <p>Widespread, simple markup. Also available as multi-page (one file per section), strict, and GitHub Flavored variants.</p>
+        </div>
+        <div class="edition__get">
+          <a class="btn-ed" data-dl data-fmt="markdown" data-kind="plain" href="https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-EN-plain-markdown.zip">&#8595; Plain .zip</a>
+          <a class="btn-ed btn-ed--ghost" data-dl data-fmt="markdown" data-kind="withhelp" href="https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-EN-withhelp-markdown.zip">With help .zip</a>
+        </div>
+      </article>
+
+      <article class="edition">
+        <div>
+          <h3>The Word Edition <span class="bib-lang">(.docx)</span></h3>
+          <p>Microsoft Word, also usable with LibreOffice or OpenOffice. The classic office companion.</p>
+        </div>
+        <div class="edition__get">
+          <a class="btn-ed" data-dl data-fmt="docx" data-kind="plain" href="https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-EN-plain-docx.zip">&#8595; Plain .zip</a>
+          <a class="btn-ed btn-ed--ghost" data-dl data-fmt="docx" data-kind="withhelp" href="https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-EN-withhelp-docx.zip">With help .zip</a>
+        </div>
+      </article>
+
+      <article class="edition">
+        <div>
+          <h3>The LaTeX Edition</h3>
+          <p>The document preparation system, for those who need beauty and are willing to invest some effort.</p>
+        </div>
+        <div class="edition__get">
+          <a class="btn-ed" data-dl data-fmt="latex" data-kind="plain" href="https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-EN-plain-latex.zip">&#8595; Plain .zip</a>
+          <a class="btn-ed btn-ed--ghost" data-dl data-fmt="latex" data-kind="withhelp" href="https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-EN-withhelp-latex.zip">With help .zip</a>
+        </div>
+      </article>
+
+      <article class="edition">
+        <div>
+          <h3>The reStructuredText Edition</h3>
+          <p>Heavily used by Read the Docs and in the Python world.</p>
+        </div>
+        <div class="edition__get">
+          <a class="btn-ed" data-dl data-fmt="rst" data-kind="plain" href="https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-EN-plain-rst.zip">&#8595; Plain .zip</a>
+          <a class="btn-ed btn-ed--ghost" data-dl data-fmt="rst" data-kind="withhelp" href="https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-EN-withhelp-rst.zip">With help .zip</a>
+        </div>
+      </article>
+
+      <article class="edition">
+        <div>
+          <h3>The Textile Edition</h3>
+          <p>Another simple markup language, documented at textile-lang.com.</p>
+        </div>
+        <div class="edition__get">
+          <a class="btn-ed" data-dl data-fmt="textile" data-kind="plain" href="https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-EN-plain-textile.zip">&#8595; Plain .zip</a>
+          <a class="btn-ed btn-ed--ghost" data-dl data-fmt="textile" data-kind="withhelp" href="https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-EN-withhelp-textile.zip">With help .zip</a>
+        </div>
+      </article>
+
+      <article class="edition">
+        <div>
+          <h3>The HTML Edition</h3>
+          <p>For viewing the template in the browser, not for working with it.</p>
+        </div>
+        <div class="edition__get">
+          <a class="btn-ed" data-dl data-fmt="html" data-kind="plain" href="https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-EN-plain-html.zip">&#8595; Plain .zip</a>
+          <a class="btn-ed btn-ed--ghost" data-dl data-fmt="html" data-kind="withhelp" href="https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-EN-withhelp-html.zip">With help .zip</a>
+        </div>
+      </article>
+
+      <article class="edition">
+        <div>
+          <h3>The Confluence Edition</h3>
+          <p>For the commercial wiki by Atlassian, generated with help, in a flat and a structured flavour. For an up-to-date workflow we recommend authoring in AsciiDoc and syncing with asciidoc2confluence.</p>
+        </div>
+        <div class="edition__get">
+          <a class="btn-ed" data-dl data-fmt="confluenceFlat" data-kind="withhelp" href="https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-EN-withhelp-confluenceFlat.zip">&#8595; Flat .zip</a>
+          <a class="btn-ed btn-ed--ghost" data-dl data-fmt="confluenceStructured" data-kind="withhelp" href="https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-EN-withhelp-confluenceStructured.zip">Structured .zip</a>
+        </div>
+      </article>
+
+      <article class="edition">
+        <div>
+          <h3>Modelling-tool Editions</h3>
+          <p>Enterprise Architect (UML, with the official explanations as notes), IBM Rhapsody (UML/SysML for embedded systems), and Doxygen. Contributed and maintained by the arc42 community.</p>
+        </div>
+        <div class="edition__get">
+          <a class="btn-ed btn-ed--ghost" href="#" title="Not in this prototype">Browse tool formats</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="colophon">
+      <h2>Colophon</h2>
+      <p>All editions are generated from their AsciiDoc sources in the arc42-template repository on GitHub. Version 9 adds Chinese (thanks to Chris Y&#26472; and DannyGe) and Hungarian (L&aacute;szl&oacute; S&eacute;ra); German is currently at 9.1 (December 2025). Some languages remain at version 8.2 until their translations catch up.</p>
+      <p>New to arc42? Take the <strong>with help</strong> edition: it embeds the official explanations in every section. Then read <a href="method.html">how the method works</a>, or browse the <a href="resources.html">library</a>.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <h2>arc42</h2>
+      <p>The pragmatic template and method for software architecture communication and documentation. By Dr. Gernot Starke and Dr. Peter Hruschka, with contributions from the community since 2005.</p>
+    </div>
+    <div>
+      <h2>On this site</h2>
+      <ul>
+        <li><a href="method.html">The arc42 method</a></li>
+        <li><a href="download.html">Download the template</a></li>
+        <li><a href="resources.html">Books, articles, talks &amp; videos</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Elsewhere</h2>
+      <ul>
+        <li><a href="#" title="Not in this prototype">docs.arc42.org</a></li>
+        <li><a href="#" title="Not in this prototype">faq.arc42.org</a></li>
+        <li><a href="#" title="Not in this prototype">GitHub: arc42/arc42-template</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__imprint">
+    <span><span class="press-mark">&#10087;</span> Open source. Free to use, even commercially.</span>
+    <span>arc42 by Dr. Gernot Starke and Dr. Peter Hruschka.</span>
+  </div>
+</footer>
+
+<script>
+// swap the language code in every download URL (downloads simulate for non-EN combos)
+(function () {
+  var chips = document.querySelectorAll('.lang-chip');
+  var links = document.querySelectorAll('a[data-dl]');
+  var label = document.querySelector('[data-lang-full]');
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      chips.forEach(function (c) {
+        c.classList.toggle('is-active', c === chip);
+        c.setAttribute('aria-pressed', c === chip ? 'true' : 'false');
+      });
+      var lang = chip.dataset.lang;
+      if (label) label.textContent = chip.dataset.full || lang;
+      links.forEach(function (a) {
+        a.href = a.href.replace(/arc42-template-[A-Z]+-/, 'arc42-template-' + lang + '-');
+      });
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

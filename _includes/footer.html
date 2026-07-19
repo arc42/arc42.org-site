@@ -1,27 +1,18 @@
 <div class="page__footer-follow footer-center">
+  <p class="footer-innoq">
+    <a href="https://www.innoq.com" target="_blank" rel="noopener noreferrer nofollow"><img class="supported-by-innoq" src="/images/supported-by-innoq--petrol-apricot.svg" alt="Supported by INNOQ"></a>
+  </p>
+
   <ul class="social-icons">
+    <li><a href="{{ '/about/' | relative_url }}"><i class="fas fa-fw fa-users" aria-hidden="true"></i>About</a></li>
 
-    <a href="https://www.innoq.com" target="_blank" rel="noopener noreferrer nofollow"><img class="supported-by-innoq" src="/images/supported-by-innoq--petrol-apricot.svg"></a><br>
-    
-      <li><a href="https://linkedin.com/in/gernotstarke">
-      <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i>LinkedIn</a></li>
+    <li><a href="{{ '/about/#contact' | relative_url }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i>Contact</a></li>
 
-    {% if site.author.github %}
-      <li><a href="https://github.com/{{ site.author.github }}"><i class="fab fa-fw fa-github" aria-hidden="true"></i>GitHub</a></li>
-    {% endif %}
+    <li><a href="{{ '/license/' | relative_url }}"><i class="fas fa-balance-scale-right" aria-hidden="true"></i>License</a></li>
 
-    <li><a href="https://www.youtube.com/arc42-video/"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i>YouTube</a></li><br>
+    <li><a href="{{ '/imprint/' | relative_url }}"><i class="fas fa-fw fa-gavel" aria-hidden="true"></i>Imprint & Privacy </a></li>
 
-    <li><a href="https://dev.to/gernotstarke/"><i class="fab fa-dev" aria-hidden="true"></i>Dev</a></li>
-
-
-    <li><a href="{{ '/imprint' | absolute_url }}"><i class="fas fa-fw fa-gavel" style="color:Tomato" aria-hidden="true"></i>Imprint & Privacy </a></li>
-
-    <li><a href="{{ '/license' | absolute_url }}"><i class="fas fa-balance-scale-right" style="color:Tomato" aria-hidden="true"></i>License</a></li>
-
-    <li><a href="https://status.arc42.org">
-      <i class="fas fa-chart-bar fa-fw" style="color:#50C878;" ></i>Status</a><i>&nbsp;&nbsp;</i></li>
-
+    <li><a href="https://github.com/arc42"><i class="fab fa-fw fa-github" aria-hidden="true"></i>GitHub</a></li>
   </ul>
 </div>
 

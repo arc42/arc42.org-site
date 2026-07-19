@@ -14,9 +14,27 @@
 @import 'ukraine.css';
 @import 'button.css';
 @import 'arc42-org.css';
+@import 'nav-2026.css';
 @import 'grid.css';
+@import 'petrol-apricot.css'; /* skin experiment, branch petrol-abricot-layout */
 
 /*
   fontawesome
 */
 @import 'all.css';
+/* No page-load fade: the theme animates masthead/main/footer in via a 0.3s
+   "intro" keyframe (opacity 0 -> 1). The Blueprint design system rejects load
+   animations, and pre-paint renderers (headless browsers, some crawlers) can
+   capture the page while it is still invisible. NOTE: this rule must live here,
+   AFTER the theme import — Sass hoists the plain @import url(...) statements
+   above the theme CSS, so overrides inside those files lose the cascade. */
+.masthead,
+.page__hero,
+.page__hero--overlay,
+.breadcrumbs,
+#main,
+.page__footer,
+.search-content__inner-wrap {
+  -webkit-animation: none;
+  animation: none;
+}

@@ -1,131 +1,92 @@
 ---
 title: "arc42 method"
 layout: splash
-permalink: /method
-header:
-  overlay_color: "#000"
-  overlay_filter: "0.2"
-  overlay_image: /images/splash/method-splash.webp
-  caption: "Photo credit: [**Jamie Templeton**](https://unsplash.com/@jamietempleton)"
-excerpt: "Systematic and process-agnostic to appropriate solutions."
-
-
-feature_row1:
-  - image_path: /images/template/01-intro-and-goals.png
-    alt: "Introduction and goals - lists for: Quality Goals and Stakeholder"
-    title: "Clarify requirements"
-    excerpt: 'Development teams need a robust and sustainable foundation of goals, requirements and constraints, 
-    in order to be able to make targeted decisions and develop.
-    '
-    
-
-
+permalink: /method/
+classes:
+  - method-page
+excerpt: "arc42 is more than a documentation template: an opinionated, iterative method for developing and evolving software architecture, built on six recurring activities, constant learning and continuous feedback."
 ---
 
-arc42 provides practical answers to the following two questions, and can be easily customized to meet your specific needs:
+<section class="dl-hero">
+  <div class="dl-hero__inner">
+    <p class="dl-hero__kicker">More than a template</p>
+    <h1 class="dl-hero__title">The arc42 method</h1>
+    <p class="dl-hero__sub">arc42 is best known as a documentation template. It is also an opinionated <strong>method</strong>: six recurring, interrelated activities that keep your architecture, your code and your stakeholders in sync, in agile, lean or formal projects alike.</p>
+  </div>
+</section>
 
-* **_What_** should we communicate/document about our architecture?
-* **_How_** should we communicate/document?
+The [template](/overview/) answers **where** architecture information belongs; the method answers **how you work** to produce it. And arc42 does take a position on the *how*: six core activities, with no fixed order and highly interrelated, so the results of any one refine the others in the next increment.
 
-Methodical procedures in architecture and development should always be _iterative_: Always (!) complement and accompany analytical and constructive tasks with systematic _feedback_.
+Along the way it takes clear stances: clarify the **most important quality requirements** before anything else, structure the system along its **domain** (domain-driven), and choose the crosscutting **concepts** that actually make those quality goals achievable (quality-driven architecture).
+
+<figure class="method-diagram" id="method-diagram">
+  {% include method-activities-diagram.svg %}
+  <figcaption>The six activities and how they feed each other. Structures and cross-cutting concepts overlap: neither can be designed without the other. Click an activity to jump to its description.</figcaption>
+</figure>
+
+<aside class="method-principles" markdown="1">
+## Two principles run through everything {#principles}
+
+**Learn constantly.** IT is a dynamic industry: new technologies, methods, libraries and frameworks appear all the time. To design, implement and operate systems responsibly, you need to assess the impact of such innovations on your current system, which only works if *independent learning* becomes a fundamental habit.
+
+**Iterate with continuous feedback.** None of the six activities is ever truly "finished". Every result is provisional: the next increment questions it, refines it, or replaces it.
+</aside>
+
+## 1 · Clarify requirements {#clarify-requirements}
+
+Development teams need a robust foundation of goals, requirements and constraints to make targeted decisions. Software architects contribute decisively here: by questioning quality requirements, categorizing functional requirements, and identifying technical risks.
 
 
-## Constant learning
+<p class="method-backtop"><a href="#method-diagram"><span aria-hidden="true">&#8593;</span> Back to the diagram</a></p>
 
-Let's start with a fundamental and omnipresent task:
-We (more precisely: all people working in IT development) are dealing with a very dynamic industry, constantly new technologies, methods, libraries, frameworks and approaches.
-We have to take these innovations into account when designing, implementing and operating IT systems - or at least be able to assess their impact on our current system.
+## 2 · Design structures {#design-structures}
 
-From our point of view, we can only do this if we make _learning independently_ a fundamental behavior.
-Thanks to the Internet and omnipresent access to information, we have the opportunity to do this; we just have to use it appropriately for ourselves.
+Building a system out of smaller parts is one of the fundamental tasks of architecture and development. arc42 calls these parts *building blocks*, deliberately technology-neutral. This task produces the static [Building Block View](https://docs.arc42.org/section-5/), its dynamic counterpart, the [Runtime View](https://docs.arc42.org/section-6/), and the *interfaces* that connect building blocks with each other and with the outside world.
 
 
-<hr>
+<p class="method-backtop"><a href="#method-diagram"><span aria-hidden="true">&#8593;</span> Back to the diagram</a></p>
 
-{% include feature_row id="feature_row1" type="left" %}
+## 3 · Design cross-cutting concepts {#design-concepts}
 
-Software architects can make a decisive contribution to clarifying requirements by, for example, questioning quality requirements, categorizing functional requirements and identifying technical risks.
+Some decisions affect single building blocks; others cut across the whole system: the choice of base technology and infrastructure, the frameworks and libraries in use, recurring architecture or design patterns, or the approach to build, deployment, test and release. arc42 calls these [cross-cutting concepts](https://docs.arc42.org/section-8/). A small sample of questions such concepts answer:
 
-<hr>
-
-## Design structures
-
-Building a system out of smaller parts (arc42 uses the term _bricks_ for this because it is technology neutral) is one of the fundamental tasks in architecture and development.
-
-The (static) _Building Block View_ and its (dynamic) counterpart _Runtime View_ fall within the scope of this task.
-Also included are _interfaces_, the connection between building blocks or our system and the outside world (_external interfaces_).
-
-<hr>
-
-## Design cross-sectional concepts
-
-Overarching decisions, such as the selection of the basic technology for development or operation, the choice of infrastructure, or even the frameworks or libraries used - these are what arc42 understands as _cross-cutting concepts_.
-Such concepts can have a direct impact on single or all building blocks.
-They can be architecture or design patterns that are used multiple times or across the board.
-Concepts may also relate to other topics, such as techniques and methodology for build, deployment, test and/or release of the system.
-
-arc42 suggests a whole zoo of topics that you could (but don't have to) solve _across_ architecture - here's a small sample:
-
-* How is the (graphical) user interface structured and implemented? Which libraries or patterns are used?
-* How, where and with what persistent data is stored, distributed and read again? Which databases are used?
-* How are business, validation or plausibility rules implemented?
-* How does the system and its building blocks handle error or exception situations?
+* How is the user interface structured and implemented, and with which libraries or patterns?
+* How and where is persistent data stored, distributed and read, and with which databases?
+* How are business, validation and plausibility rules implemented?
+* How do the system and its building blocks handle errors and exceptions?
 * How does the system handle logging and monitoring?
 
-More details can be found in [section 8 of the arc42 template...](https://docs.arc42.org/section-8/)
 
-<hr>
+<p class="method-backtop"><a href="#method-diagram"><span aria-hidden="true">&#8593;</span> Back to the diagram</a></p>
 
-## Communicate and document architecture
+## 4 · Communicate and document {#communicate}
 
-You should coordinate your architecture and design decisions with relevant stakeholders, solicit their feedback, and incorporate it as appropriate.
-You should put some decisions in writing:
-Depending on the industry, type of system, criticality, risk and/or process model sometimes more, sometimes less.
-
-In general, we recommend communicating intensively verbally about architecture decisions, especially with and within the development team.
-For this, you should document in writing as sparingly as possible:
-The written form creates maintenance overhead for future changes, which many teams understandably shy away from.
-
-The arc42 template is suitable for both very sparse and very detailed and thorough documentation.
-<hr>
-
-## Accompany implementation
-
-During the development iterations, you have discussed a lot with your team and coordinated thoroughly.
-You have (hopefully together) designed building blocks, interfaces and concepts - in short:
-You did everything right.
-
-Unfortunately, such good communication is not enough:
-It could be that deviations from the discussed, discussed or even documented decisions creep into the implementation, i.e. into the source code:
-
-Whether this happens on purpose or by accident, you should always work with your team to ensure that the source code implements the structures and concepts as intended.
-Check that decisions are being implemented appropriately or are having the effects you want.
-
-By the way, it sometimes even happens that individual developers have much better ideas than the architecture group - you could find such _gold pieces_ of the implementation by systematically accompanying the implementation and make them part of the architecture!
-
-On the other hand, developers may also misunderstand design decisions or concepts or implement them poorly.
-In such cases, you should coach and explain the decisions or concepts to those affected, or help them implement them.
-
-In any case, you should look into the source code of your systems (= _code reviews_) and compare the actual implementation with the desired target.
-Only through this (detailed) work can you really see whether and how architecture decisions will ultimately be implemented.
-
-Especially in larger teams, a single person can no longer review all the source code that has been created or changed.
-Code analysis tools can help, but in essential cases (critical or important parts of the system) people should perform such reviews (only they can ask for reasons and assess them situationally).
-Often it is also sufficient to inspect small parts of the source code to keep the effort of this task within reasonable limits.
-
-<hr>
-
-## Analyze and evaluate architecture
-
-Ask yourself as a software architect at regular intervals whether your decisions and concepts achieve the desired effect or still seem appropriate from today's perspective.
-This simple feedback loop forms the basis of iterative (nowadays called: _agile_) processes.
-The Plan-Do-Check-Act cycle (PDCA or Deming circle) has elevated the systematic review (the check phase) to a system, for good reason:
-Just acting and deciding without reflection, without looking back, easily leads to missed goals and actionism.
-So look into a _methodical rear-view mirror_ and subject your system, your architecture and design decisions, your concepts etc to a methodical review from time to time.
-
-In the best case, you (or development team and other affected stakeholders) still find all decisions super - then move on!
-In other cases, the analysis and evaluation allows you to identify possible weaknesses or risks at an early stage and to plan and initiate appropriate improvement measures.
-
-<hr>
+Coordinate architecture and design decisions with the relevant stakeholders, solicit their feedback, and incorporate it where appropriate. Communicate intensively in person, especially with and within the development team. Put decisions in writing as sparingly as possible, because written documentation creates maintenance effort for every future change. How much you write down depends on your industry, the type of system, its criticality and risk. The arc42 template supports both extremes: very sparse and very thorough documentation.
 
 
+<p class="method-backtop"><a href="#method-diagram"><span aria-hidden="true">&#8593;</span> Back to the diagram</a></p>
+
+## 5 · Accompany the implementation {#accompany-implementation}
+
+Good design discussions are not enough: deviations from agreed (or even documented) decisions can creep into the source code, on purpose or by accident. Work with your team to ensure the code implements the intended structures and concepts, which means actually looking into the source code (*code reviews*) and comparing the implementation against the target.
+
+This works in both directions. Sometimes individual developers have better ideas than the original design: find these *gold pieces* and make them part of the architecture. In other cases, developers misunderstand a decision or concept; then coach, explain, or help with the implementation. In larger teams nobody can review all code. Tools can help, but for critical parts of the system, people should review, since only they can ask for reasons and judge them in context. Inspecting small, well-chosen parts of the code usually keeps the effort reasonable.
+
+
+<p class="method-backtop"><a href="#method-diagram"><span aria-hidden="true">&#8593;</span> Back to the diagram</a></p>
+
+## 6 · Analyze and evaluate {#analyze-evaluate}
+
+Ask yourself at regular intervals whether your decisions and concepts still achieve the desired effect from today's perspective. This simple feedback loop is the basis of every iterative process: deciding and acting without reflection easily leads to missed goals and actionism. A methodical look in the *rear-view mirror* either confirms your decisions (great, move on!) or reveals weaknesses and risks early enough to plan appropriate improvements.
+
+
+<p class="method-backtop"><a href="#method-diagram"><span aria-hidden="true">&#8593;</span> Back to the diagram</a></p>
+
+<section class="method-cta">
+  <h2>Put the method to work</h2>
+  <p>Six activities, one template, twenty years of practice. Start with the download; the method comes built in.</p>
+  <p>
+    <a href="/download/" class="btn btn--arc42"><span aria-hidden="true">&#8595;</span> Download arc42</a>
+    <a href="/overview/" class="btn btn--arc42-outline">Explore the template</a>
+  </p>
+</section>
