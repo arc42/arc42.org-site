@@ -142,7 +142,7 @@ Now that you know the template sections, dive deeper at your own pace:
 
 ## Learn arc42 in a training
 
-Prefer learning from a trainer? We teach arc42 and modern software architecture in iSAQB-certified Foundation trainings, on-site and remote.
+Prefer learning from a trainer? We teach arc42 and iSAQB-accredited trainings, from Foundation to a number of advanced topics, on-site and remote.
 
 <p class="training-section__actions">
   <a class="btn btn--arc42" href="/learn/">Trainings &amp; upcoming dates &#8594;</a>

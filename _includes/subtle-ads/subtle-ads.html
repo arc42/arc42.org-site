@@ -4,15 +4,15 @@
 
 <div hx-get="https://arc42-subtle-ads-backend.vercel.app/api"
      hx-trigger="load delay"
-     hx-swap="outerHTML"
+     hx-swap="innerHTML"
      hx-target="#subtle-ads">
 </div>
 
-<div id="subtle-ads">
-    <h4>arc42 offers architecture training.</h4>
+<div id="subtle-ads" aria-live="polite">
+    <h3>arc42 offers architecture training.</h3>
     <p>
-        The data is currently loaded from the backend and should display here shortly.
-        If not, you can see the next dates at
+        Loading the upcoming training dates&hellip;
+        If they don't show up, you can find all dates at
             <a rel="noopener noreferrer nofollow" target="_blank" href="https://trainings.arc42.org">
                 trainings.arc42.org
             </a>.
