@@ -1,3 +1,10 @@
+/* ==========================================================================
+   arc42 template-structure grid (overview page + blog include)
+   Desktop: two columns echoing the arc42 poster (1–6 left, 7–12 right).
+   Mobile: single column in reading order 1–12.
+   Tiles follow the 2026 system idiom: flat, 1px border, shadow on hover only.
+   ========================================================================== */
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columns */
@@ -6,42 +13,87 @@
 }
 
 .part {
-  padding: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.247);
-  border-radius: 10px;
+  position: relative;
+  padding: 12px 14px;
+  background: #ffffff;
+  border: 1px solid var(--arc42-border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.65rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+/* number badge + stacked text (same grammar as the method diagram) */
+.part__no {
+  flex: none;
+  width: 1.65rem;
+  height: 1.65rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: var(--arc42-slate);
+}
+.part__text {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 0.15rem;
+  padding-top: 0.1rem;
 }
 
-.part:hover, .part:link, .part:visited, .part:active {
+/* section families: pale tints, badge carries the family color.
+   Requirements & quality = gold, structures & views = steel blue,
+   concepts/technologies/decisions = navy, 11+12 stay neutral. */
+.part.fam-req    { background: #fdf6e2; }
+.part.fam-req    .part__no { background: var(--arc42-accent); color: var(--arc42-ink-strong); }
+.part.fam-struct { background: #eef5fa; }
+.part.fam-struct .part__no { background: var(--arc42-primary-hover); }
+.part.fam-con    { background: #eceff5; }
+.part.fam-con    .part__no { background: var(--arc42-primary); }
+
+/* external-link affordance, hover-only ornament */
+.part::after {
+  content: "\2197";
+  position: absolute;
+  top: 0.45rem;
+  right: 0.6rem;
+  font-size: 0.75rem;
+  color: var(--arc42-slate);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+.part:hover::after,
+.part:focus-visible::after { opacity: 1; }
+
+.part:link,
+.part:visited,
+.part:active {
   text-decoration: none !important;
-  color: #132c15;
+  color: var(--arc42-ink-strong);
 }
 
-.part:hover {
-  transform: scale(1.02);
-  transition: transform 0.3s ease-in-out;
+.part strong { color: var(--arc42-ink-strong); }
+.part small { color: var(--arc42-text-muted); }
+
+.part:hover,
+.part:focus-visible {
+  text-decoration: none !important;
+  color: var(--arc42-ink-strong);
+  border-color: var(--arc42-primary-hover);
+  background: #ffffff; /* tint lifts to paper, like the method diagram */
+  box-shadow: 0 6px 14px -6px rgba(20, 40, 70, 0.35); /* hover-only, per DESIGN.md */
+}
+.part:focus-visible { outline: 2px solid var(--arc42-primary-hover); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .part { transition: none; }
 }
 
-/* Custom colors */
-.introduction-goals, .context-scope, .building-block-view, .runtime-view, .crosscutting-concepts {
-  background-color: rgb(247, 247, 247); /* slightly white */
-}
-
-.constraints, .architectural-decisions, .risks-technical-debt {
-  background-color: rgb(247, 247, 247); /* slightly white */
-}
-
-.solution-strategy, .quality-requirements {
-  background-color: rgb(247, 247, 247); /* slightly white */
-}
-
-.deployment-view, .glossary {
-  background-color: rgb(247, 247, 247); /* slightly white */
-}
-
-/* Positioning for grid items */
+/* Positioning for grid items (desktop poster arrangement) */
 .introduction-goals {
   grid-column: 1;
   grid-row: 1;
@@ -100,4 +152,36 @@
 .glossary {
   grid-column: 2;
   grid-row: 7;
+}
+
+/* color legend under the grid: type + dots, redundant to the tints */
+.grid-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+  margin: 0.7rem 0 0;
+  font-size: 0.82rem;
+  color: var(--arc42-slate);
+}
+.grid-legend__item { display: inline-flex; align-items: center; gap: 0.4rem; }
+.grid-legend__dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  border: 1px solid var(--arc42-border);
+}
+.grid-legend__dot--req    { background: var(--arc42-accent); border-color: var(--arc42-accent); }
+.grid-legend__dot--struct { background: var(--arc42-primary-hover); border-color: var(--arc42-primary-hover); }
+.grid-legend__dot--con    { background: var(--arc42-primary); border-color: var(--arc42-primary); }
+
+/* Mobile: one column, sections in reading order 1–12 */
+@media (max-width: 700px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+  .grid-container .part {
+    grid-column: auto;
+    grid-row: auto;
+  }
 }

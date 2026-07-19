@@ -135,6 +135,16 @@ sass:
   sourcemap: never  # Jekyll 4 emits a .css.map by default; not needed for this static site
 
 
+# Collections
+collections:
+  resources:
+    # Each item is data for the /resources/ listing AND gets its own detail
+    # page at /resources/<slug>/. Items with `detail: true` are linked from
+    # the listing; the rest are canonical landing pages linked only directly.
+    output: true
+    permalink: /resources/:name/
+
+
 # Outputting
 permalink: /:categories/:title/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -200,3 +210,9 @@ defaults:
       comments: false
       share: true
       related: true
+  # _resources — each item renders through the resource detail layout
+  - scope:
+      path: ""
+      type: resources
+    values:
+      layout: resource

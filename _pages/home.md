@@ -2,109 +2,108 @@
 title: "arc42"
 layout: splash
 permalink: /
-header:
-  overlay_color: "#d7ecf8"
-  overlay_filter: rgba(15, 80, 180, 0.4)
-  overlay_image: /images/splash/arc42-splash-landingpage.webp
-  caption: "Photo credit: [**Thomas Bayer**](https://www.predic8.de/)"
-  actions: 
-    - label: "Overview"
-      url: /overview
-    - label: "Contact"
-      url: /contact
-    - label: "&#8594; German site..."
-      url: "https://www.arc42.de"
-excerpt: "All you ever need to construct, **communicate and document your software architecture**. Proven, **practical and pragmatic**.
-Free and open source, **takes the pain out of documentation**."
+excerpt: "All you need to construct, communicate and document your software architecture. Proven, practical, pragmatic — free and open source."
 
-
-
-template_training_news:
-- title: "Template"
-  excerpt: "![drawers of a cabinet](/images/home/template.webp)<br> 
-  We provide you with the arc42 template for architecture documentation - 
-  **Open Source, pragmatic, free of charge**. You fill it with your architecture decisions - 
-  **Simple, effective and painless**."
-  url: "/overview"
-  btn_label: "read more..."
-  btn_class: "btn--primary"
-
-- title: "Trainings"
-  excerpt: "![Raising a hand](/images/home/training.webp)<br>
-  We have successfully trained hundreds of people in our proven **Mastering Software Architectures workshop**. 
-  Practical, effective and sustainable. Perfectly prepares for the iSAQB Foundation certification."
-  url: "/learn"
-  btn_label: "read more..."
-  btn_class: "btn--primary"
-
-
-- title: "News"
-  excerpt: "
-    * We're happy to release the Hungarian translation of arc42 to the public. Thanx to the effort by László Séra!
-  
-
-    * Our [merchandising shop](https://arc42.myspreadshop.de) is online, go get T-Shirts, Hoodies and other arc42-branded goodies. High-quality, eco-friendly. Give it a try!
-   
-    * The new book as ideal preparation for iSAQB certification: [Software Architecture Foundation](/books#software-architecture-foundation-cpsa-f-exam-preparation).
-
-    * Even more examples of arc42 in the book arc42 by Example - [Vol 2. Embedded Systems and IoT](/books#arc42-by-example-vol2).
-      "
-
-methode_publications_consulting:
-- title: "The arc42-method"
-  excerpt: "![ToDo - Doing - Done slips of paper](/images/home/method.webp)<br>
-  arc42 is systematic but flexible. Suitable for large and small teams in iterative or less agile processes.
-  "
-  url: "/method"
-  btn_label: "read more..."
-  btn_class: "btn--primary"
-
-- title: "arc42 reading material"
-  excerpt: "![Books in a bookshelf](/images/home/publikationen.webp)<br>
-  There is a lot to read about arc42 and architecture. From methodology to _good practices_ 
-  to complete examples of software architectures.
-  Browse our books, articles, talks or videos."
-  url: "/more"
-  btn_label: "read more..."
-  btn_class: "btn--primary"
-
-- title: "Canvas"
-  excerpt: "![the arc42 canvas](/images/home/canvas-overview-850.webp)<br>
-  The shortest possible form of technical documentation, the elevator-pitch. All the  important stuff on a single page"
-  url: "/canvas"
-  btn_label: "read more..."
-  btn_class: "btn--primary"
+starter:
+  - title: "Template"
+    excerpt: "![Drawers of a cabinet](/images/home/template.webp)<br>
+    The arc42 skeleton for architecture docs — you fill it with your decisions."
+    url: "/overview/"
+    btn_label: "Explore the template"
+    btn_class: "btn--arc42-outline"
+  - title: "Training"
+    excerpt: "![Participants in an arc42 training workshop](/images/home/Training.webp)<br>
+    Mastering Software Architectures — prepares for the iSAQB Foundation certification."
+    url: "/learn/"
+    btn_label: "Explore training"
+    btn_class: "btn--arc42-outline"
+  - title: "The method"
+    excerpt: "![To-do, doing, done slips of paper](/images/home/method.webp)<br>
+    Systematic but flexible — suits large and small teams, agile or not."
+    url: "/method/"
+    btn_label: "See the method"
+    btn_class: "btn--arc42-outline"
 ---
 
-<div class="ua-background" markdown="1">
+{% assign PREFIX = "https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-" %}
 
->### We stand with the people of Ukraine <span class="parent"><span class="ua-text"><i class="fa  fa-solid fa-heart children"></i></span><span class="ua-size children"><i class="fa fa-solid fa-heart heart beat children"></i></span></span>
->
->Please assist humanitarian efforts for the Ukrainian people and those affected by the military invasion of Ukraine by supporting international aid organizations, including the [International Committee of the Red Cross](https://www.icrc.org/en).
+<div class="ua-strip">
+  <span class="ua-strip__flag" aria-hidden="true"><i></i><i></i></span>
+  <span>We stand with Ukraine — please support the <a href="https://www.icrc.org/en">ICRC</a>'s humanitarian effort.</span>
 </div>
 
-{% include feature_row id="template_training_news" %}
+<section class="home-hero">
+  <div class="home-hero__inner">
+    <div class="home-hero__intro">
+      <p class="home-hero__kicker">Open source · 12 languages · since 2005</p>
+      <h1 class="home-hero__title">Document your architecture — painlessly.</h1>
+      <p class="home-hero__sub">The proven, pragmatic template to <strong>construct, communicate and document</strong> software architecture. Free and open source.</p>
+      <p class="home-hero__actions">
+        <a class="btn btn--arc42 btn--large" href="/overview/">See the template &#8594;</a>
+      </p>
+    </div>
 
-{% include feature_row id="methode_publications_consulting"%}
+    <aside class="quick-dl" data-prefix="{{ PREFIX }}" aria-label="Quick download">
+      <div class="quick-dl__head">
+        <span class="quick-dl__title">Quick download</span>
+        <span class="quick-dl__langs" role="group" aria-label="Language">
+          <button type="button" class="quick-dl__lang is-active" aria-pressed="true" data-lang="EN">EN</button>
+          <button type="button" class="quick-dl__lang" aria-pressed="false" data-lang="DE">DE</button>
+        </span>
+      </div>
+      <a class="quick-dl__row" data-fmt="asciidoc" href="{{ PREFIX }}EN-plain-asciidoc.zip">
+        <span class="quick-dl__label"><span class="quick-dl__fmt">AsciiDoc</span><span class="quick-dl__meta">recommended</span></span>
+        <span class="quick-dl__arrow" aria-hidden="true">&#8595;</span>
+      </a>
+      <a class="quick-dl__row" data-fmt="docx" href="{{ PREFIX }}EN-plain-docx.zip">
+        <span class="quick-dl__label"><span class="quick-dl__fmt">Word (.docx)</span><span class="quick-dl__meta">plain &middot; with help</span></span>
+        <span class="quick-dl__arrow" aria-hidden="true">&#8595;</span>
+      </a>
+      <a class="quick-dl__row" data-fmt="markdown" href="{{ PREFIX }}EN-plain-markdown.zip">
+        <span class="quick-dl__label"><span class="quick-dl__fmt">Markdown</span><span class="quick-dl__meta">single &middot; multi-page</span></span>
+        <span class="quick-dl__arrow" aria-hidden="true">&#8595;</span>
+      </a>
+      <a class="quick-dl__all" href="/download/">All languages and formats &#8595;</a>
+    </aside>
+  </div>
+</section>
 
-arc42 is based on **practical experience** of many systems in various domains,
-from information and web systems, real-time and embedded to business intelligence
-and data warehouses.
+{% include feature_row id="starter" %}
 
-arc42 provides a template for **documentation and communication** of software and system
-architectures.
+## What is arc42?
 
-arc42 supports **arbitrary technologies and tools**.
+arc42 is based on practical experience with many systems across domains — information and web systems, real-time and embedded, business intelligence and data warehouses. It gives you a template for the **documentation and communication** of software and system architecture.
 
-arc42 is completely process-agnostic, and especially
-well-suited for **lean and agile** development approaches.
+- Supports arbitrary technologies and tools — nothing to install.
+- Process-agnostic, and especially well-suited to lean and agile teams.
+- Open source and free of charge, in commercial and private settings — see the [license](/license/).
 
-arc42 is open-source and can be used **free of charge**, in commercial and
-private situations.
-See our [license page](/license) for details.
+There is plenty to learn from, too: [browse our books, articles, talks and videos &#8594;](/resources/).
 
-# Learn more!
+<div class="training-section" markdown="1">
+
+## Architecture trainings
+
+Learn arc42 and modern software architecture straight from its creators — iSAQB-certified Foundation trainings, on-site and remote. Upcoming dates:
 
 {% include subtle-ads/subtle-ads.html %}
 
-<a href="https://arc42.de/schulungen"><button class="margin-top button buttonGreen">Training site</button></a>
+<p class="training-section__actions">
+  <a class="btn btn--arc42" href="https://trainings.arc42.org" rel="noopener">See all dates &amp; register &#8594;</a>
+  <a class="btn btn--arc42-outline" href="/learn/">Training details</a>
+</p>
+
+</div>
+
+<div class="home-news" markdown="1">
+
+## Latest
+
+- The **Hungarian** translation of arc42 is now available — thanks to László Séra!
+- Our [merchandising shop](https://arc42.myspreadshop.de) is online: T-shirts, hoodies and other arc42-branded goodies.
+- [Software Architecture Foundation](/resources/?type=book) is ideal preparation for the iSAQB certification.
+- Even more worked examples in [arc42 by Example, Volume 2: Embedded Systems &amp; IoT](/resources/?type=book#arc42-by-example-vol2).
+
+</div>
+
+<script src="/assets/js/quick-download.js" defer></script>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resources. Books, articles, talks and videos on arc42.</title>
+<meta name="description" content="Books, articles, talks and videos from the people behind arc42, collected in one library.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap masthead__inner">
+    <a class="masthead__logo" href="index.html">
+      <img src="../../images/arc42-site-logo.png" alt="arc42 logo">
+      <span>arc42</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#" title="Not in prototype">Overview</a>
+      <a href="method.html">Method</a>
+      <a href="#" title="Not in prototype">Docs</a>
+      <a href="#" title="Not in prototype">Examples</a>
+      <a href="#" title="Not in prototype">Training</a>
+      <a class="nav-cta" href="download.html">Download</a>
+    </nav>
+  </div>
+</header>
+
+<section class="ghost-band ghost-band--resources">
+  <div class="ghost-band__layers" aria-hidden="true">
+    <img class="ghost-band__photo" src="../../images/splash/books-header-tom-hermans.webp" alt="" loading="eager">
+    <img class="ghost-band__diagram" src="../../images/template/12-glossary-overview.png" alt="">
+  </div>
+  <div class="wrap ghost-band__content">
+    <p class="ghost-band__kicker">Books &middot; articles &middot; talks &middot; videos</p>
+    <h1>Resources</h1>
+    <p class="ghost-band__sub">A compact library of what we have written, presented and recorded about arc42 and software architecture. Filter it to match how you prefer to learn.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="res-controls" role="group" aria-label="Filter by type" id="res-filter">
+      <button type="button" class="is-active" data-type="all" aria-pressed="true">All</button>
+      <button type="button" data-type="book" aria-pressed="false">Books</button>
+      <button type="button" data-type="article" aria-pressed="false">Articles</button>
+      <button type="button" data-type="talk" aria-pressed="false">Talks</button>
+      <button type="button" data-type="video" aria-pressed="false">Videos</button>
+    </div>
+    <p class="res-count" aria-live="polite" id="res-count"></p>
+
+    <ul class="res-list" id="res-list">
+      <li data-type="book"><a href="https://leanpub.com/arc42byexample-20thanniversaryedition">
+        <span class="res-year">2025</span><span class="res-type">Book</span>
+        <span class="res-main"><strong>arc42 by Example, Anniversary Edition<span class="res-lang">EN</span></strong>
+        <span>Nine real IT systems from different domains, documented with arc42 and collected for its twentieth birthday.</span></span>
+      </a></li>
+      <li data-type="article"><a href="#" title="Not in prototype">
+        <span class="res-year">2025</span><span class="res-type">Article</span>
+        <span class="res-main"><strong>20 Years arc42<span class="res-lang">EN</span></strong>
+        <span>Peter Hruschka and Gernot Starke look back at the template, its history and the ecosystem that grew around it.</span></span>
+      </a></li>
+      <li data-type="book"><a href="https://leanpub.com/arc42byexample">
+        <span class="res-year">2023</span><span class="res-type">Book</span>
+        <span class="res-main"><strong>arc42 by Example, 3rd edition<span class="res-lang">EN</span></strong>
+        <span>Complete real-world architectures, from their problem domains and quality goals to building blocks, runtime scenarios and crosscutting concepts.</span></span>
+      </a></li>
+      <li data-type="book"><a href="#" title="Not in prototype">
+        <span class="res-year">2023</span><span class="res-type">Book</span>
+        <span class="res-main"><strong>Software Architecture Foundation, 2nd edition<span class="res-lang">EN</span></strong>
+        <span>A detailed study guide for every learning goal in the iSAQB CPSA Foundation curriculum, including sample examination questions.</span></span>
+      </a></li>
+      <li data-type="article"><a href="#" title="Not in prototype">
+        <span class="res-year">2022</span><span class="res-type">Article</span>
+        <span class="res-main"><strong>Principles of technical documentation<span class="res-lang">EN</span></strong>
+        <span>More than 30 practical principles for documentation that stays correct, current, understandable, relevant and maintainable.</span></span>
+      </a></li>
+      <li data-type="book"><a href="#" title="Not in prototype">
+        <span class="res-year">2021</span><span class="res-type">Book</span>
+        <span class="res-main"><strong>arc42 by Example, Volume 2<span class="res-lang">EN</span></strong>
+        <span>Two complete architecture examples from embedded systems and IoT, including hardware and software co-design.</span></span>
+      </a></li>
+      <li data-type="article"><a href="#" title="Not in prototype">
+        <span class="res-year">2021</span><span class="res-type">Article</span>
+        <span class="res-main"><strong>Quality-Driven Software Architecture<span class="res-lang">EN</span></strong>
+        <span>A methodical approach to constructing systems that are reliable, performant, scalable, usable and cost-effective.</span></span>
+      </a></li>
+      <li data-type="talk"><a href="#" title="Not in prototype">
+        <span class="res-year">2021</span><span class="res-type">Talk</span>
+        <span class="res-main"><strong>The Art of Software Reviews<span class="res-lang">EN</span></strong>
+        <span>A systematic route from review goals and scope to code, architecture, operations, tests and concrete improvements.</span></span>
+      </a></li>
+      <li data-type="talk"><a href="#" title="Not in prototype">
+        <span class="res-year">2021</span><span class="res-type">Talk</span>
+        <span class="res-main"><strong>Im Stich gelassen<span class="res-lang">DE</span></strong>
+        <span>Daniel Lauxtermann and Gernot Starke explain why software teams should actively work toward better requirements.</span></span>
+      </a></li>
+      <li data-type="article"><a href="#" title="Not in prototype">
+        <span class="res-year">2021</span><span class="res-type">Article</span>
+        <span class="res-main"><strong>Handeln statt jammern<span class="res-lang">DE</span></strong>
+        <span>How development teams can respond constructively when important requirements arrive too late or remain implicit.</span></span>
+      </a></li>
+      <li data-type="book"><a href="#" title="Not in prototype">
+        <span class="res-year">2020</span><span class="res-type">Book</span>
+        <span class="res-main"><strong>Effektive Softwarearchitekturen, 9. Auflage<span class="res-lang">DE</span></strong>
+        <span>A thoroughly updated architecture handbook aligned with the iSAQB curriculum, including new examination questions.</span></span>
+      </a></li>
+      <li data-type="book"><a href="#" title="Not in prototype">
+        <span class="res-year">2020</span><span class="res-type">Book</span>
+        <span class="res-main"><strong>Basiswissen für Softwarearchitekten, 4. Auflage<span class="res-lang">DE</span></strong>
+        <span>Foundation-level software architecture knowledge, updated for the current iSAQB curriculum and its examination.</span></span>
+      </a></li>
+      <li data-type="book"><a href="#" title="Not in prototype">
+        <span class="res-year">2020</span><span class="res-type">Book</span>
+        <span class="res-main"><strong>Software Reviews<span class="res-lang">DE</span></strong>
+        <span>Practical ways to uncover problems in software and derive targeted improvements from many years of review experience.</span></span>
+      </a></li>
+      <li data-type="talk"><a href="#" title="Not in prototype">
+        <span class="res-year">2020</span><span class="res-type">Talk</span>
+        <span class="res-main"><strong>How to explain your architecture using arc42<span class="res-lang">EN</span></strong>
+        <span>A guided introduction to the template and how to communicate architecture to developers, management and other stakeholders.</span></span>
+      </a></li>
+      <li data-type="talk"><a href="#" title="Not in prototype">
+        <span class="res-year">2019</span><span class="res-type">Talk</span>
+        <span class="res-main"><strong>The Rise, the Ruin and the Rescue<span class="res-lang">EN</span></strong>
+        <span>Strategic and tactical approaches for escaping legacy hell and reducing technical debt in a large ecommerce system.</span></span>
+      </a></li>
+      <li data-type="book"><a href="#" title="Not in prototype">
+        <span class="res-year">2019</span><span class="res-type">Book</span>
+        <span class="res-main"><strong>arc42-Primer<span class="res-lang">DE</span></strong>
+        <span>A compact introduction that dispels documentation myths and shows how to create maintainable architecture documentation under time pressure.</span></span>
+      </a></li>
+      <li data-type="talk"><a href="#" title="Not in prototype">
+        <span class="res-year">2018</span><span class="res-type">Talk</span>
+        <span class="res-main"><strong>Hände waschen, Zähne putzen: Vergessene Grundlagen<span class="res-lang">DE</span></strong>
+        <span>Gernot Starke revisits software engineering basics such as modularity, complexity, KISS and coupling.</span></span>
+      </a></li>
+      <li data-type="book"><a href="#" title="Not in prototype">
+        <span class="res-year">2016</span><span class="res-type">Book</span>
+        <span class="res-main"><strong>arc42 in Aktion<span class="res-lang">DE</span></strong>
+        <span>The missing manual for arc42: pragmatic advice for useful, economical and maintainable architecture documentation.</span></span>
+      </a></li>
+      <li data-type="video"><a href="https://youtube.com/arc42-video" rel="noopener">
+        <span class="res-year">n.d.</span><span class="res-type">Video</span>
+        <span class="res-main"><strong>Explain your architecture with arc42<span class="res-lang">EN</span></strong>
+        <span>How the arc42 template helps explain a software architecture clearly to different stakeholder groups.</span></span>
+      </a></li>
+      <li data-type="video"><a href="https://youtube.com/arc42-video" rel="noopener">
+        <span class="res-year">n.d.</span><span class="res-type">Video</span>
+        <span class="res-main"><strong>Sparsame Dokumentation mit arc42<span class="res-lang">DE</span></strong>
+        <span>A practical look at the minimum useful architecture documentation, explained through examples.</span></span>
+      </a></li>
+      <li data-type="video"><a href="https://youtube.com/arc42-video" rel="noopener">
+        <span class="res-year">n.d.</span><span class="res-type">Video</span>
+        <span class="res-main"><strong>Diagramm des Grauens<span class="res-lang">DE</span></strong>
+        <span>Gernot Starke shows how architecture diagrams fail and what makes them genuinely useful.</span></span>
+      </a></li>
+      <li data-type="video"><a href="https://youtube.com/arc42-video" rel="noopener">
+        <span class="res-year">n.d.</span><span class="res-type">Video</span>
+        <span class="res-main"><strong>Kontextabgrenzung<span class="res-lang">DE</span></strong>
+        <span>A concise introduction to the system context, one of the most important views in software architecture.</span></span>
+      </a></li>
+    </ul>
+
+    <p style="margin-top: 2rem;"><strong>Looking for more recordings?</strong> Visit the <a href="https://youtube.com/arc42-video" rel="noopener">arc42 YouTube channel</a> or <a href="https://speakerdeck.com/gernotstarke" rel="noopener">Gernot's Speaker Deck profile</a>.</p>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div>
+      <h2>arc42</h2>
+      <p>All you need to construct, communicate and document your software architecture. Proven, practical, pragmatic. Open source and <strong>free to use, even commercially</strong>.</p>
+      <p>arc42 by Dr. Gernot Starke and Dr. Peter Hruschka.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="method.html">Method</a>
+      <a href="download.html">Download</a>
+      <a href="resources.html">Resources</a>
+      <a href="https://docs.arc42.org">docs.arc42.org</a>
+      <a href="https://faq.arc42.org">faq.arc42.org</a>
+      <a href="https://quality.arc42.org">quality.arc42.org</a>
+      <a href="https://github.com/arc42">arc42 on GitHub</a>
+    </nav>
+  </div>
+  <div class="foot-legal">
+    <div class="wrap">
+      <p>Prototype V4 "Ghost Structures". arc42 is open source: use it in any context, commercial or private, free of charge.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var list = document.getElementById("res-list");
+  var count = document.getElementById("res-count");
+  var filter = document.getElementById("res-filter");
+  var items = Array.prototype.slice.call(list.children);
+
+  function apply(type) {
+    var shown = 0;
+    items.forEach(function (li) {
+      var show = type === "all" || li.dataset.type === type;
+      li.hidden = !show;
+      if (show) shown++;
+    });
+    count.textContent = shown + (shown === 1 ? " resource" : " resources") +
+      (type === "all" ? " across all types" : " of type: " + type);
+  }
+
+  filter.addEventListener("click", function (e) {
+    var btn = e.target.closest("button");
+    if (!btn) return;
+    filter.querySelectorAll("button").forEach(function (b) {
+      b.classList.remove("is-active");
+      b.setAttribute("aria-pressed", "false");
+    });
+    btn.classList.add("is-active");
+    btn.setAttribute("aria-pressed", "true");
+    apply(btn.dataset.type);
+  });
+
+  apply("all");
+})();
+</script>
+
+</body>
+</html>

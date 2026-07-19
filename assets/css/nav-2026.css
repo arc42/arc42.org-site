@@ -1,0 +1,240 @@
+/* ==========================================================================
+   arc42 top navigation — 2026 layout
+   Priority links inline + "More…" hamburger drawer.
+   Palette via the --arc42-* tokens defined in arc42-org.css.
+   ========================================================================== */
+
+.arc42-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.arc42-nav__logo {
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+}
+.arc42-nav__logo img {
+  display: block;
+  width: auto;
+  height: 34px;
+  max-height: 34px;
+}
+
+/* ---- inline priority links (desktop) ---- */
+.arc42-nav__inline {
+  display: none;            /* hidden below the desktop breakpoint */
+  list-style: none;
+  margin: 0 0 0 auto;       /* push the cluster to the right */
+  padding: 0;
+  align-items: center;
+  gap: 1.4rem;
+}
+.arc42-nav__inline li { margin: 0; }
+.arc42-nav__inline > li > a {
+  color: var(--arc42-slate);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  padding: 0.4rem 0.1rem;
+  transition: color 0.15s ease;
+}
+.arc42-nav__inline > li > a:hover,
+.arc42-nav__inline > li > a:focus-visible {
+  color: var(--arc42-primary);
+}
+/* current page */
+.arc42-nav__inline > li > a[aria-current="page"]:not(.arc42-nav__cta) {
+  color: var(--arc42-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+.arc42-drawer__primary a[aria-current="page"]:not(.arc42-nav__cta),
+.arc42-drawer__group a[aria-current="page"] {
+  color: var(--arc42-primary);
+  font-weight: 700;
+  background: #f6f8fa;
+  border-radius: 4px;
+}
+
+/* ---- Download call-to-action (navy button) ---- */
+.arc42-nav .arc42-nav__cta,
+.arc42-drawer .arc42-nav__cta {
+  color: #ffffff;
+  background: var(--arc42-primary);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  box-shadow: none;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+.arc42-nav .arc42-nav__cta:hover,
+.arc42-nav .arc42-nav__cta:focus-visible,
+.arc42-drawer .arc42-nav__cta:hover,
+.arc42-drawer .arc42-nav__cta:focus-visible {
+  color: #ffffff;
+  background: var(--arc42-primary-hover);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
+}
+
+/* ---- "More…" toggle / hamburger ---- */
+.arc42-nav__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;          /* right-aligned when inline links are hidden */
+  padding: 0.45rem 0.7rem;
+  background: transparent;
+  border: 1px solid #e2e6ea;
+  border-radius: 8px;
+  color: var(--arc42-primary);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.arc42-nav__toggle:hover { border-color: var(--arc42-primary-hover); color: var(--arc42-primary-hover); }
+.arc42-nav__toggle:focus-visible { outline: 2px solid var(--arc42-primary-hover); outline-offset: 2px; }
+.arc42-nav__bars {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 18px;
+}
+.arc42-nav__bars span {
+  display: block;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+}
+
+/* ---- drawer ---- */
+.arc42-drawer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background: #ffffff;
+  border-top: 1px solid var(--arc42-border-light);
+  border-bottom: 1px solid #e2e6ea;
+  box-shadow: 0 12px 20px -8px rgba(20, 40, 70, 0.18);
+  z-index: 19;
+}
+.arc42-drawer[hidden] { display: none; }
+.arc42-drawer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem 1.25rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.25rem 2rem;
+}
+
+/* primary links inside the drawer — shown on small screens only */
+.arc42-drawer__primary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  grid-column: 1 / -1;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--arc42-border-light);
+}
+.arc42-drawer__primary a {
+  color: var(--arc42-ink);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem 0.25rem;
+}
+.arc42-drawer__primary a:hover { color: var(--arc42-primary); }
+.arc42-drawer__primary a.arc42-nav__cta { align-self: flex-start; margin-top: 0.35rem; }
+
+.arc42-drawer__title {
+  margin: 0 0 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--arc42-slate);
+}
+.arc42-drawer__group ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.arc42-drawer__group li { margin: 0; }
+.arc42-drawer__group a {
+  display: block;
+  padding: 0.35rem 0.25rem;
+  color: var(--arc42-ink);
+  font-size: 0.92rem;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.arc42-drawer__group a:hover,
+.arc42-drawer__group a:focus-visible {
+  color: var(--arc42-primary);
+  background: #f6f8fa;
+}
+.arc42-drawer__hint {
+  display: block;
+  margin-top: 0.05rem;
+  color: var(--arc42-slate);
+  font-size: 0.78rem;
+  line-height: 1.3;
+}
+.arc42-drawer__group a:hover .arc42-drawer__hint,
+.arc42-drawer__group a:focus-visible .arc42-drawer__hint {
+  color: var(--arc42-slate);
+}
+
+/* screen-reader-only name for the icon-only mobile toggle */
+.arc42-nav__toggle-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---- breakpoints ---- */
+@media (min-width: 800px) {
+  .arc42-nav__inline { display: flex; }
+  .arc42-nav__toggle { margin-left: 0; }   /* sits just after the inline links */
+  .arc42-nav__toggle-sr { display: none; } /* visible "More" is the name */
+  .arc42-drawer__primary { display: none; } /* primary links already inline */
+}
+@media (max-width: 799px) {
+  .arc42-nav__toggle-txt { display: none; } /* icon-only hamburger, named "Menu" via the sr span */
+  .arc42-nav__toggle { padding: 0.45rem 0.55rem; }
+
+  /* keep the primary CTA (Download) visible next to the hamburger
+     (server-rendered .arc42-nav__cta-item class marks its list item) */
+  .arc42-nav__inline {
+    display: flex;
+    margin-left: auto;
+    gap: 0;
+  }
+  .arc42-nav__inline > li { display: none; }
+  .arc42-nav__inline > li.arc42-nav__cta-item { display: block; }
+  .arc42-nav__inline > li.arc42-nav__cta-item .arc42-nav__cta {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  .arc42-nav__toggle { margin-left: 0.6rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arc42-nav__inline > li > a,
+  .arc42-nav .arc42-nav__cta,
+  .arc42-drawer .arc42-nav__cta { transition: none; }
+}
