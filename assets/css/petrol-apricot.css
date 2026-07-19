@@ -1,0 +1,141 @@
+/* ==========================================================================
+   Skin experiment: V5 "Petrol & Apricot" (branch petrol-abricot-layout)
+   Loaded AFTER the 2026 token sheet: remaps the design tokens and the few
+   hardcoded surfaces. No structural or mechanical changes — remove this file
+   (and the font link in head/custom.html) to fall back to the navy/gold skin.
+   Palette from prototype/petrol-apricot/styles.css, converted to hex.
+   ========================================================================== */
+
+:root {
+  /* petrol & apricot primitives */
+  --pa-petrol-ink: #1e4550;
+  --pa-petrol-deep: #16363f;
+  --pa-petrol-mid: #2c5e6e;
+  --pa-petrol-soft: #4d7c8a;
+  --pa-apricot: #f0a35c;
+  --pa-apricot-deep: #d5813f;
+  --pa-apricot-tint: #faeddc;
+  --pa-butter: #ecd07a;
+  --pa-butter-tint: #f6eccb;
+  --pa-ivory: #faf7f0;
+  --pa-ivory-raise: #fdfcf8;
+  --pa-cream: #f8f2e4;
+  --pa-cream-dim: #d8ccb6;
+  --pa-line: #e3ddcd;
+
+  /* remap the arc42 tokens */
+  --arc42-primary: var(--pa-petrol-ink);
+  --arc42-primary-hover: var(--pa-petrol-mid);
+  --arc42-accent: var(--pa-apricot);
+  --arc42-slate: var(--pa-petrol-soft);
+  --arc42-ink: #333d3f;
+  --arc42-ink-strong: var(--pa-petrol-deep);
+  --arc42-text-muted: var(--pa-petrol-soft);
+  --arc42-border: var(--pa-line);
+  --arc42-border-light: #efeadb;
+}
+
+/* ---------- typography: Zilla Slab display, Hanken Grotesk body ---------- */
+
+html body {
+  font-family: "Hanken Grotesk", "Avenir Next", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--pa-ivory);
+}
+body h1, body h2, body h3, body h4,
+.dl-hero__title,
+.home-hero__title {
+  font-family: "Zilla Slab", "Rockwell", Georgia, serif;
+}
+
+.masthead, .greedy-nav { background: var(--pa-ivory); }
+
+/* ---------- hero bands: petrol-deep with cream type, apricot kicker ---------- */
+
+.dl-hero {
+  background: var(--pa-petrol-deep);
+}
+.dl-hero .dl-hero__title { color: var(--pa-cream); }
+.dl-hero .dl-hero__kicker { color: var(--pa-apricot); }
+.dl-hero .dl-hero__sub { color: var(--pa-cream-dim); }
+.dl-hero .dl-hero__sub strong { color: var(--pa-cream); }
+.dl-hero .dl-hero__facts { color: var(--pa-cream-dim); }
+.dl-hero .btn--arc42-outline {
+  border-color: var(--pa-cream-dim);
+  color: var(--pa-cream);
+  background: transparent;
+}
+.dl-hero .btn--arc42-outline:hover {
+  background: var(--pa-cream);
+  color: var(--pa-petrol-deep);
+}
+
+.home-hero { background: var(--pa-petrol-deep); }
+.home-hero .home-hero__kicker { color: var(--pa-apricot); }
+.home-hero .home-hero__title { color: var(--pa-cream); }
+.home-hero .home-hero__sub { color: var(--pa-cream-dim); }
+.home-hero .home-hero__sub strong { color: var(--pa-cream); }
+
+.method-cta { background: var(--pa-apricot-tint); }
+
+/* download builder: cool blue chips and result panel become warm */
+.dlb__lang.is-active,
+.dlb__fmt.is-active {
+  background: var(--pa-apricot-tint);
+  border-color: var(--pa-apricot-deep);
+  color: var(--pa-petrol-deep);
+}
+.dlb__result {
+  background: var(--pa-ivory-raise);
+  border-color: var(--pa-butter);
+}
+
+/* ---------- neutral tints: cool gray-blue washes become warm ivory ---------- */
+
+.about-section--tint,
+.resource-footnote,
+.resource-detail__facts,
+.training-impressions,
+.method-principles {
+  background: var(--pa-ivory-raise);
+}
+
+/* commercial training box: green wash becomes butter */
+.training-section {
+  background-color: var(--pa-butter-tint);
+  border-color: var(--pa-butter);
+}
+
+/* ---------- overview grid families ---------- */
+
+.part { background: var(--pa-ivory-raise); }
+.part.fam-req    { background: var(--pa-butter-tint); }
+.part.fam-req    .part__no { background: var(--pa-apricot); color: var(--pa-petrol-deep); }
+.part.fam-struct { background: #e6efef; }
+.part.fam-struct .part__no { background: var(--pa-petrol-mid); }
+.part.fam-con    { background: var(--pa-apricot-tint); }
+.part.fam-con    .part__no { background: var(--pa-petrol-ink); }
+.part:hover,
+.part:focus-visible { background: #ffffff; }
+
+.grid-legend__dot--req    { background: var(--pa-apricot); border-color: var(--pa-apricot); }
+.grid-legend__dot--struct { background: var(--pa-petrol-mid); border-color: var(--pa-petrol-mid); }
+.grid-legend__dot--con    { background: var(--pa-petrol-ink); border-color: var(--pa-petrol-ink); }
+
+/* ---------- inline SVGs (method diagram, canvas miniature) ---------- */
+
+.method-diagram svg {
+  --ink: var(--pa-petrol-deep);
+  --muted: var(--pa-petrol-soft);
+  --line: var(--pa-line);
+  --paper: var(--pa-ivory-raise);
+  --accent: var(--pa-petrol-mid);
+}
+.method-diagram svg .olap { fill: var(--pa-apricot); }
+
+.canvas-teaser svg {
+  --ink: var(--pa-petrol-deep);
+  --muted: var(--pa-petrol-soft);
+  --line: var(--pa-line);
+  --paper: var(--pa-ivory-raise);
+  --gold: var(--pa-apricot);
+}
