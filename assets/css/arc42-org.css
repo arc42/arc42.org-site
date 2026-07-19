@@ -6,6 +6,7 @@
 :root {
   --arc42-primary: #374769;        /* navy ink — brand, primary actions */
   --arc42-primary-hover: #4b7ba3;  /* steel blue — hover state */
+  --arc42-accent: #f5b700;         /* gold — the single loud accent */
   --arc42-slate: #6f777d;          /* secondary neutral */
   --arc42-ink: #3d4144;            /* body text */
   --arc42-ink-strong: #1c2c44;     /* headings / emphasized text */
@@ -284,6 +285,12 @@ html { overflow-x: clip; }
   color: #33445c;
 }
 .dl-hero .dl-hero__sub { max-width: 54ch; margin-bottom: 0; }
+.dl-hero .dl-hero__facts {
+  margin: 0.9rem 0 0;
+  font-size: 0.88rem;
+  color: var(--arc42-text-muted);
+  max-width: 54ch;
+}
 .home-hero .home-hero__sub strong,
 .dl-hero .dl-hero__sub strong { color: var(--arc42-ink-strong); }
 .home-hero__actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin: 0; }
@@ -1223,4 +1230,87 @@ a.res-card:focus-visible { outline: 2px solid var(--arc42-primary-hover); outlin
   font-size: 0.875rem;
   color: var(--arc42-text-muted);
   text-align: center;
+}
+
+/* Method page (classes: method-page): reading measure, principles aside, closing band */
+.method-page .page__content { color: var(--arc42-ink); }
+.method-page .page__content > p,
+.method-page .page__content > ul,
+.method-page .page__content > h2 { max-width: 70ch; }
+.method-page .page__content h2 { color: var(--arc42-ink-strong); }
+
+.method-principles {
+  max-width: 70ch;
+  margin: 2.5rem 0;
+  padding: 1.4rem 1.6rem 0.4rem;
+  background: #f4f7fb;
+  border: 1px solid var(--arc42-border);
+  border-radius: 8px;
+}
+.method-principles h2 {
+  margin-top: 0;
+  font-size: 1.1em;
+  border-bottom: none;
+}
+
+.method-cta {
+  margin: 3.5rem 0 1rem;
+  padding: 2.4rem 2rem 2.2rem;
+  background: linear-gradient(135deg, #dbeaf6, #b7cbe6);
+  border-radius: 10px;
+  text-align: center;
+}
+.method-cta h2 {
+  margin-top: 0;
+  border-bottom: none;
+  color: var(--arc42-ink-strong);
+}
+.method-cta p { max-width: none; margin-inline: auto; }
+.method-cta .btn { margin: 0.25rem 0.35rem; }
+
+@media (max-width: 700px) {
+  /* let the diagram use the full viewport so its labels stay legible */
+  .method-diagram { margin-inline: calc(50% - 50vw); max-width: none; }
+  .method-diagram figcaption { padding-inline: 1.25rem; }
+}
+
+/* "Back to the diagram" markers under each method activity */
+.method-backtop {
+  max-width: 70ch;
+  margin: 1.4rem 0 2.2rem;
+  text-align: right;
+  font-size: 0.82rem;
+}
+.method-backtop a {
+  color: var(--arc42-slate);
+  text-decoration: none;
+  border-bottom: 1px solid var(--arc42-border);
+}
+.method-backtop a:hover,
+.method-backtop a:focus-visible {
+  color: var(--arc42-primary-hover);
+  border-bottom-color: var(--arc42-primary-hover);
+}
+@media (prefers-reduced-motion: no-preference) {
+  html:has(body.method-page) { scroll-behavior: smooth; }
+}
+
+/* ==========================================================================
+   Canvas teaser on the overview page: mini-SVG thumbnail next to the text
+   ========================================================================== */
+.canvas-teaser {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 1.4rem 0;
+}
+.canvas-teaser__thumb {
+  flex: none;
+  width: 8.5rem;
+  display: block;
+}
+.canvas-teaser__thumb svg { display: block; width: 100%; height: auto; }
+.canvas-teaser p { margin: 0; }
+@media (max-width: 480px) {
+  .canvas-teaser { flex-direction: column; align-items: flex-start; gap: 0.7rem; }
 }
