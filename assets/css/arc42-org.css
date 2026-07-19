@@ -291,6 +291,8 @@ html { overflow-x: clip; }
   color: var(--arc42-text-muted);
   max-width: 54ch;
 }
+.dl-hero .dl-hero__actions { margin: 1.2rem 0 0; }
+.dl-hero .dl-hero__actions .btn { margin-bottom: 0; }
 .home-hero .home-hero__sub strong,
 .dl-hero .dl-hero__sub strong { color: var(--arc42-ink-strong); }
 .home-hero__actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin: 0; }
@@ -1149,7 +1151,7 @@ a.res-card:focus-visible { outline: 2px solid var(--arc42-primary-hover); outlin
   gap: 2rem;
   align-items: start;
 }
-.training-impressions__heading > p { margin: 0.3rem 0 0; color: var(--arc42-primary-hover); font-size: 0.82rem; font-weight: 800; }
+.training-impressions__heading > p { margin: 0.3rem 0 0; color: var(--arc42-primary); font-size: 0.82rem; font-weight: 800; }
 .training-impressions__heading h2 { max-width: 18ch; margin: 0; color: var(--arc42-ink-strong); font-size: clamp(2rem, 4vw, 3rem); line-height: 1.05; }
 .training-impressions__intro { max-width: 65ch; margin: 1.5rem 0 2rem auto; color: var(--arc42-text-muted); font-size: 1.05rem; }
 .training-impressions__video { max-width: 54rem; margin: 0 auto 2rem; }

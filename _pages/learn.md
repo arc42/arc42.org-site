@@ -36,6 +36,7 @@ training_gallery:
     <p class="dl-hero__kicker">Self-study &middot; instructor-led seminars &middot; iSAQB CPSA-F</p>
     <h1 class="dl-hero__title">Training</h1>
     <p class="dl-hero__sub">Learn arc42 and systematic software architecture at your own pace with books, videos and our free documentation, or in an <strong>iSAQB-certified seminar</strong> taught by the creators of arc42.</p>
+    <p class="dl-hero__actions"><a class="btn btn--arc42-outline" href="#next-training-dates">Next training dates &#8595;</a></p>
   </div>
 </section>
 
@@ -65,12 +66,12 @@ arc42 trainings are effective preparation for the iSAQB CPSA (Certified Professi
 <section id="inside-a-training" class="training-impressions">
   <div class="training-impressions__heading">
     <p>Inside an arc42 training</p>
-    <h2>Two trainers, real questions, many drawings</h2>
+    <h2>Two trainers, real questions, practical answers</h2>
   </div>
-  <p class="training-impressions__intro">The dual-trainer format is conversational and hands-on. Peter and Gernot alternate perspectives, work through participants' systems and make architecture visible on paper and whiteboards.</p>
+  <p class="training-impressions__intro">The dual-trainer format is conversational and hands-on. Peter and Gernot alternate perspectives, work through participants' real systems, and answer questions with pragmatic, methodical approaches you can apply right away.</p>
 
   <div class="training-impressions__video">
-    {% include video id="urIPHD_jJUc" provider="youtube" %}
+    {% include video id="urIPHD_jJUc" provider="youtube" title="Inside an arc42 training: video impressions" %}
   </div>
 
   {% include gallery id="training_gallery" caption="A few impressions from our trainings. Photos by Oleg Pylypenko." %}
@@ -82,10 +83,10 @@ arc42 trainings are effective preparation for the iSAQB CPSA (Certified Professi
 
 Beyond training, we work directly with teams and organizations. Wherever your architecture needs a hand, we bring the same pragmatic, arc42-grounded approach:
 
-* **Reviews** — an independent view of your systems and development processes, with concrete suggestions for improvement.
-* **Documentation** — help documenting your systems pragmatically and economically; we have guided many organizations through adopting arc42.
-* **Improvement** — support to modernize and evolve systems and development processes.
-* **Talks** — impulse talks, keynotes or focused deep dives on architecture, at your company or a conference. See our [talks](/resources/?type=talk).
+* **Reviews**: an independent view of your systems and development processes, with concrete suggestions for improvement.
+* **Documentation**: help documenting your systems pragmatically and economically; we have guided many organizations through adopting arc42.
+* **Improvement**: support to modernize and evolve systems and development processes.
+* **Talks**: impulse talks, keynotes or focused deep dives on architecture, at your company or a conference. See our [talks](/resources/?type=talk).
 
 Interested? [Get in touch](/about/#contact).
 
