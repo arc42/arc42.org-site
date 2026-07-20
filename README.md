@@ -61,6 +61,108 @@ Netlify dashboard's build settings.
 
 ---
 
+## Resources library
+
+The [`/resources/`](https://www.arc42.org/resources/) page (books, articles, talks,
+videos) is **data-driven**. Every entry is a single Markdown file in the
+[`_resources/`](_resources/) collection — no HTML to touch, no counts to maintain.
+
+### Add a resource
+
+Drop one file in `_resources/`, e.g. `_resources/my-new-talk.md`:
+
+```yaml
+---
+type: talk                 # book | article | talk | video   (required)
+title: "My new talk"       # required
+language: en               # en | de                         (required)
+year: 2026                 # optional — undated items sort to the end
+summary: "One-line description shown on the card."   # required
+search: "extra author keywords for the filter"       # optional
+cover: /images/resources/my-new-talk.webp            # optional (see Thumbnails)
+link: https://speakerdeck.com/...                    # optional — omit for no link
+link_label: "Open slides"                            # optional CTA text
+id: my-anchor              # optional — for deep links like /resources/#my-anchor
+---
+```
+
+That's it. The listing template ([`_includes/resource-item.html`](_includes/resource-item.html))
+renders the card; [`_pages/resources.md`](_pages/resources.md) loops the collection,
+sorts by `year` descending (undated last), and computes the type-badge counts in
+Liquid — so the numbers can never drift out of sync with the files.
+
+The **link arrow is derived from the URL**, so it stays consistent:
+internal `→`, external `↗` (plus `rel="noopener"`), and `.pdf` `↓`.
+
+### Thumbnails
+
+Set `cover:` to any image path and the card shows that thumbnail. Omit it and the
+card falls back to a color-coded letter marker (**B**ook / **A**rticle / **T**alk /
+**V**ideo). This works for every type, not just books.
+
+- New thumbnails (articles, talks, videos): put them in `/images/resources/`.
+- Existing book covers live in `/images/books/` — leave them there.
+
+The thumbnail box is portrait-ish (`4rem × 5.5rem`) with `object-fit: contain`, so
+both portrait covers and landscape stills fit without distortion.
+
+### Detail pages (opt-in)
+
+Each resource also gets its own page at `/resources/<slug>/` (the collection is
+`output: true`). Most are minimal landing pages generated from the front matter; add
+`detail: true` to promote one and **the listing card links to it** ("More details →")
+instead of straight out.
+
+Write Markdown **below the front matter** and it becomes the body of that detail page
+— headings, lists, a longer description, a cover, a buy/watch button (from `link:`).
+[`_resources/effektive-softwarearchitekturen.md`](_resources/effektive-softwarearchitekturen.md)
+is the worked example; the layout is [`_layouts/resource.html`](_layouts/resource.html).
+
+> **Remember:** [`sitemap.xml`](sitemap.xml) is maintained by hand. When you publish a
+> `detail: true` page, add its URL there — the other auto-generated item pages are
+> orphaned landing pages and are intentionally left out of the sitemap.
+
+## Translators (About page)
+
+The translator credits in the [`/about/`](https://www.arc42.org/about/#community) page's
+community section are **data-driven** from [`_data/translators.yml`](_data/translators.yml).
+Add or edit people there — no HTML to touch.
+
+### Add a translator
+
+One block per **person** (not per language):
+
+```yaml
+- name: "Mario Giustiniani"   # required
+  language: "Italiano"        # required — in its own script
+  bio: "One to three sentences."                        # optional
+  portrait: "/images/translators/mario-giustiniani.webp" # optional
+  links:                                                # optional — list of labelled links
+    - label: "GitHub"
+      url: "https://github.com/mgiustiniani"
+```
+
+The About page ([`_pages/about.md`](_pages/about.md)) renders this in **two tiers**:
+
+1. **Full credit roll** — every entry, grouped by `language` (co-translators of one
+   language auto-join with commas and "and"). A name links to its first `links:` entry
+   when present.
+2. **"Meet some of our translators"** — entries that have a `bio` **or** a `portrait`,
+   shown as cards. The whole tier stays hidden until at least one entry qualifies, so it
+   never looks half-finished.
+
+### Portraits and the monogram fallback
+
+- With `portrait:` → the card shows that image (square, round-cropped via CSS). Put
+  portraits in `/images/translators/` as ~320px square `webp`.
+- Without `portrait:` → the card falls back to an **initials monogram** on a tinted
+  disc (e.g. "Damien Lucas" → **DL**), so cards with and without a photo sit together
+  cleanly.
+
+Styles live under `.translator-grid` / `.translator-card` in
+[`assets/css/arc42-org.css`](assets/css/arc42-org.css). No sitemap entry is needed —
+this is a section of an existing page, not a new URL.
+
 ## How does the search page work?
 The search uses the [Simple-Jekyll-Search Javascript Function](https://github.com/christian-fei/Simple-Jekyll-Search),
 Copyright 2015-2020, Christian Fei, licensed under the MIT License.  

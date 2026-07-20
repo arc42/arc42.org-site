@@ -3,7 +3,7 @@ title: 20 Years and our Ecosystem
 layout: single
 classes: wide
 
-permalink: /20yrs-ecosystem
+permalink: /20yrs-ecosystem/
 header:
   overlay_filter: rgba(108, 148, 139, 0.5)
   overlay_image: /images/blog/20-year-jubilee-header-martin-reisch.webp
@@ -101,7 +101,7 @@ Since copying from existing solutions is always easier than inventing new ones, 
 
 
 
-A complete lists of books, articles, videos and more can be found on our [books and articles page](https://arc42.org/more).
+A complete list of books, articles, talks and videos can be found in our [resource library](/resources/).
 
 ## Where do we go from here…
 So, here’s to the next 20 years (and beyond!) of fuss-free, content-first architectural documentation. 
@@ -112,6 +112,5 @@ We promise to keep:
 * championing open-source sharing, busting myths about documentation (yes, it really can be fun!), and surprising folks with new and practical additions to the arc42 family. 
 
 >Thank you for being part of this journey—together, we’ll continue to keep architecture clear, simple, and downright enjoyable!
-
 
 

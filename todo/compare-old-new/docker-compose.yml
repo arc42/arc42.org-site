@@ -1,0 +1,7 @@
+services:
+  compare:
+    image: nginx:alpine
+    ports:
+      - '8080:80'
+    volumes:
+      - ./comparison.html:/usr/share/nginx/html/index.html:ro

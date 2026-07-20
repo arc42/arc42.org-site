@@ -1,0 +1,39 @@
+{%- comment -%}
+  Renders one resource card for the /resources/ listing.
+  Usage: {% include resource-item.html resource=item %}
+  Fields (from _resources/*.md front matter):
+    type     book | article | talk | video   (required)
+    title    string                           (required)
+    language en | de                          (required)
+    year     integer                          (optional; undated items sort last)
+    summary  one-line description             (required)
+    search   extra keywords for the filter    (optional; title + summary are searched anyway)
+    cover    thumbnail path                   (optional; falls back to a letter marker)
+    link     URL                              (optional; omit for "no link" items)
+    link_label  CTA text                      (optional; arrow is derived from the link)
+    id       anchor id                        (optional)
+{%- endcomment -%}
+{%- assign r = include.resource -%}
+{%- assign lang = 'English' -%}{%- if r.language == 'de' -%}{%- assign lang = 'German' -%}{%- endif -%}
+<article class="resource-item"{% if r.id %} id="{{ r.id }}"{% endif %} data-resource data-type="{{ r.type }}" data-language="{{ r.language }}" data-search="{{ r.search }}">
+  {%- if r.cover -%}
+  <img class="resource-item__cover" src="{{ r.cover }}" alt="{{ r.title | escape }} cover" loading="lazy">
+  {%- else -%}
+    {%- case r.type -%}
+      {%- when 'talk' -%}{%- assign mk = 'T' -%}{%- assign mc = ' resource-item__marker--talk' -%}
+      {%- when 'video' -%}{%- assign mk = 'V' -%}{%- assign mc = ' resource-item__marker--video' -%}
+      {%- when 'book' -%}{%- assign mk = 'B' -%}{%- assign mc = '' -%}
+      {%- else -%}{%- assign mk = 'A' -%}{%- assign mc = '' -%}
+    {%- endcase -%}
+  <div class="resource-item__marker{{ mc }}" aria-hidden="true">{{ mk }}</div>
+  {%- endif -%}
+  <div class="resource-item__body"><p class="resource-item__meta"><span>{{ r.type | capitalize }}</span><span>{{ lang }}</span>{% if r.year %}<span>{{ r.year }}</span>{% endif %}</p><h2>{{ r.title }}</h2><p>{{ r.summary }}</p></div>
+  {%- if r.detail -%}
+  <a class="resource-item__link" href="{{ r.url | relative_url }}">More details <span aria-hidden="true">&#8594;</span></a>
+  {%- elsif r.link -%}
+    {%- if r.link contains '.pdf' -%}{%- assign arrow = '&#8595;' -%}
+    {%- elsif r.link contains '://' -%}{%- assign arrow = '&#8599;' -%}
+    {%- else -%}{%- assign arrow = '&#8594;' -%}{%- endif -%}
+  <a class="resource-item__link" href="{{ r.link }}"{% if r.link contains '://' %} rel="noopener"{% endif %}>{{ r.link_label | default: 'Open' }} <span aria-hidden="true">{{ arrow }}</span></a>
+  {%- endif -%}
+</article>

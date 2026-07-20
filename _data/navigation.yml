@@ -1,46 +1,46 @@
-# main links
+# ---------------------------------------------------------------------------
+# Top navigation (2026 layout)
+#   main   -> inline priority links shown in the masthead bar
+#             (Download is flagged `cta: true` and rendered as the navy button)
+#   drawer -> the "More…" hamburger contents (secondary / resource links)
+#
+# Story told by the inline row: Overview (what) -> Method (how you work) ->
+# Docs (reference) -> Examples -> Training -> Download.
+# About lives in the footer and the drawer, not the masthead.
+# ---------------------------------------------------------------------------
+
+# inline priority links (order matters)
 main:
   - title: "Overview"
-    url: /overview
+    url: /overview/
+  - title: "Method"
+    url: /method/
   - title: "Docs"
-    url: /documentation
-  - title: "More..."
-    url: /more
+    url: /documentation/
   - title: "Examples"
-    url: /examples
+    url: /examples/
   - title: "Training"
-    url: /learn
+    url: /learn/
   - title: "Download"
-    url: /download
-  - title: "About"
-    url: /about
-  - title: "Search"
-    url: /search
+    url: /download/
+    cta: true
 
-# about
-about:
-  - title: About arc42
-    url: /about
+# "More…" hamburger drawer — grouped secondary links
+drawer:
+  - title: "Explore"
     children:
-    - title: "Contact"
-      url: /contact
-    - title: "Contributors"
-      url: https://github.com/arc42/arc42-template/graphs/contributors
-    - title: "License"
-      url: /license
-    - title: "Impressions"
-      url: /gallery
-
-
-publications:
-  - title: Publikations
+      - title: "About"
+        url: /about/
+      - title: "Resources"
+        url: /resources/
+        hint: "books · articles · talks · videos"
+      - title: "Search"
+        url: /search/
+  - title: "arc42 elsewhere"
     children:
-      - title: Books
-        url: /books/
-      - title: Articles
-        url: /articles/
-      - title: Videos
-        url: /videos/
-      - title: Talks
-        url: /talks/
-
+      - title: "German site — arc42.de"
+        url: https://www.arc42.de
+      - title: "Training dates"
+        url: https://trainings.arc42.org
+      - title: "Status"
+        url: https://status.arc42.org

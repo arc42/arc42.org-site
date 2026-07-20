@@ -1,63 +1,105 @@
 ---
-title: "Learn architecture"
+title: "Training"
 layout: splash
-permalink: /learn
-header:
-  overlay_image: /images/splash/learn-header-helloquence.webp
-  caption: "Photo: [**helloquence**](https://unsplash.com/photos/5fNmWej4tAA)"
-  
+permalink: /learn/
+excerpt: "Learn arc42 and software architecture through books, videos, free documentation or iSAQB-certified seminars taught by the creators of arc42."
+
+training_gallery:
+  - url: /images/photos/training/q/DSCF8505.webp
+    image_path: /images/photos/training/q/DSCF8505-small.webp
+    alt: "Peter Hruschka and Gernot Starke explaining an architecture drawing together"
+  - url: /images/photos/training/q/DSCF8178.webp
+    image_path: /images/photos/training/q/DSCF8178-small.webp
+    alt: "Peter Hruschka answering questions at a training table"
+  - url: /images/photos/training/q/DSCF8238.webp
+    image_path: /images/photos/training/q/DSCF8238-small.webp
+    alt: "Gernot Starke explaining an architecture topic"
+  - url: /images/photos/training/q/DSCF8406.webp
+    image_path: /images/photos/training/q/DSCF8406-small.webp
+    alt: "Training table with workshop materials"
+  - url: /images/photos/training/q/DSCF8617.webp
+    image_path: /images/photos/training/q/DSCF8617-small.webp
+    alt: "Gernot Starke answering questions at a training table"
+  - url: /images/photos/training/q/DSCF8778.webp
+    image_path: /images/photos/training/q/DSCF8778-small.webp
+    alt: "Several hand-drawn architecture illustrations from a training"
+  - url: /images/photos/training/h/DSCF8846.webp
+    image_path: /images/photos/training/h/DSCF8846-small.webp
+    alt: "Peter Hruschka and Gernot Starke during a training"
+  - url: /images/photos/training/q/DSCF8928.webp
+    image_path: /images/photos/training/q/DSCF8928-small.webp
+    alt: "Peter Hruschka and Gernot Starke in the training room"
 ---
 
-<div class="ua-background" markdown="1">
+<section class="dl-hero">
+  <div class="dl-hero__inner">
+    <p class="dl-hero__kicker">Self-study &middot; instructor-led seminars &middot; iSAQB CPSA-F</p>
+    <h1 class="dl-hero__title">Training</h1>
+    <p class="dl-hero__sub">Learn arc42 and systematic software architecture at your own pace with books, videos and our free documentation, or in an <strong>iSAQB-certified seminar</strong> taught by the creators of arc42.</p>
+    <p class="dl-hero__actions"><a class="btn btn--arc42-outline" href="#next-training-dates">Next training dates &#8595;</a></p>
+  </div>
+</section>
 
->### We stand with the people of Ukraine <span class="parent"><span class="ua-text"><i class="fas fa-heart children"></i></span><span class="ua-size children"><i class="fas fa-heart beat heart children"></i></span></span>
->
->Please assist humanitarian efforts for the Ukrainian people and those affected by the military invasion of Ukraine by supporting international aid organizations, including the [International Committee of the Red Cross](https://www.icrc.org/en).
+## Self-study
 
-</div>
+Everything you need to learn arc42 is freely available. Pick what suits your learning style:
 
-<hr>
+* The [template documentation](https://docs.arc42.org) explains every section: purpose, contents, and practical tips.
+* [Real-world examples](/examples/) show complete architecture documentation you can learn from.
+* The [FAQ](https://faq.arc42.org) answers hundreds of questions about using arc42 in practice.
+* Our [resource library](/resources/) combines books, articles, videos and conference talks. Filter it by type or language to match how you prefer to learn.
 
-<a href="/gallery"><button class="button buttonRoyalBlue">Get some <br> impressions</button></a>
+## Instructor-led seminars
 
-<hr>
+![arc42 logo with an arrow pointing towards the iSAQB CPSA-F certification logo](/images/arc42-learn-cpsaf.png)
 
-# Become Certified Professional for Software Architecture!
+We are founding members of the iSAQB association and have actively participated in its standardization working groups ever since. Since 2016, Gernot Starke serves as lead of the iSAQB task force for the Foundation Level curriculum.
 
-![arc42-logo and arrow pointing towards CPSA-F-ISAQB-certified-logo](/images/arc42-learn-cpsaf.png)
+Peter and Gernot have trained and coached more than 2000 now-certified software architecture professionals, in both inhouse and public seminars. Their well-known workshop [Mastering Software Architectures](https://trainings.arc42.org) coaches developers, designers and architects in the systematic development, communication and evaluation of software architectures.
 
-We are founding members of the iSAQB association, and actively participated
-in iSAQB standardization working groups ever since.
+They pioneered the *dual-trainer* mode, in which two experienced trainers teach in parallel. Their backgrounds complement each other: Peter comes from embedded and real-time systems, Gernot from information, web and batch systems, so participants get first-hand experience from both worlds.
 
-Since 2016, Gernot Starke serves as working group lead of the FLWG,
-the iSAQB task force for the (Foundation Level) curriculum.
+### Ideal preparation for the CPSA-F examination
 
-Peter and Gernot have successfully trained and coached more than 2000 (now certified)
-software architecture professionals, both within inhouse and public seminars
-and workshops.
+arc42 trainings are effective preparation for the iSAQB CPSA (Certified Professional for Software Architecture) certification. Our public trainings are currently held in Munich, Frankfurt and Vienna.
 
-Their well-known workshop "Mastering Software Architectures" attracts developers,
-software designers and software architects, to coach systematic development,
-communication and analysis/evaluation of software architectures.
+<section id="inside-a-training" class="training-impressions">
+  <div class="training-impressions__heading">
+    <p>Inside an arc42 training</p>
+    <h2>Two trainers, real questions, practical answers</h2>
+  </div>
+  <p class="training-impressions__intro">The dual-trainer format is conversational and hands-on. Peter and Gernot alternate perspectives, work through participants' real systems, and answer questions with pragmatic, methodical approaches you can apply right away.</p>
 
-Peter and Gernot pioneered the "_dual trainer_" mode - where two experienced
-trainers are conducting training in parallel - yielding a lively, diverse
-and highly motivation learning experience. They have gained their vast experience
-from different backgrounds (Peter more from embedded and real-time systems,
-  Gernot more from information-, web- and batch systems) - giving
-  training participants many opportunities to get first-hand experience
-  from these various domains.
+  <div class="training-impressions__video">
+    {% include video id="urIPHD_jJUc" provider="youtube" title="Inside an arc42 training: video impressions" %}
+  </div>
 
-## Ideal Preparation for CPSA-F Examination
-arc42 trainings provide ideal and effective preparation for
-the iSAQB CPSA (Certified Professional for Software Architecture) certifications.
+  {% include gallery id="training_gallery" caption="A few impressions from our trainings. Photos by Oleg Pylypenko." %}
+</section>
 
-Our popular public trainings are currently held in Munic, Frankfurt and Vienna,
-for exact dates and conditions please refer to our [training site](https://arc42.de/termine).
+<section id="consulting" markdown="1">
 
+## Consulting
 
-# Next dates
+Beyond training, we work directly with teams and organizations. Wherever your architecture needs a hand, we bring the same pragmatic, arc42-grounded approach:
+
+* **Reviews**: an independent view of your systems and development processes, with concrete suggestions for improvement.
+* **Documentation**: help documenting your systems pragmatically and economically; we have guided many organizations through adopting arc42.
+* **Improvement**: support to modernize and evolve systems and development processes.
+* **Talks**: impulse talks, keynotes or focused deep dives on architecture, at your company or a conference. See our [talks](/resources/?type=talk).
+
+Interested? [Get in touch](/about/#contact).
+
+</section>
+
+<div class="training-section" markdown="1">
+
+## Next training dates
 
 {% include subtle-ads/subtle-ads.html %}
 
-<a href="https://arc42.de/schulungen"><button class="margin-top button buttonGreen">Training site</button></a>
+<p class="training-section__actions">
+  <a class="btn btn--arc42" href="https://trainings.arc42.org" rel="noopener">See all dates &amp; register &#8594;</a>
+</p>
+
+</div>

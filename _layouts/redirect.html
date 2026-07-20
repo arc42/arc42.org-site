@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <link rel="canonical" href="{{ page.redirect_to | absolute_url }}">
+    <meta http-equiv="refresh" content="0; url={{ page.redirect_to }}">
+    <title>Page moved | arc42</title>
+  </head>
+  <body>
+    <p>This page has moved to <a href="{{ page.redirect_to }}">{{ page.redirect_label | default: "its new location" }}</a>.</p>
+    <script>
+      (function () {
+        var target = {{ page.redirect_to | jsonify }};
+        if (target.indexOf("#") === -1 && window.location.hash) {
+          target += window.location.hash;
+        }
+        window.location.replace(target);
+      }());
+    </script>
+  </body>
+</html>

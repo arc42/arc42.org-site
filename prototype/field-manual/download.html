@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Workflow-led arc42 template download prototype">
+  <title>Download | Field Manual 42</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="prototype.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="prototype-note"><div class="shell"><span><strong>Visual prototype</strong> · Interactive download flow</span><span><a href="system.html">View the design system</a></span></div></div>
+  <header class="masthead">
+    <div class="shell masthead__inner">
+      <a class="brand" href="index.html" aria-label="arc42 prototype home"><img src="../../assets/ARC42_black.svg" alt="arc42"></a>
+      <nav class="site-nav" data-site-nav aria-label="Primary navigation"><a href="overview.html">Understand</a><a href="documentation.html">Use arc42</a><a href="examples.html">Examples</a><a href="resources.html">Resources</a><a href="about.html">About</a></nav>
+      <a class="nav-download" href="download.html" aria-current="page">↓ Download</a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="Open navigation">☰</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="page-header page-header--compact">
+      <div class="shell page-header__inner">
+        <div><p class="index-label">02 / Download</p><h1>Choose a workflow, not a file extension.</h1><p class="lede">Start with how your team works. We will recommend a format, then help you choose language and guidance level.</p></div>
+        <aside class="annotation"><strong>Maintained releases</strong>Every result shows its version, date, and lifecycle before you download it.</aside>
+      </div>
+    </header>
+
+    <section class="band">
+      <div class="shell section">
+        <div class="section-heading"><div><span class="section-number">01 / WORKFLOW</span><h2>How will your team maintain it?</h2></div><p class="section-heading__note">The first option is recommended for teams that already keep technical decisions near source code.</p></div>
+        <div class="workflow-list" role="group" aria-label="Choose a workflow">
+          <button class="workflow-choice" type="button" data-workflow="Docs as code" data-format="AsciiDoc" aria-pressed="true"><span class="workflow-choice__number">01 / Recommended</span><h3>Docs as code</h3><p>AsciiDoc with Git, reviewable changes, automated publishing, and full control over structure.</p></button>
+          <button class="workflow-choice" type="button" data-workflow="Office document" data-format="Word (.docx)" aria-pressed="false"><span class="workflow-choice__number">02 / Familiar</span><h3>Office document</h3><p>Word for teams that collaborate with comments, tracked changes, and familiar desktop tools.</p></button>
+          <button class="workflow-choice" type="button" data-workflow="Modeling tool" data-format="Enterprise Architect" aria-pressed="false"><span class="workflow-choice__number">03 / Specialist</span><h3>Modeling tool</h3><p>Enterprise Architect and contributed integrations. Compatibility depends on tool version.</p></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band--blue">
+      <div class="shell section configurator">
+        <div>
+          <div class="config-step"><span class="config-step__number">02</span><div><h3>Choose language</h3><div class="choice-grid" role="group" aria-label="Choose language"><button class="choice" type="button" data-language="English" data-version="9.0 · July 2025 · Current" aria-pressed="true">English <small>EN · v9.0</small></button><button class="choice" type="button" data-language="Deutsch" data-version="9.1 · December 2025 · Current" aria-pressed="false">Deutsch <small>DE · v9.1</small></button><button class="choice" type="button" data-language="Français" data-version="9.0 · April 2025 · Current" aria-pressed="false">Français <small>FR · v9.0</small></button><button class="choice" type="button" data-language="Magyar" data-version="9.0 · May 2026 · Current" aria-pressed="false">Magyar <small>HU · v9.0</small></button><button class="choice" type="button" data-language="Українська" data-version="8.2 · January 2023 · Maintenance" aria-pressed="false">Українська <small>UKR · v8.2</small></button><button class="choice" type="button" data-language="简体中文" data-version="9.0 · July 2025 · Current" aria-pressed="false">简体中文 <small>ZH · v9.0</small></button></div></div></div>
+          <div class="config-step"><span class="config-step__number">03</span><div><h3>Choose guidance level</h3><div class="choice-grid" role="group" aria-label="Choose guidance level"><button class="choice" type="button" data-guidance="With help" aria-pressed="true"><strong>With help</strong><small>Explanations inside every section</small></button><button class="choice" type="button" data-guidance="Plain" aria-pressed="false"><strong>Plain</strong><small>Structure only, for experienced teams</small></button></div><p>First arc42 document? Choose <strong>With help</strong>. The explanations can be removed section by section as your document matures.</p></div></div>
+          <details class="config-step"><summary><strong>All formats and legacy integrations</strong></summary><div><p>Markdown, LaTeX, reStructuredText, Confluence, Doxygen, IBM Rhapsody, and older modeling-tool packages remain available with explicit lifecycle and compatibility information.</p></div></details>
+        </div>
+
+        <aside class="result-panel" aria-live="polite">
+          <p class="result-panel__label">Your template</p>
+          <h2 data-result-format>AsciiDoc</h2>
+          <p class="meta-line"><span data-result-language>English</span><span data-result-guidance>With help</span></p>
+          <div class="result-panel__details"><div><span>Release</span><strong data-result-version>9.0 · July 2025 · Current</strong></div><div><span>Package</span><strong>ZIP archive</strong></div><div><span>Includes</span><strong>Template, help, README</strong></div></div>
+          <p><span class="status status--current">Current</span> <span class="status status--recommended">Recommended</span></p>
+          <button class="button button--signal" type="button" data-download-button>Download ZIP</button>
+          <div class="download-status" data-download-status tabindex="-1" hidden></div>
+          <p><small>This prototype simulates the final download handoff.</small></p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="band"><div class="shell section split"><aside class="annotation"><strong>After download</strong>Keep momentum. Open a matching example or read the concise getting-started guide before editing every section.</aside><div><p class="index-label">04 / Next step</p><h2>Start with goals, context, and risks.</h2><p class="lede">A useful first version is small. It records why the system exists, where its boundary lies, and which decisions or risks deserve attention.</p><div class="action-row"><a class="button button--secondary" href="examples.html">See a matching example</a><a class="button button--secondary" href="overview.html">Understand the sections</a></div></div></div></section>
+  </main>
+
+  <footer class="colophon"><div class="shell colophon__inner"><div><h2>arc42</h2><p>Architecture communication that earns its maintenance cost.</p></div><div><h3>Use arc42</h3><a href="download.html">Download templates</a><a href="overview.html">Template overview</a><a href="documentation.html">Documentation</a></div><div><h3>Learn</h3><a href="examples.html">Examples</a><a href="resources.html">Books and articles</a><a href="about.html">About the project</a></div><div><h3>Project</h3><a href="https://github.com/arc42">GitHub</a><a href="https://status.arc42.org">Service status</a><a href="system.html">Prototype system</a></div></div><div class="shell colophon__end">Field Manual 42 visual prototype · Not the production arc42.org website</div></footer>
+</body>
+</html>
