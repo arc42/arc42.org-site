@@ -1,0 +1,63 @@
+/* ==========================================================================
+   Skin experiment: V4 "Ghost Structures" over the clean 2026 skin.
+   Branch: ghost-clean-layout.
+   Keeps the navy/gold system fully intact and only layers a very faint
+   architectural watermark (the arc42 overview diagram, plus the splash photo
+   on the home hero) behind the existing hero bands. Pure additive: done with
+   pseudo-elements, so no page markup changes. Delete this file and its import
+   in main.scss to revert.
+   ========================================================================== */
+
+/* hero bands become positioning contexts and clip the oversized watermark */
+.home-hero,
+.dl-hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate; /* keep multiply blending scoped to the hero */
+}
+
+/* the arc42 overview diagram, oversized and ghosted into the top-right */
+.home-hero::before,
+.dl-hero::before {
+  content: "";
+  position: absolute;
+  top: -16%;
+  right: -12%;
+  width: 62%;
+  min-width: 460px;
+  aspect-ratio: 4 / 3;
+  background: url("/images/arc42-overview-V8.svg") no-repeat top right / contain;
+  filter: grayscale(0.6);
+  opacity: 0.11;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* home hero also carries the desaturated landing photo as a second wash */
+.home-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/images/splash/arc42-splash-landingpage.webp") no-repeat center / cover;
+  filter: grayscale(1) contrast(0.92);
+  opacity: 0.08;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* per-hero tuning so the pairings feel curated, not stamped */
+.dl-hero::before { top: -22%; width: 56%; opacity: 0.10; }
+
+/* content sits above both washes */
+.home-hero__inner,
+.dl-hero__inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* the diagram is a decorative texture; drop it if the user forbids images */
+@media (prefers-reduced-motion: reduce) {
+  /* no motion involved, kept for symmetry with the base skin's guards */
+}
