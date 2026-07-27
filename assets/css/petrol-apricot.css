@@ -74,6 +74,35 @@ body h1, body h2, body h3, body h4,
 .home-hero .home-hero__title { color: var(--pa-cream); }
 .home-hero .home-hero__sub { color: var(--pa-cream-dim); }
 .home-hero .home-hero__sub strong { color: var(--pa-cream); }
+/* the sole hero CTA: petrol-on-petrol would vanish, so it goes apricot */
+.home-hero .btn.btn--arc42 {
+  background-color: var(--pa-apricot);
+  border-color: var(--pa-apricot);
+  color: var(--pa-petrol-deep);
+}
+.home-hero .btn.btn--arc42:hover,
+.home-hero .btn.btn--arc42:focus-visible {
+  background-color: var(--pa-butter);
+  border-color: var(--pa-butter);
+  color: var(--pa-petrol-deep);
+}
+
+/* quick-download strip: cool blue band becomes warm apricot tint */
+.dl-strip {
+  background: var(--pa-apricot-tint);
+  border-bottom-color: var(--pa-line);
+}
+.dl-strip a.dl-strip__fmt {
+  background: var(--pa-ivory-raise);
+  border-color: var(--pa-cream-dim);
+  color: var(--pa-petrol-deep);
+}
+.dl-strip a.dl-strip__fmt:hover,
+.dl-strip a.dl-strip__fmt:focus-visible {
+  border-color: var(--pa-apricot-deep);
+  color: var(--pa-petrol-deep);
+  background: #ffffff;
+}
 
 .method-cta { background: var(--pa-apricot-tint); }
 

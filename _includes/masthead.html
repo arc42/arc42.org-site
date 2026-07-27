@@ -8,15 +8,20 @@
 
       <ul class="arc42-nav__inline">
         {%- for link in site.data.navigation.main -%}
-          <li{% if link.cta %} class="arc42-nav__cta-item"{% endif %}>
+          <li{% if link.cta %} class="arc42-nav__cta-item"{% elsif link.cta_mobile %} class="arc42-nav__cta-item arc42-nav__cta-item--mobile"{% endif %}>
             {%- if link.url contains '://' -%}
-              <a href="{{ link.url }}"{% if link.cta %} class="arc42-nav__cta"{% endif %} rel="noopener">{{ link.title }}</a>
+              <a href="{{ link.url }}"{% if link.cta %} class="arc42-nav__cta"{% elsif link.cta_mobile %} class="arc42-nav__cta arc42-nav__cta--mobile"{% endif %} rel="noopener">{{ link.title }}</a>
             {%- else -%}
-              <a href="{{ link.url | relative_url }}"{% if link.cta %} class="arc42-nav__cta"{% endif %}{% if page.url == link.url %} aria-current="page"{% endif %}>{{ link.title }}</a>
+              <a href="{{ link.url | relative_url }}"{% if link.cta %} class="arc42-nav__cta"{% elsif link.cta_mobile %} class="arc42-nav__cta arc42-nav__cta--mobile"{% endif %}{% if page.url == link.url %} aria-current="page"{% endif %}>{{ link.title }}</a>
             {%- endif -%}
           </li>
         {%- endfor -%}
       </ul>
+
+      <div class="arc42-lang" role="group" aria-label="Site language">
+        <span class="arc42-lang__item is-active" lang="en"><span class="arc42-lang__sr">Current language: </span>EN</span>
+        <a class="arc42-lang__item" lang="de" hreflang="de" href="https://www.arc42.de" rel="noopener" title="Zur deutschen Website arc42.de">DE<span class="arc42-lang__sr"> — deutsche Website arc42.de</span></a>
+      </div>
 
       <button class="arc42-nav__toggle" type="button" aria-expanded="false" aria-controls="arc42-drawer">
         <span class="arc42-nav__bars" aria-hidden="true"><span></span><span></span><span></span></span>
@@ -47,7 +52,7 @@
             {%- for child in group.children -%}
               <li>
                 {%- if child.url contains '://' -%}
-                  <a href="{{ child.url }}" rel="noopener" target="_blank">{{ child.title }}</a>
+                  <a href="{{ child.url }}" rel="noopener" target="_blank">{{ child.title }}{% if child.hint %}<span class="arc42-drawer__hint">{{ child.hint }}</span>{% endif %}</a>
                 {%- else -%}
                   <a href="{{ child.url | relative_url }}"{% if page.url == child.url %} aria-current="page"{% endif %}>{{ child.title }}{% if child.hint %}<span class="arc42-drawer__hint">{{ child.hint }}</span>{% endif %}</a>
                 {%- endif -%}

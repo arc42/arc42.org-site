@@ -5,20 +5,23 @@
 #   drawer -> the "More…" hamburger contents (secondary / resource links)
 #
 # Story told by the inline row: Overview (what) -> Method (how you work) ->
-# Docs (reference) -> Examples -> Training -> Download.
+# Docs (reference) -> Training -> Download.
+# Examples sits in the drawer: valuable, but not a first-visit destination.
 # About lives in the footer and the drawer, not the masthead.
+#
+# `cta_mobile: true` marks the link that takes the CTA slot next to the
+# hamburger below 800px — on phones Overview beats a template download.
 # ---------------------------------------------------------------------------
 
 # inline priority links (order matters)
 main:
   - title: "Overview"
     url: /overview/
+    cta_mobile: true
   - title: "Method"
     url: /method/
   - title: "Docs"
     url: /documentation/
-  - title: "Examples"
-    url: /examples/
   - title: "Training"
     url: /learn/
   - title: "Download"
@@ -29,17 +32,25 @@ main:
 drawer:
   - title: "Explore"
     children:
-      - title: "About"
-        url: /about/
+      - title: "Examples"
+        url: /examples/
+        hint: "real-world arc42 documentation"
       - title: "Resources"
         url: /resources/
         hint: "books · articles · talks · videos"
+      - title: "About"
+        url: /about/
       - title: "Search"
         url: /search/
+  # arc42.de is deliberately absent here — the masthead EN/DE switcher owns it.
   - title: "arc42 elsewhere"
     children:
-      - title: "German site — arc42.de"
-        url: https://www.arc42.de
+      - title: "FAQ"
+        url: https://faq.arc42.org
+        hint: "faq.arc42.org · using arc42 in practice"
+      - title: "arc42 Quality Model"
+        url: https://quality.arc42.org
+        hint: "quality.arc42.org · quality attributes, structured"
       - title: "Training dates"
         url: https://trainings.arc42.org
       - title: "Status"
