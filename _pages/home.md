@@ -36,37 +36,24 @@ starter:
   <div class="home-hero__inner">
     <div class="home-hero__intro">
       <p class="home-hero__kicker">Open source · 12 languages · since 2005</p>
-      <h1 class="home-hero__title">Document your architecture — painlessly.</h1>
-      <p class="home-hero__sub">The proven, pragmatic template to <strong>construct, communicate and document</strong> software architecture. Free and open source.</p>
+      <h1 class="home-hero__title">All you ever need for your <strong>software architecture</strong>.</h1>
+      <p class="home-hero__sub">Construct, communicate and document. Proven and pragmatic. <strong>Takes the pain out of documentation</strong>.</p>
       <p class="home-hero__actions">
-        <a class="btn btn--arc42 btn--large" href="/overview/">See the template &#8594;</a>
+        <a class="btn btn--arc42 btn--large" href="/overview/">Overview &#8594;</a>
       </p>
     </div>
-
-    <aside class="quick-dl" data-prefix="{{ PREFIX }}" aria-label="Quick download">
-      <div class="quick-dl__head">
-        <span class="quick-dl__title">Quick download</span>
-        <span class="quick-dl__langs" role="group" aria-label="Language">
-          <button type="button" class="quick-dl__lang is-active" aria-pressed="true" data-lang="EN">EN</button>
-          <button type="button" class="quick-dl__lang" aria-pressed="false" data-lang="DE">DE</button>
-        </span>
-      </div>
-      <a class="quick-dl__row" data-fmt="asciidoc" href="{{ PREFIX }}EN-plain-asciidoc.zip">
-        <span class="quick-dl__label"><span class="quick-dl__fmt">AsciiDoc</span><span class="quick-dl__meta">recommended</span></span>
-        <span class="quick-dl__arrow" aria-hidden="true">&#8595;</span>
-      </a>
-      <a class="quick-dl__row" data-fmt="docx" href="{{ PREFIX }}EN-plain-docx.zip">
-        <span class="quick-dl__label"><span class="quick-dl__fmt">Word (.docx)</span><span class="quick-dl__meta">plain &middot; with help</span></span>
-        <span class="quick-dl__arrow" aria-hidden="true">&#8595;</span>
-      </a>
-      <a class="quick-dl__row" data-fmt="markdown" href="{{ PREFIX }}EN-plain-markdown.zip">
-        <span class="quick-dl__label"><span class="quick-dl__fmt">Markdown</span><span class="quick-dl__meta">single &middot; multi-page</span></span>
-        <span class="quick-dl__arrow" aria-hidden="true">&#8595;</span>
-      </a>
-      <a class="quick-dl__all" href="/download/">All languages and formats &#8595;</a>
-    </aside>
   </div>
 </section>
+
+<div class="dl-strip">
+  <div class="dl-strip__inner">
+    <span class="dl-strip__label">Quick download, English:</span>
+    <a class="dl-strip__fmt" href="{{ PREFIX }}EN-plain-asciidoc.zip">AsciiDoc</a>
+    <a class="dl-strip__fmt" href="{{ PREFIX }}EN-plain-markdown.zip">Markdown</a>
+    <a class="dl-strip__fmt" href="{{ PREFIX }}EN-plain-docx.zip">Word (.docx)</a>
+    <a class="dl-strip__all" href="/download/">All languages and formats &#8594;</a>
+  </div>
+</div>
 
 {% include feature_row id="starter" %}
 
@@ -105,5 +92,3 @@ Learn arc42 and modern software architecture straight from its creators — iSAQ
 - Even more worked examples in [arc42 by Example, Volume 2: Embedded Systems &amp; IoT](/resources/?type=book#arc42-by-example-vol2).
 
 </div>
-
-<script src="/assets/js/quick-download.js" defer></script>

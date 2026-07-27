@@ -204,6 +204,7 @@
 html { overflow-x: clip; }
 .ua-strip,
 .home-hero,
+.dl-strip,
 .dl-hero {
   width: 100vw;
   margin-left: calc(50% - 50vw);
@@ -213,6 +214,7 @@ html { overflow-x: clip; }
   .initial-content { container-type: inline-size; }
   .ua-strip,
   .home-hero,
+  .dl-strip,
   .dl-hero {
     width: 100cqw;
     margin-left: calc(50% - 50cqw);
@@ -252,13 +254,16 @@ html { overflow-x: clip; }
   margin: 0 auto;
   padding: clamp(2rem, 5vw, 3.5rem) clamp(1rem, 5vw, 3rem);
 }
+/* Single-column hero since the download tile moved out to .dl-strip.
+   The intro is capped well short of the 1200px shell: headline lines stay
+   in the 2-3 line range and the sub-line keeps a readable measure instead
+   of stretching the full band. */
 .home-hero__inner {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: clamp(1.5rem, 4vw, 3rem);
-  align-items: center;
+  padding-top: clamp(2rem, 4.5vw, 3.2rem);
+  padding-bottom: clamp(1.7rem, 3.5vw, 2.4rem);
 }
-@media (max-width: 800px) { .home-hero__inner { grid-template-columns: 1fr; } }
+.home-hero__intro { max-width: 44rem; }
+.home-hero__actions .btn { margin-bottom: 0; }
 
 .home-hero .home-hero__kicker,
 .dl-hero .dl-hero__kicker {
@@ -277,12 +282,23 @@ html { overflow-x: clip; }
   color: var(--arc42-ink-strong);
   text-wrap: balance;
 }
+.home-hero .home-hero__title {
+  max-width: 22ch;
+  font-size: clamp(2.1rem, 5.6vw, 3.6rem);
+  line-height: 1.03;
+}
 .home-hero .home-hero__sub,
 .dl-hero .dl-hero__sub {
   margin: 0 0 1.5rem;
   max-width: 34ch;
   font-size: clamp(1rem, 1.6vw, 1.2rem);
   color: #33445c;
+}
+.home-hero .home-hero__sub {
+  max-width: 52ch;
+  font-size: clamp(1.05rem, 1.9vw, 1.3rem);
+  line-height: 1.45;
+  text-wrap: balance;
 }
 .dl-hero .dl-hero__sub { max-width: 54ch; margin-bottom: 0; }
 .dl-hero .dl-hero__facts {
@@ -295,60 +311,62 @@ html { overflow-x: clip; }
 .dl-hero .dl-hero__actions .btn { margin-bottom: 0; }
 .home-hero .home-hero__sub strong,
 .dl-hero .dl-hero__sub strong { color: var(--arc42-ink-strong); }
-.home-hero__actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin: 0; }
+/* .home-hero prefix beats the theme's `.page__content p` bottom margin */
+.home-hero .home-hero__actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin: 0; }
 
-.quick-dl {
-  background: #ffffff;
-  border: 1px solid #d7e0ea;
-  border-radius: 12px;
-  padding: 1.1rem 1.2rem;
-  box-shadow: 0 18px 40px -20px rgba(20, 40, 70, 0.5);
+/* --- quick-download strip, directly under the home hero ---
+   One calm band of format buttons instead of a card competing with the
+   headline. Label left, formats right, escape hatch to /download/ last. */
+.dl-strip {
+  background: #e8f0f8;
+  border-bottom: 1px solid #cfdcea;
 }
-.quick-dl__head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.8rem; }
-.quick-dl__title { font-weight: 700; font-size: 1.05rem; color: var(--arc42-ink-strong); }
-.quick-dl__langs { display: inline-flex; gap: 0.3rem; }
-.quick-dl__lang {
-  font: inherit;
-  font-size: 0.75rem;
-  font-weight: 700;
-  cursor: pointer;
-  padding: 0.2rem 0.65rem;
-  border-radius: 20px;
-  border: 1px solid #cdd8e4;
-  background: #fff;
-  color: #556;
-}
-.quick-dl__lang.is-active { background: var(--arc42-primary); color: #fff; border-color: var(--arc42-primary); }
-.quick-dl__lang:focus-visible { outline: 2px solid var(--arc42-primary-hover); outline-offset: 2px; }
-.quick-dl__row {
+.dl-strip__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.9rem clamp(1rem, 5vw, 3rem);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0.7rem 0.2rem;
-  border-top: 1px solid #eef2f6;
-  text-decoration: none;
+  flex-wrap: wrap;
+  gap: 0.6rem clamp(0.7rem, 1.4vw, 1.25rem);
 }
-.quick-dl__row:first-of-type { border-top: none; }
-.quick-dl__label { display: flex; flex-direction: column; }
-.quick-dl__fmt { font-weight: 700; color: #2b3a52; }
-.quick-dl__meta { font-size: 0.8rem; color: #8494a6; }
-.quick-dl__arrow { font-size: 1.3rem; font-weight: 800; color: var(--arc42-primary-hover); }
-.quick-dl__row:hover .quick-dl__fmt,
-.quick-dl__row:focus-visible .quick-dl__fmt { color: var(--arc42-primary); }
-.quick-dl__row:hover .quick-dl__arrow,
-.quick-dl__row:focus-visible .quick-dl__arrow { color: var(--arc42-primary); }
-.quick-dl__all {
-  display: block;
-  margin-top: 0.7rem;
-  padding-top: 0.7rem;
-  border-top: 1px solid #eef2f6;
-  text-align: center;
-  font-size: 0.9rem;
+.dl-strip__label {
+  font-weight: 700;
+  color: var(--arc42-ink-strong);
+  margin-right: auto;
+}
+.dl-strip a.dl-strip__fmt {
+  padding: 0.45rem 1rem;
+  border: 1px solid #a9bfd6;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #2b3a52;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.dl-strip a.dl-strip__fmt:hover,
+.dl-strip a.dl-strip__fmt:focus-visible {
+  border-color: var(--arc42-primary);
+  color: var(--arc42-primary);
+}
+.dl-strip a.dl-strip__all {
+  font-size: 0.92rem;
   font-weight: 700;
   color: var(--arc42-primary-hover);
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
-.quick-dl__all:hover { color: var(--arc42-primary); }
+.dl-strip a.dl-strip__all:hover { color: var(--arc42-primary); }
+
+/* phones: label on its own line, formats wrap beneath it */
+@media (max-width: 640px) {
+  .dl-strip__label { flex: 0 0 100%; margin-right: 0; font-size: 0.95rem; }
+  .dl-strip__inner { gap: 0.5rem 0.5rem; }
+  .dl-strip a.dl-strip__fmt { padding: 0.4rem 0.8rem; font-size: 0.88rem; }
+  .dl-strip a.dl-strip__all { flex: 0 0 100%; }
+}
 
 
 /* ==========================================================================
