@@ -8,6 +8,13 @@ help: ## Show this help
 dev: ## Start the local Jekyll dev server with live reload (http://localhost:4000)
 	@echo "==> Open http://localhost:4000  (NOT http://0.0.0.0:4000 — Firefox refuses to connect to 0.0.0.0)"
 	@docker compose down --remove-orphans >/dev/null 2>&1 || true
+	@holder=$$(docker ps --filter "publish=4000" --format '{{.Names}}'); \
+	if [ -n "$$holder" ]; then \
+		echo "==> Port 4000 is already in use by another container: $$holder"; \
+		echo "==> That's likely a dev server from a sibling arc42 site repo. Stop it first, e.g.:"; \
+		echo "==>   docker stop $$holder"; \
+		exit 1; \
+	fi
 	docker compose up --build
 
 build: ## Build the Docker dev image (arc42-site:latest) from the Gemfile-pinned gems

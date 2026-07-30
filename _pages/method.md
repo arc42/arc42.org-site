@@ -88,5 +88,6 @@ Ask yourself at regular intervals whether your decisions and concepts still achi
   <p>
     <a href="/download/" class="btn btn--arc42"><span aria-hidden="true">&#8595;</span> Download arc42</a>
     <a href="/overview/" class="btn btn--arc42-outline">Explore the template</a>
+    <a href="/learn/" class="btn btn--arc42-outline">Learn it in a workshop</a>
   </p>
 </section>
