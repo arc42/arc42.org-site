@@ -7,6 +7,7 @@ help: ## Show this help
 
 dev: ## Start the local Jekyll dev server with live reload (http://localhost:4000)
 	@echo "==> Open http://localhost:4000  (NOT http://0.0.0.0:4000 — Firefox refuses to connect to 0.0.0.0)"
+	@docker compose down --remove-orphans >/dev/null 2>&1 || true
 	docker compose up --build
 
 build: ## Build the Docker dev image (arc42-site:latest) from the Gemfile-pinned gems
