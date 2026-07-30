@@ -1503,3 +1503,41 @@ a.res-card:focus-visible { outline: var(--arc42-focus-ring); outline-offset: 2px
 @media (max-width: 760px) {
   .feature__wrapper { grid-template-columns: 1fr; }
 }
+
+/* ==========================================================================
+   Footer link row — plain labels separated by middots, replacing the former
+   per-link FontAwesome glyphs (the site's last rendered FA usage).
+   ========================================================================== */
+.footer-links {
+  list-style: none;
+  margin: 0.5rem 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  column-gap: 0.6rem;
+  row-gap: 0.3rem;
+}
+.footer-links li { margin: 0; padding: 0; }
+/* The .page__footer-follow prefix is load-bearing: the theme ships
+   `.page__footer-follow li + li:before { content: "" }` at equal
+   specificity, and this file is cascade-hoisted ABOVE the theme (see the
+   note in main.scss) — so without the extra class the theme blanks the
+   middot. */
+.page__footer-follow .footer-links li + li::before {
+  content: "\00B7"; /* · */
+  margin-right: 0.6rem;
+  color: var(--arc42-slate); /* decorative separator, not text — 3:1 n/a */
+}
+.footer-links a {
+  color: var(--arc42-ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: var(--arc42-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

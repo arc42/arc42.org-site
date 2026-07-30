@@ -33,10 +33,11 @@ $caption-font-family: $sans-serif;
 @import 'nav-2026.css';
 @import 'grid.css';
 
-/*
-  fontawesome
-*/
-@import 'all.css';
+/* FontAwesome removed 2026-07-30: the only glyphs that ever rendered were
+   the five footer link icons, now replaced by plain labels with middot
+   separators (.footer-links). That deleted 72 KB CSS + 2.8 MB webfonts.
+   Theme includes that still mention fa-* classes (author-profile,
+   social-share, comments providers) never render on this site. */
 /* No page-load fade: the theme animates masthead/main/footer in via a 0.3s
    "intro" keyframe (opacity 0 -> 1). The Blueprint design system rejects load
    animations, and pre-paint renderers (headless browsers, some crawlers) can
