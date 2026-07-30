@@ -3,16 +3,18 @@
     <a href="https://www.innoq.com" target="_blank" rel="noopener noreferrer nofollow"><img class="supported-by-innoq" src="/images/supported-by-innoq.svg" alt="Supported by INNOQ"></a>
   </p>
 
-  <ul class="social-icons">
-    <li><a href="{{ '/about/' | relative_url }}"><i class="fas fa-fw fa-users" aria-hidden="true"></i>About</a></li>
-
-    <li><a href="{{ '/about/#contact' | relative_url }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i>Contact</a></li>
-
-    <li><a href="{{ '/license/' | relative_url }}"><i class="fas fa-balance-scale-right" aria-hidden="true"></i>License</a></li>
-
-    <li><a href="{{ '/imprint/' | relative_url }}"><i class="fas fa-fw fa-gavel" aria-hidden="true"></i>Imprint & Privacy </a></li>
-
-    <li><a href="https://github.com/arc42"><i class="fab fa-fw fa-github" aria-hidden="true"></i>GitHub</a></li>
+  {%- comment -%} Plain text links with dot separators (styled in
+      arc42-org.css). The former per-link FontAwesome glyphs were the ONLY
+      FontAwesome usage that ever rendered on this site — dropping them
+      let us delete the vendored 72 KB all.css + 2.8 MB webfonts entirely.
+      The labels carry the meaning; the icons only added noise at this
+      size. {%- endcomment -%}
+  <ul class="footer-links">
+    <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+    <li><a href="{{ '/about/#contact' | relative_url }}">Contact</a></li>
+    <li><a href="{{ '/license/' | relative_url }}">License</a></li>
+    <li><a href="{{ '/imprint/' | relative_url }}">Imprint &amp; Privacy</a></li>
+    <li><a href="https://github.com/arc42">GitHub</a></li>
   </ul>
 </div>
 
