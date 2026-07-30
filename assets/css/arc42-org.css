@@ -6,13 +6,50 @@
 :root {
   --arc42-primary: #374769;        /* navy ink — brand, primary actions */
   --arc42-primary-hover: #4b7ba3;  /* steel blue — hover state */
-  --arc42-accent: #f5b700;         /* gold — the single loud accent */
   --arc42-slate: #6f777d;          /* secondary neutral */
   --arc42-ink: #3d4144;            /* body text */
   --arc42-ink-strong: #1c2c44;     /* headings / emphasized text */
   --arc42-text-muted: #55657a;     /* muted text on white or tinted bg */
   --arc42-border: #e4e9f0;         /* card & pane borders */
   --arc42-border-light: #f2f3f3;   /* hairline separators */
+
+  /* arc42 family accents — shared hex across all arc42 sites, do not tune.
+     Same values on docs.arc42.org and quality.arc42.org; see DESIGN.md. */
+  --arc42-amber: #ffc95c;          /* highlights, tips */
+  --arc42-amber-ink: #4a3a0a;      /* text on amber */
+  --arc42-amber-lift: #ffdb8f;     /* amber hover — lighter, so it reads as "lit"
+                                      on the dark band; not a family token */
+  --arc42-coral: #ff5c7c;          /* warm spark — small accents / text-on-dark only */
+  --arc42-coral-deep: #c22b47;     /* coral for button fills, AA with white */
+  --arc42-emerald: #2e9e67;        /* success / status */
+  --arc42-green-wash: #d9f7d3;     /* soft green surface */
+  --arc42-green-ink: #1b5e20;      /* text on green wash */
+
+  --arc42-accent: var(--arc42-amber); /* the single loud accent — alias, so all
+                                         existing --arc42-accent uses follow */
+
+  /* the family type pair, as custom properties so the plain-CSS files here can
+     reach them — they are served as separate stylesheets and never see Sass
+     variables (see the cascade note in main.scss) */
+  --arc42-font-sans: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible",
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --arc42-font-serif: "Libre Caslon Text", Georgia, serif;
+
+  /* masthead band — the family handshake: one saturated fill per site */
+  --arc42-masthead: #2b3a57;                        /* navy, deepened from --arc42-primary */
+  --arc42-on-masthead: #ffffff;                     /* logo, active/hover links */
+  --arc42-on-masthead-muted: rgba(255, 255, 255, 0.78); /* resting nav links */
+
+  /* hero band — one step deeper than the masthead so the headline, not the
+     navigation, is the darkest surface on the page. Measured on #22304a:
+     #ffffff 15.4:1, rgba(255,255,255,.85) ≈ 11:1, amber #ffc95c 8.7:1,
+     rgba(255,255,255,.75) ≈ 8.6:1 — all AA. */
+  --arc42-deep: #22304a;
+  --arc42-on-deep-muted: rgba(255, 255, 255, 0.85);
+
+  /* one focus ring for light surfaces (3.9:1 on white — clears the 3:1
+     non-text minimum; the masthead has its own ring in nav-2026.css) */
+  --arc42-focus-ring: 2px solid var(--arc42-primary-hover);
 }
 
 .arc42-legend {
@@ -127,6 +164,21 @@
    2026 layout — homepage (Rev A)
    ========================================================================== */
 
+/* Both arc42 buttons opt out of the theme's .btn scale (0.75em ≈ 12px on
+   phones, in a ~34px-tall box). These are the site's conversion actions:
+   readable label, 44px minimum touch target. */
+.btn.btn--arc42,
+.btn.btn--arc42-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+  min-height: 44px;
+  padding: 0.6em 1.3em;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
 /* Navy call-to-action button — hero "Download" + training "register".
    Reads well on both the photo hero overlay and the white page body. */
 .btn.btn--arc42 {
@@ -154,6 +206,34 @@
   background-color: var(--arc42-primary);
   color: #ffffff;
   border-color: var(--arc42-primary);
+}
+
+/* /documentation/ — "The template structure": prose and links keep one straight
+   left edge, the cabinet photo sits in its own column instead of being floated
+   into the running text. Stacks under the prose below 768px. */
+.doc-structure {
+  display: grid;
+  gap: 1.25rem 2rem;
+  align-items: start;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+  .doc-structure { grid-template-columns: minmax(0, 1fr) minmax(200px, 300px); }
+}
+.doc-structure__text > :first-child { margin-top: 0; }
+.doc-structure__text > :last-child { margin-bottom: 0; }
+.doc-structure__figure { margin: 0; max-width: 24rem; }
+.doc-structure__figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.doc-structure__figure figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--arc42-text-muted);
 }
 
 /* Trainings — subtle but identifiable; faint success-green wash per DESIGN.md */
@@ -227,7 +307,11 @@ html { overflow-x: clip; }
   align-items: center;
   gap: 0.6rem;
   padding: 0.6rem clamp(1rem, 5vw, 3rem);
-  background: #20304d;
+  /* Was its own #20304d. The strip sits directly under the masthead, and two
+     near-identical dark navies stacked read as a rendering seam — so it takes
+     the band colour and continues it instead.
+     Measured on #2b3a57: #eaf1f8 10.0:1, links #bcd6f5 7.7:1. */
+  background: var(--arc42-masthead);
   color: #eaf1f8;
   font-size: 0.92rem;
 }
@@ -246,8 +330,12 @@ html { overflow-x: clip; }
 .ua-strip__flag i:first-child { background: #0057b7; }
 .ua-strip__flag i:last-child { background: #ffd700; }
 
+/* Solid deep band, one step darker than the masthead: the headline owns the
+   page, not the navigation. Replaces the former 3-stop gradient (the design
+   system forbids gradients; the dark-band composition is the one idea kept
+   from the retired petrol experiment — see meta.arc42.org ADR-0013). */
 .home-hero,
-.dl-hero { background: linear-gradient(135deg, #dbeaf6 0%, #c5d9ee 55%, #b7cbe6 100%); }
+.dl-hero { background: var(--arc42-deep); }
 .home-hero__inner,
 .dl-hero__inner {
   max-width: 1200px;
@@ -270,7 +358,7 @@ html { overflow-x: clip; }
   margin: 0 0 0.8rem;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--arc42-text-muted);
+  color: var(--arc42-amber); /* 8.7:1 on --arc42-deep */
 }
 .home-hero .home-hero__title,
 .dl-hero .dl-hero__title {
@@ -278,8 +366,8 @@ html { overflow-x: clip; }
   font-size: clamp(2rem, 5vw, 3.1rem);
   line-height: 1.05;
   letter-spacing: -0.025em;
-  font-weight: 800;
-  color: var(--arc42-ink-strong);
+  font-weight: 700; /* Libre Caslon ships 400/700 — 800 was synthetic */
+  color: var(--arc42-on-masthead);
   text-wrap: balance;
 }
 .home-hero .home-hero__title {
@@ -292,7 +380,7 @@ html { overflow-x: clip; }
   margin: 0 0 1.5rem;
   max-width: 34ch;
   font-size: clamp(1rem, 1.6vw, 1.2rem);
-  color: #33445c;
+  color: var(--arc42-on-deep-muted);
 }
 .home-hero .home-hero__sub {
   max-width: 52ch;
@@ -304,22 +392,42 @@ html { overflow-x: clip; }
 .dl-hero .dl-hero__facts {
   margin: 0.9rem 0 0;
   font-size: 0.88rem;
-  color: var(--arc42-text-muted);
+  color: rgba(255, 255, 255, 0.75); /* ≈8.6:1 on --arc42-deep */
   max-width: 54ch;
 }
 .dl-hero .dl-hero__actions { margin: 1.2rem 0 0; }
 .dl-hero .dl-hero__actions .btn { margin-bottom: 0; }
 .home-hero .home-hero__sub strong,
-.dl-hero .dl-hero__sub strong { color: var(--arc42-ink-strong); }
+.dl-hero .dl-hero__sub strong { color: var(--arc42-on-masthead); }
 /* .home-hero prefix beats the theme's `.page__content p` bottom margin */
 .home-hero .home-hero__actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin: 0; }
+/* On the dark band a navy button disappears — the hero CTA flips to a light
+   fill with band-navy text (15:1 / 12+:1). Hover keeps the documented
+   tactile shadow; colour stays put so the label never drops contrast. */
+.home-hero .btn.btn--arc42,
+.dl-hero .btn.btn--arc42 {
+  background-color: var(--arc42-on-masthead);
+  color: var(--arc42-deep);
+  border-color: var(--arc42-on-masthead);
+}
+.home-hero .btn.btn--arc42:hover,
+.home-hero .btn.btn--arc42:focus-visible,
+.dl-hero .btn.btn--arc42:hover,
+.dl-hero .btn.btn--arc42:focus-visible {
+  background-color: #eaf1f8;
+  border-color: #eaf1f8;
+  color: var(--arc42-deep);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
+}
 
 /* --- quick-download strip, directly under the home hero ---
    One calm band of format buttons instead of a card competing with the
    headline. Label left, formats right, escape hatch to /download/ last. */
+/* Calm paper under the dark hero: the band stack above already carries the
+   colour; this strip separates with a hairline, not another tinted band. */
 .dl-strip {
-  background: #e8f0f8;
-  border-bottom: 1px solid #cfdcea;
+  background: #ffffff;
+  border-bottom: 1px solid var(--arc42-border);
 }
 .dl-strip__inner {
   max-width: 1200px;
@@ -354,11 +462,11 @@ html { overflow-x: clip; }
 .dl-strip a.dl-strip__all {
   font-size: 0.92rem;
   font-weight: 700;
-  color: var(--arc42-primary-hover);
+  color: var(--arc42-primary); /* 8.9:1 on white — #4b7ba3 measured 3.9:1 and failed AA */
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-.dl-strip a.dl-strip__all:hover { color: var(--arc42-primary); }
+.dl-strip a.dl-strip__all:hover { color: var(--arc42-ink-strong); }
 
 /* phones: label on its own line, formats wrap beneath it */
 @media (max-width: 640px) {
@@ -391,7 +499,7 @@ html { overflow-x: clip; }
   border: 1px solid #ccd4dc;
   border-radius: 8px;
 }
-.dl-finder__select:focus-visible { outline: 2px solid var(--arc42-primary-hover); outline-offset: 2px; }
+.dl-finder__select:focus-visible { outline: var(--arc42-focus-ring); outline-offset: 2px; }
 
 .dl-grid {
   display: grid;
@@ -450,7 +558,7 @@ html { overflow-x: clip; }
 .dl-details > summary::before { content: "\25B8\00a0"; color: var(--arc42-primary-hover); }
 .dl-details[open] > summary::before { content: "\25BE\00a0"; }
 .dl-details[open] { padding-bottom: 1rem; }
-.dl-details > summary:focus-visible { outline: 2px solid var(--arc42-primary-hover); outline-offset: 2px; }
+.dl-details > summary:focus-visible { outline: var(--arc42-focus-ring); outline-offset: 2px; }
 
 /* "Build your download" two-pane picker (Rev B) */
 .dlb {
@@ -503,12 +611,12 @@ html { overflow-x: clip; }
   font-weight: 700;
 }
 .dlb__lang:focus-visible,
-.dlb__fmt:focus-visible { outline: 2px solid var(--arc42-primary-hover); outline-offset: 2px; }
+.dlb__fmt:focus-visible { outline: var(--arc42-focus-ring); outline-offset: 2px; }
 
 .dlb__result {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(160deg, #f3f7fb, #e7eff7);
+  background: #eef3f8; /* flat — the system forbids gradients */
   border-color: #d7e0ea;
 }
 .dlb__rlabel {
@@ -517,8 +625,8 @@ html { overflow-x: clip; }
   font-weight: 700;
   color: var(--arc42-text-muted);
 }
-.dlb__combo { margin: 0 0 0.15rem; font-size: 1.3rem; font-weight: 800; letter-spacing: -0.01em; color: var(--arc42-ink-strong); }
-.dlb__meta { margin: 0 0 1rem; font-size: 0.85rem; color: #6f7f92; }
+.dlb__combo { margin: 0 0 0.15rem; font-size: 1.3rem; font-weight: 700; letter-spacing: -0.01em; color: var(--arc42-ink-strong); }
+.dlb__meta { margin: 0 0 1rem; font-size: 0.85rem; color: var(--arc42-text-muted); /* #6f7f92 was 3.5:1 on the tint */ }
 .dlb__buttons { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0 0 0.8rem; }
 .dlb__hint { margin: auto 0 0; font-size: 0.85rem; line-height: 1.5; color: var(--arc42-text-muted); }
 /* --- linked resource cards + tag chips (Publications, Examples) --- */
@@ -543,8 +651,8 @@ a.res-card:visited { color: inherit; text-decoration: none; }
 a.res-card:hover,
 a.res-card:focus-visible { border-color: var(--arc42-primary-hover); text-decoration: none; }
 a.res-card:hover .res-card__title { color: var(--arc42-primary-hover); }
-a.res-card:focus-visible { outline: 2px solid var(--arc42-primary-hover); outline-offset: 2px; }
-.res-card__title { margin: 0; font-size: 1.15rem; font-weight: 800; color: var(--arc42-ink-strong); }
+a.res-card:focus-visible { outline: var(--arc42-focus-ring); outline-offset: 2px; }
+.res-card__title { margin: 0; font-size: 1.15rem; font-weight: 700; color: var(--arc42-ink-strong); }
 .res-card__text { margin: 0; font-size: 0.9rem; line-height: 1.5; color: var(--arc42-text-muted); }
 .res-card__cta { margin: auto 0 0; padding-top: 0.6rem; font-weight: 700; font-size: 0.9rem; color: var(--arc42-primary); }
 .res-card__tags {
@@ -638,7 +746,7 @@ a.res-card:focus-visible { outline: 2px solid var(--arc42-primary-hover); outlin
 .resource-reset:focus-visible,
 .resource-field input:focus-visible,
 .resource-field select:focus-visible {
-  outline: 2px solid var(--arc42-primary-hover);
+  outline: var(--arc42-focus-ring);
   outline-offset: 2px;
 }
 .resource-filter.is-active {
@@ -713,7 +821,7 @@ a.res-card:focus-visible { outline: 2px solid var(--arc42-primary-hover); outlin
   background: #e5eef6;
   border-radius: 4px;
   font-size: 1.35rem;
-  font-weight: 800;
+  font-weight: 700;
 }
 .resource-item__marker--talk { color: #5f4800; background: #fff0b8; }
 .resource-item__marker--video { color: #7b2418; background: #ffe3de; }
@@ -801,7 +909,7 @@ a.res-card:focus-visible { outline: 2px solid var(--arc42-primary-hover); outlin
   border-radius: 4px;
   font-size: 0.9rem;
   line-height: 1.6;
-  color: var(--arc42-slate);
+  color: var(--arc42-text-muted); /* slate #6f777d measured 4.3:1 on this tint */
 }
 .resource-detail__facts strong { color: var(--arc42-ink-strong); }
 
@@ -842,9 +950,9 @@ a.res-card:focus-visible { outline: 2px solid var(--arc42-primary-hover); outlin
 }
 .about-hero__kicker {
   margin: 0 0 1rem;
-  color: var(--arc42-primary-hover);
+  color: var(--arc42-text-muted); /* #4b7ba3 measured 4.0:1 on the tint and failed AA */
   font-size: 0.82rem;
-  font-weight: 800;
+  font-weight: 700;
 }
 .about-hero h1 {
   max-width: 14ch;
@@ -916,9 +1024,9 @@ a.res-card:focus-visible { outline: 2px solid var(--arc42-primary-hover); outlin
 }
 .about-section__heading > p {
   margin: 0.35rem 0 0;
-  color: var(--arc42-primary-hover);
+  color: var(--arc42-text-muted); /* #4b7ba3 measured 4.2:1 on the tint and failed AA */
   font-size: 0.82rem;
-  font-weight: 800;
+  font-weight: 700;
 }
 .about-section__heading h2 {
   max-width: 17ch;
@@ -1136,7 +1244,7 @@ a.res-card:focus-visible { outline: 2px solid var(--arc42-primary-hover); outlin
   background: #eef3f7;
   border: 1px solid var(--arc42-border);
 }
-.license-answer__lead { margin: 0 0 0.5rem; font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800; line-height: 1.2; }
+.license-answer__lead { margin: 0 0 0.5rem; font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 700; line-height: 1.2; }
 .license-answer p:last-child { margin-bottom: 0; }
 .license-summary {
   display: grid;
@@ -1169,7 +1277,7 @@ a.res-card:focus-visible { outline: 2px solid var(--arc42-primary-hover); outlin
   gap: 2rem;
   align-items: start;
 }
-.training-impressions__heading > p { margin: 0.3rem 0 0; color: var(--arc42-primary); font-size: 0.82rem; font-weight: 800; }
+.training-impressions__heading > p { margin: 0.3rem 0 0; color: var(--arc42-primary); font-size: 0.82rem; font-weight: 700; }
 .training-impressions__heading h2 { max-width: 18ch; margin: 0; color: var(--arc42-ink-strong); font-size: clamp(2rem, 4vw, 3rem); line-height: 1.05; }
 .training-impressions__intro { max-width: 65ch; margin: 1.5rem 0 2rem auto; color: var(--arc42-text-muted); font-size: 1.05rem; }
 .training-impressions__video { max-width: 54rem; margin: 0 auto 2rem; }
@@ -1237,6 +1345,9 @@ a.res-card:focus-visible { outline: 2px solid var(--arc42-primary-hover); outlin
   display: block;
   width: 100%;
   height: auto;
+  /* the SVG pins font-family="system-ui" as a presentation attribute; any CSS
+     rule outranks it, which is how the diagram labels join the page's type */
+  font-family: var(--arc42-font-sans);
   /* theme the inline SVG via its custom properties */
   --ink: var(--arc42-ink-strong);
   --muted: var(--arc42-slate);
@@ -1244,7 +1355,7 @@ a.res-card:focus-visible { outline: 2px solid var(--arc42-primary-hover); outlin
   --paper: #ffffff;
   --accent: var(--arc42-primary-hover);
 }
-.method-diagram svg .olap { fill: #f5b700; opacity: 0.4; } /* amber gold: the structures/concepts overlap */
+.method-diagram svg .olap { fill: var(--arc42-amber); opacity: 0.4; } /* amber: the structures/concepts overlap */
 .method-diagram figcaption {
   margin-top: 0.75rem;
   font-size: 0.875rem;
@@ -1276,7 +1387,8 @@ a.res-card:focus-visible { outline: 2px solid var(--arc42-primary-hover); outlin
 .method-cta {
   margin: 3.5rem 0 1rem;
   padding: 2.4rem 2rem 2.2rem;
-  background: linear-gradient(135deg, #dbeaf6, #b7cbe6);
+  background: #e8f0f8; /* flat — the system forbids gradients */
+  border: 1px solid #cfdcea;
   border-radius: 10px;
   text-align: center;
 }
@@ -1329,8 +1441,65 @@ a.res-card:focus-visible { outline: 2px solid var(--arc42-primary-hover); outlin
   width: 8.5rem;
   display: block;
 }
-.canvas-teaser__thumb svg { display: block; width: 100%; height: auto; }
+.canvas-teaser__thumb svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: var(--arc42-font-sans); /* same reason as .method-diagram svg */
+}
 .canvas-teaser p { margin: 0; }
 @media (max-width: 480px) {
   .canvas-teaser { flex-direction: column; align-items: flex-start; gap: 0.7rem; }
+}
+
+/* ==========================================================================
+   Home feature cards ("starter" row) — brings the theme's feature_row into
+   the design system: CSS grid instead of the 2013 Susy floats, token
+   borders, and the documented hover-only shadow. Markup stays the theme's
+   (_includes/feature_row), so home.md needs no structural change.
+   ========================================================================== */
+.feature__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin: 2rem 0;
+  border-bottom: none; /* the theme hairline read as a stray rule under the grid */
+}
+.feature__wrapper::after { display: none; } /* theme clearfix, unneeded in grid */
+.feature__wrapper .feature__item {
+  float: none;
+  width: 100%;
+  margin: 0;
+}
+.feature__wrapper .archive__item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.1rem 1.15rem 1.25rem;
+  border: 1px solid var(--arc42-border);
+  border-radius: 8px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.feature__wrapper .archive__item:hover,
+.feature__wrapper .archive__item:focus-within {
+  border-color: var(--arc42-primary);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.12); /* hover-only, per DESIGN.md */
+}
+.feature__wrapper .archive__item-title {
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: var(--arc42-ink-strong);
+}
+.feature__wrapper .archive__item-excerpt {
+  font-size: 0.95rem;
+  color: var(--arc42-ink);
+}
+.feature__wrapper .archive__item-excerpt img {
+  border-radius: 6px;
+  margin-bottom: 0.6rem;
+}
+.feature__wrapper .archive__item-body-wrapper { display: flex; flex-direction: column; flex: 1; }
+.feature__wrapper .archive__item-body-wrapper .btn { margin-top: auto; align-self: flex-start; }
+@media (max-width: 760px) {
+  .feature__wrapper { grid-template-columns: 1fr; }
 }

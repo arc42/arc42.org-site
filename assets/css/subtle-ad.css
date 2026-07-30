@@ -1,44 +1,57 @@
-/* subtle ads */
+/* Training-dates note (".subtle ad") — the honest pointer from the arc42
+   team that funds this free site. Rebuilt 2026-07-30 on design tokens:
+   the old file carried four off-palette colours (#032f7f, #800000, a pink
+   wash, and an *invalid* `color: ff796a` that silently did nothing) and a
+   blurred shadow. It now wears the family's pinned-note signature — a hard
+   3px 3px offset in the site's deep navy (meta.arc42.org ADR-0002) — and
+   reads as an annotation attached to the page. */
 
 .subtle-ad {
-  width: 70%;
-  margin: 5px;
-  padding: 5px;
+  max-width: 46rem;
+  margin: 1rem 0;
+  padding: 0.9rem 1.1rem;
 
-  background-color: rgba(254, 228, 228, 0.3);
+  background-color: #f2f6fa;                /* calm navy-tinted wash */
+  border: 1px solid var(--arc42-border);
   border-radius: 4px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #800000;
 
-  -webkit-box-shadow: 3px 3px 4px 0px rgba(156,61,75,1);
-  -moz-box-shadow: 3px 3px 4px 0px rgba(156,61,75,1);
-  box-shadow: 3px 3px 4px 0px rgba(156,61,75,1);
+  box-shadow: 3px 3px 0 0 var(--arc42-masthead); /* the family pinned-note */
 
-  color: #032f7f;
+  color: var(--arc42-ink);                  /* 10.9:1 on the wash */
 }
 
-/* use before-pseudo-class to add icon */
+/* the exclamation icon, pinned top-right so it never crowds the first line */
+.subtle-ad {
+  position: relative;
+  padding-right: 64px;
+}
 .subtle-ad::before {
-  display: block;
-  float: right;
-  width: 50px;
-  height: 80px;
-
   content: "";
-  background: url("./arc42-exclamation.svg") no-repeat;
-  background-size: 80px 80px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 44px;
+  height: 44px;
+  background: url("./arc42-exclamation.svg") no-repeat center / contain;
 }
-
 
 .subtle-ad h4 {
-  font-family: $header-font-family;
-  font-size: 20px;
+  /* promo UI, not prose — stays in the sans */
+  font-family: var(--arc42-font-sans);
+  font-size: 1.1rem;
   font-weight: bold;
-  margin-top: 5px;
+  margin-top: 0;
   word-wrap: break-word;
 }
 
 .subtle-ad a {
-  color: ff796a;
+  color: var(--arc42-primary); /* 8.9:1 on the wash; was the invalid `ff796a` */
+  font-weight: 600;
+}
+
+/* feed states (ADR-0010): the include swaps in .subtle-ad--error copy when
+   the htmx fetch fails, so "Loading…" can never be the terminal state */
+.subtle-ad--error {
+  border-color: var(--arc42-coral-deep);
+  box-shadow: 3px 3px 0 0 var(--arc42-coral-deep);
 }

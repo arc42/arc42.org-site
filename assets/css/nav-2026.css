@@ -2,7 +2,26 @@
    arc42 top navigation — 2026 layout
    Priority links inline + "More…" hamburger drawer.
    Palette via the --arc42-* tokens defined in arc42-org.css.
+
+   The bar sits on the dark masthead band (--arc42-masthead, filled in
+   main.scss), so everything in this row is a light-on-dark treatment:
+   resting links at --arc42-on-masthead-muted (7.4:1 on the navy),
+   hover/current at solid white. The drawer that opens below the bar is a
+   separate, light surface and keeps the ink-on-paper palette.
+
+   Measured on --arc42-masthead #2b3a57:
+     rgba(255,255,255,.78)  7.4:1   resting links, language pills, hamburger
+     #ffffff               12.1:1   hover, current page, logo
+     amber #ffc95c on #4a3a0a       8.0:1   the Download CTA
    ========================================================================== */
+
+/* A navy focus outline disappears on a navy band, so header controls get a
+   two-tone ring instead: white inside, band colour outside. Same pattern as
+   quality.arc42.org's --focus-ring-on-violet. */
+:root {
+  --arc42-focus-ring-on-masthead:
+    0 0 0 2px var(--arc42-on-masthead), 0 0 0 4px var(--arc42-masthead);
+}
 
 .arc42-nav {
   display: flex;
@@ -22,6 +41,11 @@
   height: 34px;
   max-height: 34px;
 }
+.arc42-nav__logo:focus-visible {
+  border-radius: 4px;
+  box-shadow: var(--arc42-focus-ring-on-masthead);
+  outline: none;
+}
 
 /* ---- inline priority links (desktop) ---- */
 .arc42-nav__inline {
@@ -36,7 +60,7 @@
 }
 .arc42-nav__inline li { margin: 0; }
 .arc42-nav__inline > li > a {
-  color: var(--arc42-slate);
+  color: var(--arc42-on-masthead-muted);
   font-weight: 600;
   font-size: 0.95rem;
   text-decoration: none;
@@ -45,11 +69,16 @@
 }
 .arc42-nav__inline > li > a:hover,
 .arc42-nav__inline > li > a:focus-visible {
-  color: var(--arc42-primary);
+  color: var(--arc42-on-masthead);
+}
+.arc42-nav__inline > li > a:focus-visible {
+  border-radius: 3px;
+  box-shadow: var(--arc42-focus-ring-on-masthead);
+  outline: none;
 }
 /* current page */
 .arc42-nav__inline > li > a[aria-current="page"]:not(.arc42-nav__cta) {
-  color: var(--arc42-primary);
+  color: var(--arc42-on-masthead);
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 6px;
@@ -62,11 +91,15 @@
   border-radius: 4px;
 }
 
-/* ---- Download call-to-action (navy button) ---- */
+/* ---- Download call-to-action (amber button) ----
+   A navy button on the navy band would disappear, so the CTA inverts to the
+   family amber with dark ink. That also makes Download the loudest element in
+   the header, which matches its job. The drawer copy of the CTA keeps the same
+   fill: one CTA, one colour, wherever it appears. */
 .arc42-nav .arc42-nav__cta,
 .arc42-drawer .arc42-nav__cta {
-  color: #ffffff;
-  background: var(--arc42-primary);
+  color: var(--arc42-amber-ink);
+  background: var(--arc42-amber);
   border-radius: 8px;
   padding: 0.5rem 1rem;
   font-weight: 700;
@@ -77,9 +110,13 @@
 .arc42-nav .arc42-nav__cta:focus-visible,
 .arc42-drawer .arc42-nav__cta:hover,
 .arc42-drawer .arc42-nav__cta:focus-visible {
-  color: #ffffff;
-  background: var(--arc42-primary-hover);
+  color: var(--arc42-amber-ink);
+  background: var(--arc42-amber-lift);
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
+}
+.arc42-nav .arc42-nav__cta:focus-visible {
+  box-shadow: var(--arc42-focus-ring-on-masthead);
+  outline: none;
 }
 
 /* ---- language switcher (EN here, DE -> arc42.de) ----
@@ -92,7 +129,7 @@
   margin: 0;
   padding: 0.15rem;
   flex: none;
-  border: 1px solid #e2e6ea;
+  border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 20px;
   font-size: 0.75rem;
   line-height: 1;
@@ -102,21 +139,23 @@
   border-radius: 20px;
   font-weight: 700;
   letter-spacing: 0.02em;
-  color: var(--arc42-slate);
+  color: var(--arc42-on-masthead-muted);
   text-decoration: none;
 }
+/* the current language reads as a filled pill; on the dark band that means a
+   light fill with band-coloured ink, not the navy fill it used on white */
 .arc42-nav .arc42-lang__item.is-active {
-  background: var(--arc42-primary);
-  color: #ffffff;
+  background: var(--arc42-on-masthead);
+  color: var(--arc42-masthead);
 }
 .arc42-nav a.arc42-lang__item:hover,
 .arc42-nav a.arc42-lang__item:focus-visible {
-  color: var(--arc42-primary);
-  background: #f6f8fa;
+  color: var(--arc42-on-masthead);
+  background: rgba(255, 255, 255, 0.14);
 }
 .arc42-nav a.arc42-lang__item:focus-visible {
-  outline: 2px solid var(--arc42-primary-hover);
-  outline-offset: 2px;
+  box-shadow: var(--arc42-focus-ring-on-masthead);
+  outline: none;
 }
 .arc42-lang__sr {
   position: absolute;
@@ -138,16 +177,30 @@
   margin-left: auto;          /* right-aligned when inline links are hidden */
   padding: 0.45rem 0.7rem;
   background: transparent;
-  border: 1px solid #e2e6ea;
+  border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 8px;
-  color: var(--arc42-primary);
+  color: var(--arc42-on-masthead-muted);
   font-family: inherit;
   font-weight: 600;
   font-size: 0.9rem;
   cursor: pointer;
 }
-.arc42-nav__toggle:hover { border-color: var(--arc42-primary-hover); color: var(--arc42-primary-hover); }
-.arc42-nav__toggle:focus-visible { outline: 2px solid var(--arc42-primary-hover); outline-offset: 2px; }
+/* the three hamburger bars are painted with currentColor, so they follow */
+.arc42-nav__toggle:hover {
+  border-color: var(--arc42-on-masthead);
+  color: var(--arc42-on-masthead);
+}
+.arc42-nav__toggle:focus-visible {
+  border-color: var(--arc42-on-masthead);
+  color: var(--arc42-on-masthead);
+  box-shadow: var(--arc42-focus-ring-on-masthead);
+  outline: none;
+}
+.arc42-nav__toggle[aria-expanded="true"] {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: var(--arc42-on-masthead);
+  color: var(--arc42-on-masthead);
+}
 .arc42-nav__bars {
   display: inline-flex;
   flex-direction: column;
@@ -161,14 +214,17 @@
   border-radius: 2px;
 }
 
-/* ---- drawer ---- */
+/* ---- drawer ----
+   The band is the bar only: the drawer stays a light paper surface, the same
+   call docs.arc42.org makes. A full-height dark panel would turn a menu into a
+   second page. The old hairline on top is gone with it — the dark bar above is
+   already the edge. */
 .arc42-drawer {
   position: absolute;
   left: 0;
   right: 0;
   top: 100%;
   background: #ffffff;
-  border-top: 1px solid var(--arc42-border-light);
   border-bottom: 1px solid #e2e6ea;
   box-shadow: 0 12px 20px -8px rgba(20, 40, 70, 0.18);
   z-index: 19;
@@ -270,16 +326,18 @@
     background: none;
     box-shadow: none;
     font-weight: 600;
-    color: var(--arc42-slate);
+    color: var(--arc42-on-masthead-muted);
   }
   .arc42-nav .arc42-nav__cta--mobile:hover,
   .arc42-nav .arc42-nav__cta--mobile:focus-visible {
     background: none;
-    box-shadow: none;
-    color: var(--arc42-primary);
+    color: var(--arc42-on-masthead);
+  }
+  .arc42-nav .arc42-nav__cta--mobile:focus-visible {
+    box-shadow: var(--arc42-focus-ring-on-masthead);
   }
   .arc42-nav__inline > li > a.arc42-nav__cta--mobile[aria-current="page"] {
-    color: var(--arc42-primary);
+    color: var(--arc42-on-masthead);
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 6px;
@@ -312,7 +370,7 @@
     display: inline-flex;
     align-items: center;
     min-height: 2.25rem;   /* keep the tap target in the same league as the hamburger */
-    border: 1px solid #e2e6ea;
+    border: 1px solid rgba(255, 255, 255, 0.28);
     padding: 0.35rem 0.65rem;
     font-size: 0.8rem;
   }

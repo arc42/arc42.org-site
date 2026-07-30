@@ -55,7 +55,7 @@ author:
   avatar           : /images/Gernot-avatar-2016.jpg # path of avatar image, e.g. "/images/bio-photo.jpg"
   bio              : "INNOQ fellow, (co)founder of arc42, founder of aim42"
   location         : "Cologne, Germany"
-  email            : info@arc42.org
+  email            : info@arc42.de
   uri              : https://www.gernotstarke.de
   github           : arc42
   google_plus      :
@@ -99,6 +99,9 @@ exclude:
   - _site/
   - _includes/subtle-ads/logo
   - _includes/subtle-ads/*.sh
+  - todo
+  - PRODUCT.md
+  - DESIGN.md
 
 keep_files:
   - .git

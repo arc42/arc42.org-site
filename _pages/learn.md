@@ -35,8 +35,8 @@ training_gallery:
   <div class="dl-hero__inner">
     <p class="dl-hero__kicker">Self-study &middot; instructor-led seminars &middot; iSAQB CPSA-F</p>
     <h1 class="dl-hero__title">Training</h1>
-    <p class="dl-hero__sub">Learn arc42 and systematic software architecture at your own pace with books, videos and our free documentation, or in an <strong>iSAQB-certified seminar</strong> taught by the creators of arc42.</p>
-    <p class="dl-hero__actions"><a class="btn btn--arc42-outline" href="#next-training-dates">Next training dates &#8595;</a></p>
+    <p class="dl-hero__sub">Learn arc42 and systematic software architecture at your own pace with books, videos and our free documentation, or in an <strong>iSAQB-certified seminar</strong> taught by the creators of arc42 and their trainer team.</p>
+    <p class="dl-hero__actions"><a class="btn btn--arc42" href="#next-training-dates">Next training dates &#8595;</a></p>
   </div>
 </section>
 
@@ -61,7 +61,7 @@ They pioneered the *dual-trainer* mode, in which two experienced trainers teach 
 
 ### Ideal preparation for the CPSA-F examination
 
-arc42 trainings are effective preparation for the iSAQB CPSA (Certified Professional for Software Architecture) certification. Our public trainings are currently held in Munich, Frankfurt and Vienna.
+arc42 trainings are effective preparation for the iSAQB CPSA (Certified Professional for Software Architecture) certification. Public trainings run at several locations and online — the [current dates](#next-training-dates) are listed below.
 
 <section id="inside-a-training" class="training-impressions">
   <div class="training-impressions__heading">

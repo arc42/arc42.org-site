@@ -9,18 +9,24 @@ colors:
   neutral-border: "#f2f3f3"
   neutral-border-strong: "#dddddd"
   slate: "#6f777d"
-  accent-gold: "#f5b700"
-  accent-green: "#98fb98"
-  accent-red: "#ff6347"
+  masthead: "#2b3a57"
+  on-masthead: "#ffffff"
+  amber: "#ffc95c"
+  amber-ink: "#4a3a0a"
+  coral: "#ff5c7c"
+  coral-deep: "#c22b47"
+  emerald: "#2e9e67"
+  green-wash: "#d9f7d3"
+  green-ink: "#1b5e20"
 typography:
   display:
-    fontFamily: "-apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', Arial, sans-serif"
+    fontFamily: "'Libre Caslon Text', Georgia, serif"
     fontSize: "2.441rem"
     fontWeight: 700
     lineHeight: 1.2
     letterSpacing: "-0.02em"
   body:
-    fontFamily: "-apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', Arial, sans-serif"
+    fontFamily: "'Atkinson Hyperlegible Next', 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
     fontSize: "1rem"
     fontWeight: 400
     lineHeight: 1.5
@@ -42,6 +48,27 @@ components:
 ---
 
 # Design System: arc42 Design System
+
+## 0. Family
+
+arc42.org is the flagship of a family of sites, and it is meant to be
+recognisable as such. Three things are shared verbatim across every arc42 site
+and are **not** per-site decisions:
+
+1. **The type pair** — Libre Caslon Text (headings) over Atkinson Hyperlegible
+   Next (body and UI), self-hosted, never from a font CDN.
+2. **The masthead band** — one solid, saturated fill in the site's signature
+   hue, with light text and a white logo. One hue per site; the band is the
+   handshake that says "same family, different room".
+3. **The accent tokens** — amber `#ffc95c`, coral `#ff5c7c`, emerald `#2e9e67`,
+   identical hex on every site.
+
+Everything else — layout, components, semantics — is per-site. The signature
+hue for arc42.org is Navy; siblings use Signal Blue (docs) and violet
+(quality).
+
+Sibling design systems, kept in sync by hand:
+`docs.arc42.org-site/DESIGN.md`, `quality.arc42.org-site/DESIGN.md`.
 
 ## 1. Overview
 
@@ -70,20 +97,68 @@ The color palette uses deep navy and slate grey to project professional engineer
 * **Light Grey Border** (#f2f3f3): Thin, subtle borders to separate blocks of content and grid columns.
 * **Slate Grey Theme** (#6f777d): Secondary neutral used for secondary text, sidebars, and subheadings.
 
-### Accents
-* **Amber Gold** (#f5b700): Highlight color for warnings, architecture request buttons, or high-priority news tags.
-* **Success Green** (#98fb98): Soft background green for training/certification callouts and success alerts.
-* **Tomato Red** (#ff6347): Urgent alert background color (e.g. support banner highlights).
+### Masthead band
+* **Masthead Navy** (#2b3a57): The header band, deepened from Navy Ink so the
+  bar reads as its own surface rather than a large primary button. The Ukraine
+  strip on the home page continues the same fill — two near-identical dark
+  navies stacked would read as a seam.
+* **On Masthead** (#ffffff): Logo, hover and current-page links.
+* **On Masthead Muted** (rgba(255,255,255,.78)): Resting nav links, language
+  pills, hamburger. 7.4:1 on the band.
+* **Focus on the band**: a navy ring vanishes on navy, so header controls use a
+  two-tone ring — `0 0 0 2px #fff, 0 0 0 4px var(--arc42-masthead)`.
 
-**The Rarity Rule.** Saturated accent colors (gold, green, red) are reserved exclusively for specific functional triggers and highlights. They must make up less than 10% of any given screen area.
+### Accents — family tokens, shared verbatim with docs and quality
+* **Amber** (#ffc95c) with **Amber Ink** (#4a3a0a): Highlights, tips, and the
+  Download CTA on the masthead band. 7.2:1. Replaces the former #f5b700 gold.
+* **Coral** (#ff5c7c): A warm spark for small accents and text-on-dark **only**.
+  It measures 2.97:1 on white, so it must never carry body text or sit under
+  white text.
+* **Coral Deep** (#c22b47): The text- and fill-safe coral. 5.6:1 with white.
+  Replaces the former Tomato #ff6347.
+* **Emerald** (#2e9e67): Success and status marks. 3.4:1 on white — a mark or a
+  large-text colour, not a body-text colour.
+* **Green Wash** (#d9f7d3) with **Green Ink** (#1b5e20): Soft background green
+  for training/certification callouts. 6.8:1. Replaces the former PaleGreen.
+
+**The Rarity Rule.** Saturated accent colors are reserved exclusively for
+specific functional triggers and highlights. They must make up less than 10% of
+any given screen area — the masthead band is the deliberate exception, since it
+is structure rather than accent.
 
 ## 3. Typography
 
-**Display Font:** System Sans-Serif (-apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif)
-**Body Font:** System Sans-Serif (-apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif)
+**Display Font:** Libre Caslon Text, Georgia, serif — headings only
+**Body Font:** Atkinson Hyperlegible Next, Atkinson Hyperlegible, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif
 **Label/Mono Font:** Monaco, Consolas, "Lucida Console", monospace
 
-**Character:** A highly readable system-sans pairing that provides visual speed, immediate rendering, and clean modern readability across all devices.
+**Character:** The family pair. A high-contrast transitional serif carries the
+headings and gives the site its voice; Atkinson Hyperlegible Next — designed
+for low-vision readability, with letterforms that stay distinct at small sizes —
+carries everything a reader actually has to work through.
+
+**Self-hosted, always.** Both families ship from `assets/fonts/` (six woff2,
+~107 KB, latin + latin-ext subsets) and are declared in `_sass/arc42-fonts.scss`.
+No font CDN: a third-party font hop is a render-blocking dependency and a
+privacy liability on a site that carries an imprint. Both are SIL OFL 1.1 and
+the licences ship alongside them as `assets/fonts/OFL-*.txt`.
+
+**The fallback-order rule.** Plain *Atkinson Hyperlegible* is a different family
+with different metrics, so it stays second in the stack — the stack degrades to
+the right letterforms before it reaches the system sans.
+
+**The Two Voices Rule.** Serif is a display voice only: h1–h4 and card titles.
+h5/h6, body copy, buttons, nav, chips, captions and every other label stay in
+the sans. Headings that are really UI labels — drawer group titles, sidebar nav
+titles, the theme's small-caps meta/share/related labels — are explicitly
+excluded from the serif in `assets/css/main.scss`.
+
+**The cascade note.** `assets/css/*.css` are served as separate stylesheets via
+`@import url(...)`, which Sass hoists **above** the theme CSS. Any rule that has
+to beat a theme rule at equal specificity — the heading faces, the masthead band
+— must live in `main.scss` after the theme import, not in those files. They also
+never see Sass variables, which is what `--arc42-font-sans` / `--arc42-font-serif`
+are for.
 
 ### Hierarchy
 * **Display** (Bold, 2.441rem, 1.2): Used for hero headers and main landing titles.
@@ -106,7 +181,10 @@ The elevation style is strictly Flat & Sharp. Surfaces are clean and sit directl
 * **Shape**: Rounded corners with a 8px radius.
 * **Primary (Navy)**: Background `#374769`, text `white`, bold weight, padded (`10px 22px`).
 * **Hover State**: Shifts to `#4b7ba3` with a deep tactile drop-shadow: `0 12px 16px 0 rgba(0,0,0,0.24)`.
-* **Accent Buttons**: Specialty buttons like `.buttonGreen` (Pale Green with black text) and `.buttonReq4Arc` (Amber Gold with black text) are used for specific actions (trainings, architecture specs).
+* **Accent Buttons**: Specialty buttons draw their fills from the family accent
+  tokens — `.buttonGreen`/`.buttonImprove` (Green Wash with Green Ink),
+  `.buttonReq4Arc` (Amber with Amber Ink), `.buttonRed`/`.buttonAnmeldung`
+  (Coral Deep with white). Every pair clears 4.5:1.
 
 ### Cards / Containers
 * **Corner Style**: 4px border-radius (`sm`) for legend containers and small callouts.
@@ -114,7 +192,15 @@ The elevation style is strictly Flat & Sharp. Surfaces are clean and sit directl
 * **Border**: 1px solid, never double or thick accent borders.
 
 ### Navigation
-* **Style**: Minimal top masthead links using `#6f777d` (Slate Grey), changing to a darker tone on hover.
+* **Style**: A solid Masthead Navy band. Links rest at On Masthead Muted and
+  resolve to solid white on hover and for the current page; the current page
+  also carries a 2px underline at a 6px offset.
+* **The CTA inverts**: Download is Amber with Amber Ink, not navy — a navy
+  button on the navy band would disappear, and Download deserves to be the
+  loudest element in the header. The drawer copy keeps the same fill: one CTA,
+  one colour, wherever it appears.
+* **The drawer stays light**: only the bar is banded. A full-height dark panel
+  turns a menu into a second page.
 
 ## 6. Do's and Don'ts
 
@@ -124,6 +210,9 @@ The elevation style is strictly Flat & Sharp. Surfaces are clean and sit directl
 * **Do** use `text-wrap: balance` on display headers to keep line lengths visually balanced.
 
 ### Don't:
+* **Don't** load fonts from a third-party CDN (Google Fonts, Bunny, any other).
+* **Don't** set the serif on buttons, nav, chips, captions or labels.
+* **Don't** put white text on bright Coral `#ff5c7c` — use Coral Deep.
 * **Don't** use low-contrast light gray text on tinted white backgrounds.
 * **Don't** add colored accent side-stripe borders (e.g. `border-left: 4px solid ...` on cards or alerts).
 * **Don't** use gradient text effects. Use solid Navy or slate for emphasis.
