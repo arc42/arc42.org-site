@@ -2,7 +2,11 @@
 
 <!-- No font CDN here on purpose: Libre Caslon Text and Atkinson Hyperlegible
      Next are self-hosted from /assets/fonts/ via _sass/arc42-fonts.scss. -->
-<script defer data-domain="arc42.org,rollup.arc42.com" src="https://plausible.io/js/script.js"></script>
+<!-- Legacy script on purpose: the comma-separated data-domain (own site +
+     rollup.arc42.com journey dashboard) is not supported by Plausible's new
+     per-site snippet. Enhanced measurements are selected via the src filename.
+     See meta.arc42.org/plausible-journey-tracking.md before changing. -->
+<script defer data-domain="arc42.org,rollup.arc42.com" src="https://plausible.io/js/script.outbound-links.file-downloads.js"></script>
 
 <!-- Favicons: the "42" circle in masthead navy — the wordmark was illegible at
      16/32px. Legacy Windows tiles (mstile-*, browserconfig.xml) removed

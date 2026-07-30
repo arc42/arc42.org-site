@@ -1519,20 +1519,27 @@ a.res-card:focus-visible { outline: var(--arc42-focus-ring); outline-offset: 2px
   column-gap: 0.6rem;
   row-gap: 0.3rem;
 }
-.footer-links li { margin: 0; padding: 0; }
-/* The .page__footer-follow prefix is load-bearing: the theme ships
-   `.page__footer-follow li + li:before { content: "" }` at equal
-   specificity, and this file is cascade-hoisted ABOVE the theme (see the
-   note in main.scss) — so without the extra class the theme blanks the
-   middot. */
+/* The .page__footer-follow prefix is load-bearing here and below: the
+   theme styles `.page__footer-follow li` (uppercase, $type-size-6) and
+   `li + li:before { content: "" }` at equal specificity, and this file is
+   cascade-hoisted ABOVE the theme (see the note in main.scss) — without
+   the extra class the theme wins. Mixed case at 0.92rem matches the docs
+   and quality footers. */
+.page__footer-follow .footer-links li {
+  margin: 0;
+  padding: 0;
+  font-size: 0.92rem;
+  text-transform: none;
+}
 .page__footer-follow .footer-links li + li::before {
   content: "\00B7"; /* · */
   margin-right: 0.6rem;
   color: var(--arc42-slate); /* decorative separator, not text — 3:1 n/a */
 }
 .footer-links a {
-  color: var(--arc42-ink);
-  font-weight: 600;
+  /* Regular-weight, link-coloured labels — same treatment as the docs and
+     quality footers (navy on $lighter-gray, measured 8.9:1). */
+  color: var(--arc42-primary);
   text-decoration: none;
 }
 .footer-links a:hover,
