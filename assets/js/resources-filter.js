@@ -89,4 +89,43 @@
   } else {
     update();
   }
+
+  // "Back to filters": surfaces once the filter bar leaves the viewport,
+  // so the return trip from the bottom of a 48-item list is one click.
+  var backtop = browser.querySelector("[data-resource-backtop]");
+  var controls = browser.querySelector(".resource-controls");
+
+  if (backtop && controls && "IntersectionObserver" in window) {
+    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    var toggleBacktop = function (show) {
+      if (show === !backtop.hidden) { return; }
+      if (!show) {
+        backtop.hidden = true;
+        return;
+      }
+      backtop.classList.add("is-entering");
+      backtop.hidden = false;
+      window.requestAnimationFrame(function () {
+        backtop.classList.remove("is-entering");
+      });
+    };
+
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        // Only when the controls sit above the viewport — not when the reader
+        // is still above them, which happens on the resource detail pages.
+        toggleBacktop(!entry.isIntersecting && entry.boundingClientRect.top < 0);
+      });
+    }).observe(controls);
+
+    backtop.addEventListener("click", function () {
+      controls.scrollIntoView({
+        behavior: reduceMotion.matches ? "auto" : "smooth",
+        block: "start"
+      });
+      // Keyboard users continue from the filters, not from the page bottom.
+      controls.focus({ preventScroll: true });
+    });
+  }
 }());

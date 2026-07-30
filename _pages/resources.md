@@ -22,7 +22,7 @@ excerpt: "Books, articles, talks and videos from the people behind arc42, collec
 {% assign videos = site.resources | where: "type", "video" | size %}
 
 <div class="resource-browser" data-resource-browser>
-  <div class="resource-controls" aria-label="Filter resources">
+  <div class="resource-controls" id="resource-controls" tabindex="-1" aria-label="Filter resources">
     <fieldset class="resource-types">
       <legend>Type</legend>
       <div class="resource-types__options">
@@ -65,6 +65,8 @@ excerpt: "Books, articles, talks and videos from the people behind arc42, collec
     <p>Try another type, language or search term.</p>
     <button type="button" class="btn btn--arc42-outline" data-resource-reset>Reset filters</button>
   </div>
+
+  <button type="button" class="resource-backtop" data-resource-backtop hidden><span aria-hidden="true">&#8593;</span> Back to filters</button>
 </div>
 
 <div class="resource-footnote">
