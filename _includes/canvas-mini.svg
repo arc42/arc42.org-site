@@ -1,6 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 204" role="img" aria-label="Miniature of the arc42 canvas: one page with a handful of cells" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
   <style>
-    svg { --ink: #1c2c44; --muted: #6f777d; --line: #cfd8e3; --paper: #ffffff; --gold: #f5b700; }
+    /* family amber; hardcoded because the element rule here outranks any
+       inherited --gold from the page cascade */
+    svg { --ink: #1c2c44; --muted: #6f777d; --line: #cfd8e3; --paper: #ffffff; --gold: #ffc95c; }
     .sheet { fill: var(--paper); stroke: var(--ink); stroke-width: 1.5; }
     .cell  { fill: none; stroke: var(--line); stroke-width: 1; }
     .goldcell { fill: var(--gold); opacity: .25; }

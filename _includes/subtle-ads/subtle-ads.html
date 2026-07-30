@@ -3,13 +3,12 @@
         crossorigin="anonymous"></script>
 
 <div hx-get="https://arc42-subtle-ads-backend.vercel.app/api"
-     hx-trigger="load delay"
+     hx-trigger="load"
      hx-swap="innerHTML"
      hx-target="#subtle-ads">
 </div>
 
-<div id="subtle-ads" aria-live="polite">
-    <h3>arc42 offers architecture training.</h3>
+<div id="subtle-ads" aria-live="polite" data-state="loading">
     <p>
         Loading the upcoming training dates&hellip;
         If they don't show up, you can find all dates at
@@ -18,3 +17,34 @@
             </a>.
     </p>
 </div>
+
+<script>
+  /* Feed states per meta.arc42.org ADR-0010: a failed or hung fetch must
+     never leave "Loading…" as the terminal state. htmx fires responseError /
+     sendError on HTTP and network failures; the timer catches a hung request
+     or a blocked htmx CDN. Success clears data-state via the innerHTML swap
+     (the marker attribute survives, so afterSwap resets it). */
+  (function () {
+    var box = document.getElementById('subtle-ads');
+    if (!box) return;
+    var errorHtml =
+      '<div class="subtle-ad subtle-ad--error">' +
+      '<h4>Training dates are unavailable right now</h4>' +
+      '<p>Please find all upcoming arc42 trainings at ' +
+      '<a rel="noopener noreferrer nofollow" target="_blank" ' +
+      'href="https://trainings.arc42.org">trainings.arc42.org</a>.</p>' +
+      '</div>';
+    function fail() {
+      if (box.getAttribute('data-state') === 'loading') {
+        box.setAttribute('data-state', 'error');
+        box.innerHTML = errorHtml;
+      }
+    }
+    document.body.addEventListener('htmx:responseError', fail);
+    document.body.addEventListener('htmx:sendError', fail);
+    document.body.addEventListener('htmx:afterSwap', function (evt) {
+      if (evt.target === box) box.setAttribute('data-state', 'loaded');
+    });
+    window.setTimeout(fail, 12000);
+  })();
+</script>

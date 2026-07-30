@@ -29,3 +29,11 @@ To serve as the definitive home for the arc42 software architecture template. Th
 * Target WCAG AA compliance with high-contrast ratios (body text contrast ≥ 4.5:1).
 * Full support for user preferences, including reduced motion.
 * Mobile-responsive layout that maintains typographic integrity and prevents horizontal scroll or overflow on small viewports.
+
+## Family
+arc42.org is the flagship (hub) of the arc42 site family. Its visual identity
+follows the family constants — the Libre Caslon / Atkinson Hyperlegible type
+pair, the saturated navy masthead band, paper-flat surfaces, WCAG 2.2 AA —
+defined in meta.arc42.org (`BRAND.md`, `DESIGN.md`, `adr/`). Signature hue:
+navy `#374769` (masthead `#2b3a57`), shared with arc42.de. Cross-cutting
+visual decisions are ecosystem decisions and live in meta, not here.

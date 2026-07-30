@@ -4,6 +4,23 @@
 
 @charset "utf-8";
 
+/*
+  arc42 family typography — must come BEFORE the theme imports, because the
+  theme declares $sans-serif/$serif with !default and first definition wins.
+*/
+@import "arc42-fonts";
+
+// Fallback order matters: plain "Atkinson Hyperlegible" is a different family
+// with different metrics, so it stays second — the stack then degrades to the
+// right letterforms before it reaches the system sans.
+$sans-serif: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible",
+  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$serif: "Libre Caslon Text", Georgia, serif;
+
+// Serif is for headings only (the family's "Two Voices Rule"): captions are
+// small UI text and stay in the hyperlegible sans, overriding the theme default.
+$caption-font-family: $sans-serif;
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
@@ -11,12 +28,10 @@
   arc42 custom styles
 */
 @import 'subtle-ad.css';
-@import 'ukraine.css';
 @import 'button.css';
 @import 'arc42-org.css';
 @import 'nav-2026.css';
 @import 'grid.css';
-@import 'petrol-apricot.css'; /* skin experiment, branch petrol-abricot-layout */
 
 /*
   fontawesome
@@ -37,4 +52,57 @@
 .search-content__inner-wrap {
   -webkit-animation: none;
   animation: none;
+}
+
+/* ---------------------------------------------------------------------------
+   The masthead band — the arc42 family handshake.
+
+   Same cascade caveat again: the theme's `.masthead { border-bottom: 1px solid
+   $border-color }` matches at the same specificity and is imported later, so
+   the band has to be declared here rather than in nav-2026.css. Everything
+   *inside* the bar (links, CTA, language pills, hamburger) uses selectors the
+   theme never touches and stays in nav-2026.css.
+
+   The hairline goes: a border between a dark band and white paper is a seam,
+   not a separator.
+   --------------------------------------------------------------------------- */
+.masthead {
+  background: var(--arc42-masthead);
+  border-bottom: 0;
+}
+
+/* ---------------------------------------------------------------------------
+   Headings in the display serif.
+
+   Same reason as the block above: the theme sets `h1…h6 { font-family:
+   $header-font-family }` at element specificity, so this override has to sit
+   after the theme import — in arc42-org.css it would lose the cascade.
+
+   Serif is a display voice only. h5/h6, body copy and every piece of UI stay in
+   Atkinson Hyperlegible Next (the family's "Two Voices Rule").
+   --------------------------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+/* card and archive headings: the theme pins these to $sans-serif-narrow at
+   class specificity (_archive.scss), which would otherwise beat the element
+   rule above. They are content headings, so they take the serif too. */
+.archive__item-title {
+  font-family: $serif;
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+/* Headings that are really UI labels, not prose headings — drawer group titles,
+   sidebar nav titles, the theme's small-caps meta/share/related labels. */
+.arc42-drawer__title,
+.nav__title,
+.author__name,
+.comment__author,
+.page__meta-title,
+.page__share-title,
+.page__related-title,
+.page__comments-title {
+  font-family: $sans-serif;
 }
