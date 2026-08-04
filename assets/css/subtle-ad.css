@@ -49,9 +49,101 @@
   font-weight: 600;
 }
 
-/* feed states (ADR-0010): the include swaps in .subtle-ad--error copy when
-   the htmx fetch fails, so "Loading…" can never be the terminal state */
-.subtle-ad--error {
-  border-color: var(--arc42-coral-deep);
-  box-shadow: 3px 3px 0 0 var(--arc42-coral-deep);
+/* ---- Training dates strip ------------------------------------------------
+   The mini-timeline inside .subtle-ad, rendered at build time by
+   _includes/subtle-ads/subtle-ads.html from _data/trainings.json — a quiet
+   echo of trainings.arc42.org's timeline (one rail, a node per date,
+   chronological) in this site's navy tokens. Replaces the former htmx/Vercel
+   runtime fetch; ADR-0010's feed states (.subtle-ad--error and friends) are
+   obsolete here — there is no runtime fetch left to fail. Class names are
+   shared with docs.arc42.org's training-dates include, tokens are this
+   site's own. Must read right both boxed (default .subtle-ad) and unboxed
+   (.training-section .subtle-ad strips the box in arc42-org.css). */
+
+.training-dates__intro {
+  margin: 0.3rem 0;
+  max-width: 65ch;
+}
+
+/* same voice as the site's other kickers: small caps-tracked label */
+.training-dates__label {
+  margin: 0.9rem 0 0.35rem;
+  font-family: var(--arc42-font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--arc42-primary);
+}
+
+.training-dates {
+  margin: 0 0 0.6rem 0.2rem;
+  padding: 0.1rem 0 0.1rem 1rem;
+  list-style: none;
+  border-left: 1px solid var(--arc42-primary);
+}
+
+.training-dates__row {
+  position: relative;
+  margin: 0.4rem 0;
+}
+
+/* the node, centred on the rail: 1rem list padding + half the 1px rail +
+   half the 7px dot */
+.training-dates__row::before {
+  content: "";
+  position: absolute;
+  left: calc(-1rem - 4px);
+  top: 0.4em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--arc42-primary);
+}
+
+.training-dates__when {
+  font-family: Monaco, Consolas, "Lucida Console", monospace; /* DESIGN.md label/mono stack */
+  font-size: 0.88em;
+  white-space: nowrap;
+}
+
+/* the DE/EN badge: a small bordered chip in the primary hue */
+.training-dates__lang {
+  display: inline-block;
+  margin: 0 0.1em;
+  padding: 0 5px;
+  border: 1px solid var(--arc42-primary);
+  border-radius: 3px;
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--arc42-primary);
+}
+
+.training-dates__where {
+  color: var(--arc42-text-muted);
+}
+
+/* the gloss under a row, derived from the feed title's "LABEL: explanation"
+   form — what Req4Arc, IMPROVE or ADOC actually mean. Downcased in the
+   template so it reads as an aside, not a second title. */
+.training-dates__slug {
+  display: block;
+  margin-top: 1px;
+  font-size: 0.9em;
+  color: var(--arc42-text-muted);
+}
+
+.training-dates__waitlist {
+  font-size: 0.75em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--arc42-primary);
+}
+
+.training-dates__asof {
+  font-size: 0.82em;
+  color: var(--arc42-text-muted);
 }

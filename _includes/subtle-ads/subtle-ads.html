@@ -1,50 +1,117 @@
-<script src="https://unpkg.com/htmx.org@1.9.6"
-        integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni"
-        crossorigin="anonymous"></script>
+{%- comment -%}
+  Build-time training dates from _data/trainings.json (expiry-filtered copy of
+  https://trainings.arc42.org/api/trainings.json, refreshed weekly by
+  .github/workflows/refresh-trainings.yml). Replaces the former htmx fetch from
+  the Vercel fragment backend; ADR-0010's runtime feed-states (loading/error/
+  loaded) are obsolete on this page — a workflow failure now means "dates one
+  week stale", never a broken page.
 
-<div hx-get="https://arc42-subtle-ads-backend.vercel.app/api"
-     hx-trigger="load"
-     hx-swap="innerHTML"
-     hx-target="#subtle-ads">
-</div>
+  Rendering rules (docs/superpowers/specs/2026-08-04-docs-faq-training-dates-design.md),
+  shared verbatim with docs.arc42.org's _includes/training-dates.html:
+  · strictly chronological across ALL courses, capped at the next 8 dates —
+    a schedule is not documentation; the link out covers the rest
+  · expiry-filtered again here (belt and braces over the workflow's filter),
+    so a stale data file degrades to fewer dates, never to ended courses
+  · cancelled and full dates never render; waitlist renders with a marker
+  · every date carries a visible DE/EN badge — language is a required feed
+    field precisely so no consumer has to guess from city names
+  · zero upcoming dates degrades to the date-free offer
 
-<div id="subtle-ads" aria-live="polite" data-state="loading">
-    <p>
-        Loading the upcoming training dates&hellip;
-        If they don't show up, you can find all dates at
-            <a rel="noopener noreferrer nofollow" target="_blank" href="https://trainings.arc42.org">
-                trainings.arc42.org
-            </a>.
+  The sort walks all dates once, collecting "start|course_index|date_index"
+  strings: Liquid cannot sort across nested arrays, but it can sort strings, and
+  ISO dates sort lexicographically.
+{%- endcomment -%}
+{%- assign today = 'now' | date: '%Y-%m-%d' -%}
+{%- assign keys = "" | split: "" -%}
+{%- for course in site.data.trainings.courses -%}
+  {%- for d in course.dates -%}
+    {%- if d.end >= today and d.status != 'cancelled' and d.status != 'full' -%}
+      {%- capture key -%}{{ d.start }}|{{ forloop.parentloop.index0 }}|{{ forloop.index0 }}{%- endcapture -%}
+      {%- assign keys = keys | push: key -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}
+{%- assign keys = keys | sort -%}
+
+{%- comment -%}
+  The trainer claim is precise on purpose: most classes are taught by the two
+  people who created arc42, but not all — so the intro says "most", and every
+  date whose trainers differ from that baseline names them on its row (from
+  the feed's per-date/per-course `trainers`).
+{%- endcomment -%}
+{%- assign baseline_duo = "Peter Hruschka, Gernot Starke" -%}
+<div class="subtle-ad">
+    <p class="training-dates__intro">
+        Hands-on architecture training — most classes taught by Peter Hruschka
+        and Gernot Starke, the creators of arc42 (dates with other trainers say
+        so):
     </p>
+    {%- if keys.size > 0 %}
+    <p class="training-dates__label" id="training-dates-label">Next dates</p>
+    <ul class="training-dates" aria-labelledby="training-dates-label">
+        {%- for key in keys limit: 8 %}
+        {%- assign parts = key | split: '|' -%}
+        {%- assign ci = parts[1] | plus: 0 -%}
+        {%- assign di = parts[2] | plus: 0 -%}
+        {%- assign course = site.data.trainings.courses[ci] -%}
+        {%- assign d = course.dates[di] -%}
+        {%- capture when -%}
+            {%- assign start_month = d.start | date: "%Y-%m" -%}
+            {%- assign end_month = d.end | date: "%Y-%m" -%}
+            {%- if start_month == end_month -%}
+                {{- d.start | date: "%-d" }}&#8211;{{ d.end | date: "%-d&nbsp;%b&nbsp;%Y" -}}
+            {%- else -%}
+                {{- d.start | date: "%-d&nbsp;%b" }}&#8211;{{ d.end | date: "%-d&nbsp;%b&nbsp;%Y" -}}
+            {%- endif -%}
+        {%- endcapture -%}
+        {%- comment -%}
+          The topic slug: labels like Req4Arc, IMPROVE or ADOC mean nothing to a
+          first-time reader, and the feed's `title` already glosses them in the
+          form "LABEL: explanation" — everything after the first ": " becomes a
+          muted second line. A title without a colon falls back to the course's
+          certification (today: Mastering Software Architectures → "perfect
+          preparation for iSAQB CPSA-Foundation certification"); only a course
+          with neither gets no gloss.
+        {%- endcomment -%}
+        {%- assign title_head = course.title | split: ": " | first -%}
+        {%- comment -%} Title prose is downcased to read as an aside; the
+            certification fallback keeps its casing (iSAQB CPSA-Foundation). {%- endcomment -%}
+        {%- assign slug = course.title | remove_first: title_head | remove_first: ": " | downcase -%}
+        {%- if slug == "" and course.certification -%}
+          {%- capture slug -%}perfect preparation for {{ course.certification }} certification{%- endcapture -%}
+        {%- endif -%}
+        <li class="training-dates__row">
+            <a class="training-dates__when" rel="noopener noreferrer nofollow" target="_blank" href="{{ d.url }}">{{ when }}</a>
+            <b class="training-dates__lang" title="held in {% if d.language == 'de' %}German{% else %}English{% endif %}">{{ d.language | upcase }}</b>
+            <span class="training-dates__what">
+                <a class="training-dates__course" rel="noopener noreferrer nofollow" target="_blank" href="{{ course.url }}">{{ course.short_title }}</a>
+                <span class="training-dates__where">&middot; {% if d.format == "online" %}online{% else %}{{ d.city }}{% endif %}</span>
+                {%- if d.status == "waitlist" %} <span class="training-dates__waitlist">waitlist</span>{% endif %}
+                {%- comment -%} Exceptions to the intro's trainer claim: a date's
+                    trainers override its course's; anything but the baseline duo
+                    is named on the gloss line. {%- endcomment -%}
+                {%- assign trainers = d.trainers | default: course.trainers -%}
+                {%- assign trainers_key = trainers | join: ", " -%}
+                {%- capture gloss -%}
+                    {%- if slug != "" %}{{ slug }}{% endif -%}
+                    {%- if trainers_key != baseline_duo and trainers_key != "" -%}
+                        {%- if slug != "" %} &middot; {% endif -%}with {{ trainers | join: " &amp; " }}
+                    {%- endif -%}
+                {%- endcapture -%}
+                {%- if gloss != "" %}<span class="training-dates__slug">{{ gloss }}</span>{% endif %}
+            </span>
+        </li>
+        {%- endfor %}
+    </ul>
+    <p class="training-dates__more">
+        All courses and dates:
+        <a rel="noopener noreferrer nofollow" target="_blank" href="https://trainings.arc42.org">trainings.arc42.org</a>
+        <span class="training-dates__asof">&middot; as of {{ site.data.trainings.generated | date: "%-d %b %Y" }}</span>
+    </p>
+    {%- else %}
+    <p>
+        See upcoming dates and topics at
+        <a rel="noopener noreferrer nofollow" target="_blank" href="https://trainings.arc42.org">trainings.arc42.org</a>.
+    </p>
+    {%- endif %}
 </div>
-
-<script>
-  /* Feed states per meta.arc42.org ADR-0010: a failed or hung fetch must
-     never leave "Loading…" as the terminal state. htmx fires responseError /
-     sendError on HTTP and network failures; the timer catches a hung request
-     or a blocked htmx CDN. Success clears data-state via the innerHTML swap
-     (the marker attribute survives, so afterSwap resets it). */
-  (function () {
-    var box = document.getElementById('subtle-ads');
-    if (!box) return;
-    var errorHtml =
-      '<div class="subtle-ad subtle-ad--error">' +
-      '<h4>Training dates are unavailable right now</h4>' +
-      '<p>Please find all upcoming arc42 trainings at ' +
-      '<a rel="noopener noreferrer nofollow" target="_blank" ' +
-      'href="https://trainings.arc42.org">trainings.arc42.org</a>.</p>' +
-      '</div>';
-    function fail() {
-      if (box.getAttribute('data-state') === 'loading') {
-        box.setAttribute('data-state', 'error');
-        box.innerHTML = errorHtml;
-      }
-    }
-    document.body.addEventListener('htmx:responseError', fail);
-    document.body.addEventListener('htmx:sendError', fail);
-    document.body.addEventListener('htmx:afterSwap', function (evt) {
-      if (evt.target === box) box.setAttribute('data-state', 'loaded');
-    });
-    window.setTimeout(fail, 12000);
-  })();
-</script>
