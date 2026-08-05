@@ -17,9 +17,9 @@ url                      : "https://arc42.org" # the base hostname & protocol fo
 repository               : "arc42/arc42.org-site" # GitHub username/repo-name
 teaser                   : /images/arc42-splash-landingpage.jpg # og:image fallback via _includes/seo.html
 
-# The site has no posts and no feed-worthy content of its own; hide the theme's
-# feed <link> in <head>. jekyll-feed still serves an (empty) /feed.xml for any
-# legacy subscriber. This replaced a stale link to it-and-more.blogspot.com.
+# The site has no posts and publishes no feed; hide the theme's feed <link>
+# in <head> (without this, head.html would advertise a /feed.xml that no
+# plugin generates).
 atom_feed:
   hide                   : true
 
@@ -80,12 +80,13 @@ collections:
 # Outputting
 permalink: /:categories/:title/
 
-# Plugins (mirrors the Gemfile's :jekyll_plugins group)
+# Plugins (mirrors the Gemfile's :jekyll_plugins group). include-cache backs
+# the include_cached calls in scripts.html/default.html; sitemap.xml is what
+# robots.txt advertises. SEO tags come from the vendored _includes/seo.html,
+# not the jekyll-seo-tag plugin.
 plugins:
   - jekyll-include-cache
   - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-seo-tag
 
 # HTML Compression - http://jch.penibelst.de/
 compress_html:
