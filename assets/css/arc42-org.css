@@ -120,15 +120,17 @@
 }
 
 
-.footer-center {
-  text-align: center;
-  font-size: 80%;
+.page__footer-follow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+  margin-bottom: 0.5rem;
 }
-
-.copyright-size {
-  font-size: 0.8rem;
-}
-.footer-innoq { margin: 0 0 0.5rem; }
+.footer-innoq { margin: 0; }
+.supported-by-innoq { margin-bottom: 0; }
+.footer-links { margin: 0; }
 
 
 .mobile {
