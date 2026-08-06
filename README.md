@@ -172,6 +172,20 @@ key-value pairs which can then be easily read by the search script.
 In [search.html](_pages/search.html), we create the page that shows the search box and results, using the 
 script and the json, and with that, the search is ready. 
 
+## Training dates
+
+The training block (`_includes/subtle-ads/subtle-ads.html`, embedded on five
+pages: home, learn, documentation, examples, download) is rendered at build
+time from `_data/trainings.json` — an expiry-filtered copy of
+<https://trainings.arc42.org/api/trainings.json> that
+`.github/workflows/refresh-trainings.yml` refreshes weekly (Mondays 05:47 UTC,
+or manually via workflow dispatch) and commits only when the dates actually
+changed. Edit dates in the trainings repo's `_data/trainings.yml`, never here;
+`_includes/subtle-ads/subtle-ads.html` owns the rendering,
+`assets/css/subtle-ad.css` the styling. This replaced the former runtime htmx
+fetch from the Vercel fragment backend (see the integration spec in the arc42
+workspace's `docs/superpowers/specs/2026-08-04-docs-faq-training-dates-design.md`).
+
 ## Credits
 
 ##### Michael Rose, creator of the Minimal-Mistakes Jekyll Theme
