@@ -1,142 +1,72 @@
-# Welcome to Jekyll!
+# Site configuration. Deliberately minimal: Jekyll 4 defaults (kramdown/GFM,
+# rouge, utf-8, .sass-cache/Gemfile/vendor/_site auto-excludes, keep_files
+# [.git, .svn]) are not repeated here — only deviations from them are set.
+# Cleaned 2026-08-05; the git history of this file documents what was dropped.
 #
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve`. If you change this file, please restart the server process.
-
 # Theme is fully vendored into this repo (_layouts, _includes, _sass, assets/js)
 # from minimal-mistakes 4.24.0 — no remote_theme / theme gem, so builds need no
-# network and work offline from a fresh clone.
-minimal_mistakes_skin    : "default"
+# network and work offline from a fresh clone. The skin defaults to "default"
+# via assets/css/main.scss.
 
 # Site Settings
 locale                   : "en"
 title                    : "arc42"
-title_separator          : "-"
 name                     : "Dr. Gernot Starke"
 description              : "Resources for software architects."
-url                      : "https://arc42.org" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-imageurl: /images
-
+url                      : "https://arc42.org" # the base hostname & protocol for your site
 repository               : "arc42/arc42.org-site" # GitHub username/repo-name
-teaser                   : /images/arc42-splash-landingpage.jpg # path of fallback teaser image, e.g. "/images/500x300.png"
-breadcrumbs            : false # true, false (default)
-words_per_minute         : 200
-comments:
-  provider               : false # false (default)
-  
+teaser                   : /images/arc42-splash-landingpage.jpg # og:image fallback via _includes/seo.html
 
+# The site has no posts and publishes no feed; hide the theme's feed <link>
+# in <head> (without this, head.html would advertise a /feed.xml that no
+# plugin generates).
 atom_feed:
-  path                   : https://it-and-more.blogspot.com
+  hide                   : true
 
-# SEO Related
-google_site_verification :
-bing_site_verification   :
-alexa_site_verification  :
-
-# Social Sharing
-
+# Social Sharing (consumed by _includes/seo.html)
 social:
   type                   : Organization # Person or Organization (defaults to Person)
   name                   : arc42 # If the user or organization name differs from the site's name
 
-# Analytics
-analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
-  google:
-    tracking_id          :
-
-
 # Site Author
 author:
   name             : "Dr. Gernot Starke"
-  avatar           : /images/Gernot-avatar-2016.jpg # path of avatar image, e.g. "/images/bio-photo.jpg"
+  avatar           : /images/Gernot-avatar-2016.jpg
   bio              : "INNOQ fellow, (co)founder of arc42, founder of aim42"
   location         : "Cologne, Germany"
   email            : info@arc42.de
   uri              : https://www.gernotstarke.de
   github           : arc42
-  google_plus      :
-  stackoverflow    :
   twitter          : arc42Tipps
-  
 
 # Reading Files
 include:
-  - .htaccess
   - _pages
   - downloads
   - robots.txt
 
+# On top of Jekyll 4's default excludes. Every entry names something that
+# exists in the repo; prune this list when the file goes.
 exclude:
-  - vendor
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
   - assets/js/plugins
   - assets/js/_main.js
   - assets/js/vendor
-  - Capfile
-  - CHANGELOG
-  - config
-  - Gemfile
-  - LICENSE
-  - log
-  - package.json
   - README.*
-  - tmp
   - Dockerfile
   - docker-compose.yml
   - docker
   - Makefile
   - netlify.toml
-  - _manage-site.sh
-  - _docker*
+  - LICENSE-theme.txt
   - "*.code-workspace"
-  - _site/
-  - _includes/subtle-ads/logo
-  - _includes/subtle-ads/*.sh
   - todo
   - PRODUCT.md
   - DESIGN.md
 
-keep_files:
-  - .git
-  - robots.txt
-  
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-
-
-# Conversion
-markdown: kramdown
-highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
-
-
-# Markdown Processing
-kramdown:
-  input: GFM
-  hard_wrap: false
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
-
-
-# Sass/SCSS
+# Sass/SCSS (style/sourcemap are non-defaults; dir _sass is the default)
 sass:
-  sass_dir: _sass
-  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: compressed
   sourcemap: never  # Jekyll 4 emits a .css.map by default; not needed for this static site
-
 
 # Collections
 collections:
@@ -147,72 +77,25 @@ collections:
     output: true
     permalink: /resources/:name/
 
-
 # Outputting
 permalink: /:categories/:title/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-
-# Plugins
+# Plugins (mirrors the Gemfile's :jekyll_plugins group). include-cache backs
+# the include_cached calls in scripts.html/default.html; sitemap.xml is what
+# robots.txt advertises. SEO tags come from the vendored _includes/seo.html,
+# not the jekyll-seo-tag plugin.
 plugins:
   - jekyll-include-cache
   - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-seo-tag
 
-
-# Archives
-#  Type
-#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
-#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
-#  Path (examples)
-#  - Archive page should exist at path when using Liquid method or you can
-#    expect broken links (especially with breadcrumbs enabled)
-#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path/my-awesome-category/index.html ~> path: /
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
-# https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
-
-
-# HTML Compression
-# - http://jch.penibelst.de/
+# HTML Compression - http://jch.penibelst.de/
 compress_html:
   clippings: all
   ignore:
     envs: development
 
-
 # Defaults
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: false
-      share: true
-      related: true
   # _resources — each item renders through the resource detail layout
   - scope:
       path: ""

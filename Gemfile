@@ -9,13 +9,13 @@ gem "jekyll", "~> 4.3"
 # 3.x) has deprecated; 2.x compiles it cleanly and without warnings.
 gem "jekyll-sass-converter", "~> 2.2"
 
+# include-cache backs the include_cached calls in the vendored theme;
+# sitemap generates the sitemap.xml that robots.txt advertises. SEO meta
+# comes from the vendored _includes/seo.html — NOT the jekyll-seo-tag
+# plugin — and the site has no posts, hence no feed and no jekyll-feed.
 group :jekyll_plugins do
   gem "jekyll-include-cache"
   gem "jekyll-sitemap"
-  gem "jekyll-feed"
-  gem "jekyll-seo-tag"
-  gem "jekyll-gist"
-  gem "jemoji"
 end
 
 group :test do
