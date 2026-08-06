@@ -120,13 +120,15 @@
 }
 
 
+/* Footer chrome is sized in px, not rem — see the note above .footer-links
+   further down. */
 .page__footer-follow {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem 1.5rem;
-  margin-bottom: 0.5rem;
+  gap: 8px 24px;
+  margin-bottom: 8px;
 }
 .footer-innoq { margin: 0; }
 .supported-by-innoq { margin-bottom: 0; }
@@ -1561,44 +1563,73 @@ a.res-card:focus-visible { outline: var(--arc42-focus-ring); outline-offset: 2px
 /* ==========================================================================
    Footer link row — plain labels separated by middots, replacing the former
    per-link FontAwesome glyphs (the site's last rendered FA usage).
+
+   Every length in this block is px on purpose. The theme's reset scales the
+   root with the viewport (16px, then 18/20/22px at 48/64/80em), so a rem
+   here is not a fixed size: 0.92rem rendered at 14.7px on a phone but 20.2px
+   on a wide desktop, while the INNOQ logo beside it stayed 110px. The rest
+   of the family (docs, faq, quality, status, trainings) sizes from a fixed
+   16px root, so the same footer looked half again too big only here. Footer
+   chrome is UI, not body copy — it does not want the reading-size ramp.
    ========================================================================== */
 .footer-links {
   list-style: none;
-  margin: 0.5rem 0 1rem;
+  margin: 8px 0 16px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: baseline;
-  column-gap: 0.6rem;
-  row-gap: 0.3rem;
+  column-gap: 10px;
+  row-gap: 5px;
 }
 /* The .page__footer-follow prefix is load-bearing here and below: the
    theme styles `.page__footer-follow li` (uppercase, $type-size-6) and
    `li + li:before { content: "" }` at equal specificity, and this file is
    cascade-hoisted ABOVE the theme (see the note in main.scss) — without
-   the extra class the theme wins. Mixed case at 0.92rem matches the docs
-   and quality footers. */
+   the extra class the theme wins. Mixed case at 15px matches the docs and
+   quality footers (0.92rem off their fixed 16px root). */
 .page__footer-follow .footer-links li {
   margin: 0;
   padding: 0;
-  font-size: 0.92rem;
+  font-size: 15px;
   text-transform: none;
 }
 .page__footer-follow .footer-links li + li::before {
   content: "\00B7"; /* · */
-  margin-right: 0.6rem;
+  margin-right: 10px;
   color: var(--arc42-slate); /* decorative separator, not text — 3:1 n/a */
 }
-.footer-links a {
-  /* Regular-weight, link-coloured labels — same treatment as the docs and
-     quality footers (navy on $lighter-gray, measured 8.9:1). */
+/* Regular-weight, link-coloured labels — same treatment as the docs and
+   quality footers (navy on $lighter-gray, measured 8.9:1).
+
+   The .page__footer-follow prefix is what makes this rule bite. Bare
+   `.footer-links a` is (0,1,1), exactly the weight of the theme's
+   `.page__footer a { color: inherit }` and `.page__footer-follow a {
+   font-weight: bold }` — and the theme is imported after this file, so a tie
+   went to the theme. The labels had been rendering muted grey and bold ever
+   since, which is not what the rule above them said. Weight is spelled out
+   rather than left to inherit for the same reason. */
+.page__footer-follow .footer-links a {
   color: var(--arc42-primary);
+  font-weight: 400;
   text-decoration: none;
 }
-.footer-links a:hover,
-.footer-links a:focus-visible {
+.page__footer-follow .footer-links a:hover,
+.page__footer-follow .footer-links a:focus-visible {
   color: var(--arc42-primary);
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+/* The copyright line under the links. footer.html has carried the
+   .footer-center / .copyright-size hooks all along, but this file never
+   declared them — the line was left to the theme's `.page__footer-copyright
+   { font-size: .6875em }`, which rode the scaling root up to 15px on a wide
+   desktop. 13px is the docs/quality maintainer line. Two classes are needed
+   to beat the theme rule, which is imported after this file. (.footer-center
+   stays undeclared on purpose — the link row is centred by its own flex and
+   the copyright line is left-aligned, which is the layout as shipped.) */
+.page__footer-copyright.copyright-size {
+  font-size: 13px;
 }
