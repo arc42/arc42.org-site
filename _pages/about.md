@@ -99,7 +99,7 @@ excerpt: "The people, history and open-source community behind arc42."
         <li><strong>{{ group.name }}</strong><span>
           {%- for t in group.items -%}
             {%- if forloop.last and forloop.first == false %} and {% elsif forloop.first == false %}, {% endif -%}
-            {%- if t.links and t.links.size > 0 -%}<a href="{{ t.links.first.url }}" rel="noopener">{{ t.name }}</a>{%- else -%}{{ t.name }}{%- endif -%}
+            {%- if t.links and t.links.size > 0 -%}<a href="{{ t.links.first.url }}" rel="noopener">{{ t.name }}</a>{%- else -%}{{ t.name }}{%- endif -%}{%- if t.note %} ({{ t.note }}){%- endif -%}
           {%- endfor -%}
         </span></li>
         {%- endfor -%}
