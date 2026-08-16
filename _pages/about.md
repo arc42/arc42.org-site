@@ -107,12 +107,19 @@ excerpt: "The people, history and open-source community behind arc42."
       <p>Additional template formats were contributed by Stephan Lessing (Doxygen), Raphael Dumhart (Enterprise Architect) and Niranjan SK (IBM Rhapsody).</p>
     </div>
   </div>
-  {%- assign translator_bios = site.data.translators | where_exp: "t", "t.bio or t.portrait" -%}
-  {%- if translator_bios.size > 0 -%}
+  {%- assign has_translator_bios = false -%}
+  {%- for t in site.data.translators -%}
+    {%- if t.bio or t.portrait -%}
+      {%- assign has_translator_bios = true -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if has_translator_bios -%}
   <div class="translator-bios">
     <h3>Meet some of our translators</h3>
     <div class="translator-grid">
-      {%- for t in translator_bios -%}
+      {%- for t in site.data.translators -%}
+      {%- if t.bio or t.portrait -%}
       {%- assign parts = t.name | split: " " -%}
       {%- assign initials = parts.first | slice: 0 -%}
       {%- if parts.size > 1 -%}{%- assign last_initial = parts.last | slice: 0 -%}{%- assign initials = initials | append: last_initial -%}{%- endif -%}
@@ -133,6 +140,7 @@ excerpt: "The people, history and open-source community behind arc42."
           {%- endif -%}
         </figcaption>
       </figure>
+      {%- endif -%}
       {%- endfor -%}
     </div>
   </div>
