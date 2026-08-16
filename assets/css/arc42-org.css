@@ -96,6 +96,10 @@
   max-width: 300px;
 }
 
+.bookcover--small {
+  max-width: 140px;
+}
+
 
 .supported-by-innoq {
   margin-bottom: 8px;
