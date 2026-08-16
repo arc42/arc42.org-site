@@ -34,7 +34,7 @@ drawer:
     children:
       - title: "Examples"
         url: /examples/
-        hint: "real-world arc42 documentation"
+        hint: "arc42-by-Example books & training"
       - title: "Resources"
         url: /resources/
         hint: "books · articles · talks · videos"
@@ -45,6 +45,9 @@ drawer:
   # arc42.de is deliberately absent here — the masthead EN/DE switcher owns it.
   - title: "arc42 elsewhere"
     children:
+      - title: "Example systems"
+        url: https://examples.arc42.org
+        hint: "examples.arc42.org · real-world arc42 documentation"
       - title: "FAQ"
         url: https://faq.arc42.org
         hint: "faq.arc42.org · using arc42 in practice"

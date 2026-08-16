@@ -2,48 +2,24 @@
 title: "arc42 Examples"
 layout: splash
 permalink: /examples/
-excerpt: "Real-world systems documented with arc42 — browse them online or in the arc42-by-Example books."
+excerpt: "Real-world systems documented with arc42: online or in the arc42-by-Example books."
 ---
 
 <section class="dl-hero">
   <div class="dl-hero__inner">
     <p class="dl-hero__kicker">Real systems &middot; real documentation</p>
     <h1 class="dl-hero__title">Examples</h1>
-    <p class="dl-hero__sub">The best way to learn arc42 is to see it in action: complete architecture documentation of real-world systems — free online, and in the <strong>arc42-by-Example</strong> books.</p>
+    <p class="dl-hero__sub">The best way to learn arc42 is to see it in action: complete architecture documentation of real-world systems: free online, and in the <strong>arc42-by-Example</strong> books.</p>
   </div>
 </section>
 
 ## Online examples
 
-<div class="card-grid">
+Browse real-world systems documented with arc42 — reviewed, hosted, and searchable — at **[examples.arc42.org](https://examples.arc42.org)**.
 
-  <a class="res-card" href="https://hsc.aim42.org">
-    <p class="res-card__title">HTML Sanity Checker</p>
-    <p class="res-card__text">Verbose documentation of a Gradle plugin that checks HTML files for broken links and images. Created by Gernot Starke.</p>
-    <p class="res-card__tags"><span class="res-tag">English</span> <span class="res-tag">Online docs</span> <span class="res-tag">Gradle plugin</span></p>
-  </a>
+<a href="https://examples.arc42.org" class="btn btn--arc42-outline" rel="noopener">Browse examples &#8594;</a>
 
-  <a class="res-card" href="https://www.dokchess.de/dokchess/arc42/">
-    <p class="res-card__title">DokChess</p>
-    <p class="res-card__text">Verbose documentation of a chess engine, created by Stefan Zörner — a book (in German) describes how this example was written.</p>
-    <p class="res-card__tags"><span class="res-tag">German</span> <span class="res-tag">Online docs</span> <span class="res-tag">Java</span></p>
-  </a>
-
-  <a class="res-card" href="https://biking.michael-simons.eu/docs/index.html">
-    <p class="res-card__title">Biking</p>
-    <p class="res-card__text">A real-world bike-activity tracker, documented by its author Michael Simons.</p>
-    <p class="res-card__tags"><span class="res-tag">English</span> <span class="res-tag">Online docs</span> <span class="res-tag">Java</span> <span class="res-tag">Spring Boot</span></p>
-  </a>
-
-  <a class="res-card" href="https://www.embarc.de/arc42-starschnitt-gradle/">
-    <p class="res-card__title">Gradle "Starschnitt"</p>
-    <p class="res-card__text">A series of blog posts examining aspects of the Gradle build system in the context of arc42. Created by Stefan Zörner.</p>
-    <p class="res-card__tags"><span class="res-tag">German</span> <span class="res-tag">Blog series</span> <span class="res-tag">Gradle</span></p>
-  </a>
-
-</div>
-
-Would you like your system listed here? [Contact us](/about/#contact).
+Would you like your system listed there? See [how to contribute](https://examples.arc42.org/contribute/).
 
 ## In book form
 
@@ -55,13 +31,20 @@ Each example starts from the problem domain and quality requirements, walks thro
 
 <a href="https://leanpub.com/arc42byexample" class="btn btn--arc42-outline" rel="noopener">Read on Leanpub</a>
 
+![arc42 by Example, Volume 2 book cover](/images/books/arc42byexample-Title300.png){: .align-right .bookcover--small}
+
 For *embedded systems and IoT*, [arc42 by Example Volume 2](/resources/?type=book#arc42-by-example-vol2) by Peter Hruschka, Ivan Kostov and Wolfgang Reimesch adds two documented hardware/software co-design architectures.
+
+<a href="https://leanpub.com/arc42byexample-volume2" class="btn btn--arc42-outline" rel="noopener">Read on Leanpub</a>
+
+<div class="cf"></div>
 
 <div class="training-section" markdown="1">
 
 ## Learn arc42 in a training
 
-We teach arc42 and modern software architecture in iSAQB-certified Foundation trainings — on-site and remote. Upcoming dates:
+We teach arc42 and modern software architecture in iSAQB-certified Foundation trainings, both on-site and online. 
+Upcoming dates:
 
 {% include subtle-ads/subtle-ads.html %}
 
