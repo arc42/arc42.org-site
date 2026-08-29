@@ -18,7 +18,7 @@
 - **SCSS imports**: Use `@import` statements, follow existing structure in `assets/css/main.scss`
 - **File naming**: Use kebab-case for files (e.g., `about-us.md`)
 - **Images**: Store in `/images/` with descriptive paths, prefer `.webp` format
-- **Liquid templates**: Use `{% %}` for logic, `{{ }}` for output
+- **Liquid templates**: Use `{% raw %}{% %}{% endraw %}` for logic, `{% raw %}{{ }}{% endraw %}` for output
 - **YAML**: Use 2-space indentation, quote strings with special characters
 - **URLs**: Use relative paths starting with `/` for internal links
 

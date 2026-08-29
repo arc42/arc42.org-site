@@ -1,24 +1,19 @@
 <div class="page__footer-follow footer-center">
   <p class="footer-innoq">
-    <a href="https://www.innoq.com" target="_blank" rel="noopener noreferrer nofollow"><img class="supported-by-innoq" src="/images/supported-by-innoq.svg" alt="Supported by INNOQ"></a>
+    <a href="https://www.innoq.com" target="_blank" rel="noopener noreferrer nofollow"><img class="supported-by-innoq" src="/images/supported-by-innoq.svg" alt="Supported by INNOQ" width="110" height="24"></a>
   </p>
 
-  {%- comment -%} Plain text links with dot separators (styled in
-      arc42-org.css). The former per-link FontAwesome glyphs were the ONLY
-      FontAwesome usage that ever rendered on this site — dropping them
-      let us delete the vendored 72 KB all.css + 2.8 MB webfonts entirely.
-      The labels carry the meaning; the icons only added noise at this
-      size. {%- endcomment -%}
   <ul class="footer-links">
     <li><a href="{{ '/about/' | relative_url }}">About</a></li>
     <li><a href="{{ '/about/#contact' | relative_url }}">Contact</a></li>
     <li><a href="{{ '/license/' | relative_url }}">License</a></li>
     <li><a href="{{ '/imprint/' | relative_url }}">Imprint &amp; Privacy</a></li>
+    <li><a href="https://status.arc42.org/">Status</a></li>
     <li><a href="https://github.com/arc42">GitHub</a></li>
   </ul>
 </div>
 
 <div class="page__footer-copyright footer-center copyright-size">
-  &copy; {{ site.time | date: '%Y' }} Dr. Peter Hruschka and Dr. Gernot Starke. <br class="mobile">
-  Supported by <a href="https://kroener-starke.ch/">Kröner & Starke</a>.
+  &copy; 2003&ndash;{{ site.time | date: '%Y' }} arc42. Created by Peter Hruschka &amp; Gernot Starke. Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer nofollow">CC BY-SA 4.0</a>. Supported by <a href="https://kroener-starke.ch/projekte/" target="_blank" rel="noopener noreferrer">Kröner &amp; Starke</a>.
 </div>
+
