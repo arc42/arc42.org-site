@@ -17,6 +17,14 @@ make build     # build the dev image once (installs the pinned gems — needs ne
 make dev       # start Jekyll with live reload at http://localhost:4000
 ```
 
+`make dev` serves on **4000**. arc42.org is the one site in the family that keeps
+Jekyll's default port; every sibling site has its own so their dev servers can run
+side by side — see `raw/port-assignment.md` in meta.arc42.org for the full
+assignment. The number is stated explicitly in three places rather than inherited
+from Jekyll's default, so it stays honest if this site ever moves: `SITE_PORT` in
+the `Makefile`, the mapping plus `--port` in `docker-compose.yml`, and
+`EXPOSE`/`CMD` in the `Dockerfile`.
+
 Everything after the first `make build` works **fully offline** (e.g. on a train): the
 gems are baked into the Docker image and the theme is vendored into the repo, so no
 build step reaches out to the network.
