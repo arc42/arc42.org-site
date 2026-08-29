@@ -62,6 +62,7 @@ exclude:
   - todo
   - PRODUCT.md
   - DESIGN.md
+  - AGENTS.md
 
 # Sass/SCSS (style/sourcemap are non-defaults; dir _sass is the default)
 sass:

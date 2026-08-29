@@ -176,7 +176,7 @@ Nous sommes heureux d'annoncer la disponibilité de la version française d'arc4
 We are so happy to announce the Czech version of arc42 — thanks to Jakub RC. You rock!
 
 {: .notice}
-We are incredibly happy to announce the Ukrainian version of arc42 — thanks to Ivan Bulyk and support from [Larysa Visengeriyeva](https://twitter.com/visenger).
+We are incredibly happy to announce the Ukrainian version of arc42 — thanks to an anonymous author, supported by [Larysa Visengeriyeva](https://twitter.com/visenger).
 
 {: .notice}
 Thanks to Guilherme Weizenmann for the Portuguese translation, and to Pedro Mattiollo for the constructive review. Você é incrível!

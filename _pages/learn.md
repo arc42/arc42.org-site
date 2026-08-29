@@ -55,7 +55,7 @@ Everything you need to learn arc42 is freely available. Pick what suits your lea
 
 We are founding members of the iSAQB association and have actively participated in its standardization working groups ever since. Since 2016, Gernot Starke serves as lead of the iSAQB task force for the Foundation Level curriculum.
 
-Peter and Gernot have trained and coached more than 2000 now-certified software architecture professionals, in both inhouse and public seminars. Their well-known workshop [Mastering Software Architectures](https://trainings.arc42.org) coaches developers, designers and architects in the systematic development, communication and evaluation of software architectures.
+Peter and Gernot have trained and coached more than 2000 now-certified software architecture professionals, in both inhouse and public seminars. Their well-known workshop [Mastering Software Architectures](https://trainings.arc42.org/courses/msa/) coaches developers, designers and architects in the systematic development, communication and evaluation of software architectures.
 
 They pioneered the *dual-trainer* mode, in which two experienced trainers teach in parallel. Their backgrounds complement each other: Peter comes from embedded and real-time systems, Gernot from information, web and batch systems, so participants get first-hand experience from both worlds.
 
