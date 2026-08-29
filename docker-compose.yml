@@ -10,12 +10,17 @@ services:
       - .:/site
       - jekyll_cache:/site/.jekyll-cache
       - sass_cache:/site/.sass-cache
+    # 4000 is this site's fixed dev port — arc42.org is the one site that keeps
+    # Jekyll's default; every sibling has its own (see raw/port-assignment.md
+    # in meta.arc42.org). --port is passed explicitly so the number is stated
+    # rather than inherited, and Jekyll's "Server address:" startup banner
+    # keeps naming the real port if this ever moves.
     ports:
       - '4000:4000'
     # No --incremental: full rebuild on change (~2.5s). Incremental silently
     # leaves stale/relocated output when permalinks or front matter change.
     command: >
-      sh -c "bundle exec jekyll serve --host 0.0.0.0 --watch $${POLLING}"
+      sh -c "bundle exec jekyll serve --host 0.0.0.0 --port 4000 --watch $${POLLING}"
 
 volumes:
   jekyll_cache:
