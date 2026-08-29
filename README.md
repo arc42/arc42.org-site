@@ -178,9 +178,15 @@ The training block (`_includes/subtle-ads/subtle-ads.html`, embedded on five
 pages: home, learn, documentation, examples, download) is rendered at build
 time from `_data/trainings.json` — an expiry-filtered copy of
 <https://trainings.arc42.org/api/trainings.json> that
-`.github/workflows/refresh-trainings.yml` refreshes weekly (Mondays 05:47 UTC,
-or manually via workflow dispatch) and commits only when the dates actually
-changed. Edit dates in the trainings repo's `_data/trainings.yml`, never here;
+`.github/workflows/refresh-trainings.yml` refreshes and commits only when the
+dates actually changed. The workflow runs on three triggers: a weekly cron
+(Mondays 05:47 UTC), manual workflow dispatch, and a `repository_dispatch`
+event (`trainings-updated`) that the trainings repo pushes right after the
+feed republishes — so date changes propagate within minutes instead of waiting
+up to a week. The push is an **accelerator, never a dependency** (ADR-0006 in
+meta.arc42.org): if it never arrives, the cron still bounds staleness at one
+week, and a failed fetch simply leaves the last committed snapshot in place.
+Edit dates in the trainings repo's `_data/trainings.yml`, never here;
 `_includes/subtle-ads/subtle-ads.html` owns the rendering,
 `assets/css/subtle-ad.css` the styling. This replaced the former runtime htmx
 fetch from the Vercel fragment backend (see the integration spec in the arc42
