@@ -7,7 +7,11 @@
 {% assign title_separator = site.title_separator | default: '-' | replace: '|', '&#124;' %}
 
 {%- if page.title -%}
-  {%- assign seo_title = page.title | append: " " | append: title_separator | append: " " | append: site.title -%}
+  {%- if page.title == site.title -%}
+    {%- assign seo_title = site.title -%}
+  {%- else -%}
+    {%- assign seo_title = page.title | append: " " | append: title_separator | append: " " | append: site.title -%}
+  {%- endif -%}
 {%- endif -%}
 
 {%- if seo_title -%}
@@ -40,6 +44,9 @@
 
 {%- assign site_og_image = site.og_image | absolute_url -%}
 {%- assign site_og_image = site_og_image | escape -%}
+
+{%- assign site_logo = site.logo | default: site.og_image | absolute_url -%}
+{%- assign site_logo = site_logo | escape -%}
 
 {%- comment -%}
   No page on this site has a real date: front matter carries none, and Jekyll
@@ -119,8 +126,9 @@
     "@context": "https://schema.org",
     {% if site.social.type == "Organization" %}
       "@type": "Organization",
-      "url": {{ '/' | absolute_url | jsonify }}{% if site.og_image %},
-      "logo": {{ site_og_image | jsonify }}{% endif %}
+      "name": {{ site.social.name | default: site.name | jsonify }},
+      "url": {{ '/' | absolute_url | jsonify }}{% if site.logo or site.og_image %},
+      "logo": {{ site_logo | jsonify }}{% endif %}
     {% else %}
       "@type": "Person",
       "name": {{ site.social.name | default: site.name | jsonify }},

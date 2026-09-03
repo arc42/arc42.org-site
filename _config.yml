@@ -15,7 +15,9 @@ name                     : "Dr. Gernot Starke"
 description              : "Resources for software architects."
 url                      : "https://arc42.org" # the base hostname & protocol for your site
 repository               : "arc42/arc42.org-site" # GitHub username/repo-name
-teaser                   : /images/arc42-splash-landingpage.jpg # og:image fallback via _includes/seo.html
+teaser                   : /images/splash/arc42-splash-landingpage.jpg # read by archive-single.html and lunr-store.js
+og_image                 : /images/splash/arc42-splash-landingpage.jpg # og:image fallback via _includes/seo.html
+logo                     : /assets/ARC42_black.svg # schema.org Organization logo (dark variant: renders on white)
 
 # The site has no posts and publishes no feed; hide the theme's feed <link>
 # in <head> (without this, head.html would advertise a /feed.xml that no
