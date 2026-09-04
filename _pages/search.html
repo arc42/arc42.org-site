@@ -10,17 +10,10 @@ permalink: /search/
 <div id="search-container">
   <label class="visually-hidden" for="search-input">Search arc42</label>
   <input type="text" id="search-input" placeholder="Search books, examples, docs…">
-  <ul id="results-container"></ul>
+  <!-- polite: results are rewritten on every keystroke, so an assertive region
+       would interrupt the screen reader mid-word while the user is still typing -->
+  <ul id="results-container" aria-live="polite"></ul>
 </div>
 
-<!-- Script pointing to search-script.js -->
-<script src="/search-script.js" type="text/javascript"></script>
-
-<!-- Configuration -->
-<script>
-SimpleJekyllSearch({
-  searchInput: document.getElementById('search-input'),
-  resultsContainer: document.getElementById('results-container'),
-  json: '/search.json'
-})
-</script>
+<!-- Search: word-start matching and scored results, reading /search.json -->
+<script src="/assets/js/arc42-search.js" type="text/javascript"></script>
