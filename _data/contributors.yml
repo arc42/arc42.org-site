@@ -1,8 +1,9 @@
-# Further arc42 contributors (arc42-template repo) with more than one contribution,
-# excluding the founders/core people featured above and everyone already credited in
-# the translator list. Rendered on /about (#community) as a "with thanks to" roll.
+# Further arc42 contributors across the arc42 repositories (template, site), excluding
+# the founders/core people featured above and everyone already credited in the
+# translator list. Rendered on /about (#community) as a "with thanks to" roll.
 #
-# Fields: name (required), github (optional login for the profile link).
+# Fields: name (required), url (optional link, wins over github), github (optional
+# login, linked as a GitHub profile).
 # Where no real name is published, the GitHub handle is used as the name.
 
 - name: "Gerd Aschemann"
@@ -19,6 +20,8 @@
   github: "plafue"
 - name: "Per Starke"
   github: "Per-Starke"
+- name: "tecnovy"
+  url: "https://tecnovy.com"
 - name: "Martin Weck"
   github: "martinweck"
 - name: "Benjamin Wolf"

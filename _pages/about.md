@@ -149,7 +149,7 @@ excerpt: "The people, history and open-source community behind arc42."
   <div class="about-thanks">
     <h3>With thanks to our contributors</h3>
     <p>Beyond translations, many more people have improved the arc42 template, its formats and tooling over the years:
-      {% for c in site.data.contributors %}{% if c.github %}<a href="https://github.com/{{ c.github }}" rel="noopener">{{ c.name }}</a>{% else %}{{ c.name }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}.</p>
+      {% for c in site.data.contributors %}{% assign c_url = c.url %}{% if c_url == nil and c.github %}{% assign c_url = c.github | prepend: "https://github.com/" %}{% endif %}{% if c_url %}<a href="{{ c_url }}" rel="noopener">{{ c.name }}</a>{% else %}{{ c.name }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}.</p>
   </div>
   {%- endif -%}
 </section>
