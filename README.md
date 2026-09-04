@@ -172,13 +172,32 @@ Styles live under `.translator-grid` / `.translator-card` in
 this is a section of an existing page, not a new URL.
 
 ## How does the search page work?
-The search uses the [Simple-Jekyll-Search Javascript Function](https://github.com/christian-fei/Simple-Jekyll-Search),
-Copyright 2015-2020, Christian Fei, licensed under the MIT License.  
-This function is available in the [search-script.js file](search-script.js).  
-In the [search.json file](search.json), all content we want to include within the search is converted into 
-key-value pairs which can then be easily read by the search script.  
-In [search.html](_pages/search.html), we create the page that shows the search box and results, using the 
-script and the json, and with that, the search is ready. 
+
+Three pieces, no dependencies:
+
+- [`search.json`](search.json) builds the index at compile time — one entry per page
+  that has a real front-matter title, which is also what keeps the redirect stubs in
+  `_pages/` and the asset templates out of it. Roughly 14 entries.
+- [`assets/js/arc42-search.js`](assets/js/arc42-search.js) fetches that index and does
+  the matching and ranking in the browser.
+- [`_pages/search.html`](_pages/search.html) is the page itself: a search box, a results
+  list, and a `<script>` tag.
+
+Two rules in the matcher are worth knowing before you change it:
+
+**Terms match only at the start of a word.** A plain substring test makes `c4` match
+every page mentioning arc42 — "ar**c4**2" — which is what the previous implementation
+did, returning 13 of 14 pages. Prefix typing still works, so `archi` finds
+"architecture". The boundary is expressed as `(?:^|[^a-z0-9])` rather than a `(?<!…)`
+lookbehind, because Safari only gained lookbehind in 16.4.
+
+**Results are scored, not just filtered.** Title hits count 10, URL hits 4, body hits 1
+each up to 5 per term, with ties broken by title so ordering is stable between builds.
+Without this the results arrive in Jekyll's page-emission order, which put the
+20-years blog post above `/canvas/` for the query "canvas".
+
+This replaced Simple-Jekyll-Search, which could do neither: its matcher was a raw
+`field.indexOf(term)` and its sort comparator returned a constant `0`. 
 
 ## Training dates
 
