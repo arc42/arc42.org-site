@@ -14,16 +14,16 @@ All development runs in Docker — **no local Ruby, Bundler, or Jekyll needed**,
 
 ```bash
 make build     # build the dev image once (installs the pinned gems — needs network)
-make dev       # start Jekyll with live reload at http://localhost:4000
+make dev       # start Jekyll with live reload at http://localhost:4200
 ```
 
-`make dev` serves on **4000**. arc42.org is the one site in the family that keeps
-Jekyll's default port; every sibling site has its own so their dev servers can run
-side by side — see `raw/port-assignment.md` in meta.arc42.org for the full
-assignment. The number is stated explicitly in three places rather than inherited
-from Jekyll's default, so it stays honest if this site ever moves: `SITE_PORT` in
-the `Makefile`, the mapping plus `--port` in `docker-compose.yml`, and
-`EXPOSE`/`CMD` in the `Dockerfile`.
+`make dev` serves on **4200**, the first slot in the arc42 `42xx` block. Every
+site in the family has its own fixed port so their dev servers can run side by
+side — see `raw/port-assignment.md` in meta.arc42.org for the full assignment.
+The number is stated explicitly in three places rather than inherited from
+Jekyll's default, so it stays honest if this site ever moves: `SITE_PORT` in the
+`Makefile`, the mapping plus `--port` in `docker-compose.yml`, and `EXPOSE`/`CMD`
+in the `Dockerfile`.
 
 Everything after the first `make build` works **fully offline** (e.g. on a train): the
 gems are baked into the Docker image and the theme is vendored into the repo, so no
@@ -34,7 +34,7 @@ build step reaches out to the network.
 | Command           | What it does                                                              |
 | ----------------- | ------------------------------------------------------------------------ |
 | `make help`       | List all targets.                                                        |
-| `make dev`        | Start the dev server with live reload at http://localhost:4000.          |
+| `make dev`        | Start the dev server with live reload at http://localhost:4200.          |
 | `make build`      | Build the `arc42-site:latest` Docker image from the pinned gems.         |
 | `make site`       | Generate the static site into `_site/`.                                  |
 | `make check-links`| Build, then validate internal links/images/HTML with html-proofer.      |

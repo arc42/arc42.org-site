@@ -4,14 +4,14 @@
 # servers can run side by side; see raw/port-assignment.md in meta.arc42.org.
 # Changing it here is not enough: docker-compose.yml and the Dockerfile pass
 # the same number to Jekyll so its startup banner names the real port.
-SITE_PORT ?= 4000
+SITE_PORT ?= 4200
 
 .PHONY: help dev build stop site check-links clean install update shell logs
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2}'
 
-dev: ## Start the local Jekyll dev server with live reload (http://localhost:4000)
+dev: ## Start the local Jekyll dev server with live reload (http://localhost:4200)
 	@echo "==> Open http://localhost:$(SITE_PORT)  (NOT http://0.0.0.0:$(SITE_PORT) — Firefox refuses to connect to 0.0.0.0)"
 	@docker compose down --remove-orphans >/dev/null 2>&1 || true
 	@holder=$$(docker ps --filter "publish=$(SITE_PORT)" --format '{{.Names}}'); \
