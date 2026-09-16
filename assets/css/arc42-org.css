@@ -1631,9 +1631,11 @@ a.res-card:focus-visible { outline: var(--arc42-focus-ring); outline-offset: 2px
    declared them — the line was left to the theme's `.page__footer-copyright
    { font-size: .6875em }`, which rode the scaling root up to 15px on a wide
    desktop. 13px is the docs/quality maintainer line. Two classes are needed
-   to beat the theme rule, which is imported after this file. (.footer-center
-   stays undeclared on purpose — the link row is centred by its own flex and
-   the copyright line is left-aligned, which is the layout as shipped.) */
+   to beat the theme rule, which is imported after this file. The line is
+   centred to match arc42.de. (.footer-center stays undeclared on purpose —
+   arc42.de's version also shrinks the link row to 80%; the link row here is
+   centred by its own flex.) */
 .page__footer-copyright.copyright-size {
   font-size: 13px;
+  text-align: center;
 }
