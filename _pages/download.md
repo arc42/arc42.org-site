@@ -23,8 +23,11 @@ excerpt: "Version 9 — the most practical and effective arc42 ever. Every forma
 {% comment %} lang code, full name, template version, release date — per language
    (source of truth: <lang>/version.properties in the arc42-template repo) {% endcomment %}
 {% assign lang_data = "EN,English,9.0,Jul 2025|DE,Deutsch,9.1,Dec 2025|FR,Français,9.0,Apr 2025|CZ,Čeština,9.0,Jan 2025|ZH,简体中文,9.0,Jul 2025|HU,Magyar,9.0,May 2026|ES,Español,8.2,Jan 2023|IT,Italiano,8.2,Mar 2023|NL,Nederlands,8.2,Mar 2023|PT,Português,8.2,Sep 2024|RU,Русский,8.2,Jan 2023|UKR,Українська,8.2,Jan 2023" | split: "|" %}
-{% assign fmt_ids = "asciidoc|markdown|docx|markdownMP|gitHubMarkdown|latex|rst|textile|html|markdownStrict|markdownMPStrict|gitHubMarkdownMP" | split: "|" %}
-{% assign fmt_labels = "AsciiDoc|Markdown|Word (.docx)|Markdown · multi-page|GitHub Markdown|LaTeX|reStructuredText|Textile|HTML|Markdown · strict|Markdown MP · strict|GitHub Markdown · MP" | split: "|" %}
+{% assign fmt_ids = "asciidoc|markdown|docx|markdownMP|gitHubMarkdown|latex|rst|textile|html|markdownStrict|markdownMPStrict|gitHubMarkdownMP|docbook|epub|pdf" | split: "|" %}
+{% assign fmt_labels = "AsciiDoc|Markdown|Word (.docx)|Markdown · multi-page|GitHub Markdown|LaTeX|reStructuredText|Textile|HTML|Markdown · strict|Markdown MP · strict|GitHub Markdown · MP|DocBook|EPUB|PDF" | split: "|" %}
+{% comment %} formats shown but not yet published by the generator — download buttons stay disabled.
+   Remove an id once its zips exist in dist/. {% endcomment %}
+{% assign fmt_soon = "pdf" | split: "|" %}
 
 <div class="dlb" data-prefix="{{ PREFIX }}">
   <div class="dlb__pane dlb__pane--choose">
@@ -34,7 +37,7 @@ excerpt: "Version 9 — the most practical and effective arc42 ever. Every forma
     </div>
     <p class="dlb__step">2 &middot; Choose format</p>
     <div class="dlb__fmts" role="group" aria-label="Format">
-      {% for f in fmt_ids %}<button type="button" class="dlb__fmt{% if forloop.first %} is-active{% endif %}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" data-fmt="{{ f }}" data-label="{{ fmt_labels[forloop.index0] }}">{{ fmt_labels[forloop.index0] }}</button>{% endfor %}
+      {% for f in fmt_ids %}<button type="button" class="dlb__fmt{% if forloop.first %} is-active{% endif %}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" data-fmt="{{ f }}" data-label="{{ fmt_labels[forloop.index0] }}"{% if fmt_soon contains f %} data-soon="true"{% endif %}>{{ fmt_labels[forloop.index0] }}</button>{% endfor %}
     </div>
   </div>
 
@@ -152,6 +155,15 @@ We don't support additional modelling tools yet, but we'd love to. If you use ar
 
 **rst**
 : [reStructuredText](https://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html), heavily used by [Read the Docs](https://readthedocs.org/) and in the Python world.
+
+**docbook**
+: [DocBook](https://docbook.org/) XML — the intermediate format most other formats are generated from, useful for your own tool chains.
+
+**epub**
+: E-book format, for _reading_ the template on e-readers and tablets.
+
+**pdf**
+: For _reading_ or printing the template, not for working with it. (Coming soon.)
 
 **textile**
 : Another simple markup language, documented at [textile-lang.com](https://textile-lang.com/).
