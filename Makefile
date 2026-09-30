@@ -38,7 +38,7 @@ check-links: site ## Validate internal links, images, and HTML in the built _sit
 	docker compose run --rm jekyll bundle exec htmlproofer ./_site --disable-external --allow-hash-href --ignore-urls '/^\/dl\//'
 
 sync-downloads: build ## Write _data/downloads.yml (languages, formats) from manifest.json of the latest arc42-template release
-	docker compose run --rm --no-deps jekyll ruby _scripts/sync-downloads.rb
+	docker compose run --rm --no-deps -e ALLOW_FEWER -e MANIFEST_URL jekyll ruby _scripts/sync-downloads.rb
 
 clean: ## Remove generated _site AND the Docker cache volumes (a true reset)
 	rm -rf _site .sass-cache .jekyll-cache .jekyll-metadata

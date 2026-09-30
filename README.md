@@ -137,9 +137,19 @@ and format buttons from [`_data/downloads.yml`](_data/downloads.yml). That file 
 **generated** from `manifest.json` of the latest
 [arc42-template release](https://github.com/arc42/arc42-template/releases/latest) — don't edit it by hand:
 
+The workflow [`refresh-downloads.yml`](.github/workflows/refresh-downloads.yml) does this
+on its own: right after a template release (`repository_dispatch` `template-released`,
+sent by `make release` in arc42-generator) and every Monday as a safety net. It commits
+the changed file to `main`. By hand, e.g. to check a release before the workflow runs:
+
 ```sh
-make sync-downloads   # after every template release; commit the changed _data/downloads.yml
+make sync-downloads   # then commit the changed _data/downloads.yml
 ```
+
+The sync refuses to write when a release lists **fewer** languages or formats than the
+page; after removing one on purpose, run `ALLOW_FEWER=1 make sync-downloads`. Dates show
+as "Sep 2026" when the manifest carries `isoDate`, otherwise as the template's own
+localised `revdate`.
 
 The downloads go through the site's own URLs: `/dl/<file>` redirects to the latest
 template release, `/dl/tools/<file>` to the tools release (see [`netlify.toml`](netlify.toml)).
@@ -151,12 +161,11 @@ first, then newest template version; formats in `FORMAT_ORDER`, unknown ones at 
 
 ### Add a language
 
-1. Once the generator has published a release with the new language, run
-   `make sync-downloads` and commit. The counts on the home, About and download pages
-   follow automatically.
-2. By hand: the language count in the download page's `excerpt` (front matter, no
-   Liquid there), the version history on the download page, and the translator credits
-   in [`_data/translators.yml`](_data/translators.yml) (see below).
+1. Nothing for the buttons: once the generator has published a release with the new
+   language, the workflow adds it (or run `make sync-downloads`). The counts on the home,
+   About and download pages follow automatically.
+2. By hand: the version history on the download page and the translator credits in
+   [`_data/translators.yml`](_data/translators.yml) (see below).
 
 ## Translators (About page)
 
