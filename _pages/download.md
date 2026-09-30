@@ -12,43 +12,40 @@ excerpt: "Version 9 — the most practical and effective arc42 ever. Every forma
 
 <section class="dl-hero">
   <div class="dl-hero__inner">
-    <p class="dl-hero__kicker">13 languages · every format</p>
+    <p class="dl-hero__kicker">{{ site.data.downloads.languages.size }} languages · every format</p>
     <h1 class="dl-hero__title">Download arc42</h1>
-    <p class="dl-hero__sub">Build your download — pick a language and a format, <strong>plain</strong> or <strong>with help</strong>. Thirteen languages, every common format, free and open source.</p>
+    <p class="dl-hero__sub">Build your download — pick a language and a format, <strong>plain</strong> or <strong>with help</strong>. {{ site.data.downloads.languages.size }} languages, every common format, free and open source.</p>
   </div>
 </section>
 
-{% assign PREFIX = "https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-" %}
-{% assign GITHUBDIR = "https://github.com/arc42/arc42-template/raw/master/dist/" %}
-{% comment %} lang code, full name, template version, release date — per language
-   (source of truth: <lang>/version.properties in the arc42-template repo) {% endcomment %}
-{% assign lang_data = "EN,English,9.0,Jul 2025|DE,Deutsch,9.1,Dec 2025|FR,Français,9.0,Apr 2025|CZ,Čeština,9.0,Jan 2025|ZH,简体中文,9.0,Jul 2025|ZH-TW,繁體中文,9.0,Sep 2026|HU,Magyar,9.0,May 2026|ES,Español,8.2,Jan 2023|IT,Italiano,8.2,Mar 2023|NL,Nederlands,8.2,Mar 2023|PT,Português,8.2,Sep 2024|RU,Русский,8.2,Jan 2023|UKR,Українська,8.2,Jan 2023" | split: "|" %}
-{% assign fmt_ids = "asciidoc|markdown|docx|markdownMP|gitHubMarkdown|latex|rst|textile|html|markdownStrict|markdownMPStrict|gitHubMarkdownMP|docbook|epub|pdf" | split: "|" %}
-{% assign fmt_labels = "AsciiDoc|Markdown|Word (.docx)|Markdown · multi-page|GitHub Markdown|LaTeX|reStructuredText|Textile|HTML|Markdown · strict|Markdown MP · strict|GitHub Markdown · MP|DocBook|EPUB|PDF" | split: "|" %}
-{% comment %} languages / formats shown but not yet published by the generator — download buttons stay disabled.
-   Remove a code once its zips exist in dist/. {% endcomment %}
-{% assign lang_soon = "" | split: "|" %}
-{% assign fmt_soon = "" | split: "|" %}
+{% comment %} Files are served through the site's own URLs: netlify.toml redirects /dl/<file> to the
+   latest arc42-template release on GitHub and /dl/tools/<file> to the tools release. Languages and
+   formats come from _data/downloads.yml, generated from the release's manifest.json: make sync-downloads {% endcomment %}
+{% assign PREFIX = "/dl/arc42-template-" %}
+{% assign TOOLS = "/dl/tools/" %}
+{% assign dl = site.data.downloads %}
+{% assign first_lang = dl.languages | first %}
+{% assign first_fmt = dl.formats | first %}
 
 <div class="dlb" data-prefix="{{ PREFIX }}">
   <div class="dlb__pane dlb__pane--choose">
     <p class="dlb__step">1 &middot; Choose language</p>
     <div class="dlb__langs" role="group" aria-label="Language">
-      {% for item in lang_data %}{% assign p = item | split: "," %}<button type="button" class="dlb__lang{% if forloop.first %} is-active{% endif %}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" data-lang="{{ p[0] }}" data-full="{{ p[1] }}" data-version="{{ p[2] }}" data-date="{{ p[3] }}"{% if lang_soon contains p[0] %} data-soon="true"{% endif %}>{{ p[0] }}</button>{% endfor %}
+      {% for l in dl.languages %}<button type="button" class="dlb__lang{% if forloop.first %} is-active{% endif %}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" data-lang="{{ l.code }}" data-full="{{ l.name }}" data-version="{{ l.version }}" data-date="{{ l.date }}">{{ l.code }}</button>{% endfor %}
     </div>
     <p class="dlb__step">2 &middot; Choose format</p>
     <div class="dlb__fmts" role="group" aria-label="Format">
-      {% for f in fmt_ids %}<button type="button" class="dlb__fmt{% if forloop.first %} is-active{% endif %}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" data-fmt="{{ f }}" data-label="{{ fmt_labels[forloop.index0] }}"{% if fmt_soon contains f %} data-soon="true"{% endif %}>{{ fmt_labels[forloop.index0] }}</button>{% endfor %}
+      {% for f in dl.formats %}<button type="button" class="dlb__fmt{% if forloop.first %} is-active{% endif %}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" data-fmt="{{ f.id }}" data-label="{{ f.label }}">{{ f.label }}</button>{% endfor %}
     </div>
   </div>
 
   <div class="dlb__pane dlb__result" aria-live="polite">
     <p class="dlb__rlabel">Your download</p>
-    <p class="dlb__combo" id="dlb-combo">arc42 &middot; English &middot; AsciiDoc</p>
-    <p class="dlb__meta" id="dlb-meta">Version 9.0 (Jul 2025) · free &amp; open source</p>
+    <p class="dlb__combo" id="dlb-combo">arc42 &middot; {{ first_lang.name }} &middot; {{ first_fmt.label }}</p>
+    <p class="dlb__meta" id="dlb-meta">Version {{ first_lang.version }} ({{ first_lang.date }}) · free &amp; open source</p>
     <p class="dlb__buttons">
-      <a class="btn btn--arc42 btn--large" id="dlb-plain" href="{{ PREFIX }}EN-plain-asciidoc.zip"><span aria-hidden="true">&#8595;</span> Plain .zip</a>
-      <a class="btn btn--arc42-outline btn--large" id="dlb-help" href="{{ PREFIX }}EN-withhelp-asciidoc.zip"><span aria-hidden="true">&#8595;</span> With help .zip</a>
+      <a class="btn btn--arc42 btn--large" id="dlb-plain" href="{{ PREFIX }}{{ first_lang.code }}-plain-{{ first_fmt.id }}.zip"><span aria-hidden="true">&#8595;</span> Plain .zip</a>
+      <a class="btn btn--arc42-outline btn--large" id="dlb-help" href="{{ PREFIX }}{{ first_lang.code }}-withhelp-{{ first_fmt.id }}.zip"><span aria-hidden="true">&#8595;</span> With help .zip</a>
     </p>
     <p class="dlb__hint"><strong>With help</strong> embeds the official arc42 explanations in every section — ideal when you're new to the template. <strong>Plain</strong> gives you the bare structure.</p>
   </div>
@@ -68,8 +65,8 @@ Confluence versions are generated **with help** and come in two flavours:
 
 | Language | flat | structured |
 |----------|------|------------|
-| DE | [.zip]({{PREFIX}}DE-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}DE-withhelp-confluenceStructured.zip) |
-| EN | [.zip]({{PREFIX}}EN-withhelp-confluenceFlat.zip) | [.zip]({{PREFIX}}EN-withhelp-confluenceStructured.zip) |
+| DE | [.zip]({{TOOLS}}arc42-template-DE-withhelp-confluenceFlat.zip) | [.zip]({{TOOLS}}arc42-template-DE-withhelp-confluenceStructured.zip) |
+| EN | [.zip]({{TOOLS}}arc42-template-EN-withhelp-confluenceFlat.zip) | [.zip]({{TOOLS}}arc42-template-EN-withhelp-confluenceStructured.zip) |
 
 These are based on an older template version — generating Confluence from AsciiDoc for the latest versions is technically difficult. For an up-to-date workflow we recommend authoring in **AsciiDoc** and syncing to Confluence with the [asciidoc2confluence](https://github.com/rdmueller/asciidoc2confluence) script. (We no longer run a public Confluence instance, and the former Atlassian Marketplace plugin has been discontinued by Atlassian.)
 
@@ -78,10 +75,10 @@ These are based on an older template version — generating Confluence from Asci
 
 | Confluence version | Language | With Help |
 |--------|-----------|-----------|
-| 5.x | EN | [.zip]({{GITHUBDIR}}legacy/templateEN-V6-confluence-53.xml.zip) |
-| >4.3 | EN | [.zip]({{GITHUBDIR}}legacy/templateEN-V6-confluence-43.xml.zip) |
-| 5.x | DE | [.zip]({{GITHUBDIR}}legacy/templateDE-V6-confluence-53.xml.zip) |
-| >4.3 | DE | [.zip]({{GITHUBDIR}}legacy/templateDE-V6-confluence-43.xml.zip) |
+| 5.x | EN | [.zip]({{TOOLS}}templateEN-V6-confluence-53.xml.zip) |
+| >4.3 | EN | [.zip]({{TOOLS}}templateEN-V6-confluence-43.xml.zip) |
+| 5.x | DE | [.zip]({{TOOLS}}templateDE-V6-confluence-53.xml.zip) |
+| >4.3 | DE | [.zip]({{TOOLS}}templateDE-V6-confluence-43.xml.zip) |
 
 </details>
 
@@ -92,7 +89,7 @@ Doxygen is the de-facto standard for generating documentation from annotated C++
 
 | Doxygen |
 |--------------------------|
-| arc42 Doxygen template: [arc42_doxygen_template.zip]({{GITHUBDIR}}doxygen/arc42_doxygen_template.zip) |
+| arc42 Doxygen template: [arc42_doxygen_template.zip]({{TOOLS}}arc42_doxygen_template.zip) |
 
 Available in EN only. Contributed by Stephan Lessing, February 2023.
 {: .small}
@@ -106,11 +103,11 @@ Available in EN only. Contributed by Stephan Lessing, February 2023.
 
 | Language / version | Download |
 |--------------------|----------|
-| DE — with help, EAPX (EA < 16.x) | [.eapx]({{GITHUBDIR}}eap/arc42-template-DE-withhelp-ea.eapx) |
-| DE — with help, QEA (EA ≥ 16.x) | [.qea]({{GITHUBDIR}}eap/arc42-template-DE-withhelp-ea.qea) |
-| EN — with help, EAPX (EA < 16.x) | [.eapx]({{GITHUBDIR}}eap/arc42-template-EN-withhelp-ea.eapx) |
-| EN — with help, QEA (EA ≥ 16.x) | [.qea]({{GITHUBDIR}}eap/arc42-template-EN-withhelp-ea.qea) |
-| Legacy short v6 | [.eap.zip]({{GITHUBDIR}}eap/arc42-V6-short.eap.zip) |
+| DE — with help, EAPX (EA < 16.x) | [.eapx]({{TOOLS}}arc42-template-DE-withhelp-ea.eapx) |
+| DE — with help, QEA (EA ≥ 16.x) | [.qea]({{TOOLS}}arc42-template-DE-withhelp-ea.qea) |
+| EN — with help, EAPX (EA < 16.x) | [.eapx]({{TOOLS}}arc42-template-EN-withhelp-ea.eapx) |
+| EN — with help, QEA (EA ≥ 16.x) | [.qea]({{TOOLS}}arc42-template-EN-withhelp-ea.qea) |
+| Legacy short v6 | [.eap.zip]({{TOOLS}}arc42-V6-short.eap.zip) |
 
 **File formats.** QEA (introduced in EA 16, SQLite3-based) or EAPX (older default, JET 4). For EA 15 and below use EAPX; before EA 14, rename the extension to `.eap`. To only view a model, the free [EA Lite edition](https://www.sparxsystems.eu/enterprise-architect/ea-lite-edition) is enough.
 
@@ -123,7 +120,7 @@ Available in EN only. Contributed by Stephan Lessing, February 2023.
 
 | IBM Rhapsody arc42 template |
 |--------------------------|
-| [arc42-v1-rhapsody.zip]({{GITHUBDIR}}rhapsody/arc42-v1-rhapsody.zip) |
+| [arc42-v1-rhapsody.zip]({{TOOLS}}arc42-v1-rhapsody.zip) |
 
 Contributed by Niranjan SK (Robert Bosch GmbH) — thank you!
 {: .small}

@@ -65,3 +65,31 @@
   to = "/learn/#inside-a-training"
   status = 301
   force = true
+
+# Template downloads: stable URLs owned by this site, decoupled from where the files live
+# (decision: ADR 0012 in arc42/meta.arc42.org). /dl/<file> serves the file of the latest
+# arc42-template release, e.g. /dl/arc42-template-EN-plain-asciidoc.zip; /dl/tools/<file> the
+# hand-made tool files (Enterprise Architect, Confluence, Rhapsody, Doxygen) of their own release.
+# Moving the files elsewhere only changes these targets. More specific rule first.
+[[redirects]]
+  from = "/dl/tools/*"
+  to = "https://github.com/arc42/arc42-template/releases/download/tools-2026.09/:splat"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/dl/*"
+  to = "https://github.com/arc42/arc42-template/releases/latest/download/:splat"
+  status = 302
+  force = true
+
+# /downloads (plural) is a common guess; /download/ is the page. The PDFs below /downloads/ stay.
+[[redirects]]
+  from = "/downloads"
+  to = "/download/"
+  status = 301
+
+[[redirects]]
+  from = "/downloads/"
+  to = "/download/"
+  status = 301

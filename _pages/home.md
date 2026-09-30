@@ -25,7 +25,8 @@ starter:
     btn_class: "btn--arc42-outline"
 ---
 
-{% assign PREFIX = "https://github.com/arc42/arc42-template/raw/master/dist/arc42-template-" %}
+{% comment %} /dl/ redirects to the latest arc42-template release (netlify.toml) {% endcomment %}
+{% assign PREFIX = "/dl/arc42-template-" %}
 
 <div class="ua-strip">
   <span class="ua-strip__flag" aria-hidden="true"><i></i><i></i></span>
@@ -35,7 +36,7 @@ starter:
 <section class="home-hero">
   <div class="home-hero__inner">
     <div class="home-hero__intro">
-      <p class="home-hero__kicker">Open source · 13 languages · since 2005</p>
+      <p class="home-hero__kicker">Open source · {{ site.data.downloads.languages.size }} languages · since 2005</p>
       <h1 class="home-hero__title">All you ever need for your <strong>software architecture</strong>.</h1>
       <p class="home-hero__sub">Construct, communicate and document. Proven and pragmatic. <strong>Takes the pain out of documentation</strong>.</p>
       <p class="home-hero__actions">
