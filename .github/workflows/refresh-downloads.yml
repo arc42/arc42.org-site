@@ -37,5 +37,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add _data/downloads.yml
-          git commit -m "chore: downloads from arc42-template release ${release}"
+          git commit -m "downloads: arc42-template release ${release}"
           git push

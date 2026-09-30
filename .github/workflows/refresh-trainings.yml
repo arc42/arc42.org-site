@@ -62,7 +62,7 @@ jobs:
           # step. `|| true` inside the substitution keeps the runner's `set -e`
           # (GitHub runs this with `bash -e`) from killing the job on a non-zero
           # exit, and the emptiness check covers the rest.
-          fallback="chore: refresh training dates from trainings.arc42.org"
+          fallback="trainings: refresh training dates from trainings.arc42.org"
           message=$(jq -n -r --arg today "$(date -u +%Y-%m-%d)" \
             --slurpfile old /tmp/old.json \
             --slurpfile new /tmp/new.json \

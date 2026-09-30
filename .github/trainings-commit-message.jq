@@ -175,7 +175,7 @@ def line_of($event):
 # fits, the parenthetical goes away entirely. The body lists every event in
 # full, so nothing is actually lost here.
 def counted_subject($events; $courses):
-  ("chore: " + (($events | length) | tostring) + " training changes") as $base
+  ("trainings: " + (($events | length) | tostring) + " training changes") as $base
   | [ range(1; ($courses | length) + 1) as $k
       | (($courses | length) - $k) as $rest
       | $base + " (" + ($courses[0:$k] | join(", "))
@@ -185,19 +185,19 @@ def counted_subject($events; $courses):
 
 def subject_from($event; $changes):
   if $event.kind == "added" then
-    "chore: new date " + code_of($event.entry) + ", " + ($event.entry.d.start | clean)
+    "trainings: new date " + code_of($event.entry) + ", " + ($event.entry.d.start | clean)
   elif $event.kind == "updated" then
-    "chore: " + code_of($event.entry) + " — " + summary_from($changes)
+    "trainings: " + code_of($event.entry) + " — " + summary_from($changes)
   elif $event.kind == "removed" then
-    "chore: " + code_of($event.entry) + " withdrawn"
+    "trainings: " + code_of($event.entry) + " withdrawn"
   elif $event.kind == "ended" then
-    "chore: " + code_of($event.entry) + " has ended"
+    "trainings: " + code_of($event.entry) + " has ended"
   elif $event.kind == "course-new" then
-    "chore: new course " + name_of($event.entry)
+    "trainings: new course " + name_of($event.entry)
   elif $event.kind == "course-gone" then
-    "chore: course " + name_of($event.entry) + " removed"
+    "trainings: course " + name_of($event.entry) + " removed"
   else
-    "chore: " + name_of($event.entry) + " — " + summary_from($changes)
+    "trainings: " + name_of($event.entry) + " — " + summary_from($changes)
   end;
 
 # Each updated event carries a terse set of change phrases beside the rich one.
@@ -270,7 +270,7 @@ def subject_of($event):
     | .entry.course = ($course_names[.entry.course_id // .entry.id] // .entry.course) ] as $events
 | ([ $events[].entry.course | select(. != "") ] | reduce .[] as $c ([]; if index($c) == null then . + [$c] else . end)) as $courses
 | (if ($events | length) == 0 then
-     "chore: refresh training dates from trainings.arc42.org"
+     "trainings: refresh training dates from trainings.arc42.org"
    elif ($events | length) == 1 then
      subject_of($events[0])
    else
