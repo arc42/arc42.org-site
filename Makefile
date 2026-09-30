@@ -6,7 +6,7 @@
 # the same number to Jekyll so its startup banner names the real port.
 SITE_PORT ?= 4200
 
-.PHONY: help dev build stop site check-links clean install update shell logs
+.PHONY: help dev build stop site check-links sync-downloads clean install update shell logs
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2}'
@@ -33,7 +33,12 @@ site: build ## Generate the static site into _site/
 	docker compose run --rm jekyll bundle exec jekyll build
 
 check-links: site ## Validate internal links, images, and HTML in the built _site (html-proofer)
-	docker compose run --rm jekyll bundle exec htmlproofer ./_site --disable-external --allow-hash-href
+	@# /dl/ are Netlify redirects to the template releases (netlify.toml), no files in _site;
+	@# the generator checks them: make check-downloads PREFIX=https://arc42.org/dl/ (in arc42-generator)
+	docker compose run --rm jekyll bundle exec htmlproofer ./_site --disable-external --allow-hash-href --ignore-urls '/^\/dl\//'
+
+sync-downloads: build ## Write _data/downloads.yml (languages, formats) from manifest.json of the latest arc42-template release
+	docker compose run --rm --no-deps jekyll ruby _scripts/sync-downloads.rb
 
 clean: ## Remove generated _site AND the Docker cache volumes (a true reset)
 	rm -rf _site .sass-cache .jekyll-cache .jekyll-metadata

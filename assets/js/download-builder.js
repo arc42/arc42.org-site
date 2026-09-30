@@ -1,4 +1,4 @@
-/* Download builder (/download/): language + format picker.
+/* Download builder (/download/): language + format picker, rendered from _data/downloads.yml.
    Markup contract: .dlb[data-prefix], .dlb__lang / .dlb__fmt toggle buttons
    with data-lang/full/version/date resp. data-fmt/label (+ optional
    data-soon on either: not published yet, downloads disabled), result pane ids
@@ -7,8 +7,12 @@
   var root = document.querySelector('.dlb');
   if (!root) { return; }
   var PREFIX = root.getAttribute('data-prefix');
-  var lang = 'EN', full = 'English', fmt = 'asciidoc', label = 'AsciiDoc';
-  var version = '9.0', vdate = 'Jul 2025', langSoon = false, fmtSoon = false;
+  // initial state: the buttons marked active in the markup (the first language and format)
+  var l0 = root.querySelector('.dlb__lang.is-active'), f0 = root.querySelector('.dlb__fmt.is-active');
+  var lang = l0.getAttribute('data-lang'), full = l0.getAttribute('data-full');
+  var version = l0.getAttribute('data-version'), vdate = l0.getAttribute('data-date');
+  var fmt = f0.getAttribute('data-fmt'), label = f0.getAttribute('data-label');
+  var langSoon = l0.hasAttribute('data-soon'), fmtSoon = f0.hasAttribute('data-soon');
   var combo = document.getElementById('dlb-combo');
   var meta = document.getElementById('dlb-meta');
   var plain = document.getElementById('dlb-plain');
