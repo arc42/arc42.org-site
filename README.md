@@ -132,25 +132,30 @@ is the worked example; the layout is [`_layouts/resource.html`](_layouts/resourc
 
 ## Download page (languages and formats)
 
-The download builder on [`/download/`](https://www.arc42.org/download/) is driven by
-Liquid lists at the top of [`_pages/download.md`](_pages/download.md);
-[`assets/js/download-builder.js`](assets/js/download-builder.js) only builds the links
-`arc42-template-<LANG>-plain|withhelp-<format>.zip` in the template repo's `dist/`.
+The download builder on [`/download/`](https://www.arc42.org/download/) renders its language
+and format buttons from [`_data/downloads.yml`](_data/downloads.yml). That file is
+**generated** from `manifest.json` of the latest
+[arc42-template release](https://github.com/arc42/arc42-template/releases/latest) — don't edit it by hand:
 
-* **`lang_data`** — one entry per language: `code,name,version,date`. Take version and
-  date from `<LANG>/version.properties` in [arc42-template](https://github.com/arc42/arc42-template).
-* **`fmt_ids` / `fmt_labels`** — format ids (as in the zip names) and their button labels,
-  in the same order; list only formats the [generator](https://github.com/arc42/arc42-generator) builds.
-* **`lang_soon` / `fmt_soon`** — languages or formats announced before the generator
-  publishes them: selectable, but the download buttons stay disabled with a
-  "coming soon" note. Remove the code once its zips exist in `dist/`.
+```sh
+make sync-downloads   # after every template release; commit the changed _data/downloads.yml
+```
+
+The downloads go through the site's own URLs: `/dl/<file>` redirects to the latest
+template release, `/dl/tools/<file>` to the tools release (see [`netlify.toml`](netlify.toml)).
+[`assets/js/download-builder.js`](assets/js/download-builder.js) only builds the links
+`/dl/arc42-template-<LANG>-plain|withhelp-<format>.zip`.
+
+Button order is set in [`_scripts/sync-downloads.rb`](_scripts/sync-downloads.rb): English
+first, then newest template version; formats in `FORMAT_ORDER`, unknown ones at the end.
 
 ### Add a language
 
-1. Add it to `lang_data` and, until its zips are in `dist/`, to `lang_soon`.
-2. Raise the language count: the download page (excerpt, kicker, intro), the home page
-   kicker and the About page.
-3. Mention it in the version history on the download page and credit the translators
+1. Once the generator has published a release with the new language, run
+   `make sync-downloads` and commit. The counts on the home, About and download pages
+   follow automatically.
+2. By hand: the language count in the download page's `excerpt` (front matter, no
+   Liquid there), the version history on the download page, and the translator credits
    in [`_data/translators.yml`](_data/translators.yml) (see below).
 
 ## Translators (About page)

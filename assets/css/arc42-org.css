@@ -636,7 +636,6 @@ html { overflow-x: clip; }
 .dlb__combo { margin: 0 0 0.15rem; font-size: 1.3rem; font-weight: 700; letter-spacing: -0.01em; color: var(--arc42-ink-strong); }
 .dlb__meta { margin: 0 0 1rem; font-size: 0.85rem; color: var(--arc42-text-muted); /* #6f7f92 was 3.5:1 on the tint */ }
 .dlb__buttons { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0 0 0.8rem; }
-.dlb__buttons .is-disabled { opacity: 0.45; cursor: not-allowed; pointer-events: none; } /* format not published yet */
 .dlb__hint { margin: auto 0 0; font-size: 0.85rem; line-height: 1.5; color: var(--arc42-text-muted); }
 /* --- linked resource cards + tag chips (Publications, Examples) --- */
 .card-grid {
