@@ -35,7 +35,7 @@ starter:
 <section class="home-hero">
   <div class="home-hero__inner">
     <div class="home-hero__intro">
-      <p class="home-hero__kicker">Open source · 12 languages · since 2005</p>
+      <p class="home-hero__kicker">Open source · 13 languages · since 2005</p>
       <h1 class="home-hero__title">All you ever need for your <strong>software architecture</strong>.</h1>
       <p class="home-hero__sub">Construct, communicate and document. Proven and pragmatic. <strong>Takes the pain out of documentation</strong>.</p>
       <p class="home-hero__actions">

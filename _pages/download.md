@@ -2,7 +2,7 @@
 title: "Download arc42"
 layout: splash
 permalink: /download/
-excerpt: "Version 9 — the most practical and effective arc42 ever. Every format, 12 languages, free and open source."
+excerpt: "Version 9 — the most practical and effective arc42 ever. Every format, 13 languages, free and open source."
 ---
 
 <div class="ua-strip">
@@ -12,9 +12,9 @@ excerpt: "Version 9 — the most practical and effective arc42 ever. Every forma
 
 <section class="dl-hero">
   <div class="dl-hero__inner">
-    <p class="dl-hero__kicker">12 languages · every format</p>
+    <p class="dl-hero__kicker">13 languages · every format</p>
     <h1 class="dl-hero__title">Download arc42</h1>
-    <p class="dl-hero__sub">Build your download — pick a language and a format, <strong>plain</strong> or <strong>with help</strong>. Twelve languages, every common format, free and open source.</p>
+    <p class="dl-hero__sub">Build your download — pick a language and a format, <strong>plain</strong> or <strong>with help</strong>. Thirteen languages, every common format, free and open source.</p>
   </div>
 </section>
 
@@ -22,18 +22,19 @@ excerpt: "Version 9 — the most practical and effective arc42 ever. Every forma
 {% assign GITHUBDIR = "https://github.com/arc42/arc42-template/raw/master/dist/" %}
 {% comment %} lang code, full name, template version, release date — per language
    (source of truth: <lang>/version.properties in the arc42-template repo) {% endcomment %}
-{% assign lang_data = "EN,English,9.0,Jul 2025|DE,Deutsch,9.1,Dec 2025|FR,Français,9.0,Apr 2025|CZ,Čeština,9.0,Jan 2025|ZH,简体中文,9.0,Jul 2025|HU,Magyar,9.0,May 2026|ES,Español,8.2,Jan 2023|IT,Italiano,8.2,Mar 2023|NL,Nederlands,8.2,Mar 2023|PT,Português,8.2,Sep 2024|RU,Русский,8.2,Jan 2023|UKR,Українська,8.2,Jan 2023" | split: "|" %}
+{% assign lang_data = "EN,English,9.0,Jul 2025|DE,Deutsch,9.1,Dec 2025|FR,Français,9.0,Apr 2025|CZ,Čeština,9.0,Jan 2025|ZH,简体中文,9.0,Jul 2025|ZH-TW,繁體中文,9.0,Sep 2026|HU,Magyar,9.0,May 2026|ES,Español,8.2,Jan 2023|IT,Italiano,8.2,Mar 2023|NL,Nederlands,8.2,Mar 2023|PT,Português,8.2,Sep 2024|RU,Русский,8.2,Jan 2023|UKR,Українська,8.2,Jan 2023" | split: "|" %}
 {% assign fmt_ids = "asciidoc|markdown|docx|markdownMP|gitHubMarkdown|latex|rst|textile|html|markdownStrict|markdownMPStrict|gitHubMarkdownMP|docbook|epub|pdf" | split: "|" %}
 {% assign fmt_labels = "AsciiDoc|Markdown|Word (.docx)|Markdown · multi-page|GitHub Markdown|LaTeX|reStructuredText|Textile|HTML|Markdown · strict|Markdown MP · strict|GitHub Markdown · MP|DocBook|EPUB|PDF" | split: "|" %}
-{% comment %} formats shown but not yet published by the generator — download buttons stay disabled.
-   Remove an id once its zips exist in dist/. {% endcomment %}
-{% assign fmt_soon = "pdf" | split: "|" %}
+{% comment %} languages / formats shown but not yet published by the generator — download buttons stay disabled.
+   Remove a code once its zips exist in dist/. {% endcomment %}
+{% assign lang_soon = "" | split: "|" %}
+{% assign fmt_soon = "" | split: "|" %}
 
 <div class="dlb" data-prefix="{{ PREFIX }}">
   <div class="dlb__pane dlb__pane--choose">
     <p class="dlb__step">1 &middot; Choose language</p>
     <div class="dlb__langs" role="group" aria-label="Language">
-      {% for item in lang_data %}{% assign p = item | split: "," %}<button type="button" class="dlb__lang{% if forloop.first %} is-active{% endif %}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" data-lang="{{ p[0] }}" data-full="{{ p[1] }}" data-version="{{ p[2] }}" data-date="{{ p[3] }}">{{ p[0] }}</button>{% endfor %}
+      {% for item in lang_data %}{% assign p = item | split: "," %}<button type="button" class="dlb__lang{% if forloop.first %} is-active{% endif %}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" data-lang="{{ p[0] }}" data-full="{{ p[1] }}" data-version="{{ p[2] }}" data-date="{{ p[3] }}"{% if lang_soon contains p[0] %} data-soon="true"{% endif %}>{{ p[0] }}</button>{% endfor %}
     </div>
     <p class="dlb__step">2 &middot; Choose format</p>
     <div class="dlb__fmts" role="group" aria-label="Format">
@@ -163,7 +164,7 @@ We don't support additional modelling tools yet, but we'd love to. If you use ar
 : E-book format, for _reading_ the template on e-readers and tablets.
 
 **pdf**
-: For _reading_ or printing the template, not for working with it. (Coming soon.)
+: For _reading_ or printing the template, not for working with it.
 
 **textile**
 : Another simple markup language, documented at [textile-lang.com](https://textile-lang.com/).
@@ -177,7 +178,7 @@ We don't support additional modelling tools yet, but we'd love to. If you use ar
 <details class="dl-details" markdown="1">
 <summary>Version history &amp; translation credits</summary>
 
-**Version 9** adds a Chinese (ZH) translation — thanks to Chris (Gentle) Y杨 and DannyGe — and Hungarian (May 2026) by László Séra. German is currently at 9.1 (December 2025).
+**Version 9** adds a Simplified Chinese (ZH) translation — thanks to Chris (Gentle) Y杨 and DannyGe — Hungarian (May 2026) by László Séra, and Traditional Chinese (ZH-TW, September 2026) by Nien-chun Yin. German is currently at 9.1 (December 2025).
 
 **Version 8** was released February 2022; UA August 2022, CZ October 2022, FR June 2023, PT October 2024.
 

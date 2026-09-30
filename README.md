@@ -130,6 +130,29 @@ is the worked example; the layout is [`_layouts/resource.html`](_layouts/resourc
 > `detail: true` page, add its URL there — the other auto-generated item pages are
 > orphaned landing pages and are intentionally left out of the sitemap.
 
+## Download page (languages and formats)
+
+The download builder on [`/download/`](https://www.arc42.org/download/) is driven by
+Liquid lists at the top of [`_pages/download.md`](_pages/download.md);
+[`assets/js/download-builder.js`](assets/js/download-builder.js) only builds the links
+`arc42-template-<LANG>-plain|withhelp-<format>.zip` in the template repo's `dist/`.
+
+* **`lang_data`** — one entry per language: `code,name,version,date`. Take version and
+  date from `<LANG>/version.properties` in [arc42-template](https://github.com/arc42/arc42-template).
+* **`fmt_ids` / `fmt_labels`** — format ids (as in the zip names) and their button labels,
+  in the same order; list only formats the [generator](https://github.com/arc42/arc42-generator) builds.
+* **`lang_soon` / `fmt_soon`** — languages or formats announced before the generator
+  publishes them: selectable, but the download buttons stay disabled with a
+  "coming soon" note. Remove the code once its zips exist in `dist/`.
+
+### Add a language
+
+1. Add it to `lang_data` and, until its zips are in `dist/`, to `lang_soon`.
+2. Raise the language count: the download page (excerpt, kicker, intro), the home page
+   kicker and the About page.
+3. Mention it in the version history on the download page and credit the translators
+   in [`_data/translators.yml`](_data/translators.yml) (see below).
+
 ## Translators (About page)
 
 The translator credits in the [`/about/`](https://www.arc42.org/about/#community) page's

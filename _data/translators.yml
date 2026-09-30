@@ -115,3 +115,9 @@
   links:
     - label: "GitHub"
       url: "https://github.com/dannyge"
+
+- name: "Nien-chun Yin"
+  language: "繁體中文 (Traditional Chinese)"
+  links:
+    - label: "GitHub"
+      url: "https://github.com/sophieyin0310"

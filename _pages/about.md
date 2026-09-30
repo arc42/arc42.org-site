@@ -37,7 +37,7 @@ excerpt: "The people, history and open-source community behind arc42."
   <ol class="about-timeline" aria-label="Selected arc42 milestones">
     <li><strong>2005</strong><span>Peter and Gernot publish the first version of arc42.</span></li>
     <li><strong>Open source</strong><span>The template becomes freely reusable and adaptable.</span></li>
-    <li><strong>12 languages</strong><span>Translators make arc42 available to teams around the world.</span></li>
+    <li><strong>13 languages</strong><span>Translators make arc42 available to teams around the world.</span></li>
     <li><strong>Today</strong><span>Template, method, canvas, examples, tools and training form a living ecosystem.</span></li>
   </ol>
 </section>
