@@ -2,7 +2,7 @@
 title: "Download arc42"
 layout: splash
 permalink: /download/
-excerpt: "Version 9 — the most practical and effective arc42 ever. Every format, 13 languages, free and open source."
+excerpt: "Version 9 — the most practical and effective arc42 ever. Every format, many languages, free and open source."
 ---
 
 <div class="ua-strip">
