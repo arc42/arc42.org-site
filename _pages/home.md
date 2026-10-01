@@ -90,6 +90,6 @@ Learn arc42 and modern software architecture straight from its creators — iSAQ
 - The **Hungarian** translation of arc42 is now available — thanks to László Séra!
 - Our [merchandising shop](https://arc42.myspreadshop.de) is online: T-shirts, hoodies and other arc42-branded goodies.
 - [Software Architecture Foundation](/resources/?type=book) is ideal preparation for the iSAQB certification.
-- Even more worked examples in [arc42 by Example, Volume 2: Embedded Systems &amp; IoT](/resources/?type=book#arc42-by-example-vol2).
+- Even more worked examples in [arc42 by Example, Volume 2: Embedded Systems &amp; IoT](https://leanpub.com/arc42byexample-volume2).
 
 </div>

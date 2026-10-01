@@ -33,7 +33,7 @@ Each example starts from the problem domain and quality requirements, walks thro
 
 ![arc42 by Example, Volume 2 book cover](/images/books/arc42byexample-Title300.png){: .align-right .bookcover--small}
 
-For *embedded systems and IoT*, [arc42 by Example Volume 2](/resources/?type=book#arc42-by-example-vol2) by Peter Hruschka, Ivan Kostov and Wolfgang Reimesch adds two documented hardware/software co-design architectures.
+For *embedded systems and IoT*, [arc42 by Example Volume 2](https://leanpub.com/arc42byexample-volume2) by Peter Hruschka, Ivan Kostov and Wolfgang Reimesch adds two documented hardware/software co-design architectures.
 
 <a href="https://leanpub.com/arc42byexample-volume2" class="btn btn--arc42-outline" rel="noopener">Read on Leanpub</a>
 
