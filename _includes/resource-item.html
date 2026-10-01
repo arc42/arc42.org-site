@@ -11,11 +11,13 @@
     cover    thumbnail path                   (optional; falls back to a letter marker)
     link     URL                              (optional; omit for "no link" items)
     link_label  CTA text                      (optional; arrow is derived from the link)
-    id       anchor id                        (optional)
+  Anchor: the file name without .md (r.slug), e.g. /resources/#arc42-by-example-vol2.
+  Not `id:` in the front matter: Jekyll sets id to the document path for collection
+  documents, and that wins over the front matter.
 {%- endcomment -%}
 {%- assign r = include.resource -%}
 {%- assign lang = 'English' -%}{%- if r.language == 'de' -%}{%- assign lang = 'German' -%}{%- endif -%}
-<article class="resource-item"{% if r.id %} id="{{ r.id }}"{% endif %} data-resource data-type="{{ r.type }}" data-language="{{ r.language }}" data-search="{{ r.search }}">
+<article class="resource-item" id="{{ r.slug }}" data-resource data-type="{{ r.type }}" data-language="{{ r.language }}" data-search="{{ r.search }}">
   {%- if r.cover -%}
   <img class="resource-item__cover" src="{{ r.cover }}" alt="{{ r.title | escape }} cover" loading="lazy">
   {%- else -%}
