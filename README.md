@@ -90,7 +90,6 @@ search: "extra author keywords for the filter"       # optional
 cover: /images/resources/my-new-talk.webp            # optional (see Thumbnails)
 link: https://speakerdeck.com/...                    # optional — omit for no link
 link_label: "Open slides"                            # optional CTA text
-id: my-anchor              # optional — for deep links like /resources/#my-anchor
 ---
 ```
 
@@ -98,6 +97,9 @@ That's it. The listing template ([`_includes/resource-item.html`](_includes/reso
 renders the card; [`_pages/resources.md`](_pages/resources.md) loops the collection,
 sorts by `year` descending (undated last), and computes the type-badge counts in
 Liquid — so the numbers can never drift out of sync with the files.
+
+Every card gets an **anchor equal to its file name**, for deep links like
+`/resources/#my-new-talk`. (Not an `id:` field: Jekyll overrides `id` for collection files.)
 
 The **link arrow is derived from the URL**, so it stays consistent:
 internal `→`, external `↗` (plus `rel="noopener"`), and `.pdf` `↓`.

@@ -3,7 +3,6 @@ type: "book"
 title: "arc42 by Example, 3rd edition"
 language: "en"
 year: 2023
-id: "arc42-by-example-3rd"
 cover: "/images/books/arc42-by-example-3rd.webp"
 link: "https://leanpub.com/arc42byexample"
 link_label: "View on Leanpub"
