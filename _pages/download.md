@@ -48,6 +48,7 @@ excerpt: "Version 9 — the most practical and effective arc42 ever. Every forma
       <a class="btn btn--arc42-outline btn--large" id="dlb-help" href="{{ PREFIX }}{{ first_lang.code }}-withhelp-{{ first_fmt.id }}.zip"><span aria-hidden="true">&#8595;</span> With help .zip</a>
     </p>
     <p class="dlb__hint"><strong>With help</strong> embeds the official arc42 explanations in every section — ideal when you're new to the template. <strong>Plain</strong> gives you the bare structure.</p>
+    {% if dl.release %}<p class="dlb__release">Release <a href="https://github.com/arc42/arc42-template/releases/tag/{{ dl.release }}">{{ dl.release }}</a> on GitHub &middot; release notes &amp; checksums</p>{% endif %}
   </div>
 </div>
 
