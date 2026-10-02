@@ -637,8 +637,9 @@ html { overflow-x: clip; }
 .dlb__meta { margin: 0 0 1rem; font-size: 0.85rem; color: var(--arc42-text-muted); /* #6f7f92 was 3.5:1 on the tint */ }
 .dlb__buttons { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0 0 0.8rem; }
 .dlb__hint { margin: auto 0 0; font-size: 0.85rem; line-height: 1.5; color: var(--arc42-text-muted); }
-.dlb__release { margin: 0.6rem 0 0; font-size: 0.75rem; color: var(--arc42-text-muted); }
-.dlb__release a { font-variant-numeric: tabular-nums; }
+/* .dlb prefix: the theme's .page__content p {font-size: 1em} is more specific than .dlb__release alone */
+.dlb .dlb__release { margin: 0.6rem 0 0; font-size: 0.75rem; color: var(--arc42-text-muted); }
+.dlb .dlb__release a { font-variant-numeric: tabular-nums; }
 /* --- linked resource cards + tag chips (Publications, Examples) --- */
 .card-grid {
   display: grid;
