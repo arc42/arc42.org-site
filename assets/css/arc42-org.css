@@ -582,12 +582,13 @@ html { overflow-x: clip; }
   padding: 1rem 1.1rem;
 }
 .dlb__step {
-  margin: 1.1rem 0 0.5rem;
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--arc42-text-muted);
 }
-.dlb__step:first-child { margin-top: 0; }
+/* .dlb prefix: the theme's .page__content p {margin: 0 0 …} would otherwise zero the top margin */
+.dlb .dlb__step { margin: 1.6rem 0 0.6rem; }
+.dlb .dlb__step:first-child { margin-top: 0; }
 .dlb__langs,
 .dlb__fmts { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .dlb__lang,
