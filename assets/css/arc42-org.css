@@ -1643,3 +1643,25 @@ a.res-card:focus-visible { outline: var(--arc42-focus-ring); outline-offset: 2px
   font-size: 13px;
   text-align: center;
 }
+
+/* Kicker line above the home-page hero title ("Open source · 13 languages ·
+   since 2005"). Amber as on the former arc42.org hero; the shadow matches the
+   theme's overlay title so it holds up on the photo. */
+.page__hero--overlay .page__kicker {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--arc42-amber);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Download strip directly under the hero image: no theme gap in between,
+   the strip reads as the hero's footer. */
+.page__hero--overlay:has(+ #main .page__content > .dl-strip:first-child) { margin-bottom: 0; }
+#main:has(.page__content > .dl-strip:first-child),
+#main .splash .page__content > .dl-strip:first-child { margin-top: 0; padding-top: 0; }
+#main .splash .page__content:has(> .dl-strip:first-child) { margin-top: 0; padding-top: 0; }
+
+/* Two buttons on a feature tile (e.g. Training: details + dates). */
+.archive__item-body p:has(> .btn + .btn) { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.archive__item-body p:has(> .btn + .btn) > .btn { margin: 0; }

@@ -23,11 +23,21 @@
 >
   {% if page.header.overlay_color or page.header.overlay_image %}
     <div class="wrapper">
+      {%- comment -%}
+        arc42: optional kicker line above the title (home page). Front matter
+        is not Liquid-rendered, so the language counter is a placeholder:
+        %LANGUAGES% becomes the number of template languages in
+        _data/downloads.yml.
+      {%- endcomment -%}
+      {% if page.header.kicker %}
+        {% assign kicker_languages = site.data.downloads.languages.size | append: "" %}
+        <p class="page__kicker">{{ page.header.kicker | replace: "%LANGUAGES%", kicker_languages | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+      {% endif %}
       <h1 id="page-title" class="page__title" itemprop="headline">
         {% if paginator and site.paginate_show_page_num %}
           {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}
         {% else %}
-          {{ page.title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" }}
+          {{ page.header.title | default: page.title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" }}
         {% endif %}
       </h1>
       {% if page.tagline %}
