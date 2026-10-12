@@ -8,7 +8,12 @@ ua_strip_top: true
 header:
   overlay_color: "#d7ecf8"
   overlay_filter: rgba(15, 80, 180, 0.6)
-  overlay_image: /images/splash/arc42-splash-landingpage.webp
+  # Same photo as the arc42.de hero (Reichstag dome).
+  overlay_image: /images/splash/home-hero-reichstag.webp
+  # Link previews need JPEG (LinkedIn/WhatsApp render no WebP), and
+  # _includes/seo.html reads overlay_image before site.og_image - so keep
+  # the previous site-wide preview image explicitly.
+  og_image: /images/splash/arc42-splash-landingpage.jpg
   image_description: "arc42 — software architecture documentation"
   kicker: "Open source · %LANGUAGES% languages · since 2005"
   title: "All you ever need for your **software architecture**."
