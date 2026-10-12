@@ -3,6 +3,23 @@ title: "arc42"
 layout: splash
 permalink: /
 excerpt: "All you need to construct, communicate and document your software architecture. Proven, practical, pragmatic — free and open source."
+tagline: "Construct, communicate and document. Proven and pragmatic. **Takes the pain out of documentation**."
+ua_strip_top: true
+header:
+  overlay_color: "#d7ecf8"
+  overlay_filter: rgba(15, 80, 180, 0.6)
+  # Same photo as the arc42.de hero (Reichstag dome).
+  overlay_image: /images/splash/home-hero-reichstag.webp
+  # Link previews need JPEG (LinkedIn/WhatsApp render no WebP), and
+  # _includes/seo.html reads overlay_image before site.og_image - so keep
+  # the previous site-wide preview image explicitly.
+  og_image: /images/splash/arc42-splash-landingpage.jpg
+  image_description: "arc42 — software architecture documentation"
+  kicker: "Open source · %LANGUAGES% languages · since 2005"
+  title: "All you ever need for your **software architecture**."
+  actions:
+    - label: "Overview &#8594;"
+      url: /overview/
 
 starter:
   - title: "Template"
@@ -17,6 +34,9 @@ starter:
     url: "/learn/"
     btn_label: "Explore training"
     btn_class: "btn--arc42-outline"
+    btn2_url: "https://trainings.arc42.org"
+    btn2_label: "Dates"
+    btn2_class: "btn--arc42"
   - title: "The method"
     excerpt: "![To-do, doing, done slips of paper](/images/home/method.webp)<br>
     Systematic but flexible — suits large and small teams, agile or not."
@@ -27,24 +47,6 @@ starter:
 
 {% comment %} /dl/ redirects to the latest arc42-template release (netlify.toml) {% endcomment %}
 {% assign PREFIX = "/dl/arc42-template-" %}
-
-<div class="ua-strip">
-  <span class="ua-strip__flag" aria-hidden="true"><i></i><i></i></span>
-  <span>We stand with Ukraine — please support the <a href="https://www.icrc.org/en">ICRC</a>'s humanitarian effort.</span>
-</div>
-
-<section class="home-hero">
-  <div class="home-hero__inner">
-    <div class="home-hero__intro">
-      <p class="home-hero__kicker">Open source · {{ site.data.downloads.languages.size }} languages · since 2005</p>
-      <h1 class="home-hero__title">All you ever need for your <strong>software architecture</strong>.</h1>
-      <p class="home-hero__sub">Construct, communicate and document. Proven and pragmatic. <strong>Takes the pain out of documentation</strong>.</p>
-      <p class="home-hero__actions">
-        <a class="btn btn--arc42 btn--large" href="/overview/">Overview &#8594;</a>
-      </p>
-    </div>
-  </div>
-</section>
 
 <div class="dl-strip">
   <div class="dl-strip__inner">
