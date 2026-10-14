@@ -46,13 +46,14 @@
 }
 
 /* section families: pale tints, badge carries the family color.
-   Requirements & quality = gold, structures & views = steel blue,
-   concepts/technologies/decisions = navy, 11+12 stay neutral. */
-.part.fam-req    { background: #fdf6e2; }
-.part.fam-req    .part__no { background: var(--arc42-accent); color: var(--arc42-ink-strong); }
+   Requirements & quality = green; the solution (structures & views,
+   concepts/technologies/decisions) = light blue, badges steel blue vs. navy.
+   11+12 stay neutral. */
+.part.fam-req    { background: #edf7ef; }
+.part.fam-req    .part__no { background: var(--arc42-emerald); }
 .part.fam-struct { background: #eef5fa; }
 .part.fam-struct .part__no { background: var(--arc42-primary-hover); }
-.part.fam-con    { background: #eceff5; }
+.part.fam-con    { background: #ebf1f9; }
 .part.fam-con    .part__no { background: var(--arc42-primary); }
 
 /* external-link affordance, hover-only ornament */
@@ -170,7 +171,7 @@
   border-radius: 50%;
   border: 1px solid var(--arc42-border);
 }
-.grid-legend__dot--req    { background: var(--arc42-accent); border-color: var(--arc42-accent); }
+.grid-legend__dot--req    { background: var(--arc42-emerald); border-color: var(--arc42-emerald); }
 .grid-legend__dot--struct { background: var(--arc42-primary-hover); border-color: var(--arc42-primary-hover); }
 .grid-legend__dot--con    { background: var(--arc42-primary); border-color: var(--arc42-primary); }
 
