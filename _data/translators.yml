@@ -85,6 +85,14 @@
     - label: "GitHub"
       url: "https://github.com/pmattiollo"
 
+- name: "Selman Seref"
+  language: "Türkçe"
+  portrait: "/images/translators/selman-seref.webp"
+  bio: "Head of Digital @ tecnovy"
+  links:
+    - label: "tecnovy"
+      url: "https://tecnovy.com"
+
 - name: "Nikita Erilin"
   language: "Русский (Russian)"
   links:
