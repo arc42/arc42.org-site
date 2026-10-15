@@ -88,7 +88,10 @@
 - name: "Selman Seref"
   language: "Türkçe"
   portrait: "/images/translators/selman-seref.webp"
-  bio: "Head of Digital @ tecnovy"
+  bio: >
+    Head of Digital @ tecnovy, developing apps and websites with AI, eagerly
+    investigating and exploring the capacity of what LLMs can and cannot. He
+    contributed to arc42 with Turkish translation because no one else did.
   links:
     - label: "tecnovy"
       url: "https://tecnovy.com"
