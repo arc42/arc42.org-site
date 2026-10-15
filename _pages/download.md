@@ -176,7 +176,7 @@ We don't support additional modelling tools yet, but we'd love to. If you use ar
 <details class="dl-details" markdown="1">
 <summary>Version history &amp; translation credits</summary>
 
-**Version 9** adds a Simplified Chinese (ZH) translation — thanks to Chris (Gentle) Y杨 and DannyGe — Hungarian (May 2026) by László Séra, and Traditional Chinese (ZH-TW, September 2026) by Nien-chun Yin. German is currently at 9.1 (December 2025).
+**Version 9** adds a Simplified Chinese (ZH) translation — thanks to Chris (Gentle) Y杨 and DannyGe — Hungarian (May 2026) by László Séra, Traditional Chinese (ZH-TW, September 2026) by Nien-chun Yin, Turkish (TR, October 2026) by Selman Seref and Azerbaijani (AZ, October 2026) by Nihad Jabrayilzade. German is currently at 9.1 (December 2025).
 
 **Version 8** was released February 2022; UA August 2022, CZ October 2022, FR June 2023, PT October 2024.
 
