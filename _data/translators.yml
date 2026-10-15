@@ -14,6 +14,12 @@
 #   portrait  (optional) e.g. /images/translators/jakub-tomisek.webp (square, ~320px)
 #   links     (optional) list of { label, url }; first one also links the name in tier 1
 
+- name: "Nihad Jabrayilzade"
+  language: "Azərbaycanca"
+  links:
+    - label: "GitHub"
+      url: "https://github.com/nihadio"
+
 - name: "Jakub Tomíšek"
   language: "Čeština"
   portrait: "/images/translators/jakub-tomisek.webp"
