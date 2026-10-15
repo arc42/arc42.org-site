@@ -88,7 +88,7 @@ excerpt: "The people, history and open-source community behind arc42."
   </div>
   <div class="about-community__grid">
     <div class="about-community__intro">
-      <p>arc42 is available in a dozen languages thanks to people who contributed translations, reviews, template formats, examples and tooling.</p>
+      <p>arc42 is available in {{ site.data.downloads.languages.size }} languages thanks to people who contributed translations, reviews, template formats, examples and tooling.</p>
       <a class="btn btn--arc42-outline" href="https://github.com/arc42/arc42-template/graphs/contributors" rel="noopener">View all contributors on GitHub &#8599;</a>
     </div>
     <div class="about-contributors">
