@@ -59,17 +59,23 @@ These formats are generated from their AsciiDoc sources in the [GitHub repositor
 <details class="dl-details" markdown="1">
 <summary>Confluence</summary>
 
-Confluence versions are generated **with help** and come in two flavours:
+We no longer generate Confluence files. Atlassian's space-export format changes between Confluence versions, importing one requires a site administrator, and we have no Confluence instance to verify exports against. The former arc42 plugin on the Atlassian Marketplace has been discontinued by Atlassian.
 
-* **flat** — all sections on a single page
-* **structured** — one Confluence page per arc42 section
+**Recommended: publish from AsciiDoc with docToolchain.** The [publishToConfluence](https://doctoolchain.org/docToolchain/v2.0.x/015_tasks/03_task_publishToConfluence.html) task of [docToolchain](https://doctoolchain.org/) pushes the template into any Confluence **Cloud** or **Data Center** space through the REST API — one page per arc42 section, images attached. You need edit rights on the target space, nothing more. The task knows the arc42 template: every help block becomes a collapsible info box, so the *with help* variant reads well in Confluence. Running it again updates only the pages that changed.
 
-| Language | flat | structured |
+1. Download the **AsciiDoc** template in your language, plain or with help, e.g. [EN with help]({{ PREFIX }}EN-withhelp-asciidoc.zip).
+2. [Install docToolchain](https://doctoolchain.org/docToolchain/v2.0.x/010_manual/20_install.html) and point its `inputFiles` at `arc42-template.adoc`.
+3. Fill in the Confluence section of `docToolchainConfig.groovy` — API endpoint, credentials and the `ancestorId` of the parent page — then run `./dtcw generateHTML publishToConfluence`.
+
+The [publishToConfluence tutorial](https://doctoolchain.org/docToolchain/v2.0.x/020_tutorial/070_publishToConfluence.html) walks through the configuration.
+
+**Legacy files.** Hand-made exports from January 2017, **with help**, based on an older template version. They were exported from Confluence Cloud of that time and may not import into current instances. Provided as-is; we cannot update or support them.
+{: .small}
+
+| Language | flat (one page) | structured (one page per section) |
 |----------|------|------------|
 | DE | [.zip]({{TOOLS}}arc42-template-DE-withhelp-confluenceFlat.zip) | [.zip]({{TOOLS}}arc42-template-DE-withhelp-confluenceStructured.zip) |
 | EN | [.zip]({{TOOLS}}arc42-template-EN-withhelp-confluenceFlat.zip) | [.zip]({{TOOLS}}arc42-template-EN-withhelp-confluenceStructured.zip) |
-
-These are based on an older template version — generating Confluence from AsciiDoc for the latest versions is technically difficult. For an up-to-date workflow we recommend authoring in **AsciiDoc** and syncing to Confluence with the [asciidoc2confluence](https://github.com/rdmueller/asciidoc2confluence) script. (We no longer run a public Confluence instance, and the former Atlassian Marketplace plugin has been discontinued by Atlassian.)
 
 **Legacy versions (arc42 v6) for Confluence 4/5.** Provided by arc42 users; we can't support these ourselves.
 {: .small}
