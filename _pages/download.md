@@ -176,9 +176,9 @@ We don't support additional modelling tools yet, but we'd love to. If you use ar
 <details class="dl-details" markdown="1">
 <summary>Version history &amp; translation credits</summary>
 
-**Version 9** adds a Simplified Chinese (ZH) translation — thanks to Chris (Gentle) Y杨 and DannyGe — Hungarian (May 2026) by László Séra, Traditional Chinese (ZH-TW, September 2026) by Nien-chun Yin, Turkish (TR, October 2026) by Selman Seref and Azerbaijani (AZ, October 2026) by Nihad Jabrayilzade. German is currently at 9.1 (December 2025).
+**Version 9** adds a Simplified Chinese (ZH) translation — thanks to Chris (Gentle) Y杨 and DannyGe — Hungarian (May 2026) by László Séra, Traditional Chinese (ZH-TW, September 2026) by Nien-chun Yin, Turkish (TR, October 2026) by Selman Seref and Azerbaijani (AZ, October 2026) by Nihad Jabrayilzade. Since October 2026 (9.1, German 9.2), all languages refer to ISO 25010:2023 and to the open [Q42 quality model](https://quality.arc42.org).
 
-**Version 8** was released February 2022; UA August 2022, CZ October 2022, FR June 2023, PT October 2024.
+**Version 8** was released February 2022; UA August 2022, CZ October 2022, FR June 2023, PT October 2024. ES, IT, NL, PT, RU and UKR are at 8.3 (October 2026: references to ISO 25010:2023 and Q42).
 
 {: .notice}
 Nous sommes heureux d'annoncer la disponibilité de la version française d'arc42 — merci beaucoup à Damien Lucas. Bon travail !
