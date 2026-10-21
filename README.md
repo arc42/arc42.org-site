@@ -13,8 +13,7 @@ Built with [Jekyll](https://jekyllrb.com/) and served by [Netlify](https://www.n
 All development runs in Docker — **no local Ruby, Bundler, or Jekyll needed**, just Docker and `make`.
 
 ```bash
-make build     # build the dev image once (installs the pinned gems — needs network)
-make dev       # start Jekyll with live reload at http://localhost:4200
+make dev       # first run builds the dev image (needs network), then starts Jekyll at http://localhost:4200
 ```
 
 `make dev` serves on **4200**, the first slot in the arc42 `42xx` block. Every
@@ -25,9 +24,14 @@ Jekyll's default, so it stays honest if this site ever moves: `SITE_PORT` in the
 `Makefile`, the mapping plus `--port` in `docker-compose.yml`, and `EXPOSE`/`CMD`
 in the `Dockerfile`.
 
-Everything after the first `make build` works **fully offline** (e.g. on a train): the
+Everything after the first build works **fully offline** (e.g. on a train): the
 gems are baked into the Docker image and the theme is vendored into the repo, so no
-build step reaches out to the network.
+build step reaches out to the network. `make dev` does not rebuild the image; that
+happens only when `Dockerfile`, `Gemfile`, `Gemfile.lock` or
+`docker/jekyll-entrypoint.sh` changes (a hash of these files sits in an image
+label). The Ruby base image is pinned by digest and kept in the local image store,
+so even such a rebuild only re-runs `bundle install`, not apt-get. The image tag
+`arc42-org-site:latest` is this repo's own; arc42.de-site builds a separate one.
 
 ### Make targets
 
@@ -35,7 +39,8 @@ build step reaches out to the network.
 | ----------------- | ------------------------------------------------------------------------ |
 | `make help`       | List all targets.                                                        |
 | `make dev`        | Start the dev server with live reload at http://localhost:4200.          |
-| `make build`      | Build the `arc42-site:latest` Docker image from the pinned gems.         |
+| `make image`      | Build the Docker image only if its inputs changed (all targets call it). |
+| `make build`      | Force a rebuild of the `arc42-org-site:latest` image.                    |
 | `make site`       | Generate the static site into `_site/`.                                  |
 | `make check-links`| Build, then validate internal links/images/HTML with html-proofer.      |
 | `make shell`      | Open a shell inside the container for debugging.                          |
@@ -43,10 +48,11 @@ build step reaches out to the network.
 | `make update`     | Update gems to their latest allowed versions (rewrites `Gemfile.lock`).  |
 | `make stop`       | Stop and remove the running container.                                    |
 | `make logs`       | Tail the dev server logs.                                                 |
-| `make clean`      | Remove `_site/` and local caches.                                         |
+| `make clean`      | Remove the generated `_site/` only (image and caches stay).              |
+| `make distclean`  | Also stop the container and wipe the Jekyll/Sass cache volumes.          |
 
 After `make update` (or any change to `Gemfile.lock`), the container refuses to serve
-until you re-run `make build` — the entrypoint compares the lockfile against the gems
+until the image is rebuilt (`make dev` or `make image` does that automatically) — the entrypoint compares the lockfile against the gems
 baked into the image and fails loudly on drift, so you never run against stale gems.
 
 ---

@@ -1,7 +1,14 @@
 services:
   jekyll:
-    build: .
-    image: arc42-site:latest
+    build:
+      context: .
+      # Hash of the image inputs (set by the Makefile). `make` compares it with
+      # the existing image and only rebuilds when an input really changed.
+      labels:
+        org.arc42.image-inputs: ${IMAGE_INPUTS_HASH:-unset}
+    # Own tag: arc42.de-site has a different Gemfile.lock and must not
+    # overwrite this image (and vice versa).
+    image: arc42-org-site:latest
     init: true
     environment:
       JEKYLL_ENV: development
