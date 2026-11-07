@@ -17,6 +17,10 @@
     field precisely so no consumer has to guess from city names
   · course title links prefer the English detail page (url_en), falling back to url
   · zero upcoming dates degrades to the date-free offer
+  · a course whose `show_on` list exists and does not name this site
+    (site.trainings_site_name, "arc42.org") is skipped: not rendered, not
+    counted against the cap. No show_on means every site. Same rule as
+    arc42.de's timeline_auto.html.
 
   The sort walks all dates once, collecting "start|course_index|date_index"
   strings: Liquid cannot sort across nested arrays, but it can sort strings, and
@@ -25,6 +29,7 @@
 {%- assign today = 'now' | date: '%Y-%m-%d' -%}
 {%- assign keys = "" | split: "" -%}
 {%- for course in site.data.trainings.courses -%}
+  {%- if course.show_on -%}{%- unless course.show_on contains site.trainings_site_name -%}{%- continue -%}{%- endunless -%}{%- endif -%}
   {%- for d in course.dates -%}
     {%- if d.end >= today and d.status != 'cancelled' and d.status != 'full' -%}
       {%- capture key -%}{{ d.start }}|{{ forloop.parentloop.index0 }}|{{ forloop.index0 }}{%- endcapture -%}
@@ -71,8 +76,10 @@
           form "LABEL: explanation" — everything after the first ": " becomes a
           muted second line. A title without a colon falls back to the course's
           certification (today: Mastering Software Architectures → "perfect
-          preparation for iSAQB CPSA-Foundation certification"); only a course
-          with neither gets no gloss.
+          preparation for iSAQB CPSA-Foundation certification"), and without
+          one to the title itself, as written, when it says more than the
+          short title (MAISPEC → "Mastering AI-Driven Specification"). Only a
+          course whose title is its short title gets no gloss.
         {%- endcomment -%}
         {%- assign title_head = course.title | split: ": " | first -%}
         {%- comment -%} Title prose is downcased to read as an aside; the
@@ -80,6 +87,8 @@
         {%- assign slug = course.title | remove_first: title_head | remove_first: ": " | downcase -%}
         {%- if slug == "" and course.certification -%}
           {%- capture slug -%}perfect preparation for {{ course.certification }} certification{%- endcapture -%}
+        {%- elsif slug == "" and course.title != course.short_title -%}
+          {%- assign slug = course.title -%}
         {%- endif -%}
         <li class="training-dates__row">
             <a class="training-dates__when" rel="noopener noreferrer nofollow" target="_blank" href="{{ d.url }}">{{ when }}</a>
