@@ -20,6 +20,14 @@
     - label: "GitHub"
       url: "https://github.com/nihadio"
 
+- name: "Shamkhal Maharramov"
+  language: "Azərbaycanca"
+  links:
+    - label: "GitHub"
+      url: "https://github.com/Maharramoff"
+    - label: "LinkedIn"
+      url: "https://www.linkedin.com/in/sh-maharramov/"
+
 - name: "Jakub Tomíšek"
   language: "Čeština"
   portrait: "/images/translators/jakub-tomisek.webp"
