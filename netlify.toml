@@ -8,8 +8,8 @@
   publish  = "_site"
 
 [build.environment]
-  # Production build: enables jekyll-seo-tag canonical URLs, minified output,
-  # and drops development-only behaviour.
+  # Production build: turns on analytics (_includes/analytics.html) and HTML
+  # compression (compress_html in _config.yml), both off in development.
   JEKYLL_ENV = "production"
   # Ruby version also pinned via ./.ruby-version (the reliable mechanism on
   # Netlify). Jekyll 4.4 needs Ruby >= 3.0; the build image default is older.
