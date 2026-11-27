@@ -3,7 +3,8 @@
 # re-run apt-get and the whole bundle install (and fail offline). The Makefile
 # pulls this exact image into the local store so rebuilds work without network.
 # To move to a newer base: `docker buildx imagetools inspect ruby:3.4-slim`,
-# paste the new digest here, `make build`.
+# paste the new digest here, `make build`. Then set .ruby-version (Netlify's
+# Ruby) to the image's version: `docker run --rm --entrypoint ruby arc42-org-site:latest -v`.
 FROM ruby:3.4-slim@sha256:48ebc88c7c77e39b26f8f3807765745bd13fe4a09500d4f3afac444c625ad1ae
 
 LABEL description="arc42.org Jekyll dev image"
