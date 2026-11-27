@@ -71,11 +71,19 @@ distclean: clean ## Also stop the container and wipe the Jekyll/Sass cache volum
 	-docker compose down -v --remove-orphans
 	rm -rf .sass-cache .jekyll-cache
 
-install: build ## Install/refresh gems into the dev image after editing the Gemfile
-	docker compose run --rm jekyll bundle install
+install: ## After editing the Gemfile: resolve it into Gemfile.lock, then rebuild the image (needs network)
+	@# Lock with the EXISTING image first: the image build runs `bundle install
+	@# --frozen`, which refuses a Gemfile that no longer matches Gemfile.lock.
+	@# The image build also leaves `frozen: true` in /usr/local/bundle/config,
+	@# which would keep the lockfile as is (and outranks a BUNDLE_FROZEN env
+	@# var), so unset it in this throwaway container before locking.
+	docker compose run --rm --no-deps jekyll sh -c 'bundle config unset frozen >/dev/null && bundle lock'
+	$(MAKE) --no-print-directory build
 
-update: build ## Update gems to their latest allowed versions (rewrites Gemfile.lock)
-	docker compose run --rm jekyll bundle update
+update: image ## Update gems to their latest allowed versions (rewrites Gemfile.lock), then rebuild the image
+	@# Unset the image's frozen setting first (see install), or nothing changes.
+	docker compose run --rm --no-deps jekyll sh -c 'bundle config unset frozen >/dev/null && bundle update'
+	$(MAKE) --no-print-directory build
 
 shell: image ## Open a shell inside the dev container for debugging
 	docker compose run --rm jekyll bash
