@@ -43,17 +43,20 @@ so even such a rebuild only re-runs `bundle install`, not apt-get. The image tag
 | `make build`      | Force a rebuild of the `arc42-org-site:latest` image.                    |
 | `make site`       | Generate the static site into `_site/`.                                  |
 | `make check-links`| Build, then validate internal links/images/HTML with html-proofer.      |
+| `make sync-downloads` | Regenerate `_data/downloads.yml` from the latest template release.   |
 | `make shell`      | Open a shell inside the container for debugging.                          |
-| `make install`    | Refresh gems in the image after editing the `Gemfile`.                    |
-| `make update`     | Update gems to their latest allowed versions (rewrites `Gemfile.lock`).  |
+| `make install`    | After editing the `Gemfile`: update `Gemfile.lock`, rebuild the image.   |
+| `make update`     | Update gems to their latest allowed versions, rebuild the image.         |
 | `make stop`       | Stop and remove the running container.                                    |
 | `make logs`       | Tail the dev server logs.                                                 |
 | `make clean`      | Remove the generated `_site/` only (image and caches stay).              |
 | `make distclean`  | Also stop the container and wipe the Jekyll/Sass cache volumes.          |
 
-After `make update` (or any change to `Gemfile.lock`), the container refuses to serve
-until the image is rebuilt (`make dev` or `make image` does that automatically) — the entrypoint compares the lockfile against the gems
-baked into the image and fails loudly on drift, so you never run against stale gems.
+Both rewrite `Gemfile.lock` and need network; commit the changed lockfile. Whenever
+`Gemfile.lock` changes in other ways (e.g. after a `git pull`), the container refuses to
+serve until the image is rebuilt — `make dev` and every other target do that
+automatically. The entrypoint compares the lockfile against the gems baked into the
+image and fails loudly on drift, so you never run against stale gems.
 
 ---
 
@@ -134,9 +137,9 @@ Write Markdown **below the front matter** and it becomes the body of that detail
 [`_resources/effektive-softwarearchitekturen.md`](_resources/effektive-softwarearchitekturen.md)
 is the worked example; the layout is [`_layouts/resource.html`](_layouts/resource.html).
 
-> **Remember:** [`sitemap.xml`](sitemap.xml) is maintained by hand. When you publish a
-> `detail: true` page, add its URL there — the other auto-generated item pages are
-> orphaned landing pages and are intentionally left out of the sitemap.
+> **Sitemap:** `sitemap.xml` is generated at build time by `jekyll-sitemap` — there is
+> no hand-maintained file. Every `/resources/<slug>/` page is included, with or without
+> `detail: true`. To keep a page out, set `sitemap: false` in its front matter.
 
 ## Download page (languages and formats)
 
@@ -215,6 +218,19 @@ The About page ([`_pages/about.md`](_pages/about.md)) renders this in **two tier
 Styles live under `.translator-grid` / `.translator-card` in
 [`assets/css/arc42-org.css`](assets/css/arc42-org.css). No sitemap entry is needed —
 this is a section of an existing page, not a new URL.
+
+### Other contributors
+
+People who improved the template, its formats or tooling — but are **not**
+translators — go in [`_data/contributors.yml`](_data/contributors.yml), rendered as the
+"With thanks to our contributors" line on the About page. Each person is credited
+once: whoever is already listed in `translators.yml` stays out of this file.
+
+```yaml
+- name: "Gerd Aschemann"   # required; use the GitHub handle if no real name is published
+  github: "ascheman"       # optional — links to https://github.com/<login>
+  url: "https://…"         # optional — wins over github
+```
 
 ## How does the search page work?
 
